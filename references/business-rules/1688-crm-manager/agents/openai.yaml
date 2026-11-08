@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 客户资产管理员"
+  short_description: "客户列表、画像、属性、标签、导入、地区分布、跟进和订单背景"
+  default_prompt: "使用 $1688-crm-manager 处理我的客户资产管理员任务，并列出真实依据与已完成结果。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 流量与渠道诊断师"
+  short_description: "全店流量、搜索、推荐、广告渠道与行业大盘对比；基于真实数据给出可复核的业务结果"
+  default_prompt: "使用 $1688-traffic-analyst 处理我的流量与渠道诊断师任务，并列出真实依据与已完成结果。"

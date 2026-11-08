@@ -1,0 +1,996 @@
+{
+  "retrieved_date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "source": {
+    "method": "GET",
+    "path": "/plugins/remote-catalog",
+    "params": {
+      "lang": "zh-CN"
+    },
+    "cached_fallback": false
+  },
+  "total": 90,
+  "1688_related_count": 5,
+  "fields_preserved": [
+    "author",
+    "capabilities",
+    "category",
+    "currentVersion",
+    "description",
+    "displayName",
+    "id",
+    "latestVersion",
+    "mainVersion",
+    "name",
+    "pluginCode",
+    "pluginId",
+    "publisher",
+    "searchKeywords",
+    "sourceType",
+    "status",
+    "summary",
+    "tags",
+    "version"
+  ],
+  "excluded_fields": [
+    "featured",
+    "featuredOrder",
+    "iconUrl",
+    "provider",
+    "source"
+  ],
+  "entries": [
+    {
+      "pluginCode": "agorapulse-social",
+      "name": "Agorapulse",
+      "displayName": "Agorapulse",
+      "category": "social-media",
+      "mainVersion": "0.1.0",
+      "summary": "通过 Agorapulse 运营社媒平台。涵盖报表级数据分析、社交收件箱、舆情监听，以及日历草稿与备注。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "daze-store-manager-cli",
+      "name": "大泽店长工具",
+      "displayName": "大泽店长工具",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.20",
+      "summary": "支持批量复制商品并自动发布到店铺，让跨境铺货更省时省力。可从1688、Alibaba、Amazon等主流货源平台采集商品，一键发布到已授权的阿里巴巴国际站店铺。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": true
+    },
+    {
+      "pluginCode": "AIsa",
+      "name": "AIsa",
+      "displayName": "AIsa",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.1.1",
+      "summary": "AIsa 为 Accio Work 提供实时数据，支持电商选品、竞品分析、SEO 关键词研究、市场调研和 B2B 获客。研究 TikTok Shop 商品和 Amazon（亚马逊）关键词，查找企业与决策人，并搜索适合合作的达人。获取关键词搜索量、Google 排名、外链和网站流量。通过品牌在 ChatGPT、Gemini、Perplexity 和 Google AI 概览中的提及与引用，研究 AI 可见度和生成式引擎优化（GEO）。分析 Meta、TikTok 和 Google 平台的竞品广告，探索 Reddit、Twitter/X、YouTube、Instagram、小红书和抖音的社交媒体洞察。AIsa 还支持网页、新闻和学术论文研究，以及美股与加密货币数据、SEC 披露文件、Polymarket 和 Kalshi 预测市场研究。只需连接一个 AIsa 账号即可获取数据；每次付费查询都会先报价，经你批准费用后才执行。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "cinnox",
+      "name": "CINNOX",
+      "displayName": "CINNOX",
+      "category": "communication-collaboration",
+      "mainVersion": "0.1.18",
+      "summary": "使用 CINNOX 启动 AI 驱动的全渠道联络中心。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "qinghu-ai",
+      "name": "青虎AI",
+      "displayName": "青虎AI",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.11",
+      "summary": "面向1–50 人电商团队的运营、视觉负责人，同时操盘国内多平台与跨境站点，商品上新量大、素材迭代频繁，人力有限，美工产能瓶颈突出。可一站式解决全链路素材生产需求：快速产出白底图、主图套图、详情页，支持素材复刻、产品替换、模特换脸，降低实拍成本；一键生成适配抖音、Temu、亚马逊等渠道的带货短视频与投流广告素材，完成视频人脸、产品替换、爆款视频仿写。搭配多平台 AI 选品、商品优化能力，辅助挖掘潜力品，同步适配国内及跨境平台上架要求，大幅压缩素材制作周期，提升上新效率，统一全店铺商品视觉卖相，减少跨平台素材制作的重复工作量，助力团队用更少人力快速输出大量合规商品素材。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "IPvise",
+      "name": "IPVISE",
+      "displayName": "IPVISE",
+      "category": "creative-design",
+      "mainVersion": "0.1.6",
+      "summary": "在 Accio Work 中，用自然语言生成和编辑图片、视频，让创意变成可用的视觉作品。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "multi-channel-inquiry-plugin",
+      "name": "多渠道谈单专家",
+      "displayName": "多渠道谈单专家",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "1.0.0",
+      "summary": "面向跨境商家的多渠道询盘接待插件。读取已绑定 IM 渠道的消息记录，支持完成买家背调、意向分析与重点买家圈选、生成回复、自动接待等谈单相关操作。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "sofreight",
+      "name": "搜航海运工具箱",
+      "displayName": "搜航海运工具箱",
+      "category": "logistics-fulfillment",
+      "mainVersion": "0.2.0",
+      "summary": "专为外贸货代与出运场景设计，打通 Sofreight 货踪、塞港、船期、整箱运价与询盘等高频海运查询，支持对话取数与异常诊断，减少多航线、多港口经营中的重复操作。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "OpenBoost",
+      "name": "OpenBoost 跨境数据",
+      "displayName": "OpenBoost 跨境数据",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "1.0.5",
+      "summary": "支持市场研究、选品分析、竞对监控、VOC洞察、关键词分析、listing生成和社媒分析等跨境电商应用场景",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "global-lead-radar",
+      "name": "全网商机雷达",
+      "displayName": "全网商机雷达",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.2",
+      "summary": "面向跨境卖家，提供全网采购商机的智能挖掘、筛选与跟进能力，帮助发现并触达全球潜在买家。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "social-ops",
+      "name": "社媒运营",
+      "displayName": "社媒运营",
+      "category": "social-media",
+      "mainVersion": "0.3.0",
+      "summary": "电商社媒运营一站式助手。发现热门话题、看清竞品在发什么，一个想法一键生成各平台可直接发布的文案，经你确认后排期发布，持续追踪效果，还能找到带联系方式的新买家。支持 TikTok、Instagram、YouTube、Facebook、LinkedIn、X、小红书等平台。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "fastmoss",
+      "name": "FastMoss",
+      "displayName": "FastMoss",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "1.0.4",
+      "summary": "FastMoss出品的 TikTok Shop 数据分析工具，专注出海与跨境电商场景，帮助 AI 通过 FastMoss CLI 查询、分析和解读 TikTok 电商数据。\n可用于搜索和分析商品、达人、店铺、MCN 机构、短视频、直播、广告投放、类目市场与榜单数据；支持爆品挖掘、选品研究、达人筛选、竞品分析、店铺诊断、内容策略和投放效果评估，助力跨境卖家选品、建联与增长。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "accio-muse-plugin",
+      "name": "MuseSelect建店工具箱",
+      "displayName": "MuseSelect建店工具箱",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.3.9",
+      "summary": "通过 Auto 或 Step by Step 编排完成 MuseSelect 建店、定价、经营分析、商品图和 Collection。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "trendyol-plugin",
+      "name": "Trendyol",
+      "displayName": "Trendyol",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "1.0.1",
+      "summary": "连接 Trendyol 卖家账号到 AccioWork，覆盖 Trendyol 希腊 GR / 斯洛伐克 SK / 罗马尼亚 RO / 捷克 CZ / 保加利亚 BG 站点的日常运营：Excel 批量发品上架、AI 类目匹配与属性映射、查询已有商品（审核状态、拒绝原因、在售或锁定、价格库存）与更新已有商品（改标题、图片、属性、配送、价格库存）、订单包裹管理（备货 picking、物流面单、运单号回传、发货时效预警）、退货售后与申诉处理（基于退货信息与验货事实给出同意/拒绝建议）。让 Agent 正确操作 Trendyol，而不是靠猜。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "fotor",
+      "name": "Fotor",
+      "displayName": "Fotor",
+      "category": "creative-design",
+      "mainVersion": "1.0.0",
+      "summary": "基于 CIS 理论创建、补全、保存和管理品牌信息，支持从 URL、Logo、商品图和文字中生成品牌 VI 与品牌信息卡，并关联品牌生成商品套图、包装海报、UGC 口播、TVC 商品视频，以及通用 AI 生图、修图和视频内容。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "bazhuayu",
+      "name": "八爪鱼",
+      "displayName": "八爪鱼",
+      "category": "developer-data-tools",
+      "mainVersion": "1.0.0",
+      "summary": "用自然语言驱动八爪鱼云采集：搜索模板、启动任务、查询进度、导出结构化数据，并管理已有任务。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "buffer-social",
+      "name": "Buffer",
+      "displayName": "Buffer",
+      "category": "social-media",
+      "mainVersion": "0.1.0",
+      "summary": "通过 Buffer 管理 Facebook、Instagram、LinkedIn、X (Twitter)、TikTok、YouTube、Threads、Bluesky、Mastodon、Pinterest、Google 商家资料的内容发布。涵盖内容发布与排期、队列与草稿管理、内容灵感、已连接频道，以及帖子数据分析。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "dsers-dropshipping-pro",
+      "name": "DSers",
+      "displayName": "DSers",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.4",
+      "summary": "用 Accio 找到商品，再通过 DSers 把它们转化为可持续增长的电商业务。支持从 AliExpress、1688 和 Alibaba.com 导入商品并连接到你的网店，统一管理供应商与订单，自动完成履约并同步物流信息，让选品、销售和发货在一套顺畅流程中完成。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "adrate",
+      "name": "AdRate",
+      "displayName": "AdRate",
+      "category": "marketing-advertising",
+      "mainVersion": "0.1.1",
+      "summary": "通过 AdRate 管理 TikTok 广告投放 -- Ads 与 GMV Max 广告系列效果报表、ROI 与花费分析、支持 Dry Run 预演的自动规则管理、Campaign Copy 复制，以及安全的单广告系列状态、预算与 ROAS 控制。内置安全合约、幂等写入恢复和限流处理。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "pickfu",
+      "name": "PickFu",
+      "displayName": "PickFu",
+      "category": "marketing-advertising",
+      "mainVersion": "0.3.4",
+      "summary": "在投入库存和广告预算之前，先弄清真实消费者怎么想",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "mydepot",
+      "name": "MyDepot 货盘",
+      "displayName": "MyDepot 货盘",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.6.6",
+      "summary": "提供 MyDepot 货盘商品搜索、价格与库存查询",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "aimcp-tec-do",
+      "name": "Tec-Do 广告与增长情报",
+      "displayName": "Tec-Do 广告与增长情报",
+      "category": "marketing-advertising",
+      "mainVersion": "0.1.8",
+      "summary": "TEC-D0 是面向出海广告投放与增长团队的 AI 能力集合，覆盖出海营销、海外广告、广告投放优化、营销增长、用户增长等需求，帮助团队提升投放效率与增长效果。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "geoly",
+      "name": "GEOly",
+      "displayName": "GEOly",
+      "category": "marketing",
+      "mainVersion": "0.2.13",
+      "summary": "GEOly 把你的 Agent 连接到 GEOly GEO（生成式引擎优化）平台——测量品牌在 ChatGPT、Perplexity、Google AI Mode、Google AI Overview、Gemini、Copilot 回答中的可见度。追踪品牌提及、引用率、AIGVR 与 Share of Model，监测每日 AI 可见度趋势，对标竞品，发现品类空白与增长品牌，分析用户在 AI 里怎么问你的品类，并审计站点 AI 就绪度。数据来自你的 GEOly 工作区的实时 MCP 工具，报告引用真实可见度数字而非猜测。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "ecommerce-automation-toolkit",
+      "name": "电商运营工具箱",
+      "displayName": "电商运营工具箱",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.3.17",
+      "summary": "打通多电商平台，支持自动抓指标、诊断、批量发品与接待。减少多店重复操作，提升经营效率。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "global-ecommerce-design",
+      "name": "跨境电商设计",
+      "displayName": "跨境电商设计",
+      "category": "creative-design",
+      "mainVersion": "2.1.4",
+      "summary": "全流程覆盖商品素材分析、商品图片生成、品牌策划和营销投放四大能力模块。支持输入商品链接、商品图片或国际站店铺链接，自动完成素材质量诊断、竞品对比、品牌定位分析、多国本地化设计及广告素材生成，并结合行业知识库与海外买家偏好输出可直接投放的商品图片、品牌资产和营销素材，帮助商家快速建立品牌形象，提升商品转化与广告效果。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "helium10-tools",
+      "name": "Helium 10",
+      "displayName": "Helium 10",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.2",
+      "summary": "Helium 10 亚马逊卖家工具箱：关键词研究、产品选品、Listing 分析、利润核算、广告数据查询、关键词排名跟踪，覆盖选品到运营全链路。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "dxb",
+      "name": "店小宝",
+      "displayName": "店小宝",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "3.1.1",
+      "summary": "一键复制并发布商品，AI 智能处理图片，让跨境铺货更高效。支持从1688、Alibaba、Amazon、AliExpress、Made-in-China、Mercado Libre、军埔批发网等常见货源平台复制商品，并发布至授权店铺。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": true
+    },
+    {
+      "pluginCode": "visable-assistant",
+      "name": "Visable",
+      "displayName": "Visable",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.3",
+      "summary": "Visable B2B 供应商 AI 工具包，适用于 Europages 和 wer liefert was 平台 — 提供供应商业绩洞察。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "wecom-assistant",
+      "name": "企业微信",
+      "displayName": "企业微信",
+      "category": "communication-collaboration",
+      "mainVersion": "0.2.0",
+      "summary": "将企业微信官方 CLI（wecom-cli）、按产品拆分的 Skills 与 Connector 集合为 Plugin，使 Agent 使用企业微信办公能力更加流畅。内置消息、邮件、文档、在线表格、智能表格、智能文档、文档管理、日程、会议、待办、微盘、通讯录和媒体文件等企业微信技能。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "ds-mate",
+      "name": "DS-Mate",
+      "displayName": "DS-Mate",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.6",
+      "summary": "在对话中管理你的代发店铺：连接 DS-Mate 账号，查看 Shopify、Amazon、eBay、TikTok 等渠道的店铺状态；订单诊断、买家消息与选品功能将随工具集陆续上线。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "cogito-deep-research-plugin",
+      "name": "深度研究",
+      "displayName": "深度研究",
+      "category": "productivity",
+      "mainVersion": "0.0.3",
+      "summary": "深度研究 Agent：输入任何问题，自动多轮搜索、网页阅读、数据分析、代码执行，生成带引用的专业研究报告与可视化图表。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "presentations",
+      "name": "演示文稿",
+      "displayName": "演示文稿",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.7",
+      "summary": "将 PPTX 演示文稿处理能力集成为 Plugin。适用于演示文稿创建、模板复用、幻灯片编辑、缩略图生成、内容分析等各类演示文稿处理任务。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "1688-purchasing-assistant",
+      "name": "1688采购工具集",
+      "displayName": "1688采购工具集",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.9",
+      "summary": "为1688买家提供选品找货、找商找厂、询盘寻源、分销铺货、订单管理等一站式采购服务。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "1688-seller-assistant",
+      "name": "1688生意助手",
+      "displayName": "1688生意助手",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.20",
+      "summary": "为1688商家提供店铺绑定、诊断、商品与客户运营、选品找商等经营支持服务。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "spreadsheets",
+      "name": "表格",
+      "displayName": "表格",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.9",
+      "summary": "将 XLSX 表格（.xlsx、.xlsm、.csv、.tsv 等）处理能力集成为 Plugin。适用于电子表格创建、数据分析、公式计算、图表可视化等各类表格处理任务。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "documents",
+      "name": "文档",
+      "displayName": "文档",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.8",
+      "summary": "将 DOCX 与 PDF 文档处理能力集成为 Plugin。适用于 DOCX 或 PDF 文档创建、编辑、批注修订、文本提取、格式转换、表单填写等各类文档处理任务。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "logistics-expert",
+      "name": "阿里国际站物流专家",
+      "displayName": "阿里国际站物流专家",
+      "category": "logistics-fulfillment",
+      "mainVersion": "0.5.2",
+      "summary": "为阿里巴巴国际站买卖家提供运费查询、HS 编码归类、关税估算、一键下单发货、物流跟单的全链路物流 AI 解决方案。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": true
+    },
+    {
+      "pluginCode": "linear-project-management-plugin",
+      "name": "Linear",
+      "displayName": "Linear",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.3",
+      "summary": "Linear 项目管理助手，提供 Issue 管理、Sprint 报告、项目洞察等工作流 Skill。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "asana-plugin",
+      "name": "Asana",
+      "displayName": "Asana",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.2",
+      "summary": "连接 Asana，管理任务、查看项目进度、浏览团队和成员，跟踪工作分配。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "icbu-distribution-seller-plugin",
+      "name": "Alibaba 分销卖家工具箱",
+      "displayName": "Alibaba 分销卖家工具箱",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.4",
+      "summary": "为国际站分销卖家提供分销订单管理帮助，支持订单监控、面单发货等核心分销商家功能。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "icbu-distribution-buyer-plugin",
+      "name": "Alibaba 分销买家工具箱",
+      "displayName": "Alibaba 分销买家工具箱",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.5",
+      "summary": "为国际站分销买家提供创单和代扣帮助，支持多模版表格上传、面单匹配、订单监控等核心分销订单管理能力。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "twilio-assistant",
+      "name": "Twilio",
+      "displayName": "Twilio",
+      "category": "communication-collaboration",
+      "mainVersion": "0.0.2",
+      "summary": "连接 Twilio CPaaS 通信平台，发送 SMS/MMS/WhatsApp 消息、发起语音呼叫、Verify 身份验证、号码搜索与管理，覆盖全球通信场景。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "tectonic-latex-plugin",
+      "name": "LaTeX",
+      "displayName": "LaTeX",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.2",
+      "summary": "将 Tectonic LaTeX 引擎封装为 Plugin，支持本地编译、多文件项目构建与 LaTeX 文档分析修复。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "granola-plugin",
+      "name": "Granola",
+      "displayName": "Granola",
+      "category": "communication-collaboration",
+      "mainVersion": "0.0.5",
+      "summary": "Granola 会议笔记接入：检索 AI summary 已就绪的会议笔记、按需读取逐段 transcript、按文件夹浏览。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "atlassian-rovo-plugin",
+      "name": "Atlassian Rovo",
+      "displayName": "Atlassian Rovo",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.1",
+      "summary": "通过 Rovo OAuth 2.0 (3LO) 连接 Atlassian (Jira 与 Confluence)，管理事务、Sprint、看板、史诗、项目、Wiki 页面、空间、评论、任务、附件以及工时日志。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "airtable-plugin",
+      "name": "Airtable",
+      "displayName": "Airtable",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.2",
+      "summary": "连接 Airtable，浏览工作区、查看 Base 结构、增删改查记录、管理评论。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "sentry-plugin",
+      "name": "Sentry",
+      "displayName": "Sentry",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.1",
+      "summary": "连接 Sentry，支持查看错误和性能问题、搜索 Issue、查看堆栈信息、管理 Issue 状态，并监控应用发布健康度。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "fireflies-assistant",
+      "name": "Fireflies.ai",
+      "displayName": "Fireflies.ai",
+      "category": "productivity",
+      "mainVersion": "0.0.2",
+      "summary": "Fireflies.ai 会议智能：列出与搜索会议转录，获取摘要 / 待办 / 关键词 / 发言人，发现会议频道与团队成员，查看正在进行中的会议，浏览 soundbite 片段，并把 Fireflies 笔记机器人（Fred）拉入正在进行的 Zoom / Google Meet / Microsoft Teams 会议。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "ahrefs-assistant",
+      "name": "Ahrefs",
+      "displayName": "Ahrefs",
+      "category": "marketing-advertising",
+      "mainVersion": "0.0.3",
+      "summary": "Ahrefs SEO 工具集成：通过 MCP 工具进行域名分析、反向链接研究、关键词探索、SERP 分析和竞争对手分析。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "clickup-plugin",
+      "name": "ClickUp",
+      "displayName": "ClickUp",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.2",
+      "summary": "连接 ClickUp 项目管理平台，发现 workspace 层级、管理任务（创建/查看/列表/更新/删除/搜索）、查询成员，覆盖任务管理核心流程。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "streak-assistant",
+      "name": "Streak CRM",
+      "displayName": "Streak CRM",
+      "category": "crm",
+      "mainVersion": "0.0.4",
+      "summary": "连接 Streak CRM，在 Gmail 中管理销售漏斗、客户、商机和任务。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "instantly",
+      "name": "Instantly",
+      "displayName": "Instantly",
+      "category": "marketing-advertising",
+      "mainVersion": "0.0.2",
+      "summary": "Instantly 冷邮件外联与营销自动化平台接入，覆盖 Campaign 编排、Lead List 管理与 Lead 批量操作。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "typeform-plugin",
+      "name": "Typeform",
+      "displayName": "Typeform",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.1",
+      "summary": "连接 Typeform，管理表单（创建、编辑、删除）、查看问卷回复、管理工作空间，覆盖在线表单运营全流程。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "apollo-assistant",
+      "name": "Apollo.io",
+      "displayName": "Apollo.io",
+      "category": "marketing-advertising",
+      "mainVersion": "0.0.1",
+      "summary": "Apollo.io 的 B2B 公司调研与 CRM 工具：按域名富化公司、查看公司在招岗位作为销售信号、搜索/保存 CRM 联系人和公司、列出邮件序列。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "netlify-assistant",
+      "name": "Netlify",
+      "displayName": "Netlify",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.1",
+      "summary": "连接 Netlify 账号，查看站点、部署记录和构建日志，帮助排查部署问题",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "neon-plugin",
+      "name": "Neon",
+      "displayName": "Neon",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.4",
+      "summary": "接入 Neon Serverless Postgres，管理项目与分支。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "creatify-plugin",
+      "name": "Creatify",
+      "displayName": "Creatify",
+      "category": "creative-design",
+      "mainVersion": "0.0.1",
+      "summary": "将 Creatify AI 视频广告创作能力打包为 Plugin：URL 转视频、AI 数字人口播（单镜头 / 多镜头对话）、AI 脚本生成与 AI 短视频，覆盖营销视频生成全流程。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "cloudinary",
+      "name": "Cloudinary",
+      "displayName": "Cloudinary",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.2",
+      "summary": "Upload, manage and deliver images and videos through the Cloudinary media platform with optimized transformation URLs and signed delivery.",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "zoho-plugin",
+      "name": "Zoho",
+      "displayName": "Zoho",
+      "category": "business-operations",
+      "mainVersion": "0.0.2",
+      "summary": "连接 Zoho 两大核心 SaaS：CRM 客户管理、Books 财务，覆盖销售管理、财务对账等核心办公场景。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "shippo-plugin",
+      "name": "Shippo",
+      "displayName": "Shippo",
+      "category": "logistics-fulfillment",
+      "mainVersion": "0.0.1",
+      "summary": "连接 Shippo 物流平台，比较 40+ 承运商运费报价、验证地址、创建发货单、生成面单、追踪包裹状态，覆盖跨境电商履约全流程。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "cloudflare-plugin",
+      "name": "Cloudflare",
+      "displayName": "Cloudflare",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.1",
+      "summary": "连接 Cloudflare，管理 DNS 记录、清理 CDN 缓存、查看域名与账户信息，覆盖日常运维高频操作。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "biorender-assistant",
+      "name": "BioRender",
+      "displayName": "BioRender",
+      "category": "creative-design",
+      "mainVersion": "0.0.1",
+      "summary": "连接 BioRender，搜索科学图标和模板库，为论文和演示快速找到专业科学素材。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "mailchimp-plugin",
+      "name": "Mailchimp",
+      "displayName": "Mailchimp",
+      "category": "marketing-advertising",
+      "mainVersion": "0.0.1",
+      "summary": "Mailchimp 电子邮件营销集成：受众管理、订户管理、活动创建和发送、模板设计、细分和营销分析。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "klaviyo-plugin",
+      "name": "Klaviyo",
+      "displayName": "Klaviyo",
+      "category": "marketing-advertising",
+      "mainVersion": "0.0.1",
+      "summary": "Klaviyo 营销自动化平台一站式接入，覆盖邮件/SMS 活动、流程自动化、受众分群、商品目录、事件追踪及营销报表。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "odoo-assistant",
+      "name": "Odoo",
+      "displayName": "Odoo",
+      "category": "business-operations",
+      "mainVersion": "0.0.1",
+      "summary": "连接 Odoo，查询采购订单、供应商、入库收货、供应商账单（三方对账）、商品与库存数量。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "wordpress-plugin",
+      "name": "WordPress",
+      "displayName": "WordPress",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.1",
+      "summary": "连接 WordPress.com，支持查看网站、文章 / 页面增删改查、媒体库管理、评论协作、分类标签整理与 Stats 数据洞察。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "figma-assistant",
+      "name": "Figma",
+      "displayName": "Figma",
+      "category": "creative-design",
+      "mainVersion": "0.0.3",
+      "summary": "基于 Figma MCP 的助手插件，集成多种技能，帮助 Agent 高效管理设计文件评论、进行设计评审、探索文件结构、管理开发资源等。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "semrush-plugin",
+      "name": "Semrush",
+      "displayName": "Semrush",
+      "category": "marketing-advertising",
+      "mainVersion": "0.0.2",
+      "summary": "Semrush 是领先的在线可见性管理和营销分析平台，提供 SEO、SEM、竞争研究、关键词分析、反向链接分析和流量洞察。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "europe-accio",
+      "name": "欧洲电商工作台",
+      "displayName": "欧洲电商工作台",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "1.1.3",
+      "summary": "欧洲商家专属 AI 助手。支持商品跨平台一键搬家、多语言发布及 AI 智能配图，助您轻松打理全欧多店生意。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "geo-agent",
+      "name": "SEO·GEO 工具箱",
+      "displayName": "SEO·GEO 工具箱",
+      "category": "marketing",
+      "mainVersion": "1.80.0",
+      "summary": "面向任意品牌的 SEO + GEO 工具箱：关键词规划、分析与研究（多源机会矩阵、难度、意图、QDF 与竞品缺口），以及页面级关键词优化（密度、LSI、关键词蚕食、关键词与页面映射）；全站技术 SEO 诊断（50 维度）与内容质量评分（7 维度），一次产出 4 份交付物；SEO 内容生成（文章大纲、Meta 标题与描述、JSON-LD 结构化数据）；以及 AI 搜索可见度监测（ChatGPT / Gemini / Perplexity）——提及率与引用率分析、竞品仪表盘、单 Prompt 深度报告、多引擎对比报告与可发布 GEO 内容。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "twitter",
+      "name": "Twitter/X",
+      "displayName": "Twitter/X",
+      "category": "social-media",
+      "mainVersion": "0.0.2",
+      "summary": "将 Twitter/X MCP 工具和 Skill 打包成插件，使智能体能够正确使用推文搜索、用户资料、时间线、发帖、书签、点赞和媒体上传功能。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "github-assistant",
+      "name": "GitHub",
+      "displayName": "GitHub",
+      "category": "developer-data-tools",
+      "mainVersion": "0.0.7",
+      "summary": "GitHub 集成插件：通过 MCP 工具浏览/筛选你的仓库、Star、Issue 与 PR，支持 Star/Unstar 仓库，并支持在用户或组织名下创建/Fork 仓库、新建与修改 Issue、提交 PR、PR 评审与合并。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "accio-site-builder",
+      "name": "AI建站",
+      "displayName": "AI建站",
+      "category": "productivity-knowledge",
+      "mainVersion": "0.0.30",
+      "summary": "从零开始打造一个真实、专业、可上线的网站——只需与 AI 对话。\n\n- ✨ **智能生成**：AI 将你的想法和素材转化为完整网站，包括配色、文案和布局。\n- 💬 **对话 + Canvas 编辑**：像聊天一样给出指令，也可以精细调整到每一个像素。\n- 📥 **内置数据库 + 邮件提醒**：捕获每一条线索和预约，并即时收到通知。\n- 🚀 **一键发布**：零配置，即可发布到你的专属自定义子域名。\n- 🔄 **数据自动更新**：关联外部来源的内容每天自动刷新。\n- 🎯 **覆盖各种场景**：主页、品牌官网、落地页、作品集、数据看板等。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "gmail",
+      "name": "Gmail",
+      "displayName": "Gmail",
+      "category": "communication-collaboration",
+      "mainVersion": "0.0.3",
+      "summary": "将 Gmail MCP 工具与 Skill 打包，帮助智能体正确处理 Gmail 搜索语法、临时附件 ID、标签 ID 映射等易出错场景。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "feishu-assistant",
+      "name": "飞书",
+      "displayName": "飞书",
+      "category": "communication-collaboration",
+      "mainVersion": "0.2.0",
+      "summary": "将飞书官方 CLI、官方 Skills 与 Connector 集合为 Plugin，使 Agent 使用飞书办公能力更加流畅。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "yuque-plugin",
+      "name": "语雀",
+      "displayName": "语雀",
+      "category": "productivity",
+      "mainVersion": "0.0.4",
+      "summary": "语雀是阿里巴巴旗下的一款知识管理与文档协作平台，提供专业的云端知识库能力。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": true
+    },
+    {
+      "pluginCode": "linkedin-assistant",
+      "name": "LinkedIn",
+      "displayName": "LinkedIn",
+      "category": "social",
+      "mainVersion": "0.1.4",
+      "summary": "连接 LinkedIn，让智能体可以读取您的个人资料并向您的动态发布文本/文章/图片帖子。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "vercel-assistant",
+      "name": "Vercel",
+      "displayName": "Vercel",
+      "category": "development",
+      "mainVersion": "0.0.4",
+      "summary": "连接您的 Vercel 账户以查看项目、部署和构建日志，并排查部署问题",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "notion",
+      "name": "Notion",
+      "displayName": "Notion",
+      "category": "productivity",
+      "mainVersion": "1.2.3",
+      "summary": "连接 Notion，支持搜索页面、查询和管理数据库、创建/更新/删除内容、列出工作区用户，并在整个工作区中协作。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "huggingface-assistant",
+      "name": "HuggingFace",
+      "displayName": "HuggingFace",
+      "category": "ai-ml",
+      "mainVersion": "0.0.4",
+      "summary": "将 HuggingFace MCP 工具和 Skill 打包成插件，使智能体能够正确使用 HuggingFace Hub 的搜索、推理、仓库管理、Jobs、Webhooks 和 Discussions 功能。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "dingtalk-assistant",
+      "name": "钉钉",
+      "displayName": "钉钉",
+      "category": "communication-collaboration",
+      "mainVersion": "0.2.0",
+      "summary": "将钉钉官方 CLI（dws）、按产品域拆分的 Skills 与 Connector 集合为 Plugin，使 Agent 使用钉钉办公能力更加流畅。内置群聊、日历、待办、文档、AI 表格、听记、邮箱、通讯录、实时事件和综合办公等技能，按需加载上下文、路由更准。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "microsoft365-assistant",
+      "name": "Microsoft 365",
+      "displayName": "Microsoft 365",
+      "category": "productivity",
+      "mainVersion": "0.0.5",
+      "summary": "支持 Outlook 邮件、日历、联系人、OneDrive 文件、Teams 消息和 OneNote 笔记本的 Microsoft 365 集成插件。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "okki-aireach",
+      "name": "OKKI AiReach",
+      "displayName": "OKKI AiReach",
+      "category": "OKKI",
+      "mainVersion": "0.0.11",
+      "summary": "专注于外贸获客的智能体，擅长潜客挖掘、EDM内容策略与多渠道触达，助力业务高效拓客。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "okki-shops",
+      "name": "OKKI Shops",
+      "displayName": "OKKI Shops",
+      "category": "OKKI",
+      "mainVersion": "0.1.0",
+      "summary": "专为外贸B2B商家打造的数字营销智能体。现已上线社媒内容营销助手：全自动完成市场调研、竞品分析、内容策划、发布执行与评论维护，并每日推送数据日报——让社媒获客更高效、省心。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "okki-crm",
+      "name": "OKKI CRM",
+      "displayName": "OKKI CRM",
+      "category": "OKKI",
+      "mainVersion": "0.0.10",
+      "summary": "专注于外贸业务经营的智能体，擅长客户全生命周期管理、外贸商机及订单全链路跟进及追踪、经营数据洞察，助力业务持续稳健增长。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "shopline-plugin",
+      "name": "SHOPLINE",
+      "displayName": "SHOPLINE",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "1.7.0",
+      "summary": "从开店第一步到日常经营，用对话轻松搭建和管理 SHOPLINE 店铺。带你注册开店、准备商品、装修页面、做好上线准备，并协助管理订单、库存、折扣和经营数据。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "cocreate-pitch-2026",
+      "name": "CoCreate Pitch",
+      "displayName": "CoCreate Pitch",
+      "category": "Startup Competition",
+      "mainVersion": "0.0.8",
+      "summary": "CoCreate Pitch 2026 官方 AI 助手，陪你从一份出色的申请走向全球舞台。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "accio-com-buyer-assistant",
+      "name": "Accio 采购工具箱",
+      "displayName": "Accio 采购工具箱",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.20.0",
+      "summary": "您的 24/7 AI 采购（sourcing）团队。我们寻找最佳供应商、处理谈判，并管理从工厂到门口的订单。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "shopify-plugin",
+      "name": "Shopify",
+      "displayName": "Shopify",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.3.0",
+      "summary": "Shopify建站与运营插件：把 Agent 接入你的 Shopify 店铺，从0到发布上线，再到日常运营—选品寻源、目录与批量上架、店铺装修、营销（社媒发布、SEO+ AI 搜索曝光）、页面转化优化、店铺审计与日常巡店监控。所有改动都安全可控，店里改了什么，你始终一清二楚。 另支持通过 CLI 组织账户创建、列出和删除开发店；已连接店铺的日常操作继续使用 Connector。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "alibaba-com-seller-assistant",
+      "name": "国际站生意助手",
+      "displayName": "国际站生意助手",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.3.68",
+      "summary": "阿里巴巴国际站（Alibaba.com）跨境外贸B2B卖家经营助手，为国际站店铺/商家/卖家提供选品、发品、商品发布与优化、素材生成、店铺装修、RFQ 商机与报价、买家背调/客户调查、广告（P4P）、物流与关税、询盘分析、客户接待及店铺经营诊断/数据参谋等全链路 AI 解决方案。",
+      "contains_1688_metadata": false,
+      "broad_sourcing_keyword": true
+    }
+  ],
+  "1688_related": [
+    {
+      "pluginCode": "daze-store-manager-cli",
+      "name": "大泽店长工具",
+      "displayName": "大泽店长工具",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.20",
+      "summary": "支持批量复制商品并自动发布到店铺，让跨境铺货更省时省力。可从1688、Alibaba、Amazon等主流货源平台采集商品，一键发布到已授权的阿里巴巴国际站店铺。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": true
+    },
+    {
+      "pluginCode": "dsers-dropshipping-pro",
+      "name": "DSers",
+      "displayName": "DSers",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.4",
+      "summary": "用 Accio 找到商品，再通过 DSers 把它们转化为可持续增长的电商业务。支持从 AliExpress、1688 和 Alibaba.com 导入商品并连接到你的网店，统一管理供应商与订单，自动完成履约并同步物流信息，让选品、销售和发货在一套顺畅流程中完成。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "dxb",
+      "name": "店小宝",
+      "displayName": "店小宝",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "3.1.1",
+      "summary": "一键复制并发布商品，AI 智能处理图片，让跨境铺货更高效。支持从1688、Alibaba、Amazon、AliExpress、Made-in-China、Mercado Libre、军埔批发网等常见货源平台复制商品，并发布至授权店铺。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": true
+    },
+    {
+      "pluginCode": "1688-purchasing-assistant",
+      "name": "1688采购工具集",
+      "displayName": "1688采购工具集",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.9",
+      "summary": "为1688买家提供选品找货、找商找厂、询盘寻源、分销铺货、订单管理等一站式采购服务。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": false
+    },
+    {
+      "pluginCode": "1688-seller-assistant",
+      "name": "1688生意助手",
+      "displayName": "1688生意助手",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.20",
+      "summary": "为1688商家提供店铺绑定、诊断、商品与客户运营、选品找商等经营支持服务。",
+      "contains_1688_metadata": true,
+      "broad_sourcing_keyword": false
+    }
+  ]
+}

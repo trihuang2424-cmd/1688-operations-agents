@@ -1,0 +1,46 @@
+# 营销卖点图 sellingPointImage — Prompt 规则
+
+## Routing Header
+
+- **Load when**：用户对卖点图提出了具体要求（指定卖点、文案、排版风格等），需要构造英文 prompt 时。
+- **Do not load when**：用户未提任何要求（→ 不填 prompt，见 [`prompt-common.md`](prompt-common.md) §1）；用户要求纯场景/纯特写（→ 对应类型文件）。
+- **Hard stop**：卖点内容必须来自**商品真实数据**（标题/属性/卖点字段）或用户明确提供；严禁编造卖点、认证、参数。
+
+## 类型定义
+
+商品图上叠加英文卖点文案的营销图。目标：一图传达核心卖点，提升点击与转化。
+
+## Prompt 模板骨架（仅用户有要求时使用）
+
+将用户要求翻译为英文后填入两个槽位：
+
+```
+Marketing product image with clean English text overlay,
+primary headline (largest type): <L1: 核心卖点，≤4 词>,
+supporting points (smaller type): <L2: 1-2 条功能亮点，每条 ≤6 词，用 / 分隔>,
+<user_requirement: 用户的排版/风格要求英文描述（如有）>,
+clear typographic hierarchy, text placed in empty areas without covering the product,
+modern clean layout, product remains the main subject,
+1:1 square, product centered occupying 75%-80% of frame, English text only,
+no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims
+```
+
+**填充要点**：
+- **文案分层**：L1 核心卖点 **1 条、≤4 词、字号最大**；L2 功能亮点 **1–2 条、每条 ≤6 词、字号次级**。合计 2–3 条，过多则版面拥挤
+- 卖点来源优先级：用户明确给的 > 商品卖点字段（productSellingPoint）> 标题/属性中可提炼的事实
+- 中文卖点必须译为英文（"意式极简设计" → "Italian Minimalist Design"）
+- 文案排布在画面留白处，不得遮挡产品主体
+- ⛔ "no promotional claims" 指禁止促销话术（折扣/包邮/限时），**事实性卖点**（材质、功能、认证）不受限——但认证类卖点（CE、ISO 等）必须在商品数据中真实存在
+
+## 示例
+
+| 用户要求 | prompt |
+|---|---|
+| （未提要求） | **不填** |
+| "突出可定制和耐用两个卖点" | `Marketing product image with clean English text overlay, primary headline (largest type): Fully Customizable, supporting points (smaller type): Durable Solid-Wood Craftsmanship, clear typographic hierarchy, text placed in empty areas without covering the product, modern clean layout, product remains the main subject, 1:1 square, product centered occupying 75%-80% of frame, English text only, no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims` |
+
+## 红线
+
+- 严禁编造卖点/认证/参数；每条卖点必须能溯源到商品数据或用户输入
+- 严禁促销话术（"Free shipping" / "50% off" / "Limited time"）
+- 其余见 [`prompt-common.md`](prompt-common.md) §4

@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "created_at": "2026-10-28T13:45:36.088646+08:00",
+  "status": "archived_not_active",
+  "backup": "outputs/legacy-entry-cleanup-20261028/before.tar.gz",
+  "active_agent_directories": [
+    "image-agent",
+    "operations_director",
+    "product_operations",
+    "traffic_operations"
+  ],
+  "entries": [
+    {
+      "legacy_id": "aftersales_specialist",
+      "original_path": "agents/aftersales_specialist/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/aftersales_specialist/ENTRY.md",
+      "sha256": "f3ffd6df627737479d9ad358fae5ff34910dae5b7ddd99b5f6b14c5a333475c5"
+    },
+    {
+      "legacy_id": "buyer_order_assistant",
+      "original_path": "agents/buyer_order_assistant/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/buyer_order_assistant/ENTRY.md",
+      "sha256": "e8b0283faa51cf05459a5e21137bac2eea4252b593096f72c8a803ab620ab0e4"
+    },
+    {
+      "legacy_id": "company_due_diligence",
+      "original_path": "agents/company_due_diligence/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/company_due_diligence/ENTRY.md",
+      "sha256": "d30436980e79ff46f9daf69f81bf24355696c8da6eab20a279f1002cd3dcda81"
+    },
+    {
+      "legacy_id": "competition_analyst",
+      "original_path": "agents/competition_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/competition_analyst/ENTRY.md",
+      "sha256": "267ed8ad93f224226af736099467eb7a270a978b12acd3fd2b85a314ff9bb8f0"
+    },
+    {
+      "legacy_id": "connection_administrator",
+      "original_path": "agents/connection_administrator/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/connection_administrator/ENTRY.md",
+      "sha256": "2881c62496e145ed4752dcdc1fabd4ddd212726ad1ced33f9be329321266dc6d"
+    },
+    {
+      "legacy_id": "creative_studio",
+      "original_path": "agents/creative_studio/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/creative_studio/ENTRY.md",
+      "sha256": "26e01b2e176b90b9cef6239f6632996e5010f71b14ed0a7d96815f679ce3f800"
+    },
+    {
+      "legacy_id": "crm_manager",
+      "original_path": "agents/crm_manager/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/crm_manager/ENTRY.md",
+      "sha256": "25c3837f294d9f8e4ba6927c5eb60d35dedb5a2d377ebcb41a0dbbe0321b1706"
+    },
+    {
+      "legacy_id": "cross_platform_distribution",
+      "original_path": "agents/cross_platform_distribution/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/cross_platform_distribution/ENTRY.md",
+      "sha256": "09113bff7d09d347778abc376a3e6169bf9190e93ca60e9ca1754e5d07a6f8c0"
+    },
+    {
+      "legacy_id": "daily_report",
+      "original_path": "agents/daily_report/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/daily_report/ENTRY.md",
+      "sha256": "a95005e889ee07a93548b245fd928f6db968a7049d2254f6425c5aa81caf3634"
+    },
+    {
+      "legacy_id": "distribution_operator",
+      "original_path": "agents/distribution_operator/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/distribution_operator/ENTRY.md",
+      "sha256": "9cccb6d90c01784bc10d7c162d60799e5bb0aaecc1b0c68119a9223f861e7726"
+    },
+    {
+      "legacy_id": "erp_jackyun_analyst",
+      "original_path": "agents/erp_jackyun_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/erp_jackyun_analyst/ENTRY.md",
+      "sha256": "085437d5da9a51a993acb5cbc7803d2b2429c25850d0ca0d40d5f233c2ec4f8b"
+    },
+    {
+      "legacy_id": "erp_jushuitan_analyst",
+      "original_path": "agents/erp_jushuitan_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/erp_jushuitan_analyst/ENTRY.md",
+      "sha256": "b7c1a24cb82a83fbbe79fcbec104b626e0d1d357de4cba0bb61f9cb1d16a5a99"
+    },
+    {
+      "legacy_id": "fulfillment_specialist",
+      "original_path": "agents/fulfillment_specialist/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/fulfillment_specialist/ENTRY.md",
+      "sha256": "4b974632cd82fcfd8ab6da0b2412f835a21d519efd1428b1b24b2728bcf2c8e0"
+    },
+    {
+      "legacy_id": "inquiry_analyst",
+      "original_path": "agents/inquiry_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/inquiry_analyst/ENTRY.md",
+      "sha256": "1dd2208993fddcb34ea199cda59b94db50d117cb20b8c3994af23cc2611317db"
+    },
+    {
+      "legacy_id": "invoice_assistant",
+      "original_path": "agents/invoice_assistant/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/invoice_assistant/ENTRY.md",
+      "sha256": "26a2345edc595dc5abcd1f8405fb25981c7ff0a5c37cdcca7d86a8ccebc2b2c3"
+    },
+    {
+      "legacy_id": "listing_publisher",
+      "original_path": "agents/listing_publisher/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/listing_publisher/ENTRY.md",
+      "sha256": "9474272ba6669d34911de8bb332fd0c6218dbb214adab835edebeae2177a3322"
+    },
+    {
+      "legacy_id": "market_opportunity",
+      "original_path": "agents/market_opportunity/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/market_opportunity/ENTRY.md",
+      "sha256": "28d4e3f837822422a8ee8b75ab94ecb2fd0e69adc94ef35389de7041843f5747"
+    },
+    {
+      "legacy_id": "merchandising_analyst",
+      "original_path": "agents/merchandising_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/merchandising_analyst/ENTRY.md",
+      "sha256": "865348a7e2a9de00dfb4f1cd7140591f4a6ae8ad711c2fed1812e87868f9b9b4"
+    },
+    {
+      "legacy_id": "outreach_operator",
+      "original_path": "agents/outreach_operator/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/outreach_operator/ENTRY.md",
+      "sha256": "0579e2bd95543a9ed706c8e9abb58fb0c6129610c243e13c2c6283484290c2d5"
+    },
+    {
+      "legacy_id": "platform_knowledge",
+      "original_path": "agents/platform_knowledge/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/platform_knowledge/ENTRY.md",
+      "sha256": "aa9a930fa8fdc56327150aaf33e9e29c84ac1133fe795cd1d7d58263ce5ade3b"
+    },
+    {
+      "legacy_id": "platform_support",
+      "original_path": "agents/platform_support/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/platform_support/ENTRY.md",
+      "sha256": "6b7020c2b1b111bba781981d03bc24856c4cdad30acba4d0dc6c34d3dbb5daaf"
+    },
+    {
+      "legacy_id": "product_editor",
+      "original_path": "agents/product_editor/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/product_editor/ENTRY.md",
+      "sha256": "e3fed1b08db7d47ae9e22b97346e40e66504e7a3036e2afdd3ce94fdcea0ad4e"
+    },
+    {
+      "legacy_id": "profit_analyst",
+      "original_path": "agents/profit_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/profit_analyst/ENTRY.md",
+      "sha256": "3f0f9ee68bc85e4c85f21c703bdc4d42eabeed5ee74851ff366584d12a6e73ed"
+    },
+    {
+      "legacy_id": "quotation_designer",
+      "original_path": "agents/quotation_designer/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/quotation_designer/ENTRY.md",
+      "sha256": "f7fbcd8a18279d187f6910a01e6b348a09a8e4715b7c9f47b3b9bab3a6ad0002"
+    },
+    {
+      "legacy_id": "reception_coach",
+      "original_path": "agents/reception_coach/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/reception_coach/ENTRY.md",
+      "sha256": "84e476dd03196f83ea5e3bebef8d7bbd98fdc90cae94d3b8a1de9a2405376b88"
+    },
+    {
+      "legacy_id": "report_designer",
+      "original_path": "agents/report_designer/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/report_designer/ENTRY.md",
+      "sha256": "33a2c77a29c7edf71969620e64d39eefdcde7a315270f6b0465e90ad42f6c857"
+    },
+    {
+      "legacy_id": "sourcing_advisor",
+      "original_path": "agents/sourcing_advisor/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/sourcing_advisor/ENTRY.md",
+      "sha256": "f734b05edfe9c1b6cc63d25abc8d263f7db68102361488e3e5fd7bc1d470178c"
+    },
+    {
+      "legacy_id": "store_analyst",
+      "original_path": "agents/store_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/store_analyst/ENTRY.md",
+      "sha256": "0c8273ee061d394cadacb52d5f11c4971656a11f30a69d34d1504898a53fcee1"
+    },
+    {
+      "legacy_id": "title_optimizer",
+      "original_path": "agents/title_optimizer/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/title_optimizer/ENTRY.md",
+      "sha256": "4e64d99975378752bf84b5851206e4a3c6382da92945463f2eeaa77bf22fdbf8"
+    },
+    {
+      "legacy_id": "traffic_analyst",
+      "original_path": "agents/traffic_analyst/AGENTS.md",
+      "archived_path": "archive/legacy-agent-entries/traffic_analyst/ENTRY.md",
+      "sha256": "26797fa7525a960b4e62aa6ff5ec5ee7285c6ebd2789abde3a6b6b628e6ee700"
+    }
+  ],
+  "note": "30 old compatibility entry bodies preserved byte-for-byte as ENTRY.md; no symlinks or AGENTS.md remain at their former agent paths. Source business rules and image assets remain unchanged."
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-28",
+  "backup": "outputs/routing-refactor-20261028/context-documents-before.tar.gz",
+  "scope": "Only section six routing may change; original prefix and suffix remain byte-identical.",
+  "files": [
+    {
+      "path": "01-店铺接手摸底待办.md",
+      "sha256": "5eac819170517cb878df280d7640eaae4fe24263439b2688f9e6f9ad3643faa9",
+      "preserved_prefix_sha256": "5ce1d187d498ddc02803b74e88c5984455fde5de1099e28ed0b3a70459bbb05d",
+      "preserved_suffix_sha256": "6c45f8ed7775fcec95fe2e1eedaab07b40e3918824320754277b2c49db997fe0"
+    },
+    {
+      "path": "浙江淞泰科技-接手摸底-20261016.md",
+      "sha256": "67ff0dd70e33c170af754eb9b2fb66195dbd929d8dd45fb9b0592392c3417be7",
+      "preserved_prefix_sha256": "ee333a2fe6e96e724d55335254a3fcd5e85c8cdeebee9278d3eb76ed0ad2d48b",
+      "preserved_suffix_sha256": "52ab49df267ee356802e03b4d10acbf539e13af3a284f04c1bc55f129c268ca2"
+    }
+  ]
+}

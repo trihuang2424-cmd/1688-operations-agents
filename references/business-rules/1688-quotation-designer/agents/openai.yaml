@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 智能报价设计师"
+  short_description: "已生效报价查看、可编辑报价草稿、公式保存和对话模拟"
+  default_prompt: "使用 $1688-quotation-designer 处理我的智能报价设计师任务，并列出真实依据与已完成结果。"

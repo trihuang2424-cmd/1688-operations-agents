@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "date": "2026-10-25",
+  "offline_only": true,
+  "agent_count": 31,
+  "tool_count": 205,
+  "source_files_hash_checked": 2460,
+  "source_skill_entries": 107,
+  "design_prompt_count": 265,
+  "errors": []
+}

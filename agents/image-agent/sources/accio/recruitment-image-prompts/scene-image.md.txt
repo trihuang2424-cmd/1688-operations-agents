@@ -1,0 +1,52 @@
+# 场景图 sceneImage — Prompt 规则
+
+## Routing Header
+
+- **Load when**：用户对场景图提出了具体要求（使用场景、环境、氛围、光线、风格等），需要构造英文 prompt 时。
+- **Do not load when**：用户未提任何要求（→ 不填 prompt，见 [`prompt-common.md`](prompt-common.md) §1）；用户要求的是细节特写（→ detail-image.md）或卖点文案图（→ selling-point-image.md）。
+- **Hard stop**：不得改变商品本体（形状、颜色、材质、logo、结构细节）；只允许描述环境与摆放。
+
+## 类型定义
+
+商品置于真实使用场景中的生活化展示图。目标：让买家直观理解商品的使用环境与尺寸感，商品仍是画面绝对主体。
+
+## Prompt 模板骨架（仅用户有要求时使用）
+
+将用户要求翻译为英文后填入 `<user_requirement>`：
+
+```
+Place the product in <user_requirement: 英文场景描述，含环境/氛围/光线/关键背景元素>,
+the product must rest on a physically plausible supporting surface with a visible contact shadow
+and ambient occlusion matching the light direction, must not float or hover in mid-air,
+and must be realistically scaled to the environment,
+presented with a carrier a real person would actually use in that scene,
+natural realistic lighting and shadows consistent with the environment,
+commercial product photography style,
+1:1 square, product centered occupying 75%-80% of frame, English text only,
+no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims
+```
+
+**填充要点**：
+- 场景要具体（"modern living room with light oak flooring" 优于 "nice room"）
+- 用户给的中文场景名精确直译（"电商仓库打包台" → "e-commerce warehouse packing station"）
+- 光线与商品在场景中的物理合理性（有影子、比例正确）可主动补足——这是视觉执行选择，不算编造事实
+
+**物理真实性（模板已内置，不可删减）**：
+- 禁悬浮：产品必须有明确支撑物与接触点
+- 接地阴影：contact shadow + ambient occlusion，方向与光源一致
+- 合理比例：不得因场景道具暗示错误尺寸
+
+**载体-场景一致性**：摆放载体必须是真人在该场景中会真实使用的（穿在模特身上 / 置于展示架 / 放在台面等）；避免语境荒谬的载体组合，如户外跑道上的衣架、沙滩上的人台模特、厨房台面上的珠宝托盘。用户指定载体时以用户为准。
+
+## 示例
+
+| 用户要求 | prompt |
+|---|---|
+| （未提要求） | **不填** |
+| "场景放在明亮的现代客厅" | `Place the product in a bright modern living room with soft natural daylight, the product must rest on a physically plausible supporting surface with a visible contact shadow and ambient occlusion matching the light direction, must not float or hover in mid-air, and must be realistically scaled to the environment, presented with a carrier a real person would actually use in that scene, natural realistic lighting and shadows, commercial product photography style, 1:1 square, product centered occupying 75%-80% of frame, English text only, no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims` |
+
+## 红线
+
+- 场景中不得出现可识别的品牌元素、他人商标
+- 不得通过场景暗示虚假规格（如故意缩小参照物夸大商品尺寸）
+- 其余见 [`prompt-common.md`](prompt-common.md) §4

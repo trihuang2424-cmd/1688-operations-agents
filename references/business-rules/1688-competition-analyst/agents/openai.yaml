@@ -1,0 +1,6 @@
+interface:
+  display_name: "竞店竞品分析师"
+  short_description: "分析1688竞店、同款竞品、买家流失和价格带；仅使用实际可获得的竞争数据。"
+  default_prompt: "使用 $1688-competition-analyst，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

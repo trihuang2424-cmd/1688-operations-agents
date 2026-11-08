@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 连接与平台维护"
+  short_description: "按需检查连接与平台组件依赖，保留授权路由条件和业务接口边界"
+  default_prompt: "使用 $1688-platform-maintenance 核查当前任务相关的连接或组件问题，并说明可执行范围和缺口。"
+

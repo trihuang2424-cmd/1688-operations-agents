@@ -1,0 +1,170 @@
+# 生产流程图 processImage — Prompt 规则
+
+> 本文改编自通用 `image-prompt-guide` 的 `references/process-flow.md`，按定招套图链路的调用形态（`image_generation` + `tasks[].prompt`）做了适配。
+>
+> ✅ **后端已支持**：`processImage` 与其他四类同批提交、不填 prompt 时正常返回图片 URL，产出为多阶段流程图（编号唯一、箭头单向、英文文案）。默认流程无需任何额外处理。
+
+## Routing Header
+
+- **Load when**：用户对生产流程图提出了具体要求（指定工序、阶段数、流程方向等），需要构造英文 prompt 时。
+- **Do not load when**：用户未提任何要求（→ **不填 prompt**，见 [`prompt-common.md`](prompt-common.md) §1，由 rlab 内置逻辑按品类生成）；用户要的是 OEM 规格图/尺寸图（本链路不支持，引导用通用图片能力）；用户要的是卖点功能图（→ [`selling-point-image.md`](selling-point-image.md)）。
+- **Hard stop**：严禁编造商品事实、隐藏工艺细节、具体材料牌号或认证资质；只能推断对**可见商品类型与类目**而言合理的工序。
+
+## 类型定义
+
+从原材料到成品的制造工序信息图。以 3–6 个核心工序阶段呈现，每阶段含真实感工序照片 + 标题 + 一句话操作说明，用单向箭头顺序连接。目标：传达生产实力与工艺可信度。
+
+> **与细节图的区别**：细节图是商品局部特写；生产流程图是"它是怎么造出来的"的多阶段流程图。
+> **与卖点图的区别**：卖点图突出营销卖点；生产流程图讲述生产历程。
+
+---
+
+## 1. 默认不填 prompt（与其他类型一致）
+
+套图默认流程（用户未对流程图提要求）→ **task 中省略 `prompt` 字段**：
+
+```json
+{ "imageType": "processImage" }
+```
+
+⛔ 严禁在用户没有要求时自行编写工序列表填入 prompt。
+
+---
+
+## 2. 工序确认规则（仅用户指定时）
+
+| 情形 | Agent 行为 |
+|---|---|
+| **用户未提要求**（默认流程） | **不填 prompt、不确认工序**，直接提交 task |
+| **用户明确列出了工序**（如"要显示裁剪、缝制、质检三步"） | 直接采用用户工序，仅做措辞适配（译为英文、控制字数），**无需确认** |
+| **用户要求生成流程图但未指定工序** | 按品类推断 3–6 个工序，**必须先向用户确认工序方案，确认后才生成** |
+| **用户只给了部分工序** | 以用户工序为核心，补齐其余；**补充部分需确认** |
+
+**确认弹窗规格**（仅在 Agent 推断/补充工序时）：
+
+⛔ **这是工具调用，不是文字输出**（与 [`topic-query.md`](../topic-query.md) §9.6.1.1 同款约束）：「弹窗」= 发起一次 `ask_user` 工具调用。在正文里写出工序清单和"确认生成 / 修改工序"两个选项然后结束回复 = **未弹窗 = 违规**。
+
+- `mode`: `"form"`
+- `questions`: 长度为 **1** 的数组：
+
+| 字段 | 取值 |
+|---|---|
+| `question` | `根据商品与类目，建议的生产流程如下：<br>Step 1: {English Title} — {English Description}<br>Step 2: …（逐步列出全部工序）<br>是否按此方案生成？` |
+| `header` | `确认工序` |
+| `options` | **固定 2 项**：① `label: "确认生成"` / `description: "按上述工序生成流程图"`；② `label: "修改工序"` / `description: "回复你想要的工序，如「裁剪、缝制、质检」"` |
+| `recommended` | `0` |
+| `allowSkip` | `true`（跳过 = 不填 prompt 走默认生成） |
+| `multiSelect` | `false` |
+
+- 工序清单**放在 `question` 正文里**（用 `<br>` 分行），不要拆成多个 option
+- 用户选"修改工序"或经「其他」输入框直接给出工序 → 视为"用户明确列出工序"，直接执行，**不再二次确认**
+- **只确认一轮**，用户确认或修改后不再追问
+- ⚠️ 批量多品场景：逐品确认会造成连续弹窗，此时**改为不填 prompt** 走默认生成
+- ⛔ 弹窗前后不解释"为什么需要确认工序"（见 SKILL.md §4「执行纪律不得外化」）
+
+---
+
+## 3. 品类 → 工序参考映射
+
+| 商品类目 | 工序示例 |
+|---|---|
+| 纺织 / 服饰 | Raw Fabric → Cutting → Sewing → Finishing → Inspection |
+| 陶瓷 / 陶器 | Clay Preparation → Shaping → Drying → Glazing → Firing → Quality Check |
+| 金属 / 五金 | Material Cutting → Forging/Molding → Machining → Surface Treatment → Assembly |
+| 木材 / 家具 | Timber Selection → Cutting → Shaping → Assembly → Surface Finish |
+| 电子 / 数码 | PCB/Shell Prep → Component Assembly → Soldering → Testing → Packaging |
+| 食品 / 饮料 | Ingredient Prep → Mixing → Processing → Packaging → Quality Control |
+
+**规则**：
+- 阶段数必须在 **3–6** 之间
+- 每个阶段必须是该商品制造逻辑中真实、连贯的一步
+- 阶段必须单向推进，无循环、无分支、无跳号
+
+---
+
+## 4. 工序文案输出规范
+
+每个阶段产出两部分，**直接用英文**：
+
+1. **Stage Title** — 简洁短语，2–6 个英文单词
+2. **Stage Description** — 一句话描述具体操作，≤10 个英文单词
+
+英文会直接出现在图上，务必简短清晰。
+
+示例（陶瓷马克杯）：
+
+| # | Stage Title | Stage Description |
+|---|---|---|
+| 1 | Clay Mixing | Select and blend clay materials |
+| 2 | Shaping | Form the cup body on a wheel |
+| 3 | Bisque Firing | Fire once to harden the body |
+| 4 | Glazing | Apply glaze evenly to surface |
+| 5 | Glaze Firing | Final firing to finish the mug |
+
+---
+
+## 5. Prompt 模板（仅用户有要求时填入 `tasks[].prompt`）
+
+将 `<process_num>` 替换为实际阶段数，工序列表逐行嵌入：
+
+```
+Create a manufacturing process infographic showing how the product in the reference image is made. The infographic MUST contain exactly <process_num> core stages, no more and no fewer.
+
+Process stages (<process_num> total):
+
+Step 1: {English Title} — {English Description}
+Step 2: {English Title} — {English Description}
+...
+Step <process_num>: {English Title} — {English Description}
+
+## Generation Requirements:
+
+### Stage Count (Most Important):
+- The number of stages in the flowchart must be strictly equal to <process_num>. Do not add or remove any stages.
+- Each stage's content must correspond one-to-one with the user description above. Do not invent extra steps.
+
+### Numbering (Strictly Unique):
+- Every stage must be clearly labeled with a unique number, starting from 1 and increasing to <process_num>.
+- Each number may appear only once in the entire image. Duplicate numbers (e.g., two Step 3 labels) are forbidden.
+- Each number must correspond to exactly one realistic stage photo and one stage description.
+- The final image must contain exactly Step 1 through Step <process_num>, with no missing and no extra numbers.
+
+### Arrow Direction:
+- All stages must be connected in sequence by single-direction arrows: Step 1 → Step 2 → Step 3 → ... → Step <process_num>.
+- Arrow direction must only point from the previous stage to the next stage (forward progression). No bidirectional arrows, looping arrows, or skipping arrows.
+
+### Overall Style:
+- Clean industrial-manufacturing infographic style; photorealistic and intuitive; tidy background; uniform typography.
+- Each stage includes: number + title + key point label + corresponding realistic photo.
+- Image and text layout must not block key information.
+- All text on the image must be in English and clearly legible.
+- Ensure every stage photo in the flowchart is realistic and true-to-life.
+```
+
+**使用方式**：上述整块作为 `tasks[].prompt` 的完整值，**不要再拼接其他场景描述或卖点排版要求**。
+
+⚠️ **红线短语**：本类型豁免 `product centered occupying 75%-80%` 与 `no collage`（流程图本就是多格拼接、商品不居中），**其余红线短语仍须附加**——即在上述模板末尾补：
+
+```
+1:1 square, English text only, no watermark, no border, no contact info, no URL, no QR code, no promotional claims
+```
+
+上句"不要再拼接其他要求"指**不要拼场景/卖点类的内容描述**，不含红线短语。
+
+---
+
+## 6. 品类适配与降级
+
+- 生产流程图适用于**有明确制造工艺的实体商品**；**所有品类一律按五类固定序生成本类型，不做品类适配性跳过**——由 rlab 内置逻辑按品类自动推断工序
+- **底图要求**：需要有可识别商品的底图。**定招主题图兜底算有效底图**（主题图为真实商品图，足以让模型识别品类并推断工序），因此 0 张图的草稿走主题图兜底时**照常生成流程图**；仅当**连主题图兜底都不可用**（走 E-25）时才不生成
+
+---
+
+## 7. 验收要点
+
+- 阶段数在 3–6 且与规划一致
+- 每阶段编号唯一、连续，无重复无跳号
+- 箭头单向前进，形成一条连续链路
+- 阶段标题与描述为英文且清晰可读
+- 阶段照片写实，非插画或图标
+- 保留参考图中的商品identity

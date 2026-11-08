@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 运营总控"
+  short_description: "统筹完整周月诊断、逐链接行动与到期评估，持续跟踪重点产品"
+  default_prompt: "使用 $1688-operations-director 根据当前策略和未完成措施组织本轮运营并验收结果。"
+

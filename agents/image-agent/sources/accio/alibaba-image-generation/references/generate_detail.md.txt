@@ -1,0 +1,135 @@
+---
+name: generate-detail
+description: 生成图片商品的具体细节特写，结果路径保存在json中。调用细节特写生成服务处理图片，输入一张商品图片，输出生成的细节特写图片路径。当用户需要查看商品细节、生成商品特写、展示产品细节时使用。
+---
+
+# 商品细节特写生成
+
+## 功能说明
+
+本 Skill 用于生成商品图片的具体细节特写，帮助展示产品的精细特征，适用于电商产品详情展示。
+
+## 使用流程
+
+### 1. 准备输入
+
+- 输入：一张商品图片（支持常见格式：JPG、PNG、WEBP 等）
+- 图片路径：用户提供的图片文件路径
+- 细节描述：用户希望放大展示的细节区域（如"拉链"、"缝线"、"鞋底纹理"等）
+
+### 2. 参数校验（前置拦截）
+
+**在调用图像工具之前，必须先校验必传参数。如果参数为空，不发起请求，直接提示用户。**
+
+| 必传参数 | 校验规则 | 缺失时处理 |
+|---------|---------|-----------|
+| `imageUrl` | 用户提供的图片 URL，不可为空 | 终止流程，提示"请提供需要生成细节特写的商品图片" |
+
+### 3. 调用图像工具
+
+细节特写生成使用 `image_edit` 工具的 `simple_generation` task_type：
+
+```
+工具：image_edit
+task_type：simple_generation
+参数：
+  imageUrl: "<图片URL>"
+  prompt: "<细节描述 + 固定约束文案>"
+```
+
+**参数说明：**
+- `imageUrl`：输入图片的 URL 地址
+- `prompt`：细节 prompt，由用户描述与固定约束文案拼接而成
+
+**Prompt 构建：**
+
+用户/Agent 生成部分示例：
+
+```
+Zoom in on the zipper and stitching details
+```
+
+或中文描述：
+
+```
+放大展示拉链和缝线细节
+```
+
+固定拼接文案：
+
+```
+A detail image is purely a local zoom-in based on the original product image — nothing more. Only crop and enlarge the existing detail area from the original image. Do NOT add any text, captions, typography, or layout design. Do NOT generate, add, or fabricate any visual elements that do not exist in the original image.
+```
+
+完整 prompt 结构：
+
+```
+{用户/Agent 的细节描述 prompt} + A detail image is purely a local zoom-in based on the original product image — nothing more. Only crop and enlarge the existing detail area from the original image. Do NOT add any text, captions, typography, or layout design. Do NOT generate, add, or fabricate any visual elements that do not exist in the original image.
+```
+
+**返回示例：**
+
+工具直接返回处理后的图片 URL：
+
+```json
+{
+  "imageUrl": "https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png"
+}
+```
+
+### 4. 输出结果
+
+**重要：获取到处理结果后，按照以下格式向用户展示，不要直接返回原始 JSON。**
+
+**输出格式：**
+
+```
+已经帮你生成图片
+
+![]({图片URL})
+```
+
+**输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)
+
+- ✅ 正确：按上述格式输出，包含图片预览和创意工坊链接
+- ❌ 错误：直接返回 JSON 或只返回图片 URL
+
+## 注意事项
+
+1. 细节图只负责局部放大，不叠加卖点文案、不进行排版设计。
+2. **严禁凭空生成内容**：只能对原图中已存在的细节进行放大展示，不得添加原图中没有的纹理、结构、标签、文字或任何视觉元素。
+3. **遮挡部位禁止推测**：对于原图中被遮挡/隐藏的部位，严禁推测、还原或想象，仅对原图中实际可见的区域进行裁切放大。
+4. 商品主体一致性是核心要求：生成的细节图必须与原图中的商品主体完全一致。
+5. 处理失败时按 SKILL.md 中的错误处理规则执行。
+
+## 使用示例
+
+**场景：生成商品细节特写**
+
+用户："帮我生成这张商品图片的细节特写"
+
+执行步骤：
+1. 获取用户提供的图片路径
+2. 构建细节 prompt（用户描述 + 固定约束文案）
+3. 调用 `image_edit`，`task_type: simple_generation`，传入原图与 prompt
+4. 返回最终结果
+
+**示例调用：**
+
+```
+工具：image_edit
+task_type：simple_generation
+参数：
+  imageUrl: "https://sc01.alicdn.com/kf/H5b56916614944dafaa06ea9f03aff8979.jpg"
+  prompt: "放大展示商品细节。A detail image is purely a local zoom-in based on the original product image — nothing more. Only crop and enlarge the existing detail area from the original image. Do NOT add any text, captions, typography, or layout design. Do NOT generate, add, or fabricate any visual elements that do not exist in the original image."
+```
+
+**成功后输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)

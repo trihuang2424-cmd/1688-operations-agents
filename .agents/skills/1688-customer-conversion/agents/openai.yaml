@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 客户运营与转化"
+  short_description: "查询客户库和系统客群，筛选客户、准备运营计划，并按具体授权触达"
+  default_prompt: "使用 $1688-customer-conversion 查看当前店铺客户库、高成交意向与流失预警计划，并给出跟进建议。"
+

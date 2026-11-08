@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 竞争与市场研究"
+  short_description: "按任务研究竞店竞品与市场机会，保留可比口径和完整来源条件"
+  default_prompt: "使用 $1688-market-research 围绕指定商品或品类研究竞争与市场机会，并交付可追溯的候选。"
+

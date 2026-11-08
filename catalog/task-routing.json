@@ -1,0 +1,3815 @@
+{
+  "version": "2.4.0",
+  "date": "2026-10-30",
+  "authority": "当前任务职责与能力路由的唯一维护源；root/skill/role入口引用本表",
+  "selection": "按用户目标和对象选route，复合任务可选多条；不是全量每日必跑清单，也不是自动关键词匹配程序",
+  "rules_preservation": "来源原文保持不变；用户已授权的限定条款修正按 approved_rule_overrides 执行，其他业务步骤/参数/前置/免责声明继续有效",
+  "routes": [
+    {
+      "id": "daily_operations",
+      "intent": "每日运营、人工执行进度、到期措施评估及公司重点产品投流日检；新策略须有证据",
+      "owner": "operations_director",
+      "capability": "operating_cycle",
+      "skill": ".agents/skills/1688-operations-director/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-operations-director/RULES.md"
+      ],
+      "optional_capabilities": [
+        "business_analysis"
+      ],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "monitoring_routes": [
+        "conversion_monitoring"
+      ],
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [
+            "references/business-rules/1688-operations-director/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+          ],
+          "rules": [
+            "references/business-rules/1688-operations-director/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/operating-cycle.md#每日运营",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/operating-cycle.md#每日运营",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "weekly_review",
+      "intent": "完整周对比前4周同星期基线并辅比上周，先形成销售变化结论，再逐链接行动及到期评估",
+      "owner": "operations_director",
+      "capability": "operating_cycle",
+      "skill": ".agents/skills/1688-operations-director/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-operations-director/RULES.md"
+      ],
+      "optional_capabilities": [
+        "business_analysis",
+        "reporting"
+      ],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "monitoring_routes": [
+        "conversion_monitoring"
+      ],
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [
+            "references/business-rules/1688-operations-director/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/operating-cycle.md#每周效果检查",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/operating-cycle.md#每周效果检查",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "monthly_review",
+      "intent": "完整自然月对比前一完整月，结合总量与日均形成经营结论，安排链接行动并总结公司重点产品",
+      "owner": "operations_director",
+      "capability": "operating_cycle",
+      "skill": ".agents/skills/1688-operations-director/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-operations-director/RULES.md"
+      ],
+      "optional_capabilities": [
+        "business_analysis",
+        "reporting"
+      ],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "monitoring_routes": [
+        "conversion_monitoring"
+      ],
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [
+            "references/business-rules/1688-operations-director/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/operating-cycle.md#每月经营复盘",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/operating-cycle.md#每月经营复盘",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-operations-director/SKILL.md",
+            "references/operating-cycle.md#持久记录及读取顺序",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "inquiry",
+            "crm",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "daily_metrics",
+      "intent": "单日经营日报与交易/流量/买家指标",
+      "owner": "operations_director",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-daily-report/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-daily-report/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-daily-report/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-daily-report/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "period_analysis",
+      "intent": "长周期经营、活动、卖家退款与健康分析",
+      "owner": "operations_director",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-store-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [
+            "references/business-rules/1688-store-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [
+            "references/business-rules/1688-store-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论"
+          ],
+          "rules": [
+            "references/business-rules/1688-store-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "profit_analysis",
+      "intent": "成本、净销售额、退款及利润分析",
+      "owner": "operations_director",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-profit-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-profit-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-profit-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-profit-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "product_diagnosis",
+      "intent": "商品定位、异常诊断及库存预警核实",
+      "owner": "product_operations",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-merchandising-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/sales-growth-workflow.md#决策与阶段交付"
+          ],
+          "rules": [
+            "references/business-rules/1688-merchandising-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "stock_warning",
+            "scoring",
+            "sales_fields",
+            "images",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "prepare_selected_image_asset",
+              "when": "已选择图片动作并完成必要参考与事实核查，且用户已有范围包含物料准备；否则交精确缺项或下一步。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/sales-growth-workflow.md#决策与阶段交付"
+          ],
+          "rules": [
+            "references/business-rules/1688-merchandising-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "stock_warning",
+            "scoring",
+            "sales_fields",
+            "images",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "evidence",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "prepare_selected_image_asset",
+              "when": "已选择图片动作并完成必要参考与事实核查，且用户已有范围包含物料准备；否则交精确缺项或下一步。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-merchandising-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "stock_warning",
+            "scoring",
+            "sales_fields",
+            "images",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "title_optimization",
+      "intent": "商品标题与关键词优化；需要应用时进入变更执行",
+      "owner": "product_operations",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-title-optimizer/RULES.md",
+        "references/business-rules/1688-product-editor/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+          ],
+          "rules": [
+            "references/business-rules/1688-title-optimizer/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "title_keywords",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-title-optimizer/RULES.md",
+            "references/business-rules/1688-product-editor/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "title_keywords",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "title_keywords",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-title-optimizer/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "title_keywords",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "title_keywords",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-title-optimizer/RULES.md",
+              "references/business-rules/1688-product-editor/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-title-optimizer/RULES.md",
+              "references/business-rules/1688-product-editor/RULES.md"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "product_change",
+      "intent": "现有商品基础属性、主图、整商品上下架等受支持修改",
+      "owner": "product_operations",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-product-editor/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "limitations": [
+        "当前销售信息字段仍需后台手动编辑，不能用基础属性代替SKU/阶梯价格"
+      ],
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+          ],
+          "rules": [
+            "references/business-rules/1688-product-editor/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-product-editor/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-product-editor/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-product-editor/RULES.md"
+            ]
+          }
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-product-editor/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-product-operations/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-product-editor/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-product-editor/RULES.md"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "product_images",
+      "intent": "商品主副图、详情图、已有图片编辑和视觉概念",
+      "owner": "product_operations",
+      "capability": "image",
+      "skill": "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-creative-studio/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "entry": "agents/image-agent/AGENTS.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#决策与阶段交付"
+          ],
+          "rules": [
+            "references/business-rules/1688-creative-studio/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "images"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "produce_reviewable_image",
+              "when": "设计方案已经形成且已有范围覆盖物料制作；沿用既定图片后端及必要审核，不因路由选择获得生成授权。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+            "references/execution-protocol.md",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#决策与阶段交付"
+          ],
+          "rules": [
+            "references/business-rules/1688-creative-studio/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "images"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "asset",
+            "deliverables": {
+              "asset": {
+                "requirements": [
+                  "交付真实可访问的成稿文件或URL、版本和参考素材；设计说明或提示词不能冒充图片成稿。",
+                  "有原图或商品参考时说明实际核查结果，商品实图说明真实随货配置与图稿表达；无既有原图的任务注明不适用。缺素材或事实时交精确缺项和已完成准备。",
+                  "记录生成与审核状态；成稿制作、上传、应用和发布分别判断授权，成稿不代表已经上线。"
+                ]
+              },
+              "execution": {
+                "requirements": [
+                  "核对当前对象、真实能力、用户已有授权、必要业务前置及参数；计划建议与素材成稿不计执行完成。",
+                  "交付实际提交回执、后台回读、真实生效时间及未完成或结果未知项；未知先对账，不重复提交。",
+                  "涉及素材试验时，确认素材实际采用及展示核查状态后才建立对应观察起点；其他执行按本动作真实生效条件验收，明确后续负责人和评估条件。"
+                ],
+                "required_conditions": [
+                  "apply_images"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "apply_approved_image",
+              "when": "已有真实成稿且已完成必要审核，用户既有范围分别覆盖上传和商品应用；单独的成稿制作授权不满足此条件。",
+              "from_deliverables": [
+                "asset"
+              ],
+              "target_route": "product_change",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "execution",
+              "required_scope": [
+                "image_upload",
+                "product_write"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
+        },
+        "monitor": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/runtime.md#默认图片方案"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-creative-studio/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-creative-studio/RULES.md"
+            ]
+          }
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-creative-studio/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "images"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/runtime.md#默认图片方案"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-creative-studio/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-creative-studio/RULES.md"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "new_listing",
+      "intent": "新品资料、类目预测、素材包、草稿与发布",
+      "owner": "product_operations",
+      "capability": "listing",
+      "skill": ".agents/skills/1688-listing-publisher/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-listing-publisher/RULES.md"
+      ],
+      "optional_capabilities": [
+        "image"
+      ],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-listing-publisher/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+          ],
+          "rules": [
+            "references/business-rules/1688-listing-publisher/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-listing-publisher/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-listing-publisher/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-listing-publisher/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-listing-publisher/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-listing-publisher/RULES.md"
+            ]
+          }
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-listing-publisher/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-listing-publisher/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-listing-publisher/SKILL.md",
+            "references/runtime.md#商品编辑字段边界",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "images",
+            "apply_images",
+            "sales_fields",
+            "stock_warning",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-listing-publisher/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-listing-publisher/RULES.md"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "competition",
+      "intent": "竞店竞品比较",
+      "owner": "product_operations",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-competition-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-market-research/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-competition-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-market-research/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-competition-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-market-research/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-competition-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "market_opportunity",
+      "intent": "市场机会与选品研究",
+      "owner": "product_operations",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-market-research/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-market-opportunity/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-market-research/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-market-opportunity/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/product_operations/AGENTS.md",
+            ".agents/skills/1688-market-research/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-market-opportunity/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "traffic_and_ads",
+      "intent": "渠道与投放分析；重点产品先制订具体投流方案，依授权和实时能力执行或交人工，并每日检查提升策略",
+      "owner": "traffic_operations",
+      "capability": "traffic_analysis",
+      "skill": ".agents/skills/1688-traffic-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-traffic-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "主Agent有子代理工具时实际委派；已是对应专员或独立专员项目时直接执行，不能递归spawn自己",
+      "limitations": [
+        "本地目录未提供已验证的广告计划、预算或出价写入；不能声称已调投放"
+      ],
+      "delegation_policy": "domain_required",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/traffic_operations/AGENTS.md",
+            ".agents/skills/1688-traffic-operations/SKILL.md",
+            "references/sales-growth-workflow.md#重点推广与每日投流",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#决策与阶段交付"
+          ],
+          "rules": [
+            "references/business-rules/1688-traffic-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "ads"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "attribution",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "inspect_product_expression",
+              "when": "当前决策依赖商品表达或版本证据，且已有只读核查范围覆盖所需来源；展示核查仍单独遵循既有授权。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "product_diagnosis",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "evidence",
+              "required_scope": [
+                "product_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_image_trial_asset",
+              "when": "已选择首图试验且用户已有任务范围覆盖物料准备；只要求查证时仅交具体下一步，不启动生图。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/traffic_operations/AGENTS.md",
+            ".agents/skills/1688-traffic-operations/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/sales-growth-workflow.md#重点推广与每日投流",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#决策与阶段交付"
+          ],
+          "rules": [
+            "references/business-rules/1688-traffic-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "ads"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "attribution",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "evidence",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              },
+              "execution": {
+                "requirements": [
+                  "核对当前对象、真实能力、用户已有授权、必要业务前置及参数；计划建议与素材成稿不计执行完成。",
+                  "交付实际提交回执、后台回读、真实生效时间及未完成或结果未知项；未知先对账，不重复提交。",
+                  "涉及素材试验时，确认素材实际采用及展示核查状态后才建立对应观察起点；其他执行按本动作真实生效条件验收，明确后续负责人和评估条件。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "inspect_product_expression",
+              "when": "当前决策依赖商品表达或版本证据，且已有只读核查范围覆盖所需来源；展示核查仍单独遵循既有授权。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "product_diagnosis",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "evidence",
+              "required_scope": [
+                "product_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_image_trial_asset",
+              "when": "已选择首图试验且用户已有任务范围覆盖物料准备；只要求查证时仅交具体下一步，不启动生图。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
+        },
+        "monitor": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/traffic_operations/AGENTS.md",
+            ".agents/skills/1688-traffic-operations/SKILL.md",
+            "references/sales-growth-workflow.md#重点推广与每日投流",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-traffic-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "ads"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "attribution",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/traffic_operations/AGENTS.md",
+            ".agents/skills/1688-traffic-operations/SKILL.md",
+            "references/sales-growth-workflow.md#重点推广与每日投流",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [
+            "references/business-rules/1688-traffic-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "ads"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "attribution",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            "agents/traffic_operations/AGENTS.md",
+            ".agents/skills/1688-traffic-operations/SKILL.md",
+            "references/sales-growth-workflow.md#重点推广与每日投流",
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#两类观察"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [
+            "ads"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "attribution",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {
+            "data_query": [
+              "references/business-rules/1688-traffic-analyst/RULES.md"
+            ],
+            "free_query": [
+              "references/business-rules/1688-traffic-analyst/RULES.md"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "platform_rules",
+      "intent": "平台规则、权益、政策和运营知识",
+      "owner": "operations_director",
+      "capability": "platform_knowledge",
+      "skill": ".agents/skills/1688-platform-knowledge/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-platform-knowledge/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-platform-knowledge/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-platform-knowledge/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-platform-knowledge/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-platform-knowledge/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "connections_and_components",
+      "intent": "连接、授权状态或平台组件集成排障",
+      "owner": "operations_director",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-connection-administrator/RULES.md",
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-platform-maintenance/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "connection",
+            "platform_components",
+            "jushuitan",
+            "jackyun",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "connection",
+              "platform_components"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-platform-maintenance/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "connection",
+            "platform_components",
+            "jushuitan",
+            "jackyun",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "connection",
+              "platform_components"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "conversion_monitoring",
+      "intent": "每日询盘与转化轻量只读检查；周检复用持续问题和到期评估；无新证据不重复派单",
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md",
+        "references/business-rules/1688-crm-manager/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation_policy": "director_direct",
+      "mode": "analysis_only",
+      "reference": ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+      "state_contract": "references/conversion-state.md",
+      "delegation": "总控读取聚合监测和既有状态，符合触发条件时按conversion_analysis路由真实委派；不逐个下钻全部业务员或客户",
+      "analysis_route": "conversion_analysis",
+      "phase_loading": {
+        "monitor": {
+          "director_read": [
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "inquiry",
+            "crm",
+            "transfer_inquiry",
+            "crm_plan_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_requirements": [
+            {
+              "when_any": [
+                "data_query",
+                "free_query",
+                "transfer_inquiry",
+                "crm_plan_query"
+              ],
+              "require_any": [
+                "inquiry",
+                "crm"
+              ]
+            }
+          ],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#完整周期与比较基线"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "inquiry",
+            "crm",
+            "transfer_inquiry",
+            "crm_plan_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_requirements": [
+            {
+              "when_any": [
+                "data_query",
+                "free_query",
+                "transfer_inquiry",
+                "crm_plan_query"
+              ],
+              "require_any": [
+                "inquiry",
+                "crm"
+              ]
+            }
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "conversion_analysis",
+      "intent": "异常、重要新事实或复查到期时委派有限范围的询盘与转化原因分析；只返回问题卡和行动建议",
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md",
+        "references/business-rules/1688-crm-manager/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation_policy": "specialist_required",
+      "mode": "analysis_only",
+      "reference": ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+      "state_contract": "references/conversion-state.md",
+      "delegation": "总控协调；有子代理能力时实际启动或复用conversion_analysis专项，记录真实执行者与回执；专项不再启动总控或自己",
+      "executor": "conversion_analysis",
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "inquiry",
+            "crm",
+            "transfer_inquiry",
+            "crm_plan_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "inquiry",
+              "crm"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "inquiry",
+            "crm",
+            "transfer_inquiry",
+            "crm_plan_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "inquiry",
+              "crm"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [
+            "references/delegation.md#最小任务包"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+            "references/conversion-state.md",
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#完整周期与比较基线"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "inquiry",
+            "crm",
+            "transfer_inquiry",
+            "crm_plan_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "inquiry",
+              "crm"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "customer_conversion",
+      "intent": "客户运营与客户库总览、高成交意向/流失预警系统客群、自然语言筛选、画像、标签导入、运营计划及触达；人工询盘与AI接待、报价按原子流程处理",
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-crm-manager/RULES.md",
+        "references/business-rules/1688-inquiry-analyst/RULES.md",
+        "references/business-rules/1688-reception-coach/RULES.md",
+        "references/business-rules/1688-quotation-designer/RULES.md",
+        "references/business-rules/1688-outreach-operator/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "按需加载能力或创建一次性专项子任务，不设新的常驻岗位；不能扩大授权",
+      "delegation_policy": "specialist_on_demand",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "crm",
+            "crm_maintenance",
+            "inquiry",
+            "reception",
+            "quotation",
+            "outreach",
+            "crm_plan_query",
+            "transfer_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "crm",
+              "crm_maintenance",
+              "inquiry",
+              "reception",
+              "quotation",
+              "outreach"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "crm",
+            "crm_maintenance",
+            "inquiry",
+            "reception",
+            "quotation",
+            "outreach",
+            "crm_plan_query",
+            "transfer_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "crm",
+              "crm_maintenance",
+              "inquiry",
+              "reception",
+              "quotation",
+              "outreach"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "crm",
+            "crm_maintenance",
+            "inquiry",
+            "reception",
+            "quotation",
+            "outreach",
+            "crm_plan_query",
+            "transfer_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "crm",
+              "crm_maintenance",
+              "inquiry",
+              "reception",
+              "quotation",
+              "outreach"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "crm",
+            "crm_maintenance",
+            "inquiry",
+            "reception",
+            "quotation",
+            "outreach",
+            "crm_plan_query",
+            "transfer_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "crm",
+              "crm_maintenance",
+              "inquiry",
+              "reception",
+              "quotation",
+              "outreach"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "crm",
+            "crm_maintenance",
+            "inquiry",
+            "reception",
+            "quotation",
+            "outreach",
+            "crm_plan_query",
+            "transfer_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "crm",
+              "crm_maintenance",
+              "inquiry",
+              "reception",
+              "quotation",
+              "outreach"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "erp_inventory",
+      "intent": "当前已连接ERP的库存、成本及业务数据",
+      "owner": "operations_director",
+      "capability": "erp_inventory",
+      "skill": ".agents/skills/1688-erp-inventory/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-erp-jushuitan-analyst/RULES.md",
+        "references/business-rules/1688-erp-jackyun-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "按需加载能力或创建一次性专项子任务，不设新的常驻岗位；不能扩大授权",
+      "delegation_policy": "specialist_on_demand",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-erp-inventory/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "jushuitan",
+            "jackyun",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "jushuitan",
+              "jackyun"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-erp-inventory/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "jushuitan",
+            "jackyun",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "jushuitan",
+              "jackyun"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "procurement_research",
+      "intent": "找货、供应商比较及企业背调",
+      "owner": "operations_director",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md",
+        "references/business-rules/1688-company-due-diligence/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "按需加载能力或创建一次性专项子任务，不设新的常驻岗位；不能扩大授权",
+      "delegation_policy": "specialist_on_demand",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-procurement-research/SKILL.md",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "sourcing",
+            "company",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "sourcing",
+              "company"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-procurement-research/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "sourcing",
+            "company",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "sourcing",
+              "company"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "buyer_transactions",
+      "intent": "买家采购订单预览、物流、售后及发票事务",
+      "owner": "operations_director",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-buyer-order-assistant/RULES.md",
+        "references/business-rules/1688-fulfillment-specialist/RULES.md",
+        "references/business-rules/1688-aftersales-specialist/RULES.md",
+        "references/business-rules/1688-invoice-assistant/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "按需加载能力或创建一次性专项子任务，不设新的常驻岗位；不能扩大授权",
+      "delegation_policy": "specialist_on_demand",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-buyer-transactions/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "order",
+            "fulfillment",
+            "aftersales",
+            "invoice",
+            "procurement_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "order",
+              "fulfillment",
+              "aftersales",
+              "invoice",
+              "procurement_inquiry"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-buyer-transactions/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "order",
+            "fulfillment",
+            "aftersales",
+            "invoice",
+            "procurement_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "order",
+              "fulfillment",
+              "aftersales",
+              "invoice",
+              "procurement_inquiry"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-buyer-transactions/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "order",
+            "fulfillment",
+            "aftersales",
+            "invoice",
+            "procurement_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "order",
+              "fulfillment",
+              "aftersales",
+              "invoice",
+              "procurement_inquiry"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-buyer-transactions/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "order",
+            "fulfillment",
+            "aftersales",
+            "invoice",
+            "procurement_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "order",
+              "fulfillment",
+              "aftersales",
+              "invoice",
+              "procurement_inquiry"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-buyer-transactions/SKILL.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "order",
+            "fulfillment",
+            "aftersales",
+            "invoice",
+            "procurement_inquiry",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "order",
+              "fulfillment",
+              "aftersales",
+              "invoice",
+              "procurement_inquiry"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "distribution",
+      "intent": "1688分销或用户指定的跨平台分销",
+      "owner": "operations_director",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-distribution-operator/RULES.md",
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "按需加载能力或创建一次性专项子任务，不设新的常驻岗位；不能扩大授权",
+      "delegation_policy": "specialist_on_demand",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-distribution/SKILL.md",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "distribution_1688",
+            "cross_platform",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "distribution_1688",
+              "cross_platform"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-distribution/SKILL.md",
+            "references/execution-protocol.md",
+            "references/runtime.md#连接和工具",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "distribution_1688",
+            "cross_platform",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "distribution_1688",
+              "cross_platform"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "monitor": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-distribution/SKILL.md",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "distribution_1688",
+            "cross_platform",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "distribution_1688",
+              "cross_platform"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-distribution/SKILL.md",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "distribution_1688",
+            "cross_platform",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "distribution_1688",
+              "cross_platform"
+            ]
+          ],
+          "condition_rules": {}
+        },
+        "receipt": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-distribution/SKILL.md",
+            "references/purchasing-migration.md"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "distribution_1688",
+            "cross_platform",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [
+            [
+              "distribution_1688",
+              "cross_platform"
+            ]
+          ],
+          "condition_rules": {}
+        }
+      }
+    },
+    {
+      "id": "report_rendering",
+      "intent": "已有经营数据的本地报告与看板呈现",
+      "owner": "operations_director",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按 phase_loading 选择本阶段适用完整规则；总控路由视图不预读领域业务规则。执行者完整读取选中RULES及必要来源和实时前置；不以摘要替代，不因条件未选而跳过实际适用约束。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "总控职责，可直接完成；重数据处理可交一次性分析任务，不spawn总控",
+      "delegation_policy": "director_direct",
+      "phase_loading": {
+        "plan": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-report-designer/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md"
+          ],
+          "rules": [
+            "references/business-rules/1688-report-designer/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {}
+        }
+      }
+    }
+  ],
+  "delegation_policies": {
+    "director_direct": "总控职责可在主会话完成；较重取数或分析可委派有限范围任务，不另启总控。",
+    "domain_required": "根总控有子代理工具时必须真实交给route.owner；已处于该领域会话时直接执行，工具确实不可用时记录原因代行。",
+    "specialist_on_demand": "总控承担业务协调责任，按需加载能力或委派临时专项；记录实际执行者，不恢复旧常驻岗位。",
+    "specialist_required": "选中该专项分析路由且有子代理工具时，必须真实委派给route.executor；已经是该专项执行者时直接执行。仅工具确实不可用时记录原因代行，不另建常驻核心角色。"
+  },
+  "approved_rule_overrides": [
+    {
+      "path": "references/ad-decision-policy.md",
+      "scope": "广告分析、建议及复核的止损选项、产出比零值和评估周期",
+      "authorization": "2026-10-29 用户要求修复审查确认的重要规则与状态问题",
+      "precedence": "仅在文件明确列出的冲突条款内优先于来源及其引用入口，不扩展操作权限"
+    }
+  ],
+  "operating_workflow": "references/sales-growth-workflow.md",
+  "context_loading": {
+    "schema_version": 1,
+    "resolver": "scripts/task_context.py",
+    "documentation": "references/context-loading.md",
+    "phases": {
+      "plan": "形成具体分析、方案或交接；不代表已执行。",
+      "execute": "在已有授权和实时能力内实施本路由任务（可含读取）；写入另守完整业务前置。",
+      "monitor": "检查既有行动、数据截止及有限概览；新动作回到plan/execute。",
+      "evaluate": "到期后按固定基线和成熟条件比较并形成结论。",
+      "receipt": "接收人工完成事实，核验实际生效及证据，再决定观察起点；不是执行新修改。"
+    },
+    "roles": {
+      "director": "仅路由、交接和状态协调，不加载领域业务规则；主Agent亲自分析/执行同样选择executor。",
+      "executor": "实施本阶段任务的真实执行者；加载完整适用规则及必要来源。"
+    },
+    "director_read": [
+      "AGENTS.md"
+    ],
+    "executor_read": [
+      "AGENTS.md",
+      "references/runtime.md#执行边界",
+      "references/runtime.md#数据和交接"
+    ],
+    "section_documents": [
+      "references/runtime.md",
+      "references/delegation.md",
+      "references/operating-cycle.md",
+      "references/sales-growth-workflow.md"
+    ],
+    "conditions": {
+      "ads": {
+        "when": "任何广告分析、建议、执行或复核；直接广告路由自动选中。",
+        "read": [
+          "references/ad-decision-policy.md"
+        ],
+        "rules": [],
+        "source_read": []
+      },
+      "data_query": {
+        "when": "需要连接/查询真实业务数据；执行前落实实时工具和指标口径。",
+        "read": [
+          "references/runtime.md#连接和工具",
+          "references/runtime.md#数据和交接"
+        ],
+        "rules": [],
+        "source_read": []
+      },
+      "free_query": {
+        "when": "自由取数/RAG发现API时；不能用旧文档代替实时发现。",
+        "read": [
+          "references/runtime.md#连接和工具",
+          "references/runtime.md#数据和交接"
+        ],
+        "rules": [],
+        "source_read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-freedom-query-data/SKILL.md"
+        ]
+      },
+      "sales_fields": {
+        "when": "涉及商品基础尺寸、销售SKU/价格/库存等字段，即使仅交人工方案。",
+        "read": [
+          "references/runtime.md#商品编辑字段边界"
+        ],
+        "rules": [],
+        "source_read": []
+      },
+      "images": {
+        "when": "涉及图片方案、生成或编辑；直接图片路由自动选中。",
+        "read": [
+          "references/runtime.md#默认图片方案",
+          "agents/image-agent/AGENTS.md",
+          "agents/image-agent/.agents/skills/1688-image-design/references/generation-runtime.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-creative-studio/RULES.md"
+        ],
+        "source_read": []
+      },
+      "apply_images": {
+        "when": "将图片上传/应用到商品；保留图片后端和商品写入两套边界。",
+        "read": [
+          "references/runtime.md#默认图片方案",
+          "references/runtime.md#商品编辑字段边界",
+          "references/runtime.md#连接和工具",
+          "references/execution-protocol.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-product-editor/RULES.md"
+        ],
+        "source_read": []
+      },
+      "stock_warning": {
+        "when": "查询或验收SKU库存预警时。",
+        "read": [
+          "references/stock-warning-contract.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-merchandising-analyst/RULES.md"
+        ],
+        "source_read": []
+      },
+      "scoring": {
+        "when": "解释商品诊断评分口径时。",
+        "read": [],
+        "rules": [],
+        "source_read": [
+          "source/plugins/1688-seller-assistant/skills/1688-product-analysis/references/scoring-rules.md"
+        ]
+      },
+      "attribution": {
+        "when": "需要流量/健康的细化归因方法时。",
+        "read": [],
+        "rules": [],
+        "source_read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-health-check/references/analysis-methodology.md"
+        ]
+      },
+      "health": {
+        "when": "经营分析包含全店健康分析时。",
+        "read": [],
+        "rules": [],
+        "source_read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-health-check/SKILL.md"
+        ]
+      },
+      "inquiry": {
+        "when": "本次读取或解释询盘、接待、业务员或对话数据；不能因轻量模式省略。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-inquiry-analyst/RULES.md"
+        ],
+        "source_read": []
+      },
+      "crm": {
+        "when": "本次读取或解释客户库、筛选、画像、跟进、订单等CRM证据。",
+        "read": [
+          "references/runtime.md#连接和工具",
+          ".agents/skills/1688-customer-conversion/references/crm-query.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-crm-manager/RULES.md"
+        ],
+        "source_read": []
+      },
+      "transfer_inquiry": {
+        "when": "本次读取转人工或AI接待边界数据。",
+        "read": [],
+        "rules": [],
+        "source_read": [
+          "source/plugins/1688-seller-assistant/skills/1688-cowboy/SKILL.md"
+        ],
+        "requires_any_conditions": [
+          "inquiry"
+        ]
+      },
+      "crm_plan_query": {
+        "when": "只读已有系统计划/状态；不得扩为创建或触达。",
+        "read": [
+          ".agents/skills/1688-customer-conversion/references/crm-query.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-outreach-operator/RULES.md"
+        ],
+        "source_read": [],
+        "requires_any_conditions": [
+          "crm"
+        ]
+      },
+      "crm_maintenance": {
+        "when": "客户标签、属性、导入或企业接入。",
+        "read": [
+          "references/runtime.md#连接和工具",
+          ".agents/skills/1688-customer-conversion/references/crm-maintenance.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-crm-manager/RULES.md"
+        ],
+        "source_read": []
+      },
+      "reception": {
+        "when": "AI接待配置、模拟或知识入库。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-reception-coach/RULES.md"
+        ],
+        "source_read": []
+      },
+      "quotation": {
+        "when": "报价公式、草稿或模拟。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-quotation-designer/RULES.md"
+        ],
+        "source_read": []
+      },
+      "outreach": {
+        "when": "运营计划、话术、优惠券、客户消息或内部提醒；仍需具体授权。",
+        "read": [
+          "references/runtime.md#连接和工具",
+          ".agents/skills/1688-customer-conversion/references/crm-outreach.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-outreach-operator/RULES.md"
+        ],
+        "source_read": []
+      },
+      "jushuitan": {
+        "when": "已明确使用聚水潭ERP。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-erp-jushuitan-analyst/RULES.md"
+        ],
+        "source_read": []
+      },
+      "jackyun": {
+        "when": "已明确使用吉客云ERP。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-erp-jackyun-analyst/RULES.md"
+        ],
+        "source_read": []
+      },
+      "connection": {
+        "when": "网关、账号或ERP连接管理。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-connection-administrator/RULES.md"
+        ],
+        "source_read": []
+      },
+      "platform_components": {
+        "when": "聊天卡片、知识组件或平台适配。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-platform-support/RULES.md"
+        ],
+        "source_read": []
+      },
+      "sourcing": {
+        "when": "1688找货、图搜或供应商比较。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-sourcing-advisor/RULES.md"
+        ],
+        "source_read": []
+      },
+      "company": {
+        "when": "企业主体与背调。",
+        "read": [
+          "references/runtime.md#连接和工具"
+        ],
+        "rules": [
+          "references/business-rules/1688-company-due-diligence/RULES.md"
+        ],
+        "source_read": []
+      },
+      "order": {
+        "when": "买家采购要素、订单预览或付款链接。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-buyer-order-assistant/RULES.md"
+        ],
+        "source_read": []
+      },
+      "procurement_inquiry": {
+        "when": "未选具体商品且用户要求发布采购询盘。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-buyer-order-assistant/RULES.md"
+        ],
+        "source_read": [
+          "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/SKILL.md"
+        ]
+      },
+      "fulfillment": {
+        "when": "买家订单履约、物流、运踪或预约。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-fulfillment-specialist/RULES.md"
+        ],
+        "source_read": []
+      },
+      "aftersales": {
+        "when": "买家退款/投诉事务或其状态。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-aftersales-specialist/RULES.md"
+        ],
+        "source_read": []
+      },
+      "invoice": {
+        "when": "开票资格、抬头、申请或回执。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-invoice-assistant/RULES.md"
+        ],
+        "source_read": []
+      },
+      "distribution_1688": {
+        "when": "用户指定1688分销。",
+        "read": [
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-distribution-operator/RULES.md"
+        ],
+        "source_read": []
+      },
+      "cross_platform": {
+        "when": "用户指定跨平台分销服务；按providers说明选择其完整原技能。",
+        "read": [
+          "references/business-rules/1688-cross-platform-distribution/references/providers.md",
+          "references/purchasing-migration.md"
+        ],
+        "rules": [
+          "references/business-rules/1688-cross-platform-distribution/RULES.md"
+        ],
+        "source_read": []
+      },
+      "title_keywords": {
+        "when": "使用get_keyword_info/get_tokenizers时，读取各自执行前置。",
+        "read": [],
+        "rules": [
+          "references/business-rules/1688-title-optimizer/RULES.md"
+        ],
+        "source_read": [
+          "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/capabilities/get_keyword_info.md",
+          "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/capabilities/get_tokenizers.md"
+        ]
+      },
+      "strategy_refresh": {
+        "when": "首次真实业务、策略版本变化或任务包约束不清时必须选；已带确认版本及适用约束的任务包可复用。",
+        "read": [
+          "references/account-strategies/songtai-sales-growth.md"
+        ],
+        "rules": [],
+        "source_read": []
+      }
+    },
+    "rule_sources": {
+      "references/business-rules/1688-aftersales-specialist/RULES.md": {
+        "read": [
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/SKILL.md",
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/cancel-refund/SKILL.md",
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/apply-dispute/SKILL.md",
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/cancel-dispute/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-buyer-order-assistant/RULES.md": {
+        "read": [
+          "source/plugins/accio-com-buyer-assistant/skills/1688-order/SKILL.md"
+        ],
+        "conditional": [
+          "procurement_inquiry"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-company-due-diligence/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/cha88-company-report-skill/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-competition-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-compete-analysis/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-connection-administrator/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-jushuitan-erp/SKILL.md"
+        ],
+        "conditional": [
+          "jushuitan",
+          "jackyun"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-creative-studio/RULES.md": {
+        "read": [
+          "source/account-skills/image-prompt-guide/SKILL.md",
+          "source/desktop/templates/README.md"
+        ],
+        "conditional": [],
+        "on_demand": [
+          {
+            "when": "商品主图122条；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/desktop/templates/design-samples/buyer.agent.Main.Product.Image.domestic/all-prompts.json"
+            ]
+          },
+          {
+            "when": "商品详情图54条；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/desktop/templates/design-samples/buyer.agent.Product.Detail.Assets.domestic/all-prompts.json"
+            ]
+          },
+          {
+            "when": "海报与广告67条；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/desktop/templates/design-samples/buyer.agent.Posters.Advertisements.domestic/all-prompts.json"
+            ]
+          },
+          {
+            "when": "品牌设计12条；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/desktop/templates/design-samples/agent.design.tab.Branding.domestic/all-prompts.json"
+            ]
+          },
+          {
+            "when": "商品参数图10条；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/desktop/templates/design-samples/agent.design.tab.Techpack.domestic/all-prompts.json"
+            ]
+          },
+          {
+            "when": "提取的创意设计师定义；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/desktop/derived/creative-designer-profile.md"
+            ]
+          }
+        ]
+      },
+      "references/business-rules/1688-crm-manager/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-crm-customer-filter/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-cross-platform-distribution/RULES.md": {
+        "read": [],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-daily-report/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-daily-report/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-distribution-operator/RULES.md": {
+        "read": [
+          "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-erp-jackyun-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-jushuitan-erp/SKILL.md",
+          "source/plugins/1688-seller-assistant/skills/1688-shop-jushuitan-erp/references/jky/index.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-erp-jushuitan-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-jushuitan-erp/SKILL.md",
+          "source/plugins/1688-seller-assistant/skills/1688-shop-jushuitan-erp/references/jst/index.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-fulfillment-specialist/RULES.md": {
+        "read": [
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/order-fulfill/SKILL.md",
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-inquiry-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-inquiry-evaluate/SKILL.md"
+        ],
+        "conditional": [
+          "transfer_inquiry"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-invoice-assistant/RULES.md": {
+        "read": [
+          "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/invoice/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-listing-publisher/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-product-manage/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-market-opportunity/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-product-keyword-research/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-merchandising-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-product-analysis/SKILL.md"
+        ],
+        "conditional": [
+          "scoring",
+          "stock_warning"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-operations-director/RULES.md": {
+        "read": [],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-outreach-operator/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-aicrm-segment-reach-strategy/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-platform-knowledge/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-study-knowledge/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-platform-support/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-study-knowledge/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-product-editor/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-item-one-click/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": [
+          {
+            "when": "标题优化业务规则与事实约束；仅本次实际子流程需要时，依完整规则选择。",
+            "read": [
+              "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/SKILL.md"
+            ]
+          }
+        ]
+      },
+      "references/business-rules/1688-profit-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-business-analysis/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-quotation-designer/RULES.md": {
+        "read": [],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-reception-coach/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-cowboy/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-report-designer/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-common-report-to-visualization/SKILL.md"
+        ],
+        "conditional": [],
+        "on_demand": []
+      },
+      "references/business-rules/1688-sourcing-advisor/RULES.md": {
+        "read": [
+          "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/SKILL.md"
+        ],
+        "conditional": [
+          "company"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-store-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-business-analysis/SKILL.md"
+        ],
+        "conditional": [
+          "health",
+          "free_query"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-title-optimizer/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/SKILL.md",
+          "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/capabilities/optimize_title.md",
+          "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/capabilities/optimize_title_llm.md",
+          "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/references/interaction-specs.md"
+        ],
+        "conditional": [
+          "title_keywords"
+        ],
+        "on_demand": []
+      },
+      "references/business-rules/1688-traffic-analyst/RULES.md": {
+        "read": [
+          "source/plugins/1688-seller-assistant/skills/1688-shop-health-check/SKILL.md"
+        ],
+        "conditional": [
+          "attribution"
+        ],
+        "on_demand": []
+      }
+    },
+    "condition_policy": "按真实任务事实选择；直接route/phase强制项自动加入。未知模块或能力先明确并停止依赖动作，不能用未选择条件跳过已适用前置。",
+    "source_policy": "rule_sources给出完整来源入口；来源内要求的更细模块继续按其实际条件完整读取。索引不是依赖闭包或业务授权，不替代实时Schema及完整来源前置。",
+    "entrypoints": {
+      "manual_receipt": {
+        "route": "daily_operations",
+        "phase": "receipt",
+        "follow_up": "涉及具体业务核验时转原action的route、phase=receipt、role=executor，保留action_id和真实证据。"
+      },
+      "due_evaluation": {
+        "route": "daily_operations",
+        "phase": "evaluate",
+        "follow_up": "按原action的route、phase=evaluate执行领域效果评估；询盘转化到期进入conversion_analysis，先核对去重与真实任务状态。"
+      },
+      "startup": {
+        "read": [
+          "AGENTS.md"
+        ],
+        "state_command": [
+          "python3",
+          "scripts/operating_state.py",
+          "summary"
+        ],
+        "semantics": "只读真实状态摘要；无记录/缺失如实标明，不以历史报告或空索引替代当前状态。"
+      }
+    }
+  }
+}

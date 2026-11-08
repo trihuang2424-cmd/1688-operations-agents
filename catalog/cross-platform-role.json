@@ -1,0 +1,21 @@
+{
+  "display_name": "跨平台分销专家",
+  "skill": ".agents/skills/1688-distribution/SKILL.md",
+  "project": ".",
+  "source_plugins": [
+    "daze-store-manager-cli",
+    "dxb",
+    "dsers-dropshipping-pro"
+  ],
+  "tools": [],
+  "availability": "planning_and_source_reference; dedicated provider tools absent from 205-tool snapshot",
+  "kind": "capability_alias",
+  "status": "on_demand_capability_not_core_agent",
+  "owner": "operations_director",
+  "capability": "distribution",
+  "legacy_id": "cross_platform_distribution",
+  "rules": [
+    "references/business-rules/1688-cross-platform-distribution/RULES.md"
+  ],
+  "archived_entry": "archive/legacy-agent-entries/cross_platform_distribution/ENTRY.md"
+}

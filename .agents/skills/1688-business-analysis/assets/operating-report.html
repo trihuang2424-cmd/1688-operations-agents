@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>$title</title>
+  <style>
+    :root { color-scheme: light; --ink:#152636; --muted:#526574; --line:#dbe4eb; --accent:#145d73; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f2f6f8; color:var(--ink); font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; }
+    main { max-width:1280px; margin:auto; padding:36px 24px 60px; }
+    header { border-top:5px solid var(--accent); padding:28px; background:#fff; border-radius:12px; }
+    h1 { margin:8px 0 14px; font-size:30px; line-height:1.3; }
+    h2 { font-size:21px; margin:0 0 18px; }
+    p { margin:8px 0; } a { color:#086987; overflow-wrap:anywhere; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.08em; }
+    .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:8px 28px; color:var(--muted); }
+    .mode { background:#fff2cb; border:1px solid #e3bb54; padding:12px 18px; border-radius:8px; margin-bottom:18px; font-weight:700; }
+    section { background:#fff; border:1px solid var(--line); border-radius:12px; padding:24px; margin-top:22px; }
+    .scroll { overflow-x:auto; } table { border-collapse:collapse; width:100%; font-size:14px; }
+    th,td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; overflow-wrap:anywhere; min-width:90px; }
+    th { color:var(--muted); background:#f4f8fa; font-weight:600; }
+    .value { font-variant-numeric:tabular-nums; font-size:18px; font-weight:700; white-space:nowrap; }
+    .missing { color:#8a5c0b; } .detail { color:var(--muted); font-size:12px; margin-top:4px; }
+    ul { padding-left:22px; } li { margin:12px 0; } .label { color:var(--accent); font-weight:700; }
+    .empty,footer { color:var(--muted); } footer { margin-top:24px; font-size:12px; }
+    @media (max-width:600px) { main { padding:16px 12px 32px; } header,section { padding:18px; } h1 { font-size:25px; } }
+    @media print { body { background:white; } main { padding:0; } section,header { break-inside:avoid; } .scroll { overflow:visible; } }
+  </style>
+</head>
+<body><main>
+$mode_banner
+<header>
+  <div class="eyebrow">1688 · $report_label</div>
+  <h1>$title</h1>
+  <div class="meta">$metadata</div>
+</header>
+<section><h2>数据覆盖与口径</h2>$coverage</section>
+<section><h2>经营指标</h2><div class="scroll">$metrics</div></section>
+<section><h2>结论与依据</h2>$findings</section>
+<section><h2>行动与观察状态</h2><div class="scroll">$actions</div></section>
+<section><h2>未完成与待核查</h2><div class="scroll">$unfinished</div></section>
+<footer>仅呈现输入数据及已记录的行动；生成报告不执行经营动作，不证明数据事实或买家页面展示已核验。输入类型：$data_mode。</footer>
+</main></body>
+</html>

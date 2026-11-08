@@ -1,0 +1,39 @@
+{
+  "skill_validation": {
+    "1688-image-design": {
+      "valid": true,
+      "message": "Skill is valid!"
+    },
+    "1688-image-edit": {
+      "valid": true,
+      "message": "Skill is valid!"
+    },
+    "1688-product-visual-concepts": {
+      "valid": true,
+      "message": "Skill is valid!"
+    }
+  },
+  "ui_metadata": {
+    "1688-image-design": {
+      "default_prompt_mentions_skill": true,
+      "short_description_length": 32,
+      "implicit_invocation": true
+    },
+    "1688-image-edit": {
+      "default_prompt_mentions_skill": true,
+      "short_description_length": 35,
+      "implicit_invocation": true
+    },
+    "1688-product-visual-concepts": {
+      "default_prompt_mentions_skill": true,
+      "short_description_length": 35,
+      "implicit_invocation": true
+    }
+  },
+  "missing_links": [],
+  "source_count": 65,
+  "source_hash_failures": [],
+  "active_reference_count": 42,
+  "skills_directory_alias_valid": true,
+  "validation_parser": "Existing cached PyYAML; no dependency installation"
+}

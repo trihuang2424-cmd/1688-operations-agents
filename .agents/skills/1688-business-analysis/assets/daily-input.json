@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "data_mode": "template",
+  "report_type": "daily",
+  "period_basis": "single_day_t_plus_1",
+  "title": "店铺经营日报",
+  "period": {"start": "__REQUIRED__", "end": "__REQUIRED__", "timezone": "Asia/Shanghai"},
+  "data_cutoff": "__REQUIRED__",
+  "retrieved_at": "__REQUIRED__",
+  "storeAttribution": {"store_ref": "__REQUIRED__", "display_name": "__REQUIRED__"},
+  "strategy_version": null,
+  "coverage": {"status": "partial", "notes": ["__REQUIRED__"]},
+  "metrics": [
+    {"name": "交易指标：按真实来源填写", "value": null, "unit": "__REQUIRED__", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "流量指标：按真实来源填写", "value": null, "unit": "__REQUIRED__", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "买家指标：按真实来源填写", "value": null, "unit": "__REQUIRED__", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__", "denominator": "不适用", "missing_reason": "__REQUIRED__"}
+  ],
+  "findings": [],
+  "actions": [],
+  "unfinished": []
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "data_mode": "template",
+  "usage": "按实际任务复制记录并填写真实值；null是待核实，不是零。完整账本结构及合法状态见 references/operating-state.md，复制模板不代表已初始化或业务已执行。询盘转化状态仅保存引用。",
+  "review_template": {
+    "review_id": null,
+    "store_ref": null,
+    "strategy_version": null,
+    "review_type": null,
+    "period": {
+      "start": null,
+      "end": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "baseline": {
+      "start": null,
+      "end": null,
+      "basis": null,
+      "evidence_refs": []
+    },
+    "trend_period": null,
+    "data_cutoff": null,
+    "retrieved_at": null,
+    "coverage_and_comparability": null,
+    "metric_comparisons": [],
+    "sales_contributions": [],
+    "bottleneck_conclusions": [],
+    "confounders_and_unknowns": [],
+    "prioritized_links": [],
+    "action_ids": [],
+    "evidence_refs": []
+  },
+  "action_template": {
+    "action_id": null,
+    "store_ref": null,
+    "review_id": null,
+    "issue_ref": null,
+    "focus_id": null,
+    "product_id_or_draft_ref": null,
+    "owner": null,
+    "executor": null,
+    "objective_and_hypothesis": null,
+    "status": null,
+    "workflow": {
+      "version": 1,
+      "deliverable_type": null,
+      "delivered_at": null,
+      "delivery_receipt_refs": [],
+      "decision": {
+        "choice": null,
+        "basis": null,
+        "evidence_refs": [],
+        "key_unknowns": [],
+        "investigation": {
+          "status": "not_required",
+          "blocking": false,
+          "stop_conditions": [],
+          "stop_at": null
+        }
+      },
+      "preparation": {
+        "required": false,
+        "required_types": [],
+        "due_at": null,
+        "deliverables": []
+      },
+      "approval": {
+        "type": "none",
+        "necessary_basis": null,
+        "basis_refs": [],
+        "review_objects": [],
+        "status": "not_required",
+        "authorization_ref": null
+      }
+    },
+    "plan": {
+      "changes": [],
+      "steps": [],
+      "assets": [],
+      "dependencies": [],
+      "authorization_ref": null
+    },
+    "manual_handoff": {
+      "required": null,
+      "reason": null,
+      "assignee": null,
+      "due_at": null,
+      "acceptance_and_required_receipt": null
+    },
+    "execution": {
+      "effective_at": null,
+      "receipt_refs": [],
+      "readback_refs": [],
+      "display_verification_status": null,
+      "effect_verification": {
+        "status": null,
+        "evidence_refs": []
+      }
+    },
+    "fixed_baseline": {
+      "period": null,
+      "metrics": [],
+      "evidence_refs": []
+    },
+    "observation": {
+      "start": null,
+      "end": null,
+      "evaluate_at": null,
+      "primary_metrics": [],
+      "guardrail_metrics": [],
+      "sample_and_maturity_basis": null,
+      "early_intervention_conditions": [],
+      "latest_reconsider_at": null
+    },
+    "evaluation_history": [],
+    "next_step": null,
+    "next_review_at": null,
+    "related_action_ids": [],
+    "ad_plan": null,
+    "strategy_version": null
+  },
+  "focus_product_template": {
+    "focus_id": null,
+    "store_ref": null,
+    "company_instruction_ref": null,
+    "product_ids_or_draft_refs": [],
+    "objective": null,
+    "started_at": null,
+    "owner": null,
+    "status": null,
+    "next_weekly_review_at": null,
+    "next_monthly_review_at": null,
+    "next_ad_daily_check_at": null,
+    "action_ids": [],
+    "ad_plan_refs": [],
+    "company_exit_decision_ref": null
+  },
+  "ad_plan_template": {
+    "plan_ref": null,
+    "version": null,
+    "product_ids": [],
+    "objective": null,
+    "channel_and_targeting": null,
+    "creative_and_landing_refs": [],
+    "starts_at": null,
+    "ends_at": null,
+    "daily_budget": null,
+    "total_budget_cap": null,
+    "currency": null,
+    "authorization_ref": null,
+    "metric_and_attribution_basis": null,
+    "fixed_baseline_ref": null,
+    "maturity_and_evaluation_conditions": null,
+    "budget_pacing_and_intervention_conditions": null,
+    "execution_mode": null,
+    "executor": null,
+    "review_owner": null,
+    "actual_plan_id": null,
+    "activation_evidence_refs": [],
+    "daily_checks": [],
+    "status": null,
+    "next_daily_check_at": null
+  }
+}

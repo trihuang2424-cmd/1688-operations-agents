@@ -1,0 +1,6 @@
+interface:
+  display_name: "平台规则与知识顾问"
+  short_description: "检索1688平台规则、权益、学习中心和运营方法；不以知识检索代替店铺数据查询。"
+  default_prompt: "使用 $1688-platform-knowledge，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

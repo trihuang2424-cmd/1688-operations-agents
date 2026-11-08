@@ -1,0 +1,267 @@
+{
+  "source_url": "https://skill.accio.com/skills/phoenix/official/0.0.110/1688-sourcing.zip",
+  "version": "0.0.110",
+  "archive": "source/remote-skills/1688-sourcing/0.0.110/1688-sourcing.zip",
+  "archive_sha256": "37417d274f16828d40a9e09aa49f2417ffcec4b8372f642958c7324b0273f48f",
+  "downloaded_date": "2026-10-25",
+  "retrieval_status": 200,
+  "files": [
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/SKILL.md",
+      "archive_entry": "1688-sourcing/SKILL.md",
+      "sha256": "ac741aa598c2ce1125955558be3e69f34a377bde03fb01dcd904cb5489e217a4",
+      "size": 19716
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/cli.py",
+      "archive_entry": "1688-sourcing/cli.py",
+      "sha256": "c516ffec5f5b3479957013444c66f122820f9942f28251d1c6a8d0c86f66f9df",
+      "size": 3312
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/references/capabilities/compare.md",
+      "archive_entry": "1688-sourcing/references/capabilities/compare.md",
+      "sha256": "301f9e64dc0a8b520267d1de2871410d9933b26368144de716b71ce4c6cb6b54",
+      "size": 1383
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/references/capabilities/image_search.md",
+      "archive_entry": "1688-sourcing/references/capabilities/image_search.md",
+      "sha256": "8e828563b587090f1bbd9973bacdc2439b1d88fff7c30ff8a8b5c451f851a4c9",
+      "size": 1059
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/references/capabilities/link_search.md",
+      "archive_entry": "1688-sourcing/references/capabilities/link_search.md",
+      "sha256": "59851dec395007842ab195267bb524dc9024c2bcb4ce93075be18acfc294a7c1",
+      "size": 1248
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/references/capabilities/text_search.md",
+      "archive_entry": "1688-sourcing/references/capabilities/text_search.md",
+      "sha256": "385f322f09b8ef1f2c530d6761a9e1803223b3c3d29fcc8c652b59cc60dd1d79",
+      "size": 1551
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/references/common/error-handling.md",
+      "archive_entry": "1688-sourcing/references/common/error-handling.md",
+      "sha256": "32dd835b9a4680c64c74c29bb088d6b5c4f11751edb321a3439ea075f04e697c",
+      "size": 817
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/requirements.txt",
+      "archive_entry": "1688-sourcing/requirements.txt",
+      "sha256": "56b014edc6afd16e8dee58f16c591bc19e0dceec14b5c98b31eb2db94d578095",
+      "size": 111
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/_crowd_filter.py",
+      "archive_entry": "1688-sourcing/scripts/_crowd_filter.py",
+      "sha256": "0fb0bacfb26ae0d78930e93a241c2f87211a80c66a81eff4ebe4529bfaf3fc82",
+      "size": 6193
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/_errors.py",
+      "archive_entry": "1688-sourcing/scripts/_errors.py",
+      "sha256": "64844303fe28650b279191276d73b6deee001fb12d9b0ebbe0e342b2fbc169f8",
+      "size": 1607
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/_output.py",
+      "archive_entry": "1688-sourcing/scripts/_output.py",
+      "sha256": "71c6880fc356163c89ecfe15f459278612171f951e50764497e24f09531b9e43",
+      "size": 36728
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/compare/__init__.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/compare/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/compare/cmd.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/compare/cmd.py",
+      "sha256": "a30fe12ac3f82aa40b2cd5b5dad20691a9db32b7c7a5eab2071c619d68709c7e",
+      "size": 1467
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/configure/__init__.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/configure/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/image_search/__init__.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/image_search/__init__.py",
+      "sha256": "3313f1cbea8f78368253ce98b459a12794d0538c533e3525c21a5d87ede96385",
+      "size": 55
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/image_search/cmd.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/image_search/cmd.py",
+      "sha256": "b8a943ee658ddf4fb100ea4e7e43e2e249fb6f0f487380d01d386711f981cf23",
+      "size": 3205
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/link_search/__init__.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/link_search/__init__.py",
+      "sha256": "e659439c10ff219362df46aae477f7dd0b519f94112739d833ccba64658ba3e2",
+      "size": 55
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/link_search/cmd.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/link_search/cmd.py",
+      "sha256": "fd477ce647279e048bc215f1f1357d2d687b6ace7d32f17de7254e00a18faf33",
+      "size": 3878
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/text_search/__init__.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/text_search/__init__.py",
+      "sha256": "71be59c0d736fc2b9d2f4bfe7280b3315883826dfd20460c494f9f1f067aacdc",
+      "size": 55
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/capabilities/text_search/cmd.py",
+      "archive_entry": "1688-sourcing/scripts/capabilities/text_search/cmd.py",
+      "sha256": "285c6cab539de67b0e5ed0d62b7b6d29c3ad47f17f238bd4bf20ea05a989e221",
+      "size": 3099
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/mcp_postprocess.py",
+      "archive_entry": "1688-sourcing/scripts/mcp_postprocess.py",
+      "sha256": "72a89a9038f274fdbd8d0001ee38342272ac55ae66882f7ba8b783cb046a17bf",
+      "size": 11244
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/scripts/templates/product_list.html",
+      "archive_entry": "1688-sourcing/scripts/templates/product_list.html",
+      "sha256": "78f7551c752b03c438f86ae94bb7df8b2b393f3ce8c4b211f4a25e223fe3a075",
+      "size": 34793
+    },
+    {
+      "destination": "source/remote-skills/1688-sourcing/0.0.110/source/tests/testcases.json",
+      "archive_entry": "1688-sourcing/tests/testcases.json",
+      "sha256": "cfe74a253460b13c514de6bf9f3a6f227502ddfbf593f8edc838143fa6ff76db",
+      "size": 2807
+    }
+  ],
+  "local_comparison": [
+    {
+      "relative_path": "SKILL.md",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "cli.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "references/capabilities/compare.md",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "references/capabilities/image_search.md",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "references/capabilities/link_search.md",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "references/capabilities/text_search.md",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "references/common/error-handling.md",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "requirements.txt",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/_crowd_filter.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/_errors.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/_output.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/compare/__init__.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/compare/cmd.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/configure/__init__.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/image_search/__init__.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/image_search/cmd.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/link_search/__init__.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/link_search/cmd.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/text_search/__init__.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/capabilities/text_search/cmd.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/mcp_postprocess.py",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "scripts/templates/product_list.html",
+      "local_exists": true,
+      "same_sha256": true
+    },
+    {
+      "relative_path": "tests/testcases.json",
+      "local_exists": true,
+      "same_sha256": true
+    }
+  ],
+  "local_source_matches_remote": true,
+  "execution": "Downloaded and safely extracted only; no installation or code execution."
+}

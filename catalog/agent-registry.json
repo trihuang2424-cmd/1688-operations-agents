@@ -1,0 +1,753 @@
+{
+  "version": "2.4.0",
+  "date": "2026-10-30",
+  "runtime": "Codex/compatible host; default image workflow uses current-session imagegen; Accio desktop gateway required only for Accio business tools",
+  "agent_count": 3,
+  "agents": [
+    {
+      "id": "operations_director",
+      "display_name": "运营总控（主Agent）",
+      "kind": "primary",
+      "skill": ".agents/skills/1688-operations-director/SKILL.md",
+      "project": ".",
+      "purpose": "经营目标、周期策略、任务分派、跨域协调、行动观察与结果验收；不再启动总控子Agent",
+      "capabilities": [
+        "operating_cycle",
+        "business_analysis",
+        "reporting",
+        "platform_knowledge",
+        "platform_maintenance"
+      ],
+      "loading": {
+        "role": "director",
+        "phase_source": "catalog/task-routing.json",
+        "rule": "主Agent亲自执行业务时同样选择executor；每个阶段只加载完整适用规则及必要来源。"
+      }
+    },
+    {
+      "id": "product_operations",
+      "display_name": "商品运营",
+      "kind": "specialist",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "project": "agents/product_operations",
+      "native_agent_config": ".codex/agents/product_operations.toml",
+      "purpose": "商品诊断、标题属性方案、图片、新品准备、竞争与市场研究",
+      "capabilities": [
+        "product_optimization",
+        "market_research",
+        "listing",
+        "image"
+      ],
+      "loading": {
+        "role": "executor",
+        "phase_source": "catalog/task-routing.json",
+        "rule": "主Agent亲自执行业务时同样选择executor；每个阶段只加载完整适用规则及必要来源。"
+      }
+    },
+    {
+      "id": "traffic_operations",
+      "display_name": "流量与投放运营",
+      "kind": "specialist",
+      "skill": ".agents/skills/1688-traffic-operations/SKILL.md",
+      "project": "agents/traffic_operations",
+      "native_agent_config": ".codex/agents/traffic_operations.toml",
+      "purpose": "自然/搜索/推荐/广告渠道分析、行业对照及投放建议；写入能力单独验证",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "loading": {
+        "role": "executor",
+        "phase_source": "catalog/task-routing.json",
+        "rule": "主Agent亲自执行业务时同样选择executor；每个阶段只加载完整适用规则及必要来源。"
+      }
+    }
+  ],
+  "on_demand_review": {
+    "id": "operations_review",
+    "native_agent_config": ".codex/agents/operations_review.toml",
+    "counts_as_core_agent": false,
+    "mode": "独立复核任务，无自动业务写入"
+  },
+  "skills": [
+    {
+      "id": "operating_cycle",
+      "display_name": "运营周期管理",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-operations-director/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-operations-director/RULES.md"
+      ],
+      "activation": "core",
+      "legacy_roles": [
+        "operations_director"
+      ]
+    },
+    {
+      "id": "business_analysis",
+      "display_name": "经营分析",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-store-analyst/RULES.md",
+        "references/business-rules/1688-daily-report/RULES.md",
+        "references/business-rules/1688-profit-analyst/RULES.md"
+      ],
+      "activation": "core",
+      "legacy_roles": [
+        "store_analyst",
+        "daily_report",
+        "profit_analyst"
+      ]
+    },
+    {
+      "id": "product_optimization",
+      "display_name": "商品诊断与优化",
+      "owner": "product_operations",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-merchandising-analyst/RULES.md",
+        "references/business-rules/1688-title-optimizer/RULES.md",
+        "references/business-rules/1688-product-editor/RULES.md"
+      ],
+      "activation": "core",
+      "legacy_roles": [
+        "merchandising_analyst",
+        "title_optimizer",
+        "product_editor"
+      ]
+    },
+    {
+      "id": "market_research",
+      "display_name": "竞争与市场研究",
+      "owner": "product_operations",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-competition-analyst/RULES.md",
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "competition_analyst",
+        "market_opportunity"
+      ]
+    },
+    {
+      "id": "listing",
+      "display_name": "新商品准备与发布",
+      "owner": "product_operations",
+      "skill": ".agents/skills/1688-listing-publisher/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-listing-publisher/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "listing_publisher"
+      ]
+    },
+    {
+      "id": "traffic_analysis",
+      "display_name": "流量与投放分析",
+      "owner": "traffic_operations",
+      "skill": ".agents/skills/1688-traffic-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-traffic-analyst/RULES.md"
+      ],
+      "activation": "core",
+      "legacy_roles": [
+        "traffic_analyst"
+      ],
+      "availability": "现有目录支持流量/广告诊断查询；广告计划、预算和出价写入未接入验证"
+    },
+    {
+      "id": "platform_knowledge",
+      "display_name": "平台规则检索",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-platform-knowledge/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-platform-knowledge/RULES.md"
+      ],
+      "activation": "shared",
+      "legacy_roles": [
+        "platform_knowledge"
+      ]
+    },
+    {
+      "id": "platform_maintenance",
+      "display_name": "连接与平台维护",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-connection-administrator/RULES.md",
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "activation": "shared",
+      "legacy_roles": [
+        "connection_administrator",
+        "platform_support"
+      ]
+    },
+    {
+      "id": "customer_conversion",
+      "display_name": "客户运营与转化",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-crm-manager/RULES.md",
+        "references/business-rules/1688-inquiry-analyst/RULES.md",
+        "references/business-rules/1688-reception-coach/RULES.md",
+        "references/business-rules/1688-quotation-designer/RULES.md",
+        "references/business-rules/1688-outreach-operator/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "crm_manager",
+        "inquiry_analyst",
+        "reception_coach",
+        "quotation_designer",
+        "outreach_operator"
+      ]
+    },
+    {
+      "id": "erp_inventory",
+      "display_name": "ERP与库存数据",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-erp-inventory/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-erp-jushuitan-analyst/RULES.md",
+        "references/business-rules/1688-erp-jackyun-analyst/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "erp_jushuitan_analyst",
+        "erp_jackyun_analyst"
+      ]
+    },
+    {
+      "id": "procurement_research",
+      "display_name": "采购研究",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md",
+        "references/business-rules/1688-company-due-diligence/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "sourcing_advisor",
+        "company_due_diligence"
+      ]
+    },
+    {
+      "id": "buyer_transactions",
+      "display_name": "买家采购事务",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-buyer-order-assistant/RULES.md",
+        "references/business-rules/1688-fulfillment-specialist/RULES.md",
+        "references/business-rules/1688-aftersales-specialist/RULES.md",
+        "references/business-rules/1688-invoice-assistant/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "buyer_order_assistant",
+        "fulfillment_specialist",
+        "aftersales_specialist",
+        "invoice_assistant"
+      ]
+    },
+    {
+      "id": "distribution",
+      "display_name": "分销",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-distribution-operator/RULES.md",
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "distribution_operator",
+        "cross_platform_distribution"
+      ],
+      "availability": "1688分销以live schema为准；大泽/店小宝/DSers专属工具不在205快照中"
+    },
+    {
+      "id": "image",
+      "display_name": "商品视觉",
+      "owner": "product_operations",
+      "skill": "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-creative-studio/RULES.md"
+      ],
+      "activation": "on_demand",
+      "legacy_roles": [
+        "creative_studio"
+      ],
+      "entry": "agents/image-agent/AGENTS.md"
+    },
+    {
+      "id": "reporting",
+      "display_name": "经营报告呈现",
+      "owner": "operations_director",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "activation": "shared",
+      "legacy_roles": [
+        "report_designer"
+      ]
+    }
+  ],
+  "legacy_aliases": {
+    "operations_director": {
+      "owner": "operations_director",
+      "capability": "operating_cycle",
+      "skill": ".agents/skills/1688-operations-director/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-operations-director/RULES.md"
+      ],
+      "legacy_project": "agents/operations_director",
+      "entry_mode": "primary",
+      "original_skill_name": "1688-operations-director",
+      "current_owner_entry": "AGENTS.md"
+    },
+    "store_analyst": {
+      "owner": "operations_director",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-store-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/store_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-store-analyst",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/store_analyst/ENTRY.md"
+    },
+    "daily_report": {
+      "owner": "operations_director",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-daily-report/RULES.md"
+      ],
+      "legacy_project": "agents/daily_report",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-daily-report",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/daily_report/ENTRY.md"
+    },
+    "profit_analyst": {
+      "owner": "operations_director",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-profit-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/profit_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-profit-analyst",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/profit_analyst/ENTRY.md"
+    },
+    "merchandising_analyst": {
+      "owner": "product_operations",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-merchandising-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/merchandising_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-merchandising-analyst",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/merchandising_analyst/ENTRY.md"
+    },
+    "title_optimizer": {
+      "owner": "product_operations",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-title-optimizer/RULES.md"
+      ],
+      "legacy_project": "agents/title_optimizer",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-title-optimizer",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/title_optimizer/ENTRY.md"
+    },
+    "product_editor": {
+      "owner": "product_operations",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-product-editor/RULES.md"
+      ],
+      "legacy_project": "agents/product_editor",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-product-editor",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/product_editor/ENTRY.md"
+    },
+    "competition_analyst": {
+      "owner": "product_operations",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-competition-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/competition_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-competition-analyst",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/competition_analyst/ENTRY.md"
+    },
+    "market_opportunity": {
+      "owner": "product_operations",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "legacy_project": "agents/market_opportunity",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-market-opportunity",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/market_opportunity/ENTRY.md"
+    },
+    "listing_publisher": {
+      "owner": "product_operations",
+      "capability": "listing",
+      "skill": ".agents/skills/1688-listing-publisher/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-listing-publisher/RULES.md"
+      ],
+      "legacy_project": "agents/listing_publisher",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-listing-publisher",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/listing_publisher/ENTRY.md"
+    },
+    "traffic_analyst": {
+      "owner": "traffic_operations",
+      "capability": "traffic_analysis",
+      "skill": ".agents/skills/1688-traffic-operations/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-traffic-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/traffic_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-traffic-analyst",
+      "current_owner_entry": "agents/traffic_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/traffic_analyst/ENTRY.md"
+    },
+    "platform_knowledge": {
+      "owner": "operations_director",
+      "capability": "platform_knowledge",
+      "skill": ".agents/skills/1688-platform-knowledge/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-platform-knowledge/RULES.md"
+      ],
+      "legacy_project": "agents/platform_knowledge",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-platform-knowledge",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/platform_knowledge/ENTRY.md"
+    },
+    "connection_administrator": {
+      "owner": "operations_director",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-connection-administrator/RULES.md"
+      ],
+      "legacy_project": "agents/connection_administrator",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-connection-administrator",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/connection_administrator/ENTRY.md"
+    },
+    "platform_support": {
+      "owner": "operations_director",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "legacy_project": "agents/platform_support",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-platform-support",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/platform_support/ENTRY.md"
+    },
+    "crm_manager": {
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-crm-manager/RULES.md"
+      ],
+      "legacy_project": "agents/crm_manager",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-crm-manager",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/crm_manager/ENTRY.md"
+    },
+    "inquiry_analyst": {
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/inquiry_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-inquiry-analyst",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/inquiry_analyst/ENTRY.md"
+    },
+    "reception_coach": {
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-reception-coach/RULES.md"
+      ],
+      "legacy_project": "agents/reception_coach",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-reception-coach",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/reception_coach/ENTRY.md"
+    },
+    "quotation_designer": {
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-quotation-designer/RULES.md"
+      ],
+      "legacy_project": "agents/quotation_designer",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-quotation-designer",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/quotation_designer/ENTRY.md"
+    },
+    "outreach_operator": {
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-outreach-operator/RULES.md"
+      ],
+      "legacy_project": "agents/outreach_operator",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-outreach-operator",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/outreach_operator/ENTRY.md"
+    },
+    "erp_jushuitan_analyst": {
+      "owner": "operations_director",
+      "capability": "erp_inventory",
+      "skill": ".agents/skills/1688-erp-inventory/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-erp-jushuitan-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/erp_jushuitan_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-erp-jushuitan-analyst",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/erp_jushuitan_analyst/ENTRY.md"
+    },
+    "erp_jackyun_analyst": {
+      "owner": "operations_director",
+      "capability": "erp_inventory",
+      "skill": ".agents/skills/1688-erp-inventory/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-erp-jackyun-analyst/RULES.md"
+      ],
+      "legacy_project": "agents/erp_jackyun_analyst",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-erp-jackyun-analyst",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/erp_jackyun_analyst/ENTRY.md"
+    },
+    "sourcing_advisor": {
+      "owner": "operations_director",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "legacy_project": "agents/sourcing_advisor",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-sourcing-advisor",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/sourcing_advisor/ENTRY.md"
+    },
+    "company_due_diligence": {
+      "owner": "operations_director",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-company-due-diligence/RULES.md"
+      ],
+      "legacy_project": "agents/company_due_diligence",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-company-due-diligence",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/company_due_diligence/ENTRY.md"
+    },
+    "buyer_order_assistant": {
+      "owner": "operations_director",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-buyer-order-assistant/RULES.md"
+      ],
+      "legacy_project": "agents/buyer_order_assistant",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-buyer-order-assistant",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/buyer_order_assistant/ENTRY.md"
+    },
+    "fulfillment_specialist": {
+      "owner": "operations_director",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "legacy_project": "agents/fulfillment_specialist",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-fulfillment-specialist",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/fulfillment_specialist/ENTRY.md"
+    },
+    "aftersales_specialist": {
+      "owner": "operations_director",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "legacy_project": "agents/aftersales_specialist",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-aftersales-specialist",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/aftersales_specialist/ENTRY.md"
+    },
+    "invoice_assistant": {
+      "owner": "operations_director",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-invoice-assistant/RULES.md"
+      ],
+      "legacy_project": "agents/invoice_assistant",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-invoice-assistant",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/invoice_assistant/ENTRY.md"
+    },
+    "distribution_operator": {
+      "owner": "operations_director",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-distribution-operator/RULES.md"
+      ],
+      "legacy_project": "agents/distribution_operator",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-distribution-operator",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/distribution_operator/ENTRY.md"
+    },
+    "cross_platform_distribution": {
+      "owner": "operations_director",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "legacy_project": "agents/cross_platform_distribution",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-cross-platform-distribution",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/cross_platform_distribution/ENTRY.md"
+    },
+    "creative_studio": {
+      "owner": "product_operations",
+      "capability": "image",
+      "skill": "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-creative-studio/RULES.md"
+      ],
+      "legacy_project": "agents/creative_studio",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-creative-studio",
+      "current_owner_entry": "agents/product_operations/AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/creative_studio/ENTRY.md"
+    },
+    "report_designer": {
+      "owner": "operations_director",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "legacy_project": "agents/report_designer",
+      "entry_mode": "archived_alias",
+      "original_skill_name": "1688-report-designer",
+      "current_owner_entry": "AGENTS.md",
+      "archived_entry": "archive/legacy-agent-entries/report_designer/ENTRY.md"
+    }
+  },
+  "default_image_workflow": {
+    "workflow_entry": "agents/image-agent/AGENTS.md",
+    "generation_contract": "agents/image-agent/.agents/skills/1688-image-design/references/generation-runtime.md",
+    "default_backend": "current_session_imagegen_builtin",
+    "planning_and_review": "Codex",
+    "respect_explicit_user_provider_choice": true,
+    "automatic_backend_fallback": false,
+    "accio_connection_required_for_default_generation": false
+  },
+  "task_routing": "catalog/task-routing.json",
+  "rules_preservation": "manifests/routing-refactor-20261028-preservation.json",
+  "semantics": {
+    "agents": "仅3个核心岗位；总控即当前主Agent",
+    "skills": "能力条目，不等于独立Agent；按任务加载规则",
+    "legacy_aliases": "旧名只映射新负责人/能力；legacy_project仅保存历史路径，current_owner_entry是现行负责人入口，archived_entry仅供追溯，不加载为业务入口",
+    "business_rules": "原31规则逐字保留，合并仅调整组织和入口；不能借重构删改来源规则",
+    "permissions": "路由为执行约定，不构成MCP硬权限隔离",
+    "on_demand_specialists": "条件触发的有限专项，复用现有能力；注册不等于真实启动，不增加核心角色或独立项目。",
+    "phase_loading": "route.phase_loading是阶段依赖真源；完整业务规则保留，未支持或未明确阶段不得静默跳过。"
+  },
+  "legacy_entry_archive": "manifests/legacy-agent-entry-archive-20261028.json",
+  "on_demand_specialists": [
+    {
+      "id": "conversion_analysis",
+      "display_name": "询盘与转化分析专项",
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md",
+        "references/business-rules/1688-crm-manager/RULES.md"
+      ],
+      "native_config": ".codex/agents/conversion_analysis.toml",
+      "activation": "conditional",
+      "project": null,
+      "counts_as_core_agent": false,
+      "mode": "analysis_only"
+    }
+  ],
+  "primary_entry_migration": "manifests/director-entry-consolidation-20261029.json",
+  "context_loading": {
+    "authority": "catalog/task-routing.json#context_loading",
+    "resolver": "scripts/task_context.py",
+    "documentation": "references/context-loading.md",
+    "policy": "按route及阶段生成准确读取清单；注册表只存身份和完整规则清单，不复制阶段路由。"
+  }
+}

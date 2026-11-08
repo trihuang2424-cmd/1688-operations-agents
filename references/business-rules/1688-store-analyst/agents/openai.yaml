@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 店铺经营分析师"
+  short_description: "经营日报、成交健康、行业位置、活动效果与综合经营判断"
+  default_prompt: "使用 $1688-store-analyst 处理我的店铺经营分析师任务，并列出真实依据与已完成结果。"

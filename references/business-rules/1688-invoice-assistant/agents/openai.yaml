@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 发票事务专员"
+  short_description: "发票抬头、默认抬头、可开票金额、开票申请与申请记录"
+  default_prompt: "使用 $1688-invoice-assistant 处理我的发票事务专员任务，并列出真实依据与已完成结果。"

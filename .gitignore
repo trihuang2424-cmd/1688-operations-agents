@@ -1,0 +1,19 @@
+# Generated business evidence and outputs stay local.
+/reports/
+/outputs/
+/source/
+/01-店铺接手摸底待办.md
+/浙江淞泰科技-接手摸底-*.md
+/货号.md
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*credentials*.json
+*cookies*.json

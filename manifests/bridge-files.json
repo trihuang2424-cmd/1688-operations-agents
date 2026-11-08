@@ -1,0 +1,71 @@
+{
+  "note": "本地现有Codex桥接器源码；不是Accio官方源码。仅存档，当前会话沿用现有已连接MCP。",
+  "files": [
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/README.md",
+      "target": "source/bridge/README.md",
+      "bytes": 5463,
+      "sha256": "525c0e195c3bf5f1a3fa32a34540270a94e37480149d4348d3948d691730adfa"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/VALIDATION.md",
+      "target": "source/bridge/VALIDATION.md",
+      "bytes": 2765,
+      "sha256": "a8ba7e734f9ff912444ad6049bd7de912b13039875cd3a7fe8c81726aed1b4a1"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/pyproject.toml",
+      "target": "source/bridge/pyproject.toml",
+      "bytes": 568,
+      "sha256": "b375153554747fc0aad2973b4d1e1bd355b69036753e9df83203a7f5850ca8dd"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/run.sh",
+      "target": "source/bridge/run.sh",
+      "bytes": 505,
+      "sha256": "0dcd9d103e119df3ce4a04fe59c8be0c5b60a8b5d2d41b0b347cd28b626c8af8"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/src/accio1688_bridge/auth.py",
+      "target": "source/bridge/src/accio1688_bridge/auth.py",
+      "bytes": 4416,
+      "sha256": "02abd4ad1255ebaa0c741b212ff506bf8c9f2a0ffae2bbed7728c2652474c31a"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/src/accio1688_bridge/gateway.py",
+      "target": "source/bridge/src/accio1688_bridge/gateway.py",
+      "bytes": 22162,
+      "sha256": "1412b629d72053ed4804b577c158f1474f44cd94958611a1d0e2056d2d17080a"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/src/accio1688_bridge/server.py",
+      "target": "source/bridge/src/accio1688_bridge/server.py",
+      "bytes": 6642,
+      "sha256": "abf06a4ac8747c6c30db05c84d0bb3cbc191de26b9bba9b184142cd879161005"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/src/accio1688_bridge/__init__.py",
+      "target": "source/bridge/src/accio1688_bridge/__init__.py",
+      "bytes": 90,
+      "sha256": "f8a62558fc2ddef0d5add337accba2cae64e57d31ef5ffabf809a7bc919274a6"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/tests/test_gateway.py",
+      "target": "source/bridge/tests/test_gateway.py",
+      "bytes": 22256,
+      "sha256": "940945f63c3f82e0990eed7acd835000b8041b35bfc240dc819359196b54c7b9"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/tests/test_auth.py",
+      "target": "source/bridge/tests/test_auth.py",
+      "bytes": 1870,
+      "sha256": "cb0b548da2098b85a37dfbc32a102b2bb7f5724bcdba7c428e6e1384bb7fe64e"
+    },
+    {
+      "source": "/Users/shileqi/Documents/ChatGPT/jacky/1688-accio-bridge/tests/test_stdio.py",
+      "target": "source/bridge/tests/test_stdio.py",
+      "bytes": 3236,
+      "sha256": "7f3cffc077187faf304275ecfc8edd5d9e938ae9891950732dc9bf96512f4bf0"
+    }
+  ]
+}

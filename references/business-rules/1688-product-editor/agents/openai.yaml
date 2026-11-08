@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 商品优化执行员"
+  short_description: "已有商品标题、主图、属性、上下架及一键操作；基于真实数据给出可复核的业务结果"
+  default_prompt: "使用 $1688-product-editor 处理我的商品优化执行员任务，并列出真实依据与已完成结果。"

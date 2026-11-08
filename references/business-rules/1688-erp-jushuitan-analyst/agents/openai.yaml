@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 聚水潭ERP分析师"
+  short_description: "聚水潭商品、库存、仓库、采购、订单、出入库、售后与供应商查询"
+  default_prompt: "使用 $1688-erp-jushuitan-analyst 处理我的聚水潭ERP分析师任务，并列出真实依据与已完成结果。"

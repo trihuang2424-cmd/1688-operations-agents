@@ -1,0 +1,6 @@
+interface:
+  display_name: "1688 产品视觉概念"
+  short_description: "为明确的新产品需求设计外观概念和差异化方案，区分设计目标与真实商品事实"
+  default_prompt: "使用 $1688-product-visual-concepts，结合我的用途与工艺约束设计产品视觉概念。"
+policy:
+  allow_implicit_invocation: true

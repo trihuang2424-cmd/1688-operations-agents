@@ -1,0 +1,6 @@
+interface:
+  display_name: "经营日报专员"
+  short_description: "生成1688指定日期的交易、流量、买家日报与异常说明；长周期和当日实时查询转经营分析。"
+  default_prompt: "使用 $1688-daily-report，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

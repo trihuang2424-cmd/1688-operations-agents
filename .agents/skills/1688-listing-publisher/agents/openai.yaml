@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 新商品准备与发布"
+  short_description: "按原发品规则准备图片表格素材与商品草稿，逐项跟踪真实发布状态"
+  default_prompt: "使用 $1688-listing-publisher 按提供的商品资料完成指定素材包、草稿或发布任务，并列明实际状态。"
+

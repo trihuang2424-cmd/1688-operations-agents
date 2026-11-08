@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-28",
+  "passed": true,
+  "ui_metadata": [
+    {
+      "path": ".agents/skills/1688-business-analysis/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-buyer-transactions/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-distribution/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-erp-inventory/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-listing-publisher/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-market-research/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-operations-director/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-platform-knowledge/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-platform-maintenance/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-procurement-research/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-product-operations/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    },
+    {
+      "path": ".agents/skills/1688-traffic-operations/agents/openai.yaml",
+      "passed": true,
+      "checks": {
+        "short_description_length": true,
+        "prompt_invokes_skill": true,
+        "implicit_invocation": true
+      }
+    }
+  ],
+  "native_configs": [
+    {
+      "path": ".codex/agents/operations_review.toml",
+      "passed": true,
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ]
+    },
+    {
+      "path": ".codex/agents/product_operations.toml",
+      "passed": true,
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ]
+    },
+    {
+      "path": ".codex/agents/traffic_operations.toml",
+      "passed": true,
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ]
+    }
+  ]
+}

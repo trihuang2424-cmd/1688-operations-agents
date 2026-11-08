@@ -1,0 +1,6 @@
+interface:
+  display_name: "企业背调分析师"
+  short_description: "查找1688供货商企业并生成有证据的工商、法律与经营背调报告。"
+  default_prompt: "使用 $1688-company-due-diligence，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

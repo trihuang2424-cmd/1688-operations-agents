@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 退款与投诉专员"
+  short_description: "退款列表与详情、退款撤销、投诉申请与取消、投诉进展"
+  default_prompt: "使用 $1688-aftersales-specialist 处理我的退款与投诉专员任务，并列出真实依据与已完成结果。"

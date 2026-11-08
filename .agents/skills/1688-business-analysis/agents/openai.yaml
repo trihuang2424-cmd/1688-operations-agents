@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 经营分析"
+  short_description: "按完整周月及指定周期对比基线，形成销售变化结论与经营报告"
+  default_prompt: "使用 $1688-business-analysis 按指定周期分析经营表现，并说明数据覆盖、基线和缺失项。"
+

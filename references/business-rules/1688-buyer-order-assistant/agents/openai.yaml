@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 买家采购助理"
+  short_description: "采购要素、商品 SKU 库存、地址解析、订单列表与下单预览"
+  default_prompt: "使用 $1688-buyer-order-assistant 处理我的买家采购助理任务，并列出真实依据与已完成结果。"

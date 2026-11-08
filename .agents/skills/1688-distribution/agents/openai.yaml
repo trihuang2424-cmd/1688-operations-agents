@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 分销与跨平台适配"
+  short_description: "按实际服务开展分销与跨平台适配，保留渠道规则并核验真实连接"
+  default_prompt: "使用 $1688-distribution 按指定平台和服务处理分销任务，并明确连接能力与实际执行状态。"
+

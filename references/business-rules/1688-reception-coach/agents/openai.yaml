@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · AI接待配置师"
+  short_description: "接待助手配置、模拟问答、知识缺口、标准答案、运行状态和日报"
+  default_prompt: "使用 $1688-reception-coach 处理我的AI接待配置师任务，并列出真实依据与已完成结果。"

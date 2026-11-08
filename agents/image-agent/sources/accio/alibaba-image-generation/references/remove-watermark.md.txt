@@ -1,0 +1,152 @@
+---
+name: remove-watermark
+description: 从图片中移除水印、网站信息、联系方式或二维码，生成干净的图片。调用水印移除服务处理图片，输入一张图片，服务自动检测并移除水印，输出处理后的图片路径。当用户需要去除图片水印、清除网站标识、移除联系方式或二维码时使用。
+---
+
+# 图片水印移除
+
+## 功能说明
+
+本 Skill 用于从图片中移除水印、网站信息、联系方式或二维码等不需要的元素，生成干净的图片，适用于电商产品图处理、图片素材净化等场景。
+
+## 支持的移除类型
+
+1. **水印** - 文字水印、图片水印、半透明水印等
+2. **网站信息** - 网站URL、网站Logo、来源标识等
+3. **联系方式** - 电话号码、微信号、QQ号等
+4. **二维码** - 各类二维码图片
+
+## 使用流程
+
+### 1. 准备输入
+
+- 输入：一张待处理的图片（支持常见格式：JPG、PNG、WEBP 等）
+- 图片路径：用户提供的图片文件路径
+- 服务将自动检测图片中的水印、文字、二维码等元素并移除
+
+### 2. 参数校验（前置拦截）
+
+**在调用图像工具之前，必须先校验必传参数。如果参数为空，不发起请求，直接提示用户。**
+
+| 必传参数 | 校验规则 | 缺失时处理 |
+|---------|---------|-----------|
+| `imageUrl` | 用户提供的图片 URL，不可为空 | 终止流程，提示"请提供需要去除水印的图片" |
+
+### 3. 调用图像工具
+
+水印移除使用 `image_edit` 工具的 `watermark_removal` task_type：
+
+```
+工具：image_edit
+task_type：watermark_removal
+参数：
+  imageUrl: "<图片URL>"
+  prompt: "<变体 A 或 变体 B 的 prompt>"
+```
+
+**参数说明：**
+- `imageUrl`：输入图片的 URL 地址
+- `prompt`：水印移除 prompt，必须从下方变体 A/B 中选择，根据图片左上角是否存在品牌商标确定
+
+**Prompt 变体（调用 `watermark_removal` 时必选）：**
+
+Agent 需先观察图片左上角是否有品牌商标，据此选择对应的 prompt 变体。若无法确定，默认使用变体 A（更安全，不会误保留水印）。
+
+- **变体 A：左上角无商标**
+
+```
+Remove the watermark, website information, contact details, or QR code from the image. Preserve product-related text that is visibly present in the ORIGINAL image.
+```
+
+- **变体 B：左上角有商标**
+
+```
+Remove the watermark, website information, contact details, or QR code from the image. Preserve product-related text and the top-left brand logo that is visibly present in the ORIGINAL image.
+```
+
+**返回示例：**
+
+工具直接返回处理后的图片 URL：
+
+```json
+{
+  "imageUrl": "https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png"
+}
+```
+
+### 4. 输出结果
+
+**重要：获取到处理结果后，按照以下格式向用户展示，不要直接返回原始 JSON。**
+
+**输出格式：**
+
+```
+已经帮你生成图片
+
+![]({图片URL})
+```
+
+**输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)
+
+- ✅ 正确：按上述格式输出，包含图片预览和创意工坊链接
+- ❌ 错误：直接返回 JSON 或只返回图片 URL
+
+## 注意事项
+
+1. `watermark_removal` 为单一功能 task_type，**仅支持 1:1 比例**。若用户指定非 1:1 的 `aspect_ratio`，自动降级为 `simple_generation` 执行，prompt 使用上方变体 A/B。
+2. 当用户请求包含 ≥2 个意图（如"去水印 + 换白底"）时，自动降级为 `simple_generation` 执行。
+3. 商品相关文字（如产品名称、规格等）必须保留。
+4. 仅移除水印、网址、联系方式、二维码等非商品信息。
+5. 版权注意：请确保有权处理该图片，移除水印可能涉及版权问题。
+
+## 使用示例
+
+**场景1：移除图片水印**
+
+用户："帮我把这张图片上的水印去掉"
+
+执行步骤：
+1. 获取用户提供的图片路径
+2. 观察图片左上角是否有品牌商标，选择变体 A 或变体 B 的 prompt
+3. 调用 `image_edit`，`task_type: watermark_removal`，传入原图与所选 prompt
+4. 返回最终结果
+
+**示例调用：**
+
+```
+工具：image_edit
+task_type：watermark_removal
+参数：
+  imageUrl: "https://sc01.alicdn.com/kf/H5b56916614944dafaa06ea9f03aff8979.jpg"
+  prompt: "Remove the watermark, website information, contact details, or QR code from the image. Preserve product-related text that is visibly present in the ORIGINAL image."
+```
+
+**成功后输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)
+
+**场景2：移除网站标识**
+
+用户："这张图片右下角有个网站地址，帮我删掉"
+
+执行步骤：
+1. 获取用户提供的图片路径
+2. 观察图片左上角是否有品牌商标，选择变体 A 或变体 B 的 prompt
+3. 调用 `image_edit`，`task_type: watermark_removal`，传入原图与所选 prompt
+4. 返回最终结果
+
+**场景3：移除二维码**
+
+用户："帮我清除图片上的二维码"
+
+执行步骤：
+1. 获取用户提供的图片路径
+2. 观察图片左上角是否有品牌商标，选择变体 A 或变体 B 的 prompt
+3. 调用 `image_edit`，`task_type: watermark_removal`，传入原图与所选 prompt
+4. 返回最终结果

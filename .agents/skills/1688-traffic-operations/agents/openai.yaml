@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 流量与投放运营"
+  short_description: "拆解搜索推荐广告渠道与行业变化，形成有证据的流量投放建议"
+  default_prompt: "使用 $1688-traffic-operations 结合当前策略与观察中的措施分析渠道变化，提出可验证的投放建议。"
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 分销经营专员"
+  short_description: "分销选品与参谋、下游铺货、分销订单、旺旺往来和分销知识"
+  default_prompt: "使用 $1688-distribution-operator 处理我的分销经营专员任务，并列出真实依据与已完成结果。"

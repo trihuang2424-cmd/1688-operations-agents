@@ -1,0 +1,38 @@
+# 细节图 detailImage — Prompt 规则
+
+## Routing Header
+
+- **Load when**：用户对细节图提出了具体要求（指定部位、材质表现、特写角度等），需要构造英文 prompt 时。
+- **Do not load when**：用户未提任何要求（→ 不填 prompt，见 [`prompt-common.md`](prompt-common.md) §1）；用户要求的是场景展示（→ scene-image.md）。
+- **Hard stop**：只放大呈现原图中**真实可见**的部位；被遮挡/不可见的部位严禁推测重建。
+
+## 类型定义
+
+商品局部放大 / 材质与工艺特写。目标：呈现质感与做工，建立品质信任。
+
+## Prompt 模板骨架（仅用户有要求时使用）
+
+将用户要求翻译为英文后填入 `<user_requirement>`：
+
+```
+Close-up macro shot of <user_requirement: 英文部位/材质描述，如 the fabric texture and stitching / the wooden leg joint>,
+sharp focus on surface texture and craftsmanship, soft even lighting,
+1:1 square, no text, no watermark, no border, no contact info, no URL, no QR code
+```
+
+**填充要点**：
+- 部位描述必须对应原图中真实存在且可见的部分
+- 细节图默认**无文字**（`no text` 而非 `English text only`）；用户明确要求标注文字时改为英文标注
+- 材质词精确直译（"荔枝纹真皮" → "lychee-grain genuine leather"）
+
+## 示例
+
+| 用户要求 | prompt |
+|---|---|
+| （未提要求） | **不填** |
+| "特写椅子腿的木质接缝" | `Close-up macro shot of the wooden leg joint of the chair, sharp focus on surface texture and craftsmanship, soft even lighting, 1:1 square, no text, no watermark, no border, no contact info, no URL, no QR code` |
+
+## 红线
+
+- 严禁虚构工艺特征（原图看不出的缝线、涂层、纹理不得凭空描述）
+- **本类型适用 [`prompt-common.md`](prompt-common.md) §4 的完整红线块**（含 `no collage` / `no promotional claims` / 75%-80% 居中），无任何豁免——本文模板未逐字重复，不代表可省略

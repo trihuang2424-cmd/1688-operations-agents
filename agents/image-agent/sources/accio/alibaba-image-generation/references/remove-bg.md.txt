@@ -1,0 +1,106 @@
+---
+name: remove-bg
+description: 消除商品图片背景，生成白底图，结果路径保存在json中。调用背景消除服务处理图片，输入一张图片，输出背景已移除的处理后图片路径。当用户需要去除图片背景、生成白底商品图、处理产品照片时使用。
+---
+
+# 商品图片背景消除
+
+## 功能说明
+
+本 Skill 用于消除商品图片的背景，生成干净的白底图，适用于电商产品展示。
+
+## 使用流程
+
+### 1. 准备输入
+
+- 输入：一张商品图片（支持常见格式：JPG、PNG、WEBP 等）
+- 图片路径：用户提供的图片文件路径
+
+### 2. 参数校验（前置拦截）
+
+**在调用图像工具之前，必须先校验必传参数。如果参数为空，不发起请求，直接提示用户。**
+
+| 必传参数 | 校验规则 | 缺失时处理 |
+|---------|---------|-----------|
+| `imageUrl` | 用户提供的图片 URL，不可为空 | 终止流程，提示"请提供需要去除背景的图片" |
+
+### 3. 调用图像工具
+
+背景消除使用 `image_edit` 工具的 `white_background` task_type：
+
+```
+工具：image_edit
+task_type：white_background
+参数：
+  imageUrl: "<图片URL>"
+  prompt: "Replace the background of the main product in the image with a pure white background. Keep the main product unchanged in the image."
+```
+
+**参数说明：**
+- `imageUrl`：输入图片的 URL 地址
+- `prompt`：固定为 `Replace the background of the main product in the image with a pure white background. Keep the main product unchanged in the image.`，不可修改或省略
+
+**返回示例：**
+
+工具直接返回处理后的图片 URL：
+
+```json
+{
+  "imageUrl": "https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png"
+}
+```
+
+### 4. 输出结果
+
+**重要：获取到处理结果后，按照以下格式向用户展示，不要直接返回原始 JSON。**
+
+**输出格式：**
+
+```
+已经帮你生成图片
+
+![]({图片URL})
+```
+
+**输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)
+
+- ✅ 正确：按上述格式输出，包含图片预览和创意工坊链接
+- ❌ 错误：直接返回原始 JSON、下载处理后的图片、保存文件等
+
+## 注意事项
+
+1. `white_background` 为单一功能 task_type，**仅支持 1:1 比例**。若用户指定非 1:1 的 `aspect_ratio`，自动降级为 `simple_generation` 执行，prompt 仍按白底场景构建。
+2. 当用户请求包含 ≥2 个意图（如"换白底 + 去水印"）时，自动降级为 `simple_generation` 执行。
+3. 商品主体的颜色、结构、纹理等细节必须完整保留。
+4. 处理失败时按 SKILL.md 中的错误处理规则执行。
+
+## 使用示例
+
+**场景：处理商品图片**
+
+用户："帮我把这张商品图片的背景去掉"
+
+执行步骤：
+1. 获取用户提供的图片路径
+2. 调用 `image_edit`，`task_type: white_background`
+3. 按指定格式输出结果（图片预览 + 创意工坊链接）
+
+**示例调用：**
+
+```
+工具：image_edit
+task_type：white_background
+参数：
+  imageUrl: "https://sc01.alicdn.com/kf/H5b56916614944dafaa06ea9f03aff8979.jpg"
+  prompt: "Replace the background of the main product in the image with a pure white background. Keep the main product unchanged in the image."
+```
+
+**成功后输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)

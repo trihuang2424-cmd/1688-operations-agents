@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "agent_count": 3,
+  "capability_count": 15,
+  "task_route_count": 21,
+  "legacy_alias_count": 31,
+  "source_skill_entries": 107,
+  "business_rule_files_hash_checked": 63,
+  "errors": [],
+  "date": "2026-10-28",
+  "offline_only": true,
+  "tool_count": 205,
+  "source_files_hash_checked": 2460,
+  "protected_files_hash_checked": 2658,
+  "context_documents_preservation_checked": 2,
+  "design_prompt_count": 265
+}

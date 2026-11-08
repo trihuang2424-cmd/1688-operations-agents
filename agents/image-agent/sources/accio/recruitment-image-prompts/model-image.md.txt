@@ -1,0 +1,83 @@
+# 模特图 modelImage — Prompt 规则
+
+## Routing Header
+
+- **Load when**：用户要求生成模特图（人物穿戴/手持/使用商品的展示图），需要构造英文 prompt 时。
+- **Do not load when**：用户未提任何要求（→ 不填 prompt，见 [`prompt-common.md`](prompt-common.md) §1）；用户只要商品在场景中而无人物（→ scene-image.md）；只要局部特写（→ detail-image.md）。
+- **Hard stop**：不得改变商品本体（形状、结构、颜色、材质、logo、比例）；人物是陪衬，商品始终是视觉主体。
+
+## 类型定义
+
+人物自然穿戴、手持或使用商品的展示图。目标：传达穿着/使用效果与尺寸感，建立代入感。
+
+**适用品类**：服饰、鞋履、配饰、箱包、手表珠宝、母婴、手持工具等与人体直接交互的品类。家具家电等大件可用人物做尺寸参照。**品类说明**：所有品类一律按五类固定序生成本类型，不做品类适配性跳过；纯工业件、原材料等无人体交互场景的商品由 rlab 内置逻辑按品类处理（如生成手持/场景参照图），不因品类减少 tasks。
+
+## 展现形式选择
+
+按商品与人体的交互部位决定出镜范围，**不必总是全身**：
+
+| 商品类型 | 建议展现形式 |
+|---|---|
+| 手表 / 手环 / 戒指 | 手腕、手部特写 |
+| 鞋履 | 脚部及小腿 |
+| 服饰 / 箱包 | 半身或全身 |
+| 母婴用品 | 家长与婴幼儿互动 |
+| 家具 / 大件 | 全身，人物做尺寸参照 |
+
+## Prompt 模板骨架（仅用户有要求时使用）
+
+按用户是否指定模特类型选择变体，将要求翻译为英文后填入。
+
+### 变体 A — 用户指定了模特类型/特征
+
+用户给出了年龄、性别、族裔、风格等（如"亚洲女性模特，25 岁左右"）：
+
+```
+A <model_description: 英文模特描述，含年龄段/性别/族裔等用户指定特征> naturally
+<action: wearing / holding / using> the product in <user_requirement: 英文场景或动作描述>,
+<display_form: 英文展现形式，如 full-body shot / close-up on the wrist>,
+the product remains the visual focus with its shape, structure, color, material and details
+unchanged from the original image,
+natural pose and realistic human-product interaction, harmonious and realistic proportions
+with no unnatural scale mismatch,
+commercial lifestyle photography, natural lighting,
+1:1 square, English text only,
+no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims
+```
+
+### 变体 B — 用户未指定模特类型
+
+按商品品类自动匹配合适的模特（如服饰用成年模特、母婴用家长与婴幼儿）：
+
+```
+A model appropriate for this product category naturally
+<action: wearing / holding / using> the product in <user_requirement: 英文场景或动作描述>,
+<display_form: 英文展现形式>,
+the product remains the visual focus with its shape, structure, color, material and details
+unchanged from the original image,
+natural pose and realistic human-product interaction, harmonious and realistic proportions
+with no unnatural scale mismatch,
+commercial lifestyle photography, natural lighting,
+1:1 square, English text only,
+no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims
+```
+
+**填充要点**：
+- 动作要匹配品类（穿戴 wearing / 手持 holding / 使用 using），不要笼统写 "with the product"
+- 用户指定的模特特征精确直译（"欧美男性模特" → "a Western male model"）
+- 展现形式按上方表格选择，小件商品优先局部出镜（更能突出商品）
+- 人物比例必须与商品真实匹配，不得因人物过大/过小暗示错误尺寸
+
+## 示例
+
+| 用户要求 | prompt |
+|---|---|
+| （未提要求） | **不填** |
+| "加一张模特图，亚洲女性坐在椅子上看书" | `An Asian female model naturally using the product, seated on the chair reading a book in a bright living room, full-body shot, the product remains the visual focus with its shape, structure, color, material and details unchanged from the original image, natural pose and realistic human-product interaction, harmonious and realistic proportions with no unnatural scale mismatch, commercial lifestyle photography, natural lighting, 1:1 square, English text only, no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims` |
+
+## 红线
+
+- **人物合规**：模特着装得体，禁止暴露、性暗示、猎奇姿态；不得生成未成年人单独出镜的商业展示（母婴品类的亲子同框除外）
+- **肖像与身份**：不得生成可识别的真实人物（名人、公众人物）；不得使用用户未授权的真人照片作为参考
+- **商品保真**：人物不得遮挡商品关键结构；商品本体不得因人物动作而变形
+- **红线块适用范围**：本类型**豁免 `product centered occupying 75%-80% of frame`**（人物 + 商品同框，商品占比必然更低），**其余红线短语仍须全部附加**（English text only / no watermark / no border / no collage / no contact info / no URL / no QR code / no promotional claims），详见 [`prompt-common.md`](prompt-common.md) §4

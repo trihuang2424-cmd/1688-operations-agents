@@ -1,0 +1,2360 @@
+[
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/resources/recommend.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/resources/recommend.json",
+    "bytes": 6531,
+    "sha256": "7641a900bce2fca94e39c87b156cdc1e43bd4ee0fd0b796cab683331b3f5c9ee"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/resources/ali1688.svg",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/resources/ali1688.svg",
+    "bytes": 5275,
+    "sha256": "8fd8755813cb43552dabfd8f4ab76957619af33d5d0b8beaadbcf09bb674e435"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/resources/logo.svg",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/resources/logo.svg",
+    "bytes": 4084,
+    "sha256": "966803f5de50a35288fab7a4a2794a4e1cb73600a1ab54ddf7844f44f50c885e"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/resources/i18n.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/resources/i18n.json",
+    "bytes": 32238,
+    "sha256": "565faa84f97897f13398b41dc3fe670d850008e3dcf3402d6cc0229def67e4d2"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/README.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/README.md",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/connectors/connectors.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/connectors/connectors.json",
+    "bytes": 858,
+    "sha256": "3c5b6a3e764a4b518237c9eb96db35fa86ecb990e56e0141b29ef54396db497b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/prompt.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/prompt.md",
+    "bytes": 5381,
+    "sha256": "7369840cc1e0dfd680ee1b2ee5b3ee959f77381748546629e6f09b5e4da50435"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/plugin.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/plugin.json",
+    "bytes": 1332,
+    "sha256": "46326c1f939276d8f79b2e9f50fa3c1b3cb21fbfa9220d13de2b03cc46a84532"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/SKILL.md",
+    "bytes": 4620,
+    "sha256": "7eb6fbc5099ca78f62fefd7b77088a34e1f899ce6e7a4b40c2af5bb1bf49590b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/tests/testcases.json",
+    "bytes": 23566,
+    "sha256": "c4c46fcfb126d57fa618f4f75e76a89dc82834b6e2da64d75544c056e084c016"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/references/capabilities/refund/cancel_refund.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/references/capabilities/refund/cancel_refund.md",
+    "bytes": 2405,
+    "sha256": "dd3820cb8850d3c2f710f4b9fb05a1965897dd924bba902bf88ef19f0fc776dd"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-refund/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-refund/SKILL.md",
+    "bytes": 4177,
+    "sha256": "5d16ffecf2ca707852a2196b907a453a282bfb0ac3cd2ba2aa263e34df3f5f0c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/SKILL.md",
+    "bytes": 8108,
+    "sha256": "c8421c2aa664f58b6a560b11a0cd81a85feefea8f85b74d07efd2fa7163eed4b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/tests/testcases.json",
+    "bytes": 42176,
+    "sha256": "597dd469eb9a7e2f25d41bee9d456796f19052feea73ae054b400694a70c358c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/references/capabilities/refund/refund_detail_query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/references/capabilities/refund/refund_detail_query.md",
+    "bytes": 2366,
+    "sha256": "d7e8ca683f275b54391748243a7a593d454406ddec6c50c51a24ff32427a16ae"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/modify-refund/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/modify-refund/SKILL.md",
+    "bytes": 3231,
+    "sha256": "31ec4fae581c35db141ba3160d8d07e8795cf4f56075656a5bafc945efc2c3db"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/SKILL.md",
+    "bytes": 11623,
+    "sha256": "a316105bb386c795345c4b53f97d8fea18d491ce51925e3e1b2d901c45bd06fb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/tests/testcases.json",
+    "bytes": 15542,
+    "sha256": "39249c72c83b611d5f1c5dc135d2042cdbd50f59f5d49ae31463b2af804dbf91"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/references/capabilities/dispute/dispute_interface.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/references/capabilities/dispute/dispute_interface.md",
+    "bytes": 4306,
+    "sha256": "7ad553e352facd3f98cfe5dbcaa42247983b82afe05ed88b5f46a422529f3259"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/SKILL.md",
+    "bytes": 20038,
+    "sha256": "565d662006845019389794d9a087a79d3ef0238c5f1e8e46d3c05d3b521ac9a5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/tests/testcases.json",
+    "bytes": 41595,
+    "sha256": "41072b1dbd9e467f081b4b4c65b0f03b1131033ebea6ccd0fdd75bf58cf97536"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/references/capabilities/order/order_summery.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/references/capabilities/order/order_summery.md",
+    "bytes": 2185,
+    "sha256": "82796895987e490a18c2449a90d182d2e8f661363c4fe8705abe6b7050e9d26a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/references/capabilities/order/order_urge.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/references/capabilities/order/order_urge.md",
+    "bytes": 2554,
+    "sha256": "aa54dd60b07217433be786de84460702ac7a2ec83aa443ee1f6fcd5b778c8f1d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/SKILL.md",
+    "bytes": 6236,
+    "sha256": "34a6a1ee54d89538342987adc8a813b367bf058e21fd36d959fad663e43008eb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/tests/testcases.json",
+    "bytes": 22434,
+    "sha256": "ce39702ee03afd56e2e5d54b237f9d21422cc0c064cd3d4411b982030144e521"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/references/capabilities/dispute/cancel_dispute.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/references/capabilities/dispute/cancel_dispute.md",
+    "bytes": 1305,
+    "sha256": "e10120cfef84ffc2ad4ad38da687b32bd05e261c4b553016c1bf540114f782fe"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/SKILL.md",
+    "bytes": 8390,
+    "sha256": "cbd1955674988b08d4c40ef46eb189a15a5e0cf7df885ffe6455b37637898b3f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/tests/testcases.json",
+    "bytes": 42558,
+    "sha256": "2b5227b036ab89d7829f08fc627abd96321c4541b4a4bfc9a8d5d917b3182236"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/references/capabilities/refund/return_goods.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/references/capabilities/refund/return_goods.md",
+    "bytes": 3383,
+    "sha256": "8e15df5070f102301495f24c2f1b8184202c6e21e0f990a5e7dbd138fe1cd187"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/SKILL.md",
+    "bytes": 9750,
+    "sha256": "d3232914f334abe3ab4a8b9eba4ad51711a62a3eba182c1515589a9e4cc8d58d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/tests/testcases.json",
+    "bytes": 39978,
+    "sha256": "d8a42d8de89302a4142be28ba3fbd77ad7b8b1f1bfaaf4a705530d2fdbb63cd2"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/references/capabilities/refund/refund_list_query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/references/capabilities/refund/refund_list_query.md",
+    "bytes": 3781,
+    "sha256": "cc9cf092cfae4e165796c0edd1cd5c9b4a47175efbc5524abd2922eb30d92872"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/SKILL.md",
+    "bytes": 20725,
+    "sha256": "0379c76e710c2d317672da31203241032ce4f7c8c52e360ba639bc215d7ac5ae"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/tests/test/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/tests/test/testcases.json",
+    "bytes": 22192,
+    "sha256": "2517d6306671ee7be34de2e8f6960562ce8439fee3de956b0137944b1977900d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/tests/testcases.json",
+    "bytes": 18493,
+    "sha256": "0c2dde0df873589fed2d39f4c0a942efc2718519c0d7dab4b013210d36df4999"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/official_delivery_create_order.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/official_delivery_create_order.md",
+    "bytes": 6391,
+    "sha256": "ac2f134feb4ace9c8bbe60f9264b98e1f9edc173cb5e76ad4afba58f9ccbcfa8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/official_delivery_solution_query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/official_delivery_solution_query.md",
+    "bytes": 4319,
+    "sha256": "72799bef89e9b8e321e2c2b3ebaf993b6c3d17d99a23e278d835c1e69a83dc33"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/parse_address.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/parse_address.md",
+    "bytes": 2930,
+    "sha256": "5dc11ab0cf5daca4a2130348e43756de578ff56cd834a54472b1b01200ba1cb3"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/query_full_trace_list.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/query_full_trace_list.md",
+    "bytes": 3012,
+    "sha256": "0a5f69a5bd4772252ae03cb073eb0ba2ca9e769e5388cddcb20ba9b4e628216d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/query_delivery_order_pack_list.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/references/capabilities/query_delivery_order_pack_list.md",
+    "bytes": 2864,
+    "sha256": "11328420e6638c95c1b8a797da338fed88af4eef72958bb66159bd82c345f157"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/.gitignore",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/.gitignore",
+    "bytes": 1046,
+    "sha256": "f237aeb1250647613b3d6fc55209e144522d40fdf1de3fdbb6ec078c9fe8a3e7"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/SKILL.md",
+    "bytes": 11492,
+    "sha256": "94974f640a5c8c8b34b6d3d73a1ad2fdc519cc343089744064bb651bcfe54573"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/README.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/README.md",
+    "bytes": 2191,
+    "sha256": "32fb25a48d073db073dc44c1b9e90b3fa420cd1224ade375baf79efa5db6cfbb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/tests/testcases.json",
+    "bytes": 21074,
+    "sha256": "5f8f84055da4de7f2aa41f4c9ff895fa8e13b836f40ddd00cab3d0ee09cec4bb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-title-rules.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-title-rules.md",
+    "bytes": 1011,
+    "sha256": "f83d2170bdb4d4464c83549a9cf94e5c71f786e6362b4c8e126bbd8bcde786a9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-types.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-types.md",
+    "bytes": 1327,
+    "sha256": "49dcf3217fc9b1af51f0c9162b9871eb67ff69777c67b7f72b19092e64cb3344"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-amount.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-amount.md",
+    "bytes": 1217,
+    "sha256": "610511632ce26e495bf0f87dc05fd9dba6ab9014ef0c05dd0d45110f4d681c31"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-process.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-process.md",
+    "bytes": 1069,
+    "sha256": "ee8c122a67f241daaeeebca34de7b4c7195e10ad79f697bacf73278edb80efb2"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-delivery.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-delivery.md",
+    "bytes": 1415,
+    "sha256": "e38ffbd0119487b356bd35474fb8e9ce04b1fe76370fabf0b7f04ccc546be80b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-refund.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/faq/invoice-refund.md",
+    "bytes": 1891,
+    "sha256": "fee520a6da701fc4277204070cd57dc2c9eb0b03744e7ba1ffa0d66c48ffe8fe"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_config_query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_config_query.md",
+    "bytes": 2940,
+    "sha256": "2190d5c8f02583073731eac8bc75b56f0c8ec3020d96e70a8d3f656d0c312b3f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_query.md",
+    "bytes": 1781,
+    "sha256": "8b8dd981d70651e985d0734c31a119a27354caae31c325e363d2c95d86b99415"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_title_query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_title_query.md",
+    "bytes": 4094,
+    "sha256": "5431f25446ff738d26a1a06dee2e3127be40cfd92cf72c375304ef52e5a1f493"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_title_manage.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_title_manage.md",
+    "bytes": 14393,
+    "sha256": "5f256a231a57f0fa11a1288949883a25bb280a545172ec0740f14f049601f342"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_apply.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/capabilities/invoice_apply.md",
+    "bytes": 10227,
+    "sha256": "128a92a97ca8c3413252de1280f61e42af585076f03e459594e13def2663fdb9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/common/data-contracts.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/common/data-contracts.md",
+    "bytes": 9104,
+    "sha256": "c4ff5440123d3be68742220f0a03d0388a1afca3ea03c3390f34e4ee7d114832"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/common/error-handling.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/references/common/error-handling.md",
+    "bytes": 2604,
+    "sha256": "29e0bec7a3b40c11077b685b00cc3f725472846ceabc5c7dd05bba5c572228f3"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/SKILL.md",
+    "bytes": 12182,
+    "sha256": "bb0366214287345016645578429ca10922df22daf593c2ed6a735a248040d167"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/tests/testcases.json",
+    "bytes": 42752,
+    "sha256": "3610a3ed0b065db94d3e29af30dd0a70352cec90543279c8c56add96eedc159a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/references/capabilities/dispute/view_dispute_detail.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/references/capabilities/dispute/view_dispute_detail.md",
+    "bytes": 4017,
+    "sha256": "5774819bff8a201d3b19a88d6640ce44723803d7a53ba461d367cd052be3c64a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/SKILL.md",
+    "bytes": 21618,
+    "sha256": "07400897d25b020e406b6712d3e43d4cfaaf9f4eee3199d579afed83eb9463ff"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/references/capabilities/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/references/capabilities/reference.md",
+    "bytes": 3259,
+    "sha256": "bd6e3a11cadc5c3631c367c1fe95dd94d5f2e788a9795d358c181f62806f59ee"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/references/common/error-handling.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/references/common/error-handling.md",
+    "bytes": 2808,
+    "sha256": "2145f0592da55e5848db0cb76811d8331435ee7aa9ac119b2cc0f63df1e4f0cc"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-fulfillment/.gitignore",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/.gitignore",
+    "bytes": 323,
+    "sha256": "20179d50c4a97f1857a153bf79eb1e68280e1b8fded124f4599347a5bce9c5d7"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/SKILL.md",
+    "bytes": 11350,
+    "sha256": "47d58c5d09c4e711954c1351151fac13e749f924dfed5cfa81df0206d4b1fb56"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/requirements.txt",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/requirements.txt",
+    "bytes": 111,
+    "sha256": "56b014edc6afd16e8dee58f16c591bc19e0dceec14b5c98b31eb2db94d578095"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/procurement/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/procurement/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/procurement/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/procurement/cmd.py",
+    "bytes": 1833,
+    "sha256": "0868a155a7d64171960b685409c534b5d0db68c3711238e4d57bfd92de467849"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/procurement/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/capabilities/procurement/service.py",
+    "bytes": 3404,
+    "sha256": "13e020640e157698d7ee1813549c9cd1c27325795cbcd049015001d614a0c35a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/_errors.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/_errors.py",
+    "bytes": 1422,
+    "sha256": "b88259b3e7993a924c47aacd7e1bf2db5f9ef11037f0f9ba75fa8104c28e26b7"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/_output.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/scripts/_output.py",
+    "bytes": 1897,
+    "sha256": "38c1d8b56039422072a914e6d46e1ae7430549b5c6c0b9a33ae31f4b5c60b98f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/cli.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/cli.py",
+    "bytes": 3273,
+    "sha256": "1c5444260e594c9eb986c404ba1fe378c571739556c58928875a1858340c86d3"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/references/capabilities/procurement.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/references/capabilities/procurement.md",
+    "bytes": 1148,
+    "sha256": "b2a0a37d73ff52aa300d4cfe164bc0dc1cda9b10b5ca56b3d8f62cc18449c1c7"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-sourcing-inquiry/references/common/error-handling.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/references/common/error-handling.md",
+    "bytes": 801,
+    "sha256": "7c891329476566eb798b622a5e183de88e14fa06120398422db892feeea8dba3"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/SKILL.md",
+    "bytes": 17872,
+    "sha256": "cef0178c89035a1e6713695641e7a07ffcbff19b329f0507a0dd60179ac30b3d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/README.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/README.md",
+    "bytes": 1365,
+    "sha256": "b5fdfdd291d347a0c94d155e6716eecd3629de1b87fd6f842bc76f0eed884033"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/package.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/package.json",
+    "bytes": 164,
+    "sha256": "f783fbe275811796941755fa2174869350fb64a8191a805a2387365dea5dc897"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/scripts/format_suppliers.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/scripts/format_suppliers.py",
+    "bytes": 46224,
+    "sha256": "7950319b892ad12f88f7f1bb188f0f3c43959befc9ecc86cb6bcdbff34b0c463"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/scripts/dash_server.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/scripts/dash_server.py",
+    "bytes": 10437,
+    "sha256": "6c435f647675116f5ba35592d7e7ec20d90d1de414159674c307b0b9aa1d7a99"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/references/capabilities/ali_1688_source_suppliers_infos.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/references/capabilities/ali_1688_source_suppliers_infos.md",
+    "bytes": 8377,
+    "sha256": "078d38103b505ecc8a0bce684d41e75645d70f9c0e675f770c854cee77f06d17"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/.gitignore",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/.gitignore",
+    "bytes": 77,
+    "sha256": "c35b26c2d149b04a045177738660d3031ae3a6fbe5357ab7b19b91687f2f3cee"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_root",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_root",
+    "bytes": 102,
+    "sha256": "41645463409bd710f51dcf5140e065f9ebe9c21f2f2fa62339a39004fbe6e987"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_server.log",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_server.log",
+    "bytes": 937,
+    "sha256": "ca950b31bfab7942c156200dc8bedee88f7df6a0ae13ea4212befc407ee14b3a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_server.port",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_server.port",
+    "bytes": 5,
+    "sha256": "aca3b78a15680fe3bd505caea1b97cd115756797cae8b355d0100ed6b4c4bcbc"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_server.pid",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/outputs/.dash_server.pid",
+    "bytes": 4,
+    "sha256": "a24e43b7765e445a86b1904b1c24b094dbd50eaf218ddc9cd6c2b3cbcd72cea3"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-leaderboard/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-leaderboard/SKILL.md",
+    "bytes": 10249,
+    "sha256": "0ef09c76fcfd85004562719255a285f590319e39a1a8cd3ec657fb539ffa5e11"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-leaderboard/references/display-templates.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-leaderboard/references/display-templates.md",
+    "bytes": 4207,
+    "sha256": "e443dc3c17c124bb5bf01d22eec15bd101f30609b8b72e57dc45683fcb2ef68a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-leaderboard/references/param-reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-leaderboard/references/param-reference.md",
+    "bytes": 14160,
+    "sha256": "0ebd90d4c4bd88caffea462099757f05a5f87403cfc4393fefca35eb75ba6e7c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/SKILL.md",
+    "bytes": 20099,
+    "sha256": "60d91f4fedf4a80b47ba36151d45650bc669d632877d8e82761237c3209e511a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/tests/testcases.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/tests/testcases.json",
+    "bytes": 2807,
+    "sha256": "cfe74a253460b13c514de6bf9f3a6f227502ddfbf593f8edc838143fa6ff76db"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/requirements.txt",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/requirements.txt",
+    "bytes": 111,
+    "sha256": "56b014edc6afd16e8dee58f16c591bc19e0dceec14b5c98b31eb2db94d578095"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/mcp_postprocess.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/mcp_postprocess.py",
+    "bytes": 11244,
+    "sha256": "72a89a9038f274fdbd8d0001ee38342272ac55ae66882f7ba8b783cb046a17bf"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/_crowd_filter.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/_crowd_filter.py",
+    "bytes": 6193,
+    "sha256": "0fb0bacfb26ae0d78930e93a241c2f87211a80c66a81eff4ebe4529bfaf3fc82"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/link_search/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/link_search/__init__.py",
+    "bytes": 55,
+    "sha256": "e659439c10ff219362df46aae477f7dd0b519f94112739d833ccba64658ba3e2"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/link_search/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/link_search/cmd.py",
+    "bytes": 3878,
+    "sha256": "fd477ce647279e048bc215f1f1357d2d687b6ace7d32f17de7254e00a18faf33"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/image_search/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/image_search/__init__.py",
+    "bytes": 55,
+    "sha256": "3313f1cbea8f78368253ce98b459a12794d0538c533e3525c21a5d87ede96385"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/image_search/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/image_search/cmd.py",
+    "bytes": 3205,
+    "sha256": "b8a943ee658ddf4fb100ea4e7e43e2e249fb6f0f487380d01d386711f981cf23"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/configure/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/configure/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/compare/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/compare/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/compare/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/compare/cmd.py",
+    "bytes": 1467,
+    "sha256": "a30fe12ac3f82aa40b2cd5b5dad20691a9db32b7c7a5eab2071c619d68709c7e"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/text_search/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/text_search/__init__.py",
+    "bytes": 55,
+    "sha256": "71be59c0d736fc2b9d2f4bfe7280b3315883826dfd20460c494f9f1f067aacdc"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/text_search/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/capabilities/text_search/cmd.py",
+    "bytes": 3099,
+    "sha256": "285c6cab539de67b0e5ed0d62b7b6d29c3ad47f17f238bd4bf20ea05a989e221"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/_errors.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/_errors.py",
+    "bytes": 1607,
+    "sha256": "64844303fe28650b279191276d73b6deee001fb12d9b0ebbe0e342b2fbc169f8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/templates/product_list.html",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/templates/product_list.html",
+    "bytes": 34793,
+    "sha256": "78f7551c752b03c438f86ae94bb7df8b2b393f3ce8c4b211f4a25e223fe3a075"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/scripts/_output.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/scripts/_output.py",
+    "bytes": 36728,
+    "sha256": "71c6880fc356163c89ecfe15f459278612171f951e50764497e24f09531b9e43"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/cli.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/cli.py",
+    "bytes": 3320,
+    "sha256": "7b152f7f689c9a9690428e4a6ca5a176337fa0b6590e23fc8ad1a7367a34606e"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/references/capabilities/compare.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/references/capabilities/compare.md",
+    "bytes": 1383,
+    "sha256": "301f9e64dc0a8b520267d1de2871410d9933b26368144de716b71ce4c6cb6b54"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/references/capabilities/image_search.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/references/capabilities/image_search.md",
+    "bytes": 1059,
+    "sha256": "8e828563b587090f1bbd9973bacdc2439b1d88fff7c30ff8a8b5c451f851a4c9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/references/capabilities/link_search.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/references/capabilities/link_search.md",
+    "bytes": 1248,
+    "sha256": "59851dec395007842ab195267bb524dc9024c2bcb4ce93075be18acfc294a7c1"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/references/capabilities/text_search.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/references/capabilities/text_search.md",
+    "bytes": 1551,
+    "sha256": "385f322f09b8ef1f2c530d6761a9e1803223b3c3d29fcc8c652b59cc60dd1d79"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-product-find/references/common/error-handling.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/references/common/error-handling.md",
+    "bytes": 817,
+    "sha256": "32dd835b9a4680c64c74c29bb088d6b5c4f11751edb321a3439ea075f04e697c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/SKILL.md",
+    "bytes": 14032,
+    "sha256": "76d720b59326a00a47b28abbc4353e775941c00a4638057d9ed99b2a55ba1cf0"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/README.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/README.md",
+    "bytes": 871,
+    "sha256": "87daf7072e398eff3a89012687b18cea942eac8801a1c6004ed3fc671728074d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_errors.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_errors.py",
+    "bytes": 1601,
+    "sha256": "a82dcefb8e7dd4f83e183beefefb9b42e3b318d4234e8b8492ce4e30d4aa2bf0"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_skill_discovery.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_skill_discovery.py",
+    "bytes": 7203,
+    "sha256": "c1127900731395c0015a3d539cea6c59c6f6c281bb749a3a31c516dccd89445f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_mcp.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_mcp.py",
+    "bytes": 2433,
+    "sha256": "499e7d9865a99642072b9765781020296578cc53a3570828395b07f373d74541"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_output.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/_sys/_output.py",
+    "bytes": 2375,
+    "sha256": "d71fb3555e43f101cbac510e2b727fdf662cbbd14ddcd55753037b3f930d0cb0"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/capabilities/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/capabilities/__init__.py",
+    "bytes": 61,
+    "sha256": "1101c4b7764c2c9310ea8edbdb863d26fd82817b6a18bf25ace62fe7fcc551d9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/cmd.py",
+    "bytes": 4538,
+    "sha256": "23c0f3893a7e9a07a4d3ba6307d8ad4fe5c1c70349c4984d944f0d3f72ea55ac"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/service.py",
+    "bytes": 21042,
+    "sha256": "d6e18b1227b91cf0f5aa6559ded7af893ed119c5691bce4f671cd738d6b4b68b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/order_helper/reference.md",
+    "bytes": 8514,
+    "sha256": "c5d2c87caf672b68b1c4a2f113c08165f7f7ce5c9d9374c07ab2b1f7b81450c4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/cmd.py",
+    "bytes": 3611,
+    "sha256": "8c66949f171c8175861d1ee4d5f98e64d324068754f8f2c763d3077164eaca00"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/service.py",
+    "bytes": 3949,
+    "sha256": "5f3a8afac0df4030c6625f81dd18d3f60bcc1456585d992b96fe004e38273e8d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/offer_info/reference.md",
+    "bytes": 4365,
+    "sha256": "53256ba41da6b5fcaccd72688db366f43d0644fa65abe5df2e0b02908cdf5120"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/const.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/const.py",
+    "bytes": 766,
+    "sha256": "d9638784d6e4aa826e75e982a098dd96e574cbc766c6d6f3d72b57a99f34b18d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/cmd.py",
+    "bytes": 2038,
+    "sha256": "d296ad781fbc231fb1bd36322a7d32910c26f4d6e794ab90664e86f66a6438b8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/service.py",
+    "bytes": 3062,
+    "sha256": "2eae1aad229e3d1521f5555ac735b6aae1745ca1e3e4ec4c25a6510a0d4cd0d1"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/product_search_helper/reference.md",
+    "bytes": 14969,
+    "sha256": "42a04a0fcba378044b797f4931c848e40ed5de3367723c47741ffe65855b343b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/cmd.py",
+    "bytes": 4543,
+    "sha256": "5eb2c98cbb47a81e3650a05e9f5ac001ff141855c4f7a0f18b1dff254e864ace"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/service.py",
+    "bytes": 1196,
+    "sha256": "2f7d8b928c925fd299eadc4c60235358a0d8659229ec58dc0d44e1808febaa32"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/distribute_helper/reference.md",
+    "bytes": 3866,
+    "sha256": "5fc548b0d0f75491d12a596c049bbf321aecd77a6558093e585995b7865e1d4d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/cmd.py",
+    "bytes": 2487,
+    "sha256": "42ba69588d783cfa5d6ebe772e1a989b81e7f0e004fdf64bd9546352096ceb8e"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/service.py",
+    "bytes": 3959,
+    "sha256": "0c7f10d02f2281c42dfb99a723e7bf151ccc3a2fc5d4acd8e0f1801e0f28089b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/knowledge_helper/reference.md",
+    "bytes": 6118,
+    "sha256": "8e7a6861e576354204549f6b6f08c0fd06bd9da7d23ea55c17cf8e361197f902"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/cmd.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/cmd.py",
+    "bytes": 1755,
+    "sha256": "240583dadfb059a215d75b74243c7aa9d9066b8adfa51b4408d716a2f5331838"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/service.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/service.py",
+    "bytes": 2038,
+    "sha256": "e9872eea533f053600ff66f908924300b342d5c484ee0a78989c6743a29c27e5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/reference.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/biz/shop_info/reference.md",
+    "bytes": 3691,
+    "sha256": "eed4d4d0ceeacffc4918f7e60c254aa86368b5a92439eaa6cf05d7b4b8b60698"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-distribution/scripts/cli.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/scripts/cli.py",
+    "bytes": 6528,
+    "sha256": "2ea67427255ef057b38162bf9736ace23d644acb16283b0602acef23d856f809"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/SKILL.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/SKILL.md",
+    "bytes": 23068,
+    "sha256": "406c6f1b34ea497dc509ed3a2b9f86660d12cd75b988a654495e688cf7424d4d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/README.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/README.md",
+    "bytes": 5167,
+    "sha256": "7ee991554b072ae60b4db691b66409a9b1d297a3b29128f5f33d5613a5570077"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/requirements.txt",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/requirements.txt",
+    "bytes": 138,
+    "sha256": "4845287aa795013605033f423bdb95e0117707cefc0267662f5ca269ad7e921e"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/config.json",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/config.json",
+    "bytes": 364,
+    "sha256": "8c54d693e99ad7df4d36af13d3c59eb710a716c98a89f3db7d157ec3d4b1e0bb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/__init__.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_data.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_data.py",
+    "bytes": 31830,
+    "sha256": "d58304e9a51dcf4d7cc481db0315799e1cc58b54f2d990e893feea0938f1f0ad"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/purchase_list.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/purchase_list.py",
+    "bytes": 17138,
+    "sha256": "80b76fde78f3274676a0560a0ff97462c6f368e222f52c99eb929a3c639d024a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/templates/order_confirm_widget.html",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/templates/order_confirm_widget.html",
+    "bytes": 2353,
+    "sha256": "855c31450df28aa85aea8e247e3f1cdd72d2824b38369004d476dbf9173ee28f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/templates/purchase_list_confirm.html",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/templates/purchase_list_confirm.html",
+    "bytes": 2683,
+    "sha256": "bd025307939724553551cef6b7eaeae75c9c8979bfab7da3d699a319f402ac7a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/templates/order_confirm.html",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/templates/order_confirm.html",
+    "bytes": 2640,
+    "sha256": "96d83ea64e6d4f0d1cb8b5a5dafdaf73576fb64016479fa5266fff7ab4e1ab7c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/templates/purchase_list_confirm_widget.html",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/templates/purchase_list_confirm_widget.html",
+    "bytes": 2395,
+    "sha256": "1ae7f602c14cca3d021e55e4d86c4ee936bdb6be61308f1170a0d8b0b941869d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_tool_call.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_tool_call.py",
+    "bytes": 24969,
+    "sha256": "f04b43ab63ec0564c313f566459f8801bc264b7d824f37b877fd9672d7cb65f9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_html_render.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_html_render.py",
+    "bytes": 36726,
+    "sha256": "ad79b51a7ffb12df3ca7997be735bdeeade63ae231e66a9fa9ac71eb494080db"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_tracker.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_tracker.py",
+    "bytes": 2006,
+    "sha256": "fcd0072cc8368912df7205010a70ea1c0f3ba7d83ef330db2eeac7cfff90e3af"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_preflight.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_preflight.py",
+    "bytes": 9288,
+    "sha256": "eafda0ff26310a2f82586e95591e16f5978e8ff521c3aa3caade6a88e2656f2b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_display.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_display.py",
+    "bytes": 35443,
+    "sha256": "0f0848a314b5d3895cd3b212c62ced7dbe230e075576dff5a5bb04be7775da2f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_http_server.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_http_server.py",
+    "bytes": 20663,
+    "sha256": "fd5ed58456cacbc43158aecaef8f8ba20b6fde0f0faf84a1151446fc338b409a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/scripts/_config.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/scripts/_config.py",
+    "bytes": 9108,
+    "sha256": "448db78784859d153359ae19b10f218213aab68db5313639024ff1948497cc66"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/cli.py",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/cli.py",
+    "bytes": 56835,
+    "sha256": "e269dd88c3efb0aae3b24bf007277dfbebf40a4a7db12b71d41d8e1ee27bc837"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/references/path-3.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/references/path-3.md",
+    "bytes": 9725,
+    "sha256": "4a96b75f95ef0e31260e6116008ca31025313af739bf67392be5649f36f4a513"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/references/display-order-preview.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/references/display-order-preview.md",
+    "bytes": 15452,
+    "sha256": "fc872833e6e85937a0fb0c348b885ba8347add71d97c55fcb1e13c5d50d6f54e"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/references/api-params.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/references/api-params.md",
+    "bytes": 20220,
+    "sha256": "ac47c6798d89f1497d99168bfa47ed840694c5f0cc5e2e937b9dc99d7ec92ffe"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/references/display-order-query.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/references/display-order-query.md",
+    "bytes": 8010,
+    "sha256": "965d4bc7872906e49e8e1c550c517a64511e60b7420df79682109db621e6f9ae"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/references/path-1.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/references/path-1.md",
+    "bytes": 12608,
+    "sha256": "58b21bf3803c64a46d7d172c6a662e31c9384bf2dfa026e288e89cca534157e4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "1688-purchasing-assistant",
+    "version": "0.0.9",
+    "archive_member": "1688-purchasing-assistant/skills/1688-order/references/path-4.md",
+    "target": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/references/path-4.md",
+    "bytes": 3779,
+    "sha256": "8e7156e1f54e29c24fb03ba5a2f747c82cbe23cc4e7a1129142f152ae6110361"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "plugin.json",
+    "target": "source/remote-plugins/daze-store-manager-cli/plugin.json",
+    "bytes": 1027,
+    "sha256": "3bdff8e3964d37e7e089a72c8466cd24ed93e77dc99564749205376015edad24"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "clis/clis.json",
+    "target": "source/remote-plugins/daze-store-manager-cli/clis/clis.json",
+    "bytes": 1023,
+    "sha256": "f7889f521c07d24a10069fa082e8d951efff4fe2a4af68beaebdf75008f20cae"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "connectors/connectors.json",
+    "target": "source/remote-plugins/daze-store-manager-cli/connectors/connectors.json",
+    "bytes": 4835,
+    "sha256": "13cf4ca087adf833f2b7fcc8fa273e7a14c45fc062838b091bd9776d38aceb19"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "resources/i18n.json",
+    "target": "source/remote-plugins/daze-store-manager-cli/resources/i18n.json",
+    "bytes": 35085,
+    "sha256": "aaca8b5232bcccf532fc7ccdc92b63c70bfbed2509bdde91ab5008c55fb9f5a4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "resources/icon.png",
+    "target": "source/remote-plugins/daze-store-manager-cli/resources/icon.png",
+    "bytes": 23227,
+    "sha256": "5f17cc3212b92cc17aebbf3aea90e1fce2bbd880a282ed735e5da4dcf9d6a279"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "scripts/dzgj-accio.js",
+    "target": "source/remote-plugins/daze-store-manager-cli/scripts/dzgj-accio.js",
+    "bytes": 37233,
+    "sha256": "c60373235139dcf1602ed67a120b351438cae185cfb835c9f3da164df94d4d2d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "skills/daze-cli-batch-publishing/SKILL.md",
+    "target": "source/remote-plugins/daze-store-manager-cli/skills/daze-cli-batch-publishing/SKILL.md",
+    "bytes": 7711,
+    "sha256": "d356caa58621d50412be392b33ce3a5ec288a62289cb51c01dd9b67d99974a49"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "daze-store-manager-cli",
+    "version": "0.1.20",
+    "archive_member": "skills/daze-cli-batch-publishing/display.txt",
+    "target": "source/remote-plugins/daze-store-manager-cli/skills/daze-cli-batch-publishing/display.txt",
+    "bytes": 36,
+    "sha256": "af3cc73d553641e849a5ffc05be8caa9a4a4bd7538d0e59566b3f3b89c8ecdaa"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/resources/i18n.json",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/resources/i18n.json",
+    "bytes": 14153,
+    "sha256": "e16230692cc7a09eca8e38bc730a0f72fd397f3ad5c32418dd2fd8407c347323"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/resources/icon.png",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/resources/icon.png",
+    "bytes": 12490,
+    "sha256": "de81f1af9314e20bf7ca531735e059621837679be15ce3b3f3ff52bf851b508a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/output_templates.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/output_templates.md",
+    "bytes": 5160,
+    "sha256": "bb87f127583d1fcba5d81a41581566ecafa7a00f0fb0172c45b0f7500c9a25cb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/input_output.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/input_output.md",
+    "bytes": 3718,
+    "sha256": "4bcbfaa634da222e2bc3de42f697e7d7dd079d4dcd7af9940c7fc99b8d840ab2"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/workflow.md",
+    "bytes": 4201,
+    "sha256": "06175b52fee1a010544d7a6a9638e5b62a72dc286cef1115a77009be8bd3c287"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/rules.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/rules.md",
+    "bytes": 5466,
+    "sha256": "472ccc7bff5a167e10e7420a4bf491cb0b8fae50bcc7fed6eb60f381c2809a79"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/kb_refs.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/kb_refs.md",
+    "bytes": 3382,
+    "sha256": "ea75317db66e0c934e4164ea1bfca3b4538ec6801f56757c38ddcb85cf85ad92"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/SKILL.md",
+    "bytes": 10346,
+    "sha256": "7aed8833d926303c5428281038be45428417feef5ae38f4312d589f3beb08778"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/listing_quality_rules.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/listing_quality_rules.md",
+    "bytes": 4308,
+    "sha256": "7bc3c67fbe56afd30ca2ebeb23b3b5eecb0f421ec22d7688060fc194b7864327"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-listing-optimization/examples.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/examples.md",
+    "bytes": 4444,
+    "sha256": "67df7c56add3c10ea6aa51f173b569ec6bb0c27b18506eed291b9eb27ba5742a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/tool_refs.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/tool_refs.md",
+    "bytes": 13386,
+    "sha256": "674a273031d6009f34d58eb174b71132d7a44f56ea0b0cb17a1ab4560e472761"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/eval_cases.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/eval_cases.md",
+    "bytes": 7326,
+    "sha256": "0e4342f4699df46b632fde0d42dbb28edb57f94b29f62445590aa3559d50ebb8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/output_templates.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/output_templates.md",
+    "bytes": 4000,
+    "sha256": "8610a17fee77675967f6ba64bbde2d94375d6c668c414d4ef7bd04476ac2f505"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/input_output.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/input_output.md",
+    "bytes": 4892,
+    "sha256": "80ce60dcd257cefa12f60b11612e5a516559e56a9e2c4dae6cf80e077974e462"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/workflow.md",
+    "bytes": 5714,
+    "sha256": "46f13ce3a32e27d785ad632e13b51ff9a4369d2a460aaaacf619a159dcd2cbde"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/rules.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/rules.md",
+    "bytes": 4331,
+    "sha256": "d7235fbd0e66b89a49464369569243a6f587c2973362196dfe54429afb737e19"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/kb_refs.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/kb_refs.md",
+    "bytes": 2549,
+    "sha256": "bc1b7e21a386a24faedad68600124101701bd59e56e8d65bb961e2292bcf7d49"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/SKILL.md",
+    "bytes": 12250,
+    "sha256": "9c055a38f2c9de30c1320405ba98cde1f55e8668ea5fd684ab095a9334c42b0d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/supplier-mapping-skill/examples.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/examples.md",
+    "bytes": 5218,
+    "sha256": "110f9dd5661cc617402fa0fb3c5356c26a6833ca281cffe67f05e79010e505ea"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/tool_refs.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/tool_refs.md",
+    "bytes": 5049,
+    "sha256": "92b020239662aad336da7c0f5694c64477ecf0373613b849e7eadf09ef568294"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/output_templates.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/output_templates.md",
+    "bytes": 3399,
+    "sha256": "56877ac3c8dc1ef8cb1f9132fef1f58446cd8871c912fe16e3e44dc42db18cca"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/input_output.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/input_output.md",
+    "bytes": 8855,
+    "sha256": "a537f272e025f53aa6aaba523894777a7ed43488372484e91f36d3994eab4fd6"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/workflow.md",
+    "bytes": 4084,
+    "sha256": "cfb605a43268c4fc0862d591f434d35b3af2367a92323f18c70d554c6e8fb063"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/rules.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/rules.md",
+    "bytes": 10058,
+    "sha256": "ed4f199a0fd72607c51a57803aa0c20a7c11117c31760be3fa833fe4c430f5b4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/kb_refs.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/kb_refs.md",
+    "bytes": 6332,
+    "sha256": "9a2d84d8a68d6ee8229b495fd179c69e2f5b32beb1546c064e1fd2d91558a1b4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/SKILL.md",
+    "bytes": 12976,
+    "sha256": "ff23521146a87c34c7d8755dd4e04c3a7310a071a92d75e95da8dab55632380b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-pricing-skill/examples.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/examples.md",
+    "bytes": 3084,
+    "sha256": "9b984be1da9acdc2731d1e2222a20b502d0b084445a9c7478826a357e7223efe"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-research-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-research-skill/workflow.md",
+    "bytes": 14238,
+    "sha256": "250243e4364a2091a3feb117cf2915c794b0da6951b988302961280bec693b4b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-research-skill/example.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-research-skill/example.md",
+    "bytes": 5630,
+    "sha256": "994cd0a0ec430c67e95253c1f705fc8ccd0e62e9e2b220bd18c0cfbe5c3176d5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-research-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-research-skill/SKILL.md",
+    "bytes": 21629,
+    "sha256": "e7a7bdd8eefe85de1efa5278cf98f1ac7f149f8f8b9b0affa0bb7d4f8122d2c5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/references/diagnosis-workflows.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/references/diagnosis-workflows.md",
+    "bytes": 12944,
+    "sha256": "938d64c535111c53738d3e90ed8b4a5a116214204269485585606e38cf70054c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/references/evidence-and-tool-contracts.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/references/evidence-and-tool-contracts.md",
+    "bytes": 9717,
+    "sha256": "5ed7e6cf985c420ef98b5870738d129e2079d5628a4402f486d97a88c4160eb3"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/references/knowledge-and-response.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/references/knowledge-and-response.md",
+    "bytes": 9145,
+    "sha256": "7657a9126cc9f65866ca742c10bad0409e1ead1f80b0d1b49a06c95480c37bb6"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/SKILL.md",
+    "bytes": 24115,
+    "sha256": "11ec366ba93117425d335200676d31945d1c786489cd4d9db27749f1c8b39096"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/tracking-management-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-management-skill/workflow.md",
+    "bytes": 11759,
+    "sha256": "1c41e6d547cee2db5f179e12418f0b8d342a2e0751c8b72af7ba8c98b57ceaa9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/tracking-management-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-management-skill/SKILL.md",
+    "bytes": 11206,
+    "sha256": "8b0ea72943f0b2e2457334c9adb9b0f6896767bbad707af387f9e4c19d4e91c9"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/references/evidence-and-tool-contracts.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/references/evidence-and-tool-contracts.md",
+    "bytes": 7957,
+    "sha256": "d90950c9e36ef0a62a3d4ca06b177e8b953c1e170fbfc60d4bee0867a925d843"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/references/cancellation-and-sync.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/references/cancellation-and-sync.md",
+    "bytes": 4632,
+    "sha256": "0ea96de7ea81a4165cf7ca300dca9b5c21446404b6e41d8b303ff810c08f0751"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/references/order-edits.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/references/order-edits.md",
+    "bytes": 11539,
+    "sha256": "43d0530a6f0036515a162b185e69a173501f14c5130ca29ef1483502371e03ad"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/references/browse-and-inspect.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/references/browse-and-inspect.md",
+    "bytes": 5726,
+    "sha256": "1a2f1e70b46cb7a46ca71bd3ed8673c1a3227014afe4bd690c1223279eb6e2e4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/references/order-billing-records.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/references/order-billing-records.md",
+    "bytes": 3727,
+    "sha256": "2a31605a63a8b2940549fc1c72ae4b98c18c5d4ad2f080099207464ebd5e5c36"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/references/knowledge-and-ui-handoffs.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/references/knowledge-and-ui-handoffs.md",
+    "bytes": 6097,
+    "sha256": "8d5c53d9e4d348ff9ac95b76cf678851f612e56f08e73a8eba55acd1c39f335c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-management-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/SKILL.md",
+    "bytes": 13203,
+    "sha256": "808fd94ffc078616aecf5f70a6ca279589cbf04bdc58471051dbfc73cdb7c5d4"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/manual-notification.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/manual-notification.md",
+    "bytes": 5171,
+    "sha256": "ce86c09347802b4fcbf066be6ea1628497404f0d509cd37cd76afff3b4aff8ff"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/evidence-and-tool-contracts.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/evidence-and-tool-contracts.md",
+    "bytes": 5661,
+    "sha256": "b39a6d0cfaeefbf825278607bf50b1a7279ab6482bb253488c050f0111254272"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/repair-order-blockers.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/repair-order-blockers.md",
+    "bytes": 15047,
+    "sha256": "ace07868b54e5e71172ffbc3985070906a6546b3f60c8a4654fab4649f1545ae"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/supplier-selection-and-mapping.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/supplier-selection-and-mapping.md",
+    "bytes": 16004,
+    "sha256": "3aeef2b655c37c6f94a93420858e1d2ab7f6d924b164018a262b55428b7b3cfb"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/place-orders.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/place-orders.md",
+    "bytes": 18014,
+    "sha256": "f3c9a6852474955bf53fbd51787588ca8decca0c97b6ae8d87c0a57cd6f1f289"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/settings-and-delivery-troubleshooting.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/settings-and-delivery-troubleshooting.md",
+    "bytes": 5587,
+    "sha256": "6bc8534217e9d6300d153867319a505d74e16d8a53215910eafad83e3c55986a"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/manual-fulfillment-and-rollback.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/manual-fulfillment-and-rollback.md",
+    "bytes": 10633,
+    "sha256": "9d85fb0fec9716a646bc12208f7e089e240fec38d21304913d74c4d11fd6fead"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/payment.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/references/payment.md",
+    "bytes": 6102,
+    "sha256": "e6bf1c42773a86bc49475a76ddbf32197f55234db4ac053aa515e023393af554"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/SKILL.md",
+    "bytes": 10668,
+    "sha256": "173286c07b19df5030b09aefd8344490820d305d3e4d58ac957445379757eccd"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-management-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-management-skill/workflow.md",
+    "bytes": 8282,
+    "sha256": "1103c72fd77432fe703bd4df13b3b27136be93c7d7ad04eb2ba63c9126fc1e81"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-management-skill/.WeDrive",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-management-skill/.WeDrive",
+    "bytes": 53,
+    "sha256": "feb18553d21242fa23e24a5f450c69d20255fd8839c2326e144e7b21d53a8eda"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-management-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-management-skill/SKILL.md",
+    "bytes": 14316,
+    "sha256": "97d6cafa660c17e2cb7b9b3125aacf9084fbe3bfaa6fe160f90321eaf512b97d"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-management-skill/examples.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-management-skill/examples.md",
+    "bytes": 15352,
+    "sha256": "c4eabf28d864558188ccd90f0951a35f3cf7cb0dfcb3d1c552b8752beef13880"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-publishing-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-publishing-skill/workflow.md",
+    "bytes": 22417,
+    "sha256": "d257823845598c16764f0a3b74c1488e0b95ab39fe7746354b2aa557f13256ee"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-publishing-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-publishing-skill/SKILL.md",
+    "bytes": 20552,
+    "sha256": "3a30994d435d77fae773373a642e5717610d1d8ef59036809f0679ec720fbf2f"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/product-publishing-skill/examples.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-publishing-skill/examples.md",
+    "bytes": 6512,
+    "sha256": "8a43fedc822453607ed76df21750025c3e378f78aac6daee727b9ca087f69e5b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/repair-order-blockers.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/repair-order-blockers.md",
+    "bytes": 20369,
+    "sha256": "d1962c3e75660771fe3937f37cf284a9ffa0af86c977796f4380a31ecbec4ba5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/supplier-selection-and-mapping.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/supplier-selection-and-mapping.md",
+    "bytes": 19447,
+    "sha256": "d1b89df23b8192d2b012c602123cb624ce1438c2cf5d956429a342c25bc7c6d5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/place-orders.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/place-orders.md",
+    "bytes": 22527,
+    "sha256": "6c4d1990898d12b6aae111ff4f4db5729ce5645c6922c96a99f1de40b3b585a2"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/manual-fulfillment-and-rollback.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/manual-fulfillment-and-rollback.md",
+    "bytes": 10633,
+    "sha256": "9d85fb0fec9716a646bc12208f7e089e240fec38d21304913d74c4d11fd6fead"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/payment.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/references/payment.md",
+    "bytes": 6102,
+    "sha256": "e6bf1c42773a86bc49475a76ddbf32197f55234db4ac053aa515e023393af554"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/SKILL.md",
+    "bytes": 47541,
+    "sha256": "f38ecc7152261e8a8f20f0d0b9e05ac04ebf4fd1951f1f0a661ad23a9f58262b"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/tracking-exception-checker-skill/workflow.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-exception-checker-skill/workflow.md",
+    "bytes": 11580,
+    "sha256": "bbb8a6b3865f39b98d90fd231f00aafdfc88622572ce9515bba92b25d36c2947"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/tracking-exception-checker-skill/example.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-exception-checker-skill/example.md",
+    "bytes": 6081,
+    "sha256": "4cb4681655656424f116756133813a5eadaed9d2686430b6f75b6afd1f6700a8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/skills/tracking-exception-checker-skill/SKILL.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-exception-checker-skill/SKILL.md",
+    "bytes": 14102,
+    "sha256": "c96c6b7efe7166ddc45d1524d7ee7623b7aa908a4c8ceb0d428c1f1c6d052dee"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/prompt.md",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/prompt.md",
+    "bytes": 45961,
+    "sha256": "56add300f75afc47198f2959a5130b4f704c816698d4e3c97004e5b89997813c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/plugin.json",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/plugin.json",
+    "bytes": 1521,
+    "sha256": "2df9d1a69d1edb706552b3534ea982c2191d2d3ba3eb8200a1a12c42e9c7f792"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dsers-dropshipping-pro",
+    "version": "0.0.4",
+    "archive_member": "dsers-dropshipping-pro/validate-plugin.js",
+    "target": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/validate-plugin.js",
+    "bytes": 18439,
+    "sha256": "b31790b350b6fdec003982b479ada65ac653e276d29453934eb9af5c47158201"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/resources/i18n.json",
+    "target": "source/remote-plugins/dxb/dxb/resources/i18n.json",
+    "bytes": 73890,
+    "sha256": "4c3561e0fc9fed22f8c10a2d81eb9dde9d6742eddf3cc747ff1a0166e55e48e8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/resources/icon.svg",
+    "target": "source/remote-plugins/dxb/dxb/resources/icon.svg",
+    "bytes": 1447,
+    "sha256": "95643437bcc748e5c62e02fb433bb0314bb98e5e1e7d2e1f296d88eb2ae49656"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/clis/clis.json",
+    "target": "source/remote-plugins/dxb/dxb/clis/clis.json",
+    "bytes": 1988,
+    "sha256": "97e43867e6c667d3fd99476f2ed8aae6c18a4280b6c4c9027ba9c34955974815"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/plugin.json",
+    "target": "source/remote-plugins/dxb/dxb/plugin.json",
+    "bytes": 1299,
+    "sha256": "d1362b6f82407c8d54b68ddad8c8819ed926c7de2ef972f5cac4fc5f210d2b0c"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/scripts/dxb-cli.js",
+    "target": "source/remote-plugins/dxb/dxb/scripts/dxb-cli.js",
+    "bytes": 27805,
+    "sha256": "811b59ce5015b1203fea655b9bbf6366b0476f25f9ec3233c293a9f6054a60b5"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/skills/dxb-image/SKILL.md",
+    "target": "source/remote-plugins/dxb/dxb/skills/dxb-image/SKILL.md",
+    "bytes": 10377,
+    "sha256": "3df558a5f3556da1b47cf48f4989b87f6b26be52ea08315540d08223fdfd9885"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/skills/dxb-image/display.txt",
+    "target": "source/remote-plugins/dxb/dxb/skills/dxb-image/display.txt",
+    "bytes": 905,
+    "sha256": "dbdc2bf593cb8526a16ccc26b83799443025f4075ee682cfd57ccd303fa0a2b8"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/skills/dxb/SKILL.md",
+    "target": "source/remote-plugins/dxb/dxb/skills/dxb/SKILL.md",
+    "bytes": 26698,
+    "sha256": "9a01cb1c8d4e7ea61b7f6e858b040bb6c09f4c22b144191c9969d431ae7a20ce"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/skills/dxb/display.txt",
+    "target": "source/remote-plugins/dxb/dxb/skills/dxb/display.txt",
+    "bytes": 951,
+    "sha256": "5428570cc5669de8a6df19bca94f21c6af5e0f53ceffde6388354e09a3fd2916"
+  },
+  {
+    "source_type": "remote-plugin-archive",
+    "pluginCode": "dxb",
+    "version": "3.1.1",
+    "archive_member": "dxb/connectors/connectors.json",
+    "target": "source/remote-plugins/dxb/dxb/connectors/connectors.json",
+    "bytes": 11122,
+    "sha256": "04e78a91ca739460a261e896d093e322a1c07ef92c745337ee937e27ec2bc7cb"
+  }
+]

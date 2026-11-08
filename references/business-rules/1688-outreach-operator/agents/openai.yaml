@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 客户经营与触达专员"
+  short_description: "客户策略、触达计划、话术草拟、旺旺与优惠券等触达执行"
+  default_prompt: "使用 $1688-outreach-operator 处理我的客户经营与触达专员任务，并列出真实依据与已完成结果。"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "经营报告与看板设计师"
+  short_description: "把已取得的1688经营数据或报告转成可核验的HTML看板和报告，不自行创造指标。"
+  default_prompt: "使用 $1688-report-designer，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

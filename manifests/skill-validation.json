@@ -1,0 +1,188 @@
+[
+  {
+    "skill": "1688-aftersales-specialist",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-buyer-order-assistant",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-company-due-diligence",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-competition-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-connection-administrator",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-creative-studio",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-crm-manager",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-cross-platform-distribution",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-daily-report",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-distribution-operator",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-erp-jackyun-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-erp-jushuitan-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-fulfillment-specialist",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-inquiry-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-invoice-assistant",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-listing-publisher",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-market-opportunity",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-merchandising-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-operations-director",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-outreach-operator",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-platform-knowledge",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-platform-support",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-product-editor",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-profit-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-quotation-designer",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-reception-coach",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-report-designer",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-sourcing-advisor",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-store-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-title-optimizer",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  },
+  {
+    "skill": "1688-traffic-analyst",
+    "valid": true,
+    "message": "Skill is valid!",
+    "ui_valid": true
+  }
+]

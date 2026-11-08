@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 采购与供应商研究"
+  short_description: "研究货源供应商及企业背景，统一入口并保留图搜与背调完整规则"
+  default_prompt: "使用 $1688-procurement-research 按采购需求研究货源或供应商，并提供可追溯的候选及报告状态。"
+

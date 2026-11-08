@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688跨平台分销专家"
+  short_description: "依据大泽、店小宝与DSers规则规划1688跨平台铺货、SKU映射与代发履约"
+  default_prompt: "使用 $1688-cross-platform-distribution 为选定1688商品准备跨平台铺货方案，并核实当前连接能执行哪些步骤。"

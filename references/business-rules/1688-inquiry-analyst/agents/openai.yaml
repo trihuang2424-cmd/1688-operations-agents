@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 询盘与业务员评估师"
+  short_description: "业务员询盘评估、单买家对话回溯和转人工明细；基于真实数据给出可复核的业务结果"
+  default_prompt: "使用 $1688-inquiry-analyst 处理我的询盘与业务员评估师任务，并列出真实依据与已完成结果。"

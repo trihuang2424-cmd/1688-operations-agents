@@ -1,0 +1,83 @@
+# 定招生图 Prompt 公共规范
+
+本文是 `image-prompts/` 下所有类型文件的**公共前置规范**。构造任何类型的 prompt 前，先按本文规则判定"要不要写 prompt"，再进入类型文件取模板。
+
+---
+
+## 1. 首要规则：默认不填 prompt
+
+| 情形 | prompt 取值 |
+|---|---|
+| **用户未提出任何图片要求**（默认流程 / 后置引导 / 只说"生成套图"） | **不填**——task 中省略 `prompt` 字段，由 rlab 工作流内置默认生成逻辑处理 |
+| 用户提出了具体要求（场景、风格、文案、构图等） | 按 §2 构造英文 prompt |
+
+⛔ **禁止在用户没有要求时自行编写、填充任何"默认模板" prompt**。模板只在"用户有要求"时作为改写骨架使用。
+
+## 2. 英文强制
+
+- 传给 `image_generation` 的 `prompt` 值**必须是英文**。
+- 用户用中文表达的要求 → **先翻译成英文**再填入（翻译时保留具体信息：场景名、材质、颜色、文案原文等；用户要求图中出现的文案本身也必须是英文，中文文案需译为英文后使用）。
+- 禁止中英混杂的 prompt。
+
+## 3. 构造流程（用户有要求时）
+
+```
+用户要求（中/英文）
+  → 判定涉及哪些图片类型（场景/细节/卖点/模特/生产流程）
+  → 加载对应类型文件（scene-image.md / detail-image.md / selling-point-image.md / model-image.md / process-image.md）
+  → 按类型模板骨架，将用户要求翻译为英文后填入 <user_requirement> 位
+  → 附加 §4 红线短语
+  → 输出最终英文 prompt
+```
+
+- 用户要求只涉及某一类型时，**其余类型仍不填 prompt**（不要把一个类型的要求扩散到所有 task）。
+- 用户要求与红线冲突（如"加二维码""写中文大字"）→ 拒绝该项要求并告知原因，其余部分正常执行。
+
+## 4. 红线短语（构造 prompt 时必须附加）
+
+以下约束以英文短语形式附加在 prompt 末尾（仅在写 prompt 时附加；不填 prompt 时无需处理，由后端默认逻辑保证）：
+
+```
+1:1 square, product centered occupying 75%-80% of frame, English text only,
+no watermark, no border, no collage, no contact info, no URL, no QR code, no promotional claims
+```
+
+**按类型的适用范围**（各类型文件内的模板可能只写了部分短语，以本表为准补齐）：
+
+| 类型 | 完整红线块 | 豁免项与原因 |
+|---|---|---|
+| `sceneImage` 场景图 | 全部适用 | — |
+| `detailImage` 细节图 | 适用 | — |
+| `sellingPointImage` 卖点图 | 适用 | — |
+| `modelImage` 模特图 | 适用**除 `product centered occupying 75%-80%`** | 模特图为人物 + 商品同框，商品占比必然低于 75%，强套会挤掉模特 |
+| `processImage` 生产流程图 | 适用**除 `product centered occupying 75%-80%` 与 `no collage`** | 流程图本质是多阶段拼接的信息图，多格布局是其固有形态；商品不居中占大幅 |
+
+⛔ **除上表明确豁免外，其余短语一律必须附加**，不因类型文件模板未写而省略。
+
+内容红线（既约束 prompt 也约束对用户要求的审查）：
+- 文字必须英文，严禁中文出现在图中
+- 禁止拼图、边框、水印
+- 禁止联系方式、URL、二维码
+- 禁止促销文案（"Free shipping" / "50% off" 等）
+- 禁止色情、暴力、政治、敏感内容
+- 禁止编造商品事实（卖点、认证、尺寸、材质等必须来自商品数据或用户提供）
+
+## 5. 风格一致性（同品多图）
+
+同一商品一次生成多张时，若用户对整组提出统一风格要求（如"都用北欧风客厅"）：
+
+1. 将该风格描述翻译成英文，形成一段**风格令牌**（style token），**逐字复用**在每个涉及的 task prompt 中——不得逐张改写措辞，否则整组视觉会漂移
+2. 在每个 prompt 末尾追加编号与一致性约束：
+
+```
+shot N of M, consistent background world, lighting and color palette across the set
+```
+
+（N = 当前是第几张，M = 本组总张数）
+
+用户未提风格要求时一律不填 prompt（§1），一致性由后端默认逻辑保证。
+
+## 6. 与流程手册的关系
+
+- 链路流程（查图/去重/提交/轮询/回填）见 [`../topic-image-generation.md`](../topic-image-generation.md)
+- 本目录只管 **prompt 的取舍与写法**；imageType 枚举与 tasks 结构以流程手册 §5 ④ 为准

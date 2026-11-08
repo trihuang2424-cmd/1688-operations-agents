@@ -1,0 +1,6 @@
+interface:
+  display_name: "商品标题优化师"
+  short_description: "优化1688商品标题与关键词，并在用户授权范围内应用确认的标题。"
+  default_prompt: "使用 $1688-title-optimizer，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

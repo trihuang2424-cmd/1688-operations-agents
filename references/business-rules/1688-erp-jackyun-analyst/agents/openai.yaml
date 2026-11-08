@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 吉客云ERP分析师"
+  short_description: "吉客云销售订单、仓库、库存、货品、采购、调拨、出入库与供应商查询"
+  default_prompt: "使用 $1688-erp-jackyun-analyst 处理我的吉客云ERP分析师任务，并列出真实依据与已完成结果。"

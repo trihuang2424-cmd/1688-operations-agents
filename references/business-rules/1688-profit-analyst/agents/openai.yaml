@@ -1,0 +1,6 @@
+interface:
+  display_name: "成本利润分析师"
+  short_description: "核算1688店铺净销售额、退款、平台费用和可验证利润，区分实际成本与假设成本。"
+  default_prompt: "使用 $1688-profit-analyst，根据我的1688需求提供有依据的分析或执行结果。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-29",
+  "scope": "conversion analysis module; no scheduled jobs or live business writes",
+  "backup": "outputs/conversion-analysis-20261029/configuration-before.tar.gz",
+  "files": [
+    {
+      "path": ".agents/skills/1688-business-analysis/SKILL.md",
+      "sha256": "74a62c4aa9100cc90a9ffc783a01f085c97c44b0557e53e1b6917abefb392920"
+    },
+    {
+      "path": ".agents/skills/1688-business-analysis/agents/openai.yaml",
+      "sha256": "a58a15a3c572137d86fb612da59c69d63dbb432413300fd59c6aa67b6e36ada9"
+    },
+    {
+      "path": ".agents/skills/1688-business-analysis/assets/daily-input.json",
+      "sha256": "924585f367143eeb62701e61be12c4c8cfe3bd8d229980faf5491a693791b86e"
+    },
+    {
+      "path": ".agents/skills/1688-business-analysis/assets/operating-report.html",
+      "sha256": "e3a61f383406cae5f7c0fb39aae408d245bb3e7c1384ac4fc8e1f221c65a7027"
+    },
+    {
+      "path": ".agents/skills/1688-business-analysis/assets/weekly-input.json",
+      "sha256": "4511d11e5e6b80ac1c0d931bdb10208606413b6912b0b7204dcce51bfdaf2bf4"
+    },
+    {
+      "path": ".agents/skills/1688-business-analysis/references/report-templates.md",
+      "sha256": "dbb30ed4badea550b0bae0a3605c1e8e2fb70d366c021ca63526ff2e1eb82ba3"
+    },
+    {
+      "path": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "sha256": "78ae45d94b64353ea3d16fbde3994e07c73a5303ee99707bc3090d543440ae6b"
+    },
+    {
+      "path": ".agents/skills/1688-buyer-transactions/agents/openai.yaml",
+      "sha256": "6dd7786e62ac5cd001bfdbf45a3c7227473d10bfcddd07731f0dcd026be40ff6"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "sha256": "38f0f1a92b5150cc6591ecb29c7bbb06c074fc10687e6195d3a230f962134caf"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/agents/openai.yaml",
+      "sha256": "38f543955a94fb786c6aa9b773fb5d78abc1afe04bf658cebc69f9d172604770"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/references/crm-maintenance.md",
+      "sha256": "5730f70a04718b4c1bed008eb312fdac9a7874ef0703b8a0d844066ebad57e87"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/references/crm-outreach.md",
+      "sha256": "8241166536cbdbdbfcf461425f3270f3352a582fdbe92519fc9dc0bf771055df"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/references/crm-query.md",
+      "sha256": "da5f2169710f2a425568466842f3eb1108704fd237e24011d7ab00cd8c8b0f86"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/references/provenance.md",
+      "sha256": "70859337e43b8441f26b3a0a9cf925313bf7481162404539f7b4bf1b7b4715e4"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/references/snapshot.md",
+      "sha256": "7e4c46727f4f291f4654e5f954750ca91fd0ed6cc2ebf281403211ee1013e8bb"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/scripts/crm_snapshot.py",
+      "sha256": "994676512457f5c9d122546fceadb9589fe0346ce220e98c2b18f1a75f9438a3"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/scripts/test_crm_snapshot.py",
+      "sha256": "8efa873e51305f2376da7815b8e0d60ca474bcd447a4ccbbbf182961eb627c8b"
+    },
+    {
+      "path": ".agents/skills/1688-distribution/SKILL.md",
+      "sha256": "f6e1bdd5ac99e82862ac9bcd75c7b86546144f27d35565a1b3182471e2f366e6"
+    },
+    {
+      "path": ".agents/skills/1688-distribution/agents/openai.yaml",
+      "sha256": "da7a8760049d93f838506f619a6bad2cdbb02ef4912b78296ac2b23e940119cf"
+    },
+    {
+      "path": ".agents/skills/1688-erp-inventory/SKILL.md",
+      "sha256": "d62d6d99d3cce18ab7d91fa7f8ef372f795e3bb1f4a7107fcecf6e7eac5fb742"
+    },
+    {
+      "path": ".agents/skills/1688-erp-inventory/agents/openai.yaml",
+      "sha256": "ced3de8f933e599a8b8617dd8472918098ef540d5edecae08f7f51a96eabc941"
+    },
+    {
+      "path": ".agents/skills/1688-listing-publisher/SKILL.md",
+      "sha256": "f23ec61a76b9b62d2b0336e9a428ba15fe1cc1d5b18282a41bf646a04b43bdd0"
+    },
+    {
+      "path": ".agents/skills/1688-listing-publisher/agents/openai.yaml",
+      "sha256": "ed465d15f30243154aee6dd2d90186e90cdbb32d69851bbf55ef6209ce07eca5"
+    },
+    {
+      "path": ".agents/skills/1688-market-research/SKILL.md",
+      "sha256": "1ae2e25f7210ac65ec8071fda2d730d3a5b0dcff7f1be09ba22772a2dd9e66a5"
+    },
+    {
+      "path": ".agents/skills/1688-market-research/agents/openai.yaml",
+      "sha256": "23c617a8c8f63e15784ba3d8faffcc768be039e8162a94145f947e4969a1168d"
+    },
+    {
+      "path": ".agents/skills/1688-operations-director/SKILL.md",
+      "sha256": "7501bdbb0652c561a250c55728b47f8c0431fb551ace9c4ce6036fe911abdb38"
+    },
+    {
+      "path": ".agents/skills/1688-operations-director/agents/openai.yaml",
+      "sha256": "a74122cbbb62d7c3fa2a24abc63697d1c4c7e038c3d82bf62a75c2d278e1ab7b"
+    },
+    {
+      "path": ".agents/skills/1688-platform-knowledge/SKILL.md",
+      "sha256": "0a5aed90af7f4c3a335b5d13135a15ad40857086f051be915c791687a234154f"
+    },
+    {
+      "path": ".agents/skills/1688-platform-knowledge/agents/openai.yaml",
+      "sha256": "c422266dbfab774ed019cb106128820703825e7370745f4a7f52cdb8cc1131ef"
+    },
+    {
+      "path": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "sha256": "acb039e95efd5e3be47b062ba711591bf4178d852d38436a7d0c983e68e803d6"
+    },
+    {
+      "path": ".agents/skills/1688-platform-maintenance/agents/openai.yaml",
+      "sha256": "63e342653838b227fd1d16d9bf6c1f6e46cf68ee321c0a98d487aa227d31f191"
+    },
+    {
+      "path": ".agents/skills/1688-procurement-research/SKILL.md",
+      "sha256": "a897758351f8796953e26023ca0b8a84e8f909db7af3b54621f495c1ab226ac7"
+    },
+    {
+      "path": ".agents/skills/1688-procurement-research/agents/openai.yaml",
+      "sha256": "d7aa5f020cb9a2a156d63afbd5a9e39ff2aa557057be85e4acbe13263c647088"
+    },
+    {
+      "path": ".agents/skills/1688-product-operations/SKILL.md",
+      "sha256": "5ff396a536d08db88a1a382f4b0e1fc1328caa814e8ca22fe65d65ea355360f4"
+    },
+    {
+      "path": ".agents/skills/1688-product-operations/agents/openai.yaml",
+      "sha256": "ba8e614906914895da1bb9cda7ab0cce483148d078f62c53b1bdddfa538cffb9"
+    },
+    {
+      "path": ".agents/skills/1688-traffic-operations/SKILL.md",
+      "sha256": "10d1a522c86d63c93811da85f4448044d0a30c5baba05678aefc694860d98967"
+    },
+    {
+      "path": ".agents/skills/1688-traffic-operations/agents/openai.yaml",
+      "sha256": "6a68eb3da52ddc923155acbfec86e5f9d0d23be8cf9b413fd4f625bb487565b8"
+    },
+    {
+      "path": ".codex/agents/operations_review.toml",
+      "sha256": "8098b364bf46414c7301017efee053ffa920b4d1ea62d6994a4ddbc6f549c10e"
+    },
+    {
+      "path": ".codex/agents/product_operations.toml",
+      "sha256": "62b35dbe430a3012d3401f6d3a483d5341670d91dbb9051d5ed01f36705c23da"
+    },
+    {
+      "path": ".codex/agents/traffic_operations.toml",
+      "sha256": "8bed570987251aff7b2b0f3fbc3be0a3741dfa5d02b9c5a624a8efa1d8b388b8"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "058a9573601a218d3b41b2ed592f3391f03a266a3052883e34c6bd596f638dbb"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b8432afaf7984773a36c01fc62884632b3d816ac0da00e56110c1fa600888abf"
+    },
+    {
+      "path": "VALIDATION-REVIEW.md",
+      "sha256": "609aeb06b34e59d42dfd40d487a9aa229cc56489c7684cec381eb95c5cdf0a38"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "f61da54b0b64d9987a75f88d099fc45452b1b020b2af5fabbf462cc2946e9542"
+    },
+    {
+      "path": "agents/image-agent/AGENTS.md",
+      "sha256": "ff278c46b91727a4432eb4cc3afd47df83b2d1097596b188c4005499672256c9"
+    },
+    {
+      "path": "agents/operations_director/AGENTS.md",
+      "sha256": "3093e21980f16a3bdebed54a76ddfdbf617882f2722a7b287b8bc1da1faad09d"
+    },
+    {
+      "path": "agents/product_operations/AGENTS.md",
+      "sha256": "8474c05ac078019f1df1408bcee01f4ba7d232dd14f45f1329136da16f03ff16"
+    },
+    {
+      "path": "agents/traffic_operations/AGENTS.md",
+      "sha256": "fd51133e8289bfea0a428213caf5f5242b5b1a2c6d586d7961a55505332885c6"
+    },
+    {
+      "path": "catalog/2026-10-25-tool-catalog.md",
+      "sha256": "16d2e30437240b0e9e89f5d51513bb7eb6e9625358cdabf914e395dd6824a553"
+    },
+    {
+      "path": "catalog/AGENT-INDEX.md",
+      "sha256": "4e305a53b31f09bff33c54526e1beedfb2123dabb58cb4fb7b8ebe3e67c70a06"
+    },
+    {
+      "path": "catalog/additional-roles.json",
+      "sha256": "d1532f6f94b3b3cfe1c48284367c06c10f8aa31a56592150b5a2f0ecdef11b34"
+    },
+    {
+      "path": "catalog/agent-registry.json",
+      "sha256": "253669dd44f889158384219c92605a52e130148e5cb93491d0cfd258662b86b8"
+    },
+    {
+      "path": "catalog/cross-platform-role.json",
+      "sha256": "10c66c86ef6c17996dac589b688d547b2726188bd2abdf811debf819807dcada"
+    },
+    {
+      "path": "catalog/live-tool-schemas.json",
+      "sha256": "46c413d9ba9726586a82b2266f16b18fae7c28ffaadb87d16d716edbbe14da5a"
+    },
+    {
+      "path": "catalog/role-design.md",
+      "sha256": "5750ac603341c6a59352bfa37d12dc4e704686d21c8104bcef889ccbf71a6fb2"
+    },
+    {
+      "path": "catalog/source-to-agent.json",
+      "sha256": "4bf610e8496e40ec1d507c846b85828f78050dd2f64749a4d3e10df0e86dba8c"
+    },
+    {
+      "path": "catalog/task-routing.json",
+      "sha256": "5e7c18da9038afbf151948876d516227f61fa48f032d5b2d3244456b3efc5ce3"
+    },
+    {
+      "path": "catalog/tool-routing.json",
+      "sha256": "3a9f563505cf91d792a478f8b5ce801741c63502c4272140142127648f2e7d8c"
+    },
+    {
+      "path": "references/delegation.md",
+      "sha256": "96dcfc0b58b790971dbbf9570a6c2e209e235c81355d2f223ff35cd1835bb29b"
+    },
+    {
+      "path": "references/execution-protocol.md",
+      "sha256": "be039fa02aa007116d3bf812f0bfee2c35a18d9e664d4a953cc3bbea6812eeb4"
+    },
+    {
+      "path": "references/operating-cycle.md",
+      "sha256": "746f1b7f58a07ebd325afffd4c991e45a0eb22e20ce9b7ef7d3feeed3d4f8d61"
+    },
+    {
+      "path": "references/operating-scenarios.md",
+      "sha256": "d8d05ddbe74daf65396b5375a8c584b4b8d1b73de8eb13ea13d0a62fa03489a7"
+    },
+    {
+      "path": "references/purchasing-migration.md",
+      "sha256": "ea94d98b06a87539626167871946c09613c9dca9a741ae4ca8f3b6dc0d7e5345"
+    },
+    {
+      "path": "references/rule-questions.md",
+      "sha256": "2ea221fae8ce171fa02c9a4aaadb45b01ca2e08f8d3696619a172dcceaa80372"
+    },
+    {
+      "path": "references/runtime.md",
+      "sha256": "d00b01e9ea6c611c81872c5ac2b43a5e782f36cf7f24a23feb6c7a3d64ffea33"
+    },
+    {
+      "path": "references/stock-warning-contract.md",
+      "sha256": "aaaa9990aaadb5c39f685fdd6789da11d2489764764464f89d788f4c89dde00a"
+    },
+    {
+      "path": "scripts/normalize_stock_warning.py",
+      "sha256": "c98ac06363d0aad97833e312ce3d6cb07e1b4e55a6a5085a2c9042049bec58aa"
+    },
+    {
+      "path": "scripts/render_operating_report.py",
+      "sha256": "d5156ac5a3b2375d76d338a48f9601800b1d185f2603739fa466ccf142d05b0d"
+    },
+    {
+      "path": "scripts/test_normalize_stock_warning.py",
+      "sha256": "b87d84692608eaf6830feae4c9a3e7709d4d9bb225a53bcbc9a06c916f06736a"
+    },
+    {
+      "path": "scripts/test_report_rendering.py",
+      "sha256": "8613763578d267b9da09da8b7ffb61bc7651d384faf191e7b3807204fa6131c7"
+    },
+    {
+      "path": "scripts/test_routing_contract.py",
+      "sha256": "4ea9470a83a4f6e712acd3ca3a6262174a635cbfce19e5bc2db625a9c9337152"
+    },
+    {
+      "path": "scripts/validate_package.py",
+      "sha256": "457d77ce0dbac24ffd7b3402aca5dde83270916b2ad8e9b70d430e519a69593e"
+    }
+  ]
+}

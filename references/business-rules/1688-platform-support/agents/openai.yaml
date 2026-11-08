@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 平台组件与知识支持员"
+  short_description: "站内知识，以及 Aegis、IM 网关、卡片、归一化数据等平台组件的按需识别"
+  default_prompt: "使用 $1688-platform-support 处理我的平台组件与知识支持员任务，并列出真实依据与已完成结果。"

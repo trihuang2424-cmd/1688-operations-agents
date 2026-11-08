@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 商品运营"
+  short_description: "结合商品事实与既有措施诊断链接，组织标题属性图片方案和执行"
+  default_prompt: "使用 $1688-product-operations 检查指定商品的现有措施，再按相关业务规则完成诊断或优化任务。"
+

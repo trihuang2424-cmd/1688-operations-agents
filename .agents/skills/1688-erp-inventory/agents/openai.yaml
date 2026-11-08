@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 ERP与库存数据"
+  short_description: "按实际ERP连接取得商品库存订单等证据，保留供应商适配和口径"
+  default_prompt: "使用 $1688-erp-inventory 查询当前任务相关的ERP数据，并对齐店铺、SKU、日期和库存口径。"
+

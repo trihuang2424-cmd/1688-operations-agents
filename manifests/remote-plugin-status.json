@@ -1,0 +1,180 @@
+[
+  {
+    "pluginCode": "1688-purchasing-assistant",
+    "date": "2026-10-25",
+    "installed": false,
+    "detail_keys": [
+      "pluginCode",
+      "name",
+      "displayName",
+      "iconUrl",
+      "category",
+      "mainVersion",
+      "summary",
+      "source",
+      "featured",
+      "featuredOrder",
+      "provider",
+      "description",
+      "manifest",
+      "components",
+      "engines"
+    ],
+    "detail": {
+      "pluginCode": "1688-purchasing-assistant",
+      "name": "1688采购工具集",
+      "displayName": "1688采购工具集",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.9",
+      "summary": "为1688买家提供选品找货、找商找厂、询盘寻源、分销铺货、订单管理等一站式采购服务。",
+      "provider": null,
+      "description": "为1688买家提供选品找货、找商找厂、询盘寻源、分销铺货、订单管理等一站式采购服务。"
+    },
+    "version": "0.0.9",
+    "expected_archive_sha256": "978047b10f89f53eacc25b74d45d19307f240775405c138646cb974cdcf37417",
+    "download_source": "https://plugin-download.accio-ai.com/releases/1688-purchasing-assistant/0.0.9/plugin.zip",
+    "status": "extracted",
+    "file_count": 173,
+    "archive_sha256": "978047b10f89f53eacc25b74d45d19307f240775405c138646cb974cdcf37417",
+    "excluded": [
+      {
+        "path": "1688-purchasing-assistant/skills/.DS_Store",
+        "reason": "credential environment or generated dependency/cache"
+      }
+    ]
+  },
+  {
+    "pluginCode": "daze-store-manager-cli",
+    "date": "2026-10-25",
+    "installed": false,
+    "detail_keys": [
+      "pluginCode",
+      "name",
+      "displayName",
+      "iconUrl",
+      "category",
+      "mainVersion",
+      "summary",
+      "source",
+      "featured",
+      "featuredOrder",
+      "provider",
+      "description",
+      "manifest",
+      "components",
+      "engines"
+    ],
+    "detail": {
+      "pluginCode": "daze-store-manager-cli",
+      "name": "大泽店长工具",
+      "displayName": "大泽店长工具",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.20",
+      "summary": "支持批量复制商品并自动发布到店铺，让跨境铺货更省时省力。可从1688、Alibaba、Amazon等主流货源平台采集商品，一键发布到已授权的阿里巴巴国际站店铺。",
+      "provider": null,
+      "description": "支持批量复制商品并自动发布到店铺，让跨境铺货更省时省力。可从1688、Alibaba、Amazon等主流货源平台采集商品，一键发布到已授权的阿里巴巴国际站店铺。"
+    },
+    "version": "0.1.20",
+    "expected_archive_sha256": "9a4d0614a4fed5f95a64dc240a84f1c964ce026dbe88ecddf36d68098ceb40c9",
+    "download_source": "http://accio-work-public-zhangjiakou.oss-accelerate.aliyuncs.com/package/CN/plugin/USER/4500070612684/daze-store-manager-cli/639509dd75194034a09bd0ada6618f8c",
+    "status": "extracted",
+    "file_count": 8,
+    "archive_sha256": "9a4d0614a4fed5f95a64dc240a84f1c964ce026dbe88ecddf36d68098ceb40c9",
+    "excluded": []
+  },
+  {
+    "pluginCode": "dsers-dropshipping-pro",
+    "date": "2026-10-25",
+    "installed": false,
+    "detail_keys": [
+      "pluginCode",
+      "name",
+      "displayName",
+      "iconUrl",
+      "category",
+      "mainVersion",
+      "summary",
+      "source",
+      "featured",
+      "featuredOrder",
+      "provider",
+      "description",
+      "manifest",
+      "components",
+      "engines"
+    ],
+    "detail": {
+      "pluginCode": "dsers-dropshipping-pro",
+      "name": "DSers",
+      "displayName": "DSers",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.4",
+      "summary": "用 Accio 找到商品，再通过 DSers 把它们转化为可持续增长的电商业务。支持从 AliExpress、1688 和 Alibaba.com 导入商品并连接到你的网店，统一管理供应商与订单，自动完成履约并同步物流信息，让选品、销售和发货在一套顺畅流程中完成。",
+      "provider": null,
+      "description": "用 Accio 找到商品，再通过 DSers 把它们转化为可持续增长的电商业务。支持从 AliExpress、1688 和 Alibaba.com 导入商品并连接到你的网店，统一管理供应商与订单，自动完成履约并同步物流信息，让选品、销售和发货在一套顺畅流程中完成。"
+    },
+    "version": "0.0.4",
+    "expected_archive_sha256": "59209d1a523b6cd74053a80b45b7b1121cc7574fe3f70a459c2ba3d2a791f7dc",
+    "download_source": "https://plugin-download.accio-ai.com/releases/dsers-dropshipping-pro/0.0.4/plugin.zip",
+    "status": "extracted",
+    "file_count": 71,
+    "archive_sha256": "59209d1a523b6cd74053a80b45b7b1121cc7574fe3f70a459c2ba3d2a791f7dc",
+    "excluded": [
+      {
+        "path": "dsers-dropshipping-pro/.DS_Store",
+        "reason": "credential environment or generated dependency/cache"
+      },
+      {
+        "path": "dsers-dropshipping-pro/skills/.DS_Store",
+        "reason": "credential environment or generated dependency/cache"
+      },
+      {
+        "path": "dsers-dropshipping-pro/skills/product-management-skill/.DS_Store",
+        "reason": "credential environment or generated dependency/cache"
+      },
+      {
+        "path": "dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/.DS_Store",
+        "reason": "credential environment or generated dependency/cache"
+      }
+    ]
+  },
+  {
+    "pluginCode": "dxb",
+    "date": "2026-10-25",
+    "installed": false,
+    "detail_keys": [
+      "pluginCode",
+      "name",
+      "displayName",
+      "iconUrl",
+      "category",
+      "mainVersion",
+      "summary",
+      "source",
+      "featured",
+      "featuredOrder",
+      "provider",
+      "description",
+      "manifest",
+      "components",
+      "engines"
+    ],
+    "detail": {
+      "pluginCode": "dxb",
+      "name": "店小宝",
+      "displayName": "店小宝",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "3.1.1",
+      "summary": "一键复制并发布商品，AI 智能处理图片，让跨境铺货更高效。支持从1688、Alibaba、Amazon、AliExpress、Made-in-China、Mercado Libre、军埔批发网等常见货源平台复制商品，并发布至授权店铺。",
+      "provider": null,
+      "description": "一键复制并发布商品，AI 智能处理图片，让跨境铺货更高效。支持从1688、Alibaba、Amazon、AliExpress、Made-in-China、Mercado Libre、军埔批发网等常见货源平台复制商品，并发布至授权店铺。"
+    },
+    "version": "3.1.1",
+    "expected_archive_sha256": "87011c70ec8753eeffd133fc5b53dc66e8b3fab5d42507973593034fc2584936",
+    "download_source": "https://plugin-download.accio-ai.com/releases/dxb/3.1.1/plugin.zip",
+    "status": "extracted",
+    "file_count": 10,
+    "archive_sha256": "87011c70ec8753eeffd133fc5b53dc66e8b3fab5d42507973593034fc2584936",
+    "excluded": []
+  }
+]

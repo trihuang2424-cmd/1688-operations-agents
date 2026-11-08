@@ -1,0 +1,1505 @@
+{
+  "date": "2026-10-25",
+  "source_skill_count": 107,
+  "skills": [
+    {
+      "source": "source/account-skills/1688-sourcing/SKILL.md",
+      "original_skill_folder": "1688-sourcing",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/account-skills/accio-mcp-cli/SKILL.md",
+      "original_skill_folder": "accio-mcp-cli",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/account-skills/image-prompt-guide/SKILL.md",
+      "original_skill_folder": "image-prompt-guide",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "creative_studio",
+      "capability": "image",
+      "skill": "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-creative-studio/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/experts/jungle-scout-related-knowledge/constraint-led-sourcing/SKILL.md",
+      "original_skill_folder": "constraint-led-sourcing",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/experts/jungle-scout-related-knowledge/new-product-approval-orchestrator/SKILL.md",
+      "original_skill_folder": "new-product-approval-orchestrator",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-common-report-to-visualization/SKILL.md",
+      "original_skill_folder": "1688-common-report-to-visualization",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "report_designer",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-cowboy/SKILL.md",
+      "original_skill_folder": "1688-cowboy",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "reception_coach",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-reception-coach/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-inquiry-evaluate/SKILL.md",
+      "original_skill_folder": "1688-inquiry-evaluate",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "inquiry_analyst",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-item-one-click/SKILL.md",
+      "original_skill_folder": "1688-item-one-click",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "product_editor",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-product-editor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-item-title-optimizer/SKILL.md",
+      "original_skill_folder": "1688-item-title-optimizer",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "title_optimizer",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-title-optimizer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-product-analysis/SKILL.md",
+      "original_skill_folder": "1688-product-analysis",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "merchandising_analyst",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-merchandising-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-product-keyword-research/SKILL.md",
+      "original_skill_folder": "1688-product-keyword-research",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "market_opportunity",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-product-manage/SKILL.md",
+      "original_skill_folder": "1688-product-manage",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "listing_publisher",
+      "capability": "listing",
+      "skill": ".agents/skills/1688-listing-publisher/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-listing-publisher/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-aicrm-segment-reach-strategy/SKILL.md",
+      "original_skill_folder": "1688-shop-aicrm-segment-reach-strategy",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "outreach_operator",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-outreach-operator/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-business-analysis/SKILL.md",
+      "original_skill_folder": "1688-shop-business-analysis",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "profit_analyst",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-profit-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-compete-analysis/SKILL.md",
+      "original_skill_folder": "1688-shop-compete-analysis",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "competition_analyst",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-competition-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-crm-customer-filter/SKILL.md",
+      "original_skill_folder": "1688-shop-crm-customer-filter",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "crm_manager",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-crm-manager/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-daily-report/SKILL.md",
+      "original_skill_folder": "1688-shop-daily-report",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "daily_report",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-daily-report/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-freedom-query-data/SKILL.md",
+      "original_skill_folder": "1688-shop-freedom-query-data",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "store_analyst",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-store-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-health-check/SKILL.md",
+      "original_skill_folder": "1688-shop-health-check",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "store_analyst",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-store-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-jushuitan-erp/SKILL.md",
+      "original_skill_folder": "1688-shop-jushuitan-erp",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "erp_jushuitan_analyst",
+      "capability": "erp_inventory",
+      "skill": ".agents/skills/1688-erp-inventory/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-erp-jushuitan-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/1688-shop-study-knowledge/SKILL.md",
+      "original_skill_folder": "1688-shop-study-knowledge",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_knowledge",
+      "capability": "platform_knowledge",
+      "skill": ".agents/skills/1688-platform-knowledge/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-knowledge/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/1688-seller-assistant/skills/cha88-company-report-skill/SKILL.md",
+      "original_skill_folder": "cha88-company-report-skill",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "company_due_diligence",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-company-due-diligence/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/SKILL.md",
+      "original_skill_folder": "1688-fulfillment",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/SKILL.md",
+      "original_skill_folder": "1688-official-logistics",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/apply-dispute/SKILL.md",
+      "original_skill_folder": "apply-dispute",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/apply-refund/SKILL.md",
+      "original_skill_folder": "apply-refund",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/cancel-dispute/SKILL.md",
+      "original_skill_folder": "cancel-dispute",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/cancel-refund/SKILL.md",
+      "original_skill_folder": "cancel-refund",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/invoice/SKILL.md",
+      "original_skill_folder": "invoice",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "invoice_assistant",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-invoice-assistant/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/modify-refund/SKILL.md",
+      "original_skill_folder": "modify-refund",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/order-fulfill/SKILL.md",
+      "original_skill_folder": "order-fulfill",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/refund-detail-query/SKILL.md",
+      "original_skill_folder": "refund-detail-query",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/refund-list-query/SKILL.md",
+      "original_skill_folder": "refund-list-query",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/return-goods/SKILL.md",
+      "original_skill_folder": "return-goods",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/SKILL.md",
+      "original_skill_folder": "view-dispute-detail",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/1688-order/SKILL.md",
+      "original_skill_folder": "1688-order",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "buyer_order_assistant",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-buyer-order-assistant/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/accio-inquiry/SKILL.md",
+      "original_skill_folder": "accio-inquiry",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/accio-product-supplier-sourcing/SKILL.md",
+      "original_skill_folder": "accio-product-supplier-sourcing",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/alibaba-logistics-assistant-buyer/SKILL.md",
+      "original_skill_folder": "alibaba-logistics-assistant-buyer",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/buyer-trade-intent/SKILL.md",
+      "original_skill_folder": "buyer-trade-intent",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/cross-border-market-research/SKILL.md",
+      "original_skill_folder": "cross-border-market-research",
+      "agent": "product_operations",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "market_opportunity",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/html-report-generator/SKILL.md",
+      "original_skill_folder": "html-report-generator",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "report_designer",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/product-analysis-report/SKILL.md",
+      "original_skill_folder": "product-analysis-report",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "merchandising_analyst",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-merchandising-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/profit-calculator/SKILL.md",
+      "original_skill_folder": "profit-calculator",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "profit_analyst",
+      "capability": "business_analysis",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-profit-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/sourcing-artifact-writer/SKILL.md",
+      "original_skill_folder": "sourcing-artifact-writer",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "report_designer",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/supersourcing/SKILL.md",
+      "original_skill_folder": "supersourcing",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/supplier-verification-report/SKILL.md",
+      "original_skill_folder": "supplier-verification-report",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "company_due_diligence",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-company-due-diligence/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/accio-com-buyer-assistant/skills/write-compare-report/SKILL.md",
+      "original_skill_folder": "write-compare-report",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "report_designer",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-1688-product-research/SKILL.md",
+      "original_skill_folder": "alibaba-1688-product-research",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-blue-ocean-finder/SKILL.md",
+      "original_skill_folder": "alibaba-blue-ocean-finder",
+      "agent": "product_operations",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "market_opportunity",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-competitor-analysis/SKILL.md",
+      "original_skill_folder": "alibaba-competitor-analysis",
+      "agent": "product_operations",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "competition_analyst",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-competition-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-global-smart-publish/SKILL.md",
+      "original_skill_folder": "alibaba-global-smart-publish",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-hot-product-insight/SKILL.md",
+      "original_skill_folder": "alibaba-hot-product-insight",
+      "agent": "product_operations",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "market_opportunity",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-jungle-scout-deep-dive-analyzer/SKILL.md",
+      "original_skill_folder": "alibaba-jungle-scout-deep-dive-analyzer",
+      "agent": "product_operations",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "market_opportunity",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-market-analysis/SKILL.md",
+      "original_skill_folder": "alibaba-market-analysis",
+      "agent": "product_operations",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "market_opportunity",
+      "capability": "market_research",
+      "skill": ".agents/skills/1688-market-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-market-opportunity/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-product-publish/SKILL.md",
+      "original_skill_folder": "alibaba-product-publish",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/alibaba-com-seller-assistant/skills/alibaba-product-title-generation/SKILL.md",
+      "original_skill_folder": "alibaba-product-title-generation",
+      "agent": "product_operations",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "title_optimizer",
+      "capability": "product_optimization",
+      "skill": ".agents/skills/1688-product-operations/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-title-optimizer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/browser-rpa-launch/SKILL.md",
+      "original_skill_folder": "browser-rpa-launch",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/browser-rpa-run/SKILL.md",
+      "original_skill_folder": "browser-rpa-run",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/discover-store-accounts/SKILL.md",
+      "original_skill_folder": "discover-store-accounts",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "connection_administrator",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-connection-administrator/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/ecommerce-data-collect/SKILL.md",
+      "original_skill_folder": "ecommerce-data-collect",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/ecommerce-data-query/SKILL.md",
+      "original_skill_folder": "ecommerce-data-query",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/ecommerce-search/SKILL.md",
+      "original_skill_folder": "ecommerce-search",
+      "agent": "operations_director",
+      "adaptation_status": "cross_platform_reference",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/ecommerce-search/platforms/douyin/SKILL.md",
+      "original_skill_folder": "douyin",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/ecommerce-search/platforms/pinduoduo/SKILL.md",
+      "original_skill_folder": "pinduoduo",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/ecommerce-search/store-monitor/SKILL.md",
+      "original_skill_folder": "store-monitor",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/html-report-visuals/SKILL.md",
+      "original_skill_folder": "html-report-visuals",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "report_designer",
+      "capability": "reporting",
+      "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-report-designer/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/multi-platform-chat-analysis/SKILL.md",
+      "original_skill_folder": "multi-platform-chat-analysis",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "inquiry_analyst",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/ecommerce-automation-toolkit/skills/product-package-autofill/SKILL.md",
+      "original_skill_folder": "product-package-autofill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/plugins/geo-agent/skills/geo-query-builder/SKILL.md",
+      "original_skill_folder": "geo-query-builder",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-distribution/SKILL.md",
+      "original_skill_folder": "1688-distribution",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "distribution_operator",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-distribution-operator/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/SKILL.md",
+      "original_skill_folder": "1688-fulfillment",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/1688-official-logistics/SKILL.md",
+      "original_skill_folder": "1688-official-logistics",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-dispute/SKILL.md",
+      "original_skill_folder": "apply-dispute",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/apply-refund/SKILL.md",
+      "original_skill_folder": "apply-refund",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-dispute/SKILL.md",
+      "original_skill_folder": "cancel-dispute",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/cancel-refund/SKILL.md",
+      "original_skill_folder": "cancel-refund",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/invoice/SKILL.md",
+      "original_skill_folder": "invoice",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "invoice_assistant",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-invoice-assistant/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/modify-refund/SKILL.md",
+      "original_skill_folder": "modify-refund",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/order-fulfill/SKILL.md",
+      "original_skill_folder": "order-fulfill",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "fulfillment_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-fulfillment-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-detail-query/SKILL.md",
+      "original_skill_folder": "refund-detail-query",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/refund-list-query/SKILL.md",
+      "original_skill_folder": "refund-list-query",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/return-goods/SKILL.md",
+      "original_skill_folder": "return-goods",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-fulfillment/subskills/view-dispute-detail/SKILL.md",
+      "original_skill_folder": "view-dispute-detail",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "aftersales_specialist",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-aftersales-specialist/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-leaderboard/SKILL.md",
+      "original_skill_folder": "1688-leaderboard",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-order/SKILL.md",
+      "original_skill_folder": "1688-order",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "buyer_order_assistant",
+      "capability": "buyer_transactions",
+      "skill": ".agents/skills/1688-buyer-transactions/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-buyer-order-assistant/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-product-find/SKILL.md",
+      "original_skill_folder": "1688-product-find",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-source-suppliers/SKILL.md",
+      "original_skill_folder": "1688-source-suppliers",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/1688-purchasing-assistant/1688-purchasing-assistant/skills/1688-sourcing-inquiry/SKILL.md",
+      "original_skill_folder": "1688-sourcing-inquiry",
+      "agent": "operations_director",
+      "adaptation_status": "business_workflow_adapted",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "sourcing_advisor",
+      "capability": "procurement_research",
+      "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-sourcing-advisor/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/daze-store-manager-cli/skills/daze-cli-batch-publishing/SKILL.md",
+      "original_skill_folder": "daze-cli-batch-publishing",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-notification-skill/SKILL.md",
+      "original_skill_folder": "order-fulfillment-notification-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-fulfillment-processing-skill/SKILL.md",
+      "original_skill_folder": "order-fulfillment-processing-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-issue-diagnosis-skill/SKILL.md",
+      "original_skill_folder": "order-issue-diagnosis-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/order-management-skill/SKILL.md",
+      "original_skill_folder": "order-management-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-listing-optimization/SKILL.md",
+      "original_skill_folder": "product-listing-optimization",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-management-skill/SKILL.md",
+      "original_skill_folder": "product-management-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-pricing-skill/SKILL.md",
+      "original_skill_folder": "product-pricing-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-publishing-skill/SKILL.md",
+      "original_skill_folder": "product-publishing-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/product-research-skill/SKILL.md",
+      "original_skill_folder": "product-research-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/supplier-mapping-skill/SKILL.md",
+      "original_skill_folder": "supplier-mapping-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-exception-checker-skill/SKILL.md",
+      "original_skill_folder": "tracking-exception-checker-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dsers-dropshipping-pro/dsers-dropshipping-pro/skills/tracking-management-skill/SKILL.md",
+      "original_skill_folder": "tracking-management-skill",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dxb/dxb/skills/dxb/SKILL.md",
+      "original_skill_folder": "dxb",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-plugins/dxb/dxb/skills/dxb-image/SKILL.md",
+      "original_skill_folder": "dxb-image",
+      "agent": "operations_director",
+      "adaptation_status": "external_tools_required",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "cross_platform_distribution",
+      "capability": "distribution",
+      "skill": ".agents/skills/1688-distribution/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-cross-platform-distribution/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/remote-skills/1688-sourcing/0.0.110/source/SKILL.md",
+      "original_skill_folder": "source",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "原文能力不等于当前工具可调用；按agent技能与实时目录执行。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    },
+    {
+      "source": "source/desktop-resources/wiki-skills/merchant-wiki-compiler/SKILL.md",
+      "original_skill_folder": "merchant-wiki-compiler",
+      "agent": "operations_director",
+      "adaptation_status": "archived_shared_dependency_or_external_tool",
+      "note": "包含1688店铺/商品/资产schema，原Accio记忆workflow仅存档，不自动写入用户记忆。",
+      "legacy_agent": "platform_support",
+      "capability": "platform_maintenance",
+      "skill": ".agents/skills/1688-platform-maintenance/SKILL.md",
+      "preserved_rules": [
+        "references/business-rules/1688-platform-support/RULES.md"
+      ],
+      "routing_note": "原始来源不变；旧角色只作为兼容能力名，业务规则完整保留；当前负责人/能力见task-routing与registry"
+    }
+  ],
+  "routing_updated_on": "2026-10-28"
+}

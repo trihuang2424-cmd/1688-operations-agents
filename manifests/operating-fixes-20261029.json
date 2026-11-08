@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-29",
+  "authorization": "用户在确认七项重要问题后要求先修复",
+  "backup": "outputs/operating-fixes-20261029/before-manifest.json",
+  "files": [
+    {
+      "path": ".agents/skills/1688-business-analysis/SKILL.md",
+      "before_sha256": "74a62c4aa9100cc90a9ffc783a01f085c97c44b0557e53e1b6917abefb392920",
+      "after_sha256": "e52ce8f38e1d6e4a5728cdd63a73504afb0f6cf57497f5db9c84309161191902"
+    },
+    {
+      "path": ".agents/skills/1688-customer-conversion/references/conversion-analysis.md",
+      "before_sha256": "5b0d7bc33dd85dd5cb488ea0855c0cc9ac4f30389056b1e7f4afd52c35139814",
+      "after_sha256": "fcc06c1c3660fd16ad5778bf65ad69002bfee70b2b3e4b5938abc394fb6f7751"
+    },
+    {
+      "path": ".agents/skills/1688-operations-director/SKILL.md",
+      "before_sha256": "ccb159d059b0e19aa0e4b4b5f6347e485f3d92a7f5f33d3ea0240d22f182b424",
+      "after_sha256": "a8b0c2504fc7d1775ad01891f2cb24bf89dd47d176ebdced9057be5ed05dabfc"
+    },
+    {
+      "path": ".agents/skills/1688-traffic-operations/SKILL.md",
+      "before_sha256": "10d1a522c86d63c93811da85f4448044d0a30c5baba05678aefc694860d98967",
+      "after_sha256": "55ac87cdbad5fcc24b7258a9f57bedd4b5e23b27e6a07a9fa707073411db24c0"
+    },
+    {
+      "path": ".codex/agents/conversion_analysis.toml",
+      "before_sha256": "417c7e6edd24056b0b1a15b1a98db87827bb28051ea54ed5a8701daa71c7e002",
+      "after_sha256": "5ef46e958d2e579a366d8359ef4fe39a0d36bf2bfc7fd2bbc540bdd4e4172a7a"
+    },
+    {
+      "path": ".codex/agents/operations_review.toml",
+      "before_sha256": "8098b364bf46414c7301017efee053ffa920b4d1ea62d6994a4ddbc6f549c10e",
+      "after_sha256": "3f5b9d0ca7eaa4651b18ade515c30687d9f2f6eb45e3140d0f64cf8f36a836c3"
+    },
+    {
+      "path": ".codex/agents/traffic_operations.toml",
+      "before_sha256": "8bed570987251aff7b2b0f3fbc3be0a3741dfa5d02b9c5a624a8efa1d8b388b8",
+      "after_sha256": "d9fa3d8fdbb03bf1a150bdcc4174af024b393292c9afa946935ed47da0f7a07c"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "0ca9ebc1ba45ec62cb75e1c43ab56ac585caa5d99c52604d863b7df638414a38",
+      "after_sha256": "a791a5cf96abb9480b6cd00d6533653e0f754f60b1c5be2e52407e110b71a3f4"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "19ab2e4951a4bab6e5b2fff1b352ff4191e3dd55a70e21bcb7093c14af4bf664",
+      "after_sha256": "881f2e39f4415e9d02f98600e6d711e4819df8444f6a23eab7d5e2a702491621"
+    },
+    {
+      "path": "catalog/task-routing.json",
+      "before_sha256": "879121c82019f23ac7de32ef5431f3148b027552ab06c94e7659638472db9bab",
+      "after_sha256": "0a474cffd88baf28e430e54b3484adf397877c43c313ac4dd76c3179201f4004"
+    },
+    {
+      "path": "references/conversion-state.md",
+      "before_sha256": "81a27e2ccf91ce9615f63604e1075cc7a0ec97f9e41edcb0434f0a5fef2026cd",
+      "after_sha256": "d4f5bbbd9ecb4cbb49dca854b36185960b80599b4e9b92d35b16e43fb60cdcc1"
+    },
+    {
+      "path": "references/delegation.md",
+      "before_sha256": "a7f3c99a7ea2799bebe651f3c3d0660e505ba318f249ec0f27a03c648b2793fa",
+      "after_sha256": "9a4a7fe511aa2a97579783ba52338ee683ce011ac43e040a055200062219faac"
+    },
+    {
+      "path": "references/execution-protocol.md",
+      "before_sha256": "be039fa02aa007116d3bf812f0bfee2c35a18d9e664d4a953cc3bbea6812eeb4",
+      "after_sha256": "9b9db6908d301d12b5789fa9b19004653c7090e80b4e82f7eabd3779a1ae10b3"
+    },
+    {
+      "path": "references/operating-cycle.md",
+      "before_sha256": "dc04aae2841ac78887451d8538d2ccf0195191c88f09bf1fe0527dd2652414c5",
+      "after_sha256": "0930df4583c34fdb9ed8c4946e54a3dcdeae00eef7504a7c058805414ca094bb"
+    },
+    {
+      "path": "references/rule-questions.md",
+      "before_sha256": "2ea221fae8ce171fa02c9a4aaadb45b01ca2e08f8d3696619a172dcceaa80372",
+      "after_sha256": "fcede18e400fc32cf403cd77a488c812efc3059e81ec96c5bdb589b3887bf3a2"
+    },
+    {
+      "path": "references/runtime.md",
+      "before_sha256": "2f790347c3285991cfb1f197d235ee816acf6ffd1614084d76f1625cdb66f2f7",
+      "after_sha256": "366c67290052575ab11ad6d2990553dc8540c3190cfd39428a731ed727698a3f"
+    },
+    {
+      "path": "scripts/conversion_state.py",
+      "before_sha256": "bfd161d4deaf4cca06adfef75c00f609e2434fd92e8301c3b7748ec4e9ba119d",
+      "after_sha256": "f0d03a5934167dd49924898da61b49c65c2c1d5987e47a5b5cd8c5dd109c3810"
+    },
+    {
+      "path": "scripts/test_conversion_state.py",
+      "before_sha256": "a7e51298f7d6153a0f79afedd79f2294f455b353f191ef4afa21a816fd7a4507",
+      "after_sha256": "475d88f9225886504bf898bfb580107fcae44a0a06f65397e158c0137ec33c8d"
+    },
+    {
+      "path": "references/ad-decision-policy.md",
+      "before_sha256": null,
+      "after_sha256": "2983835527831a3b600e11d7a10906ba2c5f8451902b732638cc47e4e3f32700"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/ad-forward-review.json",
+      "before_sha256": null,
+      "after_sha256": "38be4b32d3556b39c255dfc8c7b4e0d3738855c3a2f5f5a3001b298ab34c597b"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/business-forward-result.json",
+      "before_sha256": null,
+      "after_sha256": "8c896015273a0a8162fac7418677c3883fe9c3ce2078860e88ea378f6c9a584e"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/business-forward-stdout.json",
+      "before_sha256": null,
+      "after_sha256": "8c896015273a0a8162fac7418677c3883fe9c3ce2078860e88ea378f6c9a584e"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/business-forward.py",
+      "before_sha256": null,
+      "after_sha256": "349026b85988d72efa5cfc638e2156741bec1594bf3ba3e819d464e5ccd0fa53"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/package-validation.json",
+      "before_sha256": null,
+      "after_sha256": "6ced5d152883f0d26b6dca5b95e0ec8c2134bc4e714b68db683cfaec7957d03b"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/skill-validation.json",
+      "before_sha256": null,
+      "after_sha256": "f74244b6d5f4872346122d6c0d92bd526414d960c2f9c11e382410eef1ef1fec"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/verification/unit-tests.log",
+      "before_sha256": null,
+      "after_sha256": "d33cb9664b3e9514c7682ea0abf6db9b745247a868c73686dcfbfafe75841546"
+    },
+    {
+      "path": "reports/2026-10-29-operating-fixes/重要问题修复与验证.md",
+      "before_sha256": null,
+      "after_sha256": "55fe009532d593a13b3167b74a79236f4ada08b45607b9cb09c8d987c9c13ebb"
+    }
+  ],
+  "validation": {
+    "unit_tests": 119,
+    "conversion_state_tests": 50,
+    "independent_state_cases": 15,
+    "independent_ad_reasoning_cases": 8,
+    "skill_checks": 4
+  },
+  "source_originals_modified": false,
+  "live_shop_operations": false,
+  "live_state_migrated": false
+}

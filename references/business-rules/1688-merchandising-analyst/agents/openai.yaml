@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 商品诊断与选品师"
+  short_description: "店内商品定位、评分圈选、异常商品、优秀商品和竞品比较"
+  default_prompt: "使用 $1688-merchandising-analyst 处理我的商品诊断与选品师任务，并列出真实依据与已完成结果。"

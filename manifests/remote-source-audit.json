@@ -1,0 +1,9 @@
+{
+  "checked_date": "2026-10-25",
+  "file_count": 262,
+  "sha256_matches": true,
+  "scan": "Static filename and literal assignment patterns for API keys, access/refresh tokens, secrets, passwords, userCode, Bearer literals and private-key headers. No code execution or credential loading.",
+  "literal_credential_candidates": [],
+  "redactions": [],
+  "limitation": "Pattern scan covers common credential forms and does not prove the absence of every possible encoded secret."
+}

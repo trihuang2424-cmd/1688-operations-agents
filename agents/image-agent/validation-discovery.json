@@ -1,0 +1,15 @@
+{
+  "command": "codex --no-daemon -C <project> debug prompt-input",
+  "returncode": 0,
+  "context_items": 5,
+  "agent_instructions_present": true,
+  "project_skill_roots": [
+    "- `r7` = `/Users/shileqi/1688运营agents/image-agent/.agents/skills`"
+  ],
+  "skill_catalog": {
+    "1688-image-design": true,
+    "1688-image-edit": true,
+    "1688-product-visual-concepts": true
+  },
+  "model_inference_requested": false
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 商品发品规划师"
+  short_description: "类目识别、属性与 SKU 预测、素材包、发品链接和商品草稿"
+  default_prompt: "使用 $1688-listing-publisher 处理我的商品发品规划师任务，并列出真实依据与已完成结果。"

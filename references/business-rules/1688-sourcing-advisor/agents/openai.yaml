@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 货源与供应商研究员"
+  short_description: "找货、图搜同款、供应商搜索、企业背调与品类市场研究"
+  default_prompt: "使用 $1688-sourcing-advisor 处理我的货源与供应商研究员任务，并列出真实依据与已完成结果。"

@@ -1,0 +1,1138 @@
+{
+  "generated_at": "2026-10-25",
+  "scope": "Installed local plugin source, role definitions, explicit 1688 branches and shared dependencies; private runtime and credentials excluded. No plugins were installed or executed.",
+  "roots": {
+    "account": "/Users/shileqi/.accio/accounts/1795792947",
+    "application_support": "/Users/shileqi/Library/Application Support/Accio",
+    "external_tools": "/Users/shileqi/Library/Accio"
+  },
+  "all_installed_plugins": [
+    {
+      "id": "1688-seller-assistant",
+      "name": "1688生意助手",
+      "version": "0.0.20",
+      "description": "为1688商家提供店铺绑定、店铺诊断、商品发布、选品找商等经营支持服务。",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant",
+      "local_file_count": 784,
+      "local_bytes": 6138829,
+      "skill_names": [
+        "1688-common-report-to-visualization",
+        "1688-cowboy",
+        "1688-inquiry-evaluate",
+        "1688-item-one-click",
+        "1688-item-title-optimizer",
+        "1688-product-analysis",
+        "1688-product-keyword-research",
+        "1688-product-manage",
+        "1688-shop-aicrm-segment-reach-strategy",
+        "1688-shop-business-analysis",
+        "1688-shop-compete-analysis",
+        "1688-shop-crm-customer-filter",
+        "1688-shop-daily-report",
+        "1688-shop-freedom-query-data",
+        "1688-shop-health-check",
+        "1688-shop-jushuitan-erp",
+        "1688-shop-study-knowledge",
+        "cha88-company-report-skill"
+      ]
+    },
+    {
+      "id": "accio-com-buyer-assistant",
+      "name": "Accio Sourcing Toolkit",
+      "version": "0.20.0",
+      "description": "Your 24/7 AI sourcing team. We find the best suppliers, handle negotiations, and manage your orders from factory to front door.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/accio-com-buyer-assistant",
+      "local_file_count": 325,
+      "local_bytes": 5083247,
+      "skill_names": [
+        "1688-fulfillment",
+        "1688-order",
+        "accio-inquiry",
+        "accio-product-supplier-sourcing",
+        "ai-product-designer",
+        "alibaba-icbu-payment-action",
+        "alibaba-icbu-payment-link",
+        "alibaba-icbu-payment-result-detail",
+        "alibaba-icbu-payment-status",
+        "alibaba-icbu-trade-after-sales-refund-guide",
+        "alibaba-icbu-trade-after-sales-refund-submit",
+        "alibaba-icbu-trade-after-sales-status-query",
+        "alibaba-icbu-trade-agent-guide",
+        "alibaba-icbu-trade-buyer-consignee-address-list-query",
+        "alibaba-icbu-trade-buynow-order",
+        "alibaba-icbu-trade-contract-draft-view",
+        "alibaba-icbu-trade-order-create",
+        "alibaba-icbu-trade-order-query",
+        "alibaba-logistics-assistant-buyer",
+        "buyer-payment-intent",
+        "buyer-trade-intent",
+        "coarse-rank",
+        "conversation-summary",
+        "cross-border-market-research",
+        "html-report-generator",
+        "im-conversation-reader",
+        "image-analysis",
+        "negotiation-assist",
+        "product-analysis-report",
+        "product-selection",
+        "profit-calculator",
+        "quotation-analysis",
+        "risk-analysis",
+        "sourcing-artifact-writer",
+        "sourcing-requirement-collect",
+        "supersourcing",
+        "supplier-verification-report",
+        "trade-knowledge",
+        "trade-page-navigation",
+        "write-compare-report"
+      ]
+    },
+    {
+      "id": "accio-site-builder",
+      "name": "Live Sites",
+      "version": "0.0.30",
+      "description": "Build a real, professional, live website from scratch — just by talking to AI.\n\n- ✨ **Smart Generation**: AI turns your ideas and materials into a full site — colors, copy, layout.\n- 💬 **Chat + Canvas Editing**: Give instructions like a conversation, or fine-tune to the pixel.\n- 📥 **Built-in Database + Email Alerts**: Capture every lead and booking, with instant notifications.\n- 🚀 **One-Click Publish**: Go live on your own custom subdomain — zero setup required.\n- 🔄 **Auto-Updating Data**: Content linked to external sources refreshes automatically every day.\n- 🎯 **Covers Every Scenario**: Homepage, brand site, landing page, portfolio, dashboard, and more.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/accio-site-builder",
+      "local_file_count": 813,
+      "local_bytes": 32417322,
+      "skill_names": [
+        "canvas-design",
+        "canvas-design-library",
+        "code-generator",
+        "dashboard-admin",
+        "follow-up",
+        "frontend-implementation-policy",
+        "link-in-bio",
+        "media-kit",
+        "polardb-supabase-backend",
+        "provider-operations",
+        "react-local-runtime",
+        "reference-replication",
+        "safety",
+        "schema",
+        "seo",
+        "site-builder",
+        "social-avatar-fetch",
+        "social-latest-fetch",
+        "supabase-backend",
+        "supabase-mcp-backend"
+      ]
+    },
+    {
+      "id": "alibaba-com-seller-assistant",
+      "name": "国际站生意助手",
+      "version": "0.3.68",
+      "description": "阿里巴巴国际站（Alibaba.com）跨境外贸B2B卖家经营助手，为国际站店铺/商家/卖家提供选品、发品、商品发布与优化、素材生成、店铺装修、RFQ 商机与报价、买家背调/客户调查、广告（P4P）、物流与关税、询盘分析、客户接待及店铺经营诊断/数据参谋等全链路 AI 解决方案。",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant",
+      "local_file_count": 1226,
+      "local_bytes": 28095381,
+      "skill_names": [
+        "alibaba-1688-product-research",
+        "alibaba-ads-marketing-analysis",
+        "alibaba-analysis-brief",
+        "alibaba-atomic-insight",
+        "alibaba-blue-ocean-finder",
+        "alibaba-brand-ads-keyword-recommendation",
+        "alibaba-buyer-bgcheck",
+        "alibaba-cco-rag",
+        "alibaba-chargeback-appeal-assistant",
+        "alibaba-competitor-analysis",
+        "alibaba-create-website",
+        "alibaba-data-advisor",
+        "alibaba-global-ai-image-studio",
+        "alibaba-global-amazon-market-intel",
+        "alibaba-global-blue-ocean-finder",
+        "alibaba-global-buyercheck-bgcheck",
+        "alibaba-global-chat-analysis-pro",
+        "alibaba-global-create-website",
+        "alibaba-global-hot-product-insight",
+        "alibaba-global-knowledge-base",
+        "alibaba-global-logistics-assistant",
+        "alibaba-global-product-deep-dive",
+        "alibaba-global-smart-assistant-settings",
+        "alibaba-global-smart-optimize",
+        "alibaba-global-smart-publish",
+        "alibaba-global-store-diagnosis",
+        "alibaba-global-tariff-assistant",
+        "alibaba-hot-product-insight",
+        "alibaba-icbu-brand-data-report",
+        "alibaba-image-generation",
+        "alibaba-ip-violation-query",
+        "alibaba-jungle-scout-deep-dive-analyzer",
+        "alibaba-local-data-analysis",
+        "alibaba-logistics-assistant",
+        "alibaba-market-analysis",
+        "alibaba-pdf-to-catalog-table",
+        "alibaba-product-optimization",
+        "alibaba-product-publish",
+        "alibaba-product-recruitment",
+        "alibaba-product-risk-diagnosis",
+        "alibaba-product-title-generation",
+        "alibaba-product-video-generation",
+        "alibaba-prohibited-rule-interpretation",
+        "alibaba-rfq-discovery"
+      ]
+    },
+    {
+      "id": "documents",
+      "name": "Documents",
+      "version": "0.0.8",
+      "description": "Packages DOCX and PDF document processing capabilities into one Plugin. Use when working with DOCX or PDF document creation, editing, tracked changes, text extraction, format conversion, form filling, or any other document tasks.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/documents",
+      "local_file_count": 463,
+      "local_bytes": 9738483,
+      "skill_names": [
+        "docx",
+        "pdf"
+      ]
+    },
+    {
+      "id": "ecommerce-automation-toolkit",
+      "name": "电商运营工具箱",
+      "version": "0.3.17",
+      "description": "打通多电商平台，支持自动抓指标、诊断、批量发品与接待。减少多店重复操作，提升经营效率。",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/ecommerce-automation-toolkit",
+      "local_file_count": 648,
+      "local_bytes": 46678199,
+      "skill_names": [
+        "browser-rpa-launch",
+        "browser-rpa-run",
+        "discover-store-accounts",
+        "ecommerce-data-collect",
+        "ecommerce-data-query",
+        "ecommerce-search",
+        "excel-product-data",
+        "excel-product-publish",
+        "html-report-visuals",
+        "multi-platform-ads-analysis",
+        "multi-platform-chat-analysis",
+        "multi-platform-product-analysis",
+        "multi-platform-review-reply",
+        "multi-platform-single-product-analysis",
+        "multi-platform-store-analysis",
+        "product-package-autofill",
+        "product-package-template"
+      ]
+    },
+    {
+      "id": "geo-agent",
+      "name": "SEO·GEO Toolkit",
+      "version": "1.80.0",
+      "description": "SEO + GEO toolkit for any brand: keyword planning, analysis and research (multi-source opportunity matrix, difficulty, intent, QDF and competitor gap) plus on-page keyword optimization (density, LSI, cannibalization, keyword-to-page mapping); full-site technical SEO audit (50 dimensions) and content-quality scoring (7 dimensions) with 4 deliverables; SEO content generation (article outlines, meta titles & descriptions, JSON-LD structured data); and AI-search visibility monitoring across ChatGPT, Gemini, and Perplexity — mention & citation rates, competitive dashboards, single-prompt deep-dive reports, three-engine comparison reports, and publish-ready GEO content.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/geo-agent",
+      "local_file_count": 84,
+      "local_bytes": 2100710,
+      "skill_names": [
+        "geo-analyzer",
+        "geo-collector",
+        "geo-content-writer",
+        "geo-dashboard-builder",
+        "geo-domain-ranker",
+        "geo-multi-engine-comparison",
+        "geo-query-builder",
+        "geo-report-builder",
+        "geo-site-auditor",
+        "geo-strategy-advisor",
+        "seo-content-writer",
+        "seo-full-audit",
+        "seo-keyword-optimization",
+        "seo-keywords"
+      ]
+    },
+    {
+      "id": "global-lead-radar",
+      "name": "全网商机雷达",
+      "version": "0.1.2",
+      "description": "面向跨境卖家，提供全网采购商机的智能挖掘、筛选与跟进能力，帮助发现并触达全球潜在买家。",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/global-lead-radar",
+      "local_file_count": 66,
+      "local_bytes": 693838,
+      "skill_names": [
+        "government_tender_search",
+        "social-opportunity-search"
+      ]
+    },
+    {
+      "id": "knowledge-base-plugin",
+      "name": "Knowledge Base",
+      "version": "1.0.5",
+      "description": "Accio Work Knowledge Base plugin for file reference and semantic search. It handles Knowledge Base file references, retrieves selected KB file contents, and searches team knowledge so agents can answer with grounded document evidence.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/knowledge-base-plugin",
+      "local_file_count": 4,
+      "local_bytes": 23510,
+      "skill_names": [
+        "knowledge-base"
+      ]
+    },
+    {
+      "id": "multi-channel-inquiry-plugin",
+      "name": "多渠道谈单专家",
+      "version": "1.0.0",
+      "description": "面向跨境商家的多渠道询盘接待插件。读取已绑定 IM 渠道的消息记录，支持完成买家背调、意向分析与重点买家圈选、生成回复、自动接待等谈单相关操作。",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/multi-channel-inquiry-plugin",
+      "local_file_count": 25,
+      "local_bytes": 230838,
+      "skill_names": [
+        "inquiry-analysis",
+        "lead-selection",
+        "reply-follow-up"
+      ]
+    },
+    {
+      "id": "presentations",
+      "name": "Presentations",
+      "version": "0.0.7",
+      "description": "Packages PPTX presentation processing capabilities into one Plugin. Use when working with presentation creation, template reuse, slide editing, thumbnail generation, content analysis, or any other presentation tasks.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/presentations",
+      "local_file_count": 262,
+      "local_bytes": 9558098,
+      "skill_names": [
+        "pptx"
+      ]
+    },
+    {
+      "id": "spreadsheets",
+      "name": "Spreadsheets",
+      "version": "0.0.9",
+      "description": "Packages XLSX spreadsheet (.xlsx, .xlsm, .csv, .tsv, etc) processing capabilities into one Plugin. Use when working with spreadsheet creation, data analysis, formula calculation, chart visualization, or any other spreadsheet tasks.",
+      "path": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/spreadsheets",
+      "local_file_count": 9,
+      "local_bytes": 119483,
+      "skill_names": [
+        "xlsx"
+      ]
+    }
+  ],
+  "all_local_experts": [
+    {
+      "id": "DID-82AD6B-6582AD6BU1792740-8915e3e8844e931e49fa-DED8BE",
+      "name": "Accio Assistant",
+      "description": "Handle wide-ranging business tasks",
+      "agentType": "accio",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredSkillIds": [
+        "skill-finder",
+        "skill-creator",
+        "self-improvement",
+        "accio-mcp-cli",
+        "pdf",
+        "docx",
+        "xlsx",
+        "gmail-assistant",
+        "pptx"
+      ],
+      "origin": {
+        "kind": "sdk-builtin",
+        "packageId": "agent-80cbb04c-c791-4baa-97fb-f789b500f8f2",
+        "versionNo": "0.0.2",
+        "installedAt": 1792740891565
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 1,
+        "bindings": []
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/DID-82AD6B-6582AD6BU1792740-8915e3e8844e931e49fa-DED8BE"
+    },
+    {
+      "id": "MID-07792947U1792740-95C20F-8950-61DD1A",
+      "name": "Deal Negotiation Expert",
+      "description": "End-to-end support for buyer-seller communication, covering buyer research, automated reception, assisted reception, and inquiry analysis to help turn conversations into orders.",
+      "agentType": "alibaba-com-reception-assistant",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "alibaba-com-seller-assistant",
+        "multi-channel-inquiry-plugin"
+      ],
+      "requiredSkillIds": [
+        "skill-finder",
+        "skill-creator",
+        "self-improvement",
+        "mcp-tools",
+        "product-description-generator",
+        "ecommerce-marketing",
+        "review-summarizer"
+      ],
+      "packageId": "agent-bfbbb11d-3163-45b5-9fd7-89139bfe69ab",
+      "packageCode": "agent-bfbbb11d-3163-45b5-9fd7-89139bfe69ab",
+      "versionNo": "0.0.6",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-bfbbb11d-3163-45b5-9fd7-89139bfe69ab"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "alibaba-com-seller-assistant",
+            "locked": true,
+            "origin": "agent-package"
+          },
+          {
+            "pluginId": "multi-channel-inquiry-plugin",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": [
+          "alibaba-com-seller-assistant",
+          "multi-channel-inquiry-plugin"
+        ]
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-07792947U1792740-95C20F-8950-61DD1A"
+    },
+    {
+      "id": "MID-22792947U1792740-95C20F-8932-E2BEFB",
+      "name": "Accio Site Builder",
+      "description": "Chat with AI to build live websites — with auto updates, lead capture, bookings, data, custom domains, and more.",
+      "agentType": "site-builder",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "accio-site-builder"
+      ],
+      "packageId": "agent-28abdb91-1786-4d21-918a-86a6e4b3b4df",
+      "packageCode": "agent-28abdb91-1786-4d21-918a-86a6e4b3b4df",
+      "versionNo": "0.0.3",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-28abdb91-1786-4d21-918a-86a6e4b3b4df"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "accio-site-builder",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-22792947U1792740-95C20F-8932-E2BEFB"
+    },
+    {
+      "id": "MID-44792947U1792740-95C20F-8932-1CC720",
+      "name": "Design Expert",
+      "description": "AI-powered creative assistant for image generation, video creation, and visual content editing — from idea to deliverable in one conversation.",
+      "agentType": "design_expert",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredSkillIds": [
+        "skill-finder",
+        "skill-creator",
+        "self-improvement",
+        "precise-image-editing"
+      ],
+      "packageId": "agent-7b8d7f1f-4112-4c63-ac7f-d712abfd05b9",
+      "packageCode": "agent-7b8d7f1f-4112-4c63-ac7f-d712abfd05b9",
+      "versionNo": "0.0.6",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-7b8d7f1f-4112-4c63-ac7f-d712abfd05b9"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 1,
+        "bindings": []
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-44792947U1792740-95C20F-8932-1CC720"
+    },
+    {
+      "id": "MID-60792947U1792740-95C20F-8927-96FC71",
+      "name": "国际站生意助手",
+      "description": "专为跨境卖家设计，选品、发品、素材生成到经营分析，一站式AI全链路支持",
+      "agentType": "alibaba-com-seller-assistant",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "alibaba-com-seller-assistant"
+      ],
+      "requiredSkillIds": [
+        "skill-finder",
+        "skill-creator",
+        "self-improvement",
+        "product-description-generator",
+        "ecommerce-marketing",
+        "review-summarizer"
+      ],
+      "packageId": "agent-80c12b84-388a-4c5f-b19e-d98dd040e4e6",
+      "packageCode": "agent-80c12b84-388a-4c5f-b19e-d98dd040e4e6",
+      "versionNo": "0.1.8",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-80c12b84-388a-4c5f-b19e-d98dd040e4e6"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "alibaba-com-seller-assistant",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-60792947U1792740-95C20F-8927-96FC71"
+    },
+    {
+      "id": "MID-69792947U1792740-95C20F-8932-B6D6FB",
+      "name": "SEO·GEO Assistant",
+      "description": "Helps brands with traditional SEO and Generative Engine Optimization (GEO): website health audits and brand visibility in AI search.",
+      "agentType": "seo-geo-toolkit",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "geo-agent"
+      ],
+      "requiredSkillIds": [
+        "skill-finder",
+        "self-improvement"
+      ],
+      "packageId": "agent-480c6ded-915a-4ab4-bc5f-a62471da8980",
+      "packageCode": "agent-480c6ded-915a-4ab4-bc5f-a62471da8980",
+      "versionNo": "0.0.2",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-480c6ded-915a-4ab4-bc5f-a62471da8980"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "geo-agent",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-69792947U1792740-95C20F-8932-B6D6FB"
+    },
+    {
+      "id": "MID-70792947U1792740-95C20F-9115-38ED7F",
+      "name": "Jungle Scout选品专家",
+      "description": "基于 Jungle Scout 的 Amazon 选品一站式助手，从趋势发现和需求验证出发，推进竞品拆解、利润核算与立项判断。",
+      "agentType": "jungle-scout-product-expert",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredSkillIds": [
+        "target-market-research",
+        "constraint-led-sourcing",
+        "buyer-prospect-shortlist",
+        "deliverable-revision",
+        "new-product-approval-orchestrator",
+        "trend-breakout-scout",
+        "validate-before-you-source",
+        "demand-mirror",
+        "competitor-teardown",
+        "margin-reality-check",
+        "keyword-listing-builder",
+        "ad-spend-planner"
+      ],
+      "packageId": "agent-deceaed1-7d66-469a-bb5a-10f2f2a40039",
+      "packageCode": "agent-deceaed1-7d66-469a-bb5a-10f2f2a40039",
+      "versionNo": "0.0.4",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-deceaed1-7d66-469a-bb5a-10f2f2a40039"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 1,
+        "bindings": []
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-70792947U1792740-95C20F-9115-38ED7F"
+    },
+    {
+      "id": "MID-71792947U1792740-95C20F-8927-27F4BB",
+      "name": "China E-commerce Manager",
+      "description": "Run your business intelligently across Taobao, Tmall, JD, Douyin Store, Pinduoduo with one click, including bulk product publishing, store performance analysis, product selection and competitor monitoring, customer service analysis, and review monitoring, making growth easier.",
+      "agentType": "omni-ecommerce-manager",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "ecommerce-automation-toolkit"
+      ],
+      "packageId": "agent-a5f139f0-7a3a-4c19-a80d-518089146578",
+      "packageCode": "agent-a5f139f0-7a3a-4c19-a80d-518089146578",
+      "versionNo": "0.0.20",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-a5f139f0-7a3a-4c19-a80d-518089146578"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "ecommerce-automation-toolkit",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-71792947U1792740-95C20F-8927-27F4BB"
+    },
+    {
+      "id": "MID-72792947U1792740-95C20F-8969-2D9B07",
+      "name": "1688生意助手",
+      "description": "面向1688商家的智能经营助手，覆盖选品、流量、转化、供应链与增长分析，并协助处理店铺运营任务",
+      "agentType": "1688-seller-assistant",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "1688-seller-assistant"
+      ],
+      "requiredSkillIds": [
+        "1688-common-report-to-visualization",
+        "1688-cowboy",
+        "1688-inquiry-evaluate",
+        "1688-item-one-click",
+        "1688-product-manage",
+        "1688-shop-business-analysis",
+        "1688-shop-daily-report",
+        "1688-shop-freedom-query-data",
+        "1688-shop-health-check",
+        "1688-shop-jushuitan-erp",
+        "1688-shop-operate",
+        "1688-shop-study-knowledge"
+      ],
+      "packageId": "agent-9601f3a0-a283-4d87-8a51-b9540d357daa",
+      "packageCode": "agent-9601f3a0-a283-4d87-8a51-b9540d357daa",
+      "versionNo": "0.0.7",
+      "origin": {
+        "kind": "agent-hub",
+        "packageId": "agent-9601f3a0-a283-4d87-8a51-b9540d357daa"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 3,
+        "bindings": [
+          {
+            "pluginId": "1688-seller-assistant",
+            "locked": true,
+            "origin": "agent-package",
+            "claims": [
+              {
+                "origin": "user",
+                "locked": false
+              },
+              {
+                "origin": "agent-package",
+                "locked": true
+              }
+            ]
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": [
+          "1688-seller-assistant"
+        ]
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-72792947U1792740-95C20F-8969-2D9B07"
+    },
+    {
+      "id": "MID-89792947U1792740-95C20F-8927-63D93A",
+      "name": "Accio Sourcing Expert",
+      "description": "Your 24/7 AI sourcing team. We find the best suppliers, handle negotiations, and manage your orders from factory to front door.",
+      "agentType": "accio-com-buyer-assistant",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "full",
+      "requiredPluginIds": [
+        "accio-com-buyer-assistant"
+      ],
+      "packageId": "agent-cc3d4d0d-ec7e-4391-8312-5411b5255405",
+      "packageCode": "agent-cc3d4d0d-ec7e-4391-8312-5411b5255405",
+      "versionNo": "0.0.7",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-cc3d4d0d-ec7e-4391-8312-5411b5255405"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "accio-com-buyer-assistant",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-89792947U1792740-95C20F-8927-63D93A"
+    },
+    {
+      "id": "MID-92792947U1792740-95C20F-9055-188240",
+      "name": "Business Opportunity Expert",
+      "description": "For cross-border sellers, search for procurement opportunities across the web (RFQs/RFPs), including sourcing requests on social media, RFQs on B2B and bulk trading platforms, and government tenders. It identifies high-value buyers and prospective customer leads, generates outreach messages, and follows up on buyer communications to make customer acquisition more precise and sustainable.",
+      "agentType": "business-opportunity-expert",
+      "model": {
+        "provider": "auto",
+        "name": "auto"
+      },
+      "runtime": "local",
+      "toolPreset": "developer",
+      "requiredPluginIds": [
+        "global-lead-radar"
+      ],
+      "requiredSkillIds": [
+        "skill-finder",
+        "skill-creator",
+        "self-improvement"
+      ],
+      "packageId": "agent-3e269ddd-955a-46a0-964f-8cc318a716bb",
+      "packageCode": "agent-3e269ddd-955a-46a0-964f-8cc318a716bb",
+      "versionNo": "0.0.4",
+      "origin": {
+        "kind": "server-resolve",
+        "packageId": "agent-3e269ddd-955a-46a0-964f-8cc318a716bb"
+      },
+      "pluginBindings": {
+        "schemaVersion": 2,
+        "revision": 2,
+        "bindings": [
+          {
+            "pluginId": "global-lead-radar",
+            "locked": true,
+            "origin": "agent-package"
+          }
+        ]
+      },
+      "agentPackagePluginDeclarations": {
+        "schemaVersion": 1,
+        "bundlePluginIds": []
+      },
+      "path": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-92792947U1792740-95C20F-9055-188240"
+    }
+  ],
+  "selected_plugin_skills": {
+    "accio-com-buyer-assistant": {
+      "skills": [
+        "1688-fulfillment",
+        "1688-order",
+        "accio-inquiry",
+        "accio-product-supplier-sourcing",
+        "alibaba-logistics-assistant-buyer",
+        "buyer-trade-intent",
+        "cross-border-market-research",
+        "html-report-generator",
+        "product-analysis-report",
+        "profit-calculator",
+        "sourcing-artifact-writer",
+        "supersourcing",
+        "supplier-verification-report",
+        "write-compare-report"
+      ],
+      "reasons": {
+        "1688-fulfillment": "explicit_1688_related_skill_or_shared_runtime",
+        "1688-order": "explicit_1688_related_skill_or_shared_runtime",
+        "accio-inquiry": "explicit_1688_related_skill_or_shared_runtime",
+        "accio-product-supplier-sourcing": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-logistics-assistant-buyer": "explicit_1688_related_skill_or_shared_runtime",
+        "buyer-trade-intent": "explicit_1688_related_skill_or_shared_runtime",
+        "cross-border-market-research": "explicit_1688_related_skill_or_shared_runtime",
+        "html-report-generator": "explicit_1688_related_skill_or_shared_runtime",
+        "product-analysis-report": "explicit_1688_related_skill_or_shared_runtime",
+        "profit-calculator": "explicit_1688_related_skill_or_shared_runtime",
+        "sourcing-artifact-writer": "explicit_1688_related_skill_or_shared_runtime",
+        "supersourcing": "explicit_1688_related_skill_or_shared_runtime",
+        "supplier-verification-report": "explicit_1688_related_skill_or_shared_runtime",
+        "write-compare-report": "explicit_1688_related_skill_or_shared_runtime"
+      },
+      "copy_mode": "selected_skill_trees_with_shared_plugin_metadata"
+    },
+    "ecommerce-automation-toolkit": {
+      "skills": [
+        "browser-rpa-launch",
+        "browser-rpa-run",
+        "discover-store-accounts",
+        "ecommerce-data-collect",
+        "ecommerce-data-query",
+        "ecommerce-search",
+        "html-report-visuals",
+        "multi-platform-chat-analysis",
+        "product-package-autofill"
+      ],
+      "reasons": {
+        "browser-rpa-launch": "explicit_1688_related_skill_or_shared_runtime",
+        "browser-rpa-run": "explicit_1688_related_skill_or_shared_runtime",
+        "discover-store-accounts": "explicit_1688_related_skill_or_shared_runtime",
+        "ecommerce-data-collect": "explicit_1688_related_skill_or_shared_runtime",
+        "ecommerce-data-query": "explicit_1688_related_skill_or_shared_runtime",
+        "ecommerce-search": "explicit_1688_related_skill_or_shared_runtime",
+        "multi-platform-chat-analysis": "explicit_1688_related_skill_or_shared_runtime",
+        "html-report-visuals": "explicit_1688_related_skill_or_shared_runtime",
+        "product-package-autofill": "referenced_dependency_from:ecommerce-search"
+      },
+      "copy_mode": "selected_skill_trees_with_shared_plugin_metadata"
+    },
+    "alibaba-com-seller-assistant": {
+      "skills": [
+        "alibaba-1688-product-research",
+        "alibaba-blue-ocean-finder",
+        "alibaba-competitor-analysis",
+        "alibaba-global-smart-publish",
+        "alibaba-hot-product-insight",
+        "alibaba-jungle-scout-deep-dive-analyzer",
+        "alibaba-market-analysis",
+        "alibaba-product-publish",
+        "alibaba-product-title-generation"
+      ],
+      "reasons": {
+        "alibaba-1688-product-research": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-blue-ocean-finder": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-competitor-analysis": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-global-smart-publish": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-hot-product-insight": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-jungle-scout-deep-dive-analyzer": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-market-analysis": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-product-publish": "explicit_1688_related_skill_or_shared_runtime",
+        "alibaba-product-title-generation": "explicit_1688_related_skill_or_shared_runtime"
+      },
+      "copy_mode": "selected_skill_trees_with_shared_plugin_metadata"
+    },
+    "geo-agent": {
+      "skills": [
+        "geo-query-builder"
+      ],
+      "reasons": {
+        "geo-query-builder": "explicit_1688_related_skill_or_shared_runtime"
+      },
+      "copy_mode": "selected_skill_trees_with_shared_plugin_metadata"
+    }
+  },
+  "selected_account_skills": [
+    "1688-sourcing",
+    "image-prompt-guide",
+    "accio-mcp-cli"
+  ],
+  "remote_catalog_count": 90,
+  "remote_1688_plugin_metadata": [
+    {
+      "pluginCode": "daze-store-manager-cli",
+      "name": "大泽店长工具",
+      "displayName": "大泽店长工具",
+      "iconUrl": "https://accio-work-public.oss-us-east-1.aliyuncs.com/plugins/icons/COMPANY/14/daze-store-manager-cli/icon-1792635932336.png",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.1.20",
+      "summary": "支持批量复制商品并自动发布到店铺，让跨境铺货更省时省力。可从1688、Alibaba、Amazon等主流货源平台采集商品，一键发布到已授权的阿里巴巴国际站店铺。",
+      "source": "THIRD_PARTY",
+      "featured": false,
+      "featuredOrder": null,
+      "provider": "大泽科技"
+    },
+    {
+      "pluginCode": "dsers-dropshipping-pro",
+      "name": "DSers",
+      "displayName": "DSers",
+      "iconUrl": "https://accio-work-public.oss-us-east-1.aliyuncs.com/plugins/icons/dsers-dropshipping-pro/icon.png",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.4",
+      "summary": "用 Accio 找到商品，再通过 DSers 把它们转化为可持续增长的电商业务。支持从 AliExpress、1688 和 Alibaba.com 导入商品并连接到你的网店，统一管理供应商与订单，自动完成履约并同步物流信息，让选品、销售和发货在一套顺畅流程中完成。",
+      "source": "THIRD_PARTY",
+      "featured": false,
+      "featuredOrder": null,
+      "provider": "DSers"
+    },
+    {
+      "pluginCode": "dxb",
+      "name": "店小宝",
+      "displayName": "店小宝",
+      "iconUrl": "https://accio-work-public.oss-us-east-1.aliyuncs.com/plugins/icons/dxb/icon.svg",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "3.1.1",
+      "summary": "一键复制并发布商品，AI 智能处理图片，让跨境铺货更高效。支持从1688、Alibaba、Amazon、AliExpress、Made-in-China、Mercado Libre、军埔批发网等常见货源平台复制商品，并发布至授权店铺。",
+      "source": "THIRD_PARTY",
+      "featured": false,
+      "featuredOrder": null,
+      "provider": "店小宝"
+    },
+    {
+      "pluginCode": "1688-purchasing-assistant",
+      "name": "1688采购工具集",
+      "displayName": "1688采购工具集",
+      "iconUrl": "https://accio-work-public.oss-us-east-1.aliyuncs.com/plugins/icons/1688-purchasing-assistant/icon.svg",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.9",
+      "summary": "为1688买家提供选品找货、找商找厂、询盘寻源、分销铺货、订单管理等一站式采购服务。",
+      "source": "THIRD_PARTY",
+      "featured": true,
+      "featuredOrder": 4,
+      "provider": "1688"
+    },
+    {
+      "pluginCode": "1688-seller-assistant",
+      "name": "1688生意助手",
+      "displayName": "1688生意助手",
+      "iconUrl": "https://accio-work-public.oss-us-east-1.aliyuncs.com/plugins/icons/1688-seller-assistant/icon.svg",
+      "category": "e-commerce-marketplaces",
+      "mainVersion": "0.0.20",
+      "summary": "为1688商家提供店铺绑定、诊断、商品与客户运营、选品找商等经营支持服务。",
+      "source": "THIRD_PARTY",
+      "featured": false,
+      "featuredOrder": null,
+      "provider": "1688"
+    }
+  ],
+  "remote_sourcing_skill_metadata": {
+    "id": "27_1688-sourcing",
+    "name": "1688-sourcing",
+    "description": "1688智能选品找货能力。通过文字、图片或链接搜商品、找同款、找相似款，支持批量采购比价、热销选品、跨境找货、场景化选品及多条件筛选（价格/销量/材质/属性排除等）。支持中英双语：英文输入自动译为中文检索，结果译回英文展示。\n❗英文输入时必须给后处理命令附加 --lang en 参数（否则可视化页面仍为中文）。\n触发词：找商品、找同款、搜商品、帮我找、想要XX、图片找货、链接找货、以图搜图、选品、批发、找货源、热销、比价、最便宜、按销量排序、出口、跨境、找供应商、find product、source product、find similar、cheapest、wholesale。",
+    "version": "0.0.110",
+    "ownerType": "official",
+    "official": true,
+    "oss": "https://skill.accio.com/skills/phoenix/official/0.0.110/1688-sourcing.zip"
+  },
+  "gaps": [
+    {
+      "id": "1688-shop-operate",
+      "reason": "Declared by local 1688 expert but absent from installed plugins and account skills."
+    }
+  ],
+  "excluded_files": [
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-inquiry-evaluate/.env",
+      "reason": "environment_private_runtime_or_cache"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.env",
+      "reason": "environment_private_runtime_or_cache"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/1688-item-title-optimizer.iml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/inspectionProfiles/Project_Default.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/misc.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/modules.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/smartfox/common_info.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/smartfox/workspace.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/tdkConfig.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/vcs.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-item-title-optimizer/.idea/workspace.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-product-keyword-research/scripts/__pycache__/constants.cpython-313.pyc",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-product-keyword-research/scripts/__pycache__/market_search.cpython-313.pyc",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-product-keyword-research/tests/__pycache__/smoke_test.cpython-313.pyc",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-compete-analysis/.env",
+      "reason": "environment_private_runtime_or_cache"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.env",
+      "reason": "environment_private_runtime_or_cache"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/.gitignore",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/1688-shop-daily-report.iml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/inspectionProfiles/Project_Default.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/misc.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/modules.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/smartfox/common_info.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/smartfox/workspace.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/tdkConfig.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-daily-report/.idea/vcs.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.env",
+      "reason": "environment_private_runtime_or_cache"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.idea/.gitignore",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.idea/1688-shop-freedom-query-data.iml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.idea/inspectionProfiles/profiles_settings.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.idea/misc.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.idea/modules.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-freedom-query-data/.idea/vcs.xml",
+      "reason": "developer_cache_or_vcs_metadata"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/skills/1688-shop-health-check/.env",
+      "reason": "environment_private_runtime_or_cache"
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-72792947U1792740-95C20F-8969-2D9B07/agent-core/USER.md",
+      "reason": "environment_private_runtime_or_cache"
+    }
+  ],
+  "copied_file_count": 1795,
+  "copied_bytes": 37723676,
+  "credential_redactions": [
+    {
+      "path": "source/plugins/geo-agent/skills/geo-query-builder/scripts/single_query_runner.py",
+      "field": "API_KEY",
+      "reason": "Static source contained an embedded credential; archive uses an empty-by-default environment lookup."
+    }
+  ],
+  "remote_plugin_source_followup": {
+    "status": "extracted",
+    "plugins": [
+      "1688-purchasing-assistant",
+      "daze-store-manager-cli",
+      "dsers-dropshipping-pro",
+      "dxb"
+    ],
+    "manifest": "manifests/remote-plugin-files.json",
+    "status_manifest": "manifests/remote-plugin-status.json"
+  },
+  "remote_sourcing_verified": {
+    "version": "0.0.110",
+    "files": 23,
+    "matches_local": true,
+    "manifest": "manifests/remote-skills-files.json"
+  }
+}

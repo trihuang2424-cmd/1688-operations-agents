@@ -1,0 +1,396 @@
+{
+  "snapshot_date": "2026-10-25",
+  "scope": "Local documentation snapshot; no credentials, runtime code or cloud model weights",
+  "files": [
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/SKILL.md",
+      "archive": "sources/accio/image-prompt-guide/SKILL.md.txt",
+      "sha256": "0b01d52412cd32ad0d9858772ea587f13af10f1e6f83b16d9b610cfb37a225ac",
+      "bytes": 13301
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/accio-orchestration.md",
+      "archive": "sources/accio/image-prompt-guide/references/accio-orchestration.md.txt",
+      "sha256": "641370a355bc2a270c66b12fe6733c6bfed4f0319b1aac89eb7459ea3c51c9d1",
+      "bytes": 4895
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/brand-assets.md",
+      "archive": "sources/accio/image-prompt-guide/references/brand-assets.md.txt",
+      "sha256": "e70cbd35d9d5f3bc6bb3e1d504d759fe1d2f7232b3cd3659671c8d683263dd21",
+      "bytes": 4366
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/commerce-recipes.md",
+      "archive": "sources/accio/image-prompt-guide/references/commerce-recipes.md.txt",
+      "sha256": "b131fcb06ec3995ae3bf0f4ebdb164c77588859fb17361fadb404ac17624f6ba",
+      "bytes": 5545
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/design-patterns.md",
+      "archive": "sources/accio/image-prompt-guide/references/design-patterns.md.txt",
+      "sha256": "6ab546f919684b9a4a5d726defeb430bb32f0d6ad2b73f55ab15d41e78d55a8c",
+      "bytes": 4473
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/detail-pages.md",
+      "archive": "sources/accio/image-prompt-guide/references/detail-pages.md.txt",
+      "sha256": "cf6c3078f15ef14ce488e9f821de8b188a28fddd9fae0443a5f7101dd499ba94",
+      "bytes": 8555
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/edit-patterns.md",
+      "archive": "sources/accio/image-prompt-guide/references/edit-patterns.md.txt",
+      "sha256": "17ed582236dab42865a07e0a6b86ac9bd9537ed6cea213464449bd121ffb74fb",
+      "bytes": 9760
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/generation-runtime.md",
+      "archive": "sources/accio/image-prompt-guide/references/generation-runtime.md.txt",
+      "sha256": "a3ea59cffba65dcf95faab38f76a35769fe157268dc76ccd13c98b4ebef9964d",
+      "bytes": 11579
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/hd-upscale.md",
+      "archive": "sources/accio/image-prompt-guide/references/hd-upscale.md.txt",
+      "sha256": "cc4d24ec9699866e7b9e06ec2154147469bbae8adb76e5c4982e959abcf409d9",
+      "bytes": 370
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/image-detail.md",
+      "archive": "sources/accio/image-prompt-guide/references/image-detail.md.txt",
+      "sha256": "0306cc15c2f750772ceb0f6f63141278f724ead06ca3a209c03bc27cd405adfc",
+      "bytes": 386
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/image-edits.md",
+      "archive": "sources/accio/image-prompt-guide/references/image-edits.md.txt",
+      "sha256": "bdd111cce0b20c39b753b2c3e9761d496c15c500da6563c7cbc242f678ac1eb2",
+      "bytes": 6244
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/image-resize.md",
+      "archive": "sources/accio/image-prompt-guide/references/image-resize.md.txt",
+      "sha256": "362bf08455681a1479108393674262453012f41dbc26b0db588624abbd7bdfc7",
+      "bytes": 376
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/image-translation.md",
+      "archive": "sources/accio/image-prompt-guide/references/image-translation.md.txt",
+      "sha256": "1c8c778e44119441033bf30770cfc26655f6d13a1c1558e432d3ec2aff975a5f",
+      "bytes": 9537
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/logo-customization.md",
+      "archive": "sources/accio/image-prompt-guide/references/logo-customization.md.txt",
+      "sha256": "2ab8d739291d5456de3a31b2d262c167323f37c6f9e55103d82264fe59b9b800",
+      "bytes": 355
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/logo-design.md",
+      "archive": "sources/accio/image-prompt-guide/references/logo-design.md.txt",
+      "sha256": "fc4797eee33027885ecc2aaac03e877d8cf1f130b3de6328e8d4006846d097be",
+      "bytes": 347
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/marketing-images.md",
+      "archive": "sources/accio/image-prompt-guide/references/marketing-images.md.txt",
+      "sha256": "479587b8a3f27e214d66786cf469a7a551fc5a5a762d0e399d957509e8c97600",
+      "bytes": 5903
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/marketing-poster.md",
+      "archive": "sources/accio/image-prompt-guide/references/marketing-poster.md.txt",
+      "sha256": "f9b2e3619fc7a7607b53f22452a33463d85e5db003826b74f05e597df423ebb1",
+      "bytes": 353
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/model-showcase.md",
+      "archive": "sources/accio/image-prompt-guide/references/model-showcase.md.txt",
+      "sha256": "b495df27c87b413f01f7912f59dcfd50b9f36e0ae90c86d85ac25bcce04d750c",
+      "bytes": 394
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/parallel-generation.md",
+      "archive": "sources/accio/image-prompt-guide/references/parallel-generation.md.txt",
+      "sha256": "5355f578ed1ac34ad1a396246f649f214338ad02e18b619433d6edcac183bb78",
+      "bytes": 8100
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/pdp-platform-specs.md",
+      "archive": "sources/accio/image-prompt-guide/references/pdp-platform-specs.md.txt",
+      "sha256": "658be0c81a2037ed1f51c93c74dc7ef5af2297136d5e1575da22cd2fe506126f",
+      "bytes": 508
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/pdp.md",
+      "archive": "sources/accio/image-prompt-guide/references/pdp.md.txt",
+      "sha256": "8d69ba7f9e9370c64c575e1665a0d6c13a80e43002db8e97344dae898a33b0d6",
+      "bytes": 354
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/platform-product-guidelines.md",
+      "archive": "sources/accio/image-prompt-guide/references/platform-product-guidelines.md.txt",
+      "sha256": "641f0382802d2f63e0451d7cdb9960f6b05d72cca0c5959689b90bb17a56b8b0",
+      "bytes": 550
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/platform-specs-china.md",
+      "archive": "sources/accio/image-prompt-guide/references/platform-specs-china.md.txt",
+      "sha256": "359a7f8a3c9cd86dc5f09358054d45964a97a6b4ca6d0ed86453bce39dfe7e73",
+      "bytes": 496
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/platform-specs-overseas.md",
+      "archive": "sources/accio/image-prompt-guide/references/platform-specs-overseas.md.txt",
+      "sha256": "7df52b3c44e389f0be35a0dcae96283f01850b1b3e495dea1c7cdb8246d1ff51",
+      "bytes": 518
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/process-flow.md",
+      "archive": "sources/accio/image-prompt-guide/references/process-flow.md.txt",
+      "sha256": "982aa1b0f8d3108fbb77d9ae490bdc6a3c91653694abcd3a9c1ee855c15a5640",
+      "bytes": 360
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/product-images.md",
+      "archive": "sources/accio/image-prompt-guide/references/product-images.md.txt",
+      "sha256": "b5cd61b239d3ff91ab60ce36f9cd5b31883d5269e17b56c5c7b42b1f8bfe9c85",
+      "bytes": 6415
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/prompt-review.md",
+      "archive": "sources/accio/image-prompt-guide/references/prompt-review.md.txt",
+      "sha256": "74090c3e98509541a9eb8ff2948bcaa865f6de1838837008afd47fede4e4c4af",
+      "bytes": 4729
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/remove-watermark.md",
+      "archive": "sources/accio/image-prompt-guide/references/remove-watermark.md.txt",
+      "sha256": "e270f107b826351d9d25a041a474b133c135d39810cf1deb5cf4d6cadeb4d855",
+      "bytes": 370
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/resolution-routing.md",
+      "archive": "sources/accio/image-prompt-guide/references/resolution-routing.md.txt",
+      "sha256": "f578a515f35f9644011f5ee204097479761e8d8045ebae3a16be9a8121287317",
+      "bytes": 387
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/scene-image.md",
+      "archive": "sources/accio/image-prompt-guide/references/scene-image.md.txt",
+      "sha256": "52408621a672cc4719f43f438bdb6f7296abcda96641155db990af474ff724b0",
+      "bytes": 397
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/selling-point.md",
+      "archive": "sources/accio/image-prompt-guide/references/selling-point.md.txt",
+      "sha256": "c02dc52b0fe455563affcfef71e63b793572ddc323e6bfc6e64dfec99ae424f1",
+      "bytes": 397
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/sku-color-change.md",
+      "archive": "sources/accio/image-prompt-guide/references/sku-color-change.md.txt",
+      "sha256": "85596ffb8117cbdbb8208a012f1c0f3daeaeed0ebe66452de1f508b1790b514e",
+      "bytes": 349
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/style-guide.md",
+      "archive": "sources/accio/image-prompt-guide/references/style-guide.md.txt",
+      "sha256": "adabc5928a8dba667c2405725d6acf6fd937069a87134685f824fc27c106deef",
+      "bytes": 363
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/tech-pack.md",
+      "archive": "sources/accio/image-prompt-guide/references/tech-pack.md.txt",
+      "sha256": "c8faced87b23b2aad47a26706f9291bee0863a06083fc5db1732748e83131f1d",
+      "bytes": 370
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/technical-visuals.md",
+      "archive": "sources/accio/image-prompt-guide/references/technical-visuals.md.txt",
+      "sha256": "7635ce25dc75f9a7e6ab353253bb730a491395ce847a3037c05c47e73c682f7c",
+      "bytes": 1185
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/text-editing.md",
+      "archive": "sources/accio/image-prompt-guide/references/text-editing.md.txt",
+      "sha256": "381fec2e3f985b8abe0f382e69ed15385e452f9699cb0b86de335b9612f9ae6e",
+      "bytes": 456
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/visual-recipes.md",
+      "archive": "sources/accio/image-prompt-guide/references/visual-recipes.md.txt",
+      "sha256": "f744f26620474442b8a1dd3d4b3302348c47ba78563ab9d43f8968f9381980a6",
+      "bytes": 4222
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/skills/image-prompt-guide/references/white-background.md",
+      "archive": "sources/accio/image-prompt-guide/references/white-background.md.txt",
+      "sha256": "31cda551f9c26fdb1803e1bcd7242356d4446b5413b6ec2e8ba9b9840fa0d2ea",
+      "bytes": 391
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/SKILL.md",
+      "archive": "sources/accio/alibaba-image-generation/SKILL.md.txt",
+      "sha256": "9f8849b0941cf26852f0b57cfd20539d5dfe7c005c97626776886617878709ad",
+      "bytes": 28750
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/apply_logo.md",
+      "archive": "sources/accio/alibaba-image-generation/references/apply_logo.md.txt",
+      "sha256": "05a64ef6987c14e4bacf082e0b81a0d2f62087b7b1a095c65528e95767542208",
+      "bytes": 19815
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/command_drawing.md",
+      "archive": "sources/accio/alibaba-image-generation/references/command_drawing.md.txt",
+      "sha256": "23468f6f5c3c85b70376c29b75a5b9dbe37965454c928bfca23d654d3eedc724",
+      "bytes": 5359
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/enhance_resolution.md",
+      "archive": "sources/accio/alibaba-image-generation/references/enhance_resolution.md.txt",
+      "sha256": "7b6707bf8061eb2fc92198a2693c040eb1bedcccfa7c09d17b9665953bc751ad",
+      "bytes": 3496
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/generate_detail.md",
+      "archive": "sources/accio/alibaba-image-generation/references/generate_detail.md.txt",
+      "sha256": "b42a0dcc24819e280e52c7c7f52ae6434ae67c260f9b5c87654fc167f9e0cf56",
+      "bytes": 4847
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/image-translation.md",
+      "archive": "sources/accio/alibaba-image-generation/references/image-translation.md.txt",
+      "sha256": "d550c5e4db56f633c2f4af9acf31d0ec36696354e74ca6cc372df13391b7247d",
+      "bytes": 8448
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/model-image.md",
+      "archive": "sources/accio/alibaba-image-generation/references/model-image.md.txt",
+      "sha256": "172e55f993e39128bef3133ae92519f7bb8574dde8087a6e9723f741218fba22",
+      "bytes": 13890
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/product-scene-display.md",
+      "archive": "sources/accio/alibaba-image-generation/references/product-scene-display.md.txt",
+      "sha256": "da3136e45aab654de8b93cebe8ccd4ebc50b95d46133a1b47d633caf5cc20792",
+      "bytes": 7075
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/remove-bg.md",
+      "archive": "sources/accio/alibaba-image-generation/references/remove-bg.md.txt",
+      "sha256": "ccdb2aa91e49092a004680277b3f329f8178bd54951300c23b0b0d439fd7347a",
+      "bytes": 3575
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/remove-watermark.md",
+      "archive": "sources/accio/alibaba-image-generation/references/remove-watermark.md.txt",
+      "sha256": "bd3e903811df7ecb70cd6d98e7088fc2e550b578f98b107c604e85017f1e8cf1",
+      "bytes": 5439
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-image-generation/references/sku-color-change.md",
+      "archive": "sources/accio/alibaba-image-generation/references/sku-color-change.md.txt",
+      "sha256": "f714ce764c10ae0e97da42e5877c27e027c237abcf8012ac82693c79298ace59",
+      "bytes": 6327
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-global-ai-image-studio/SKILL.md",
+      "archive": "sources/accio/alibaba-global-ai-image-studio/SKILL.md.txt",
+      "sha256": "3dcc1e6d18f821b67a7e2dcd12ccba79fe385425f9f93f2ef6483aa314fb0af7",
+      "bytes": 12326
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-global-ai-image-studio/references/intelligent-optimization.md",
+      "archive": "sources/accio/alibaba-global-ai-image-studio/references/intelligent-optimization.md.txt",
+      "sha256": "5301cd02a56be2021ccc3c3f125cdf7372ccbe47b653069a0b19d4442f8d9a11",
+      "bytes": 6085
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-global-ai-image-studio/references/product-scene-display.md",
+      "archive": "sources/accio/alibaba-global-ai-image-studio/references/product-scene-display.md.txt",
+      "sha256": "5578c6d534232cf1af41cc0e7f018ea0040f790b6a10b8c61285d382ae658ae1",
+      "bytes": 6846
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-global-ai-image-studio/references/remove-bg.md",
+      "archive": "sources/accio/alibaba-global-ai-image-studio/references/remove-bg.md.txt",
+      "sha256": "48345ff3514ce4861e4cd8b601eb3b99f5852020dde2941093e8b29e1d99b907",
+      "bytes": 5838
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-global-ai-image-studio/references/remove-watermark.md",
+      "archive": "sources/accio/alibaba-global-ai-image-studio/references/remove-watermark.md.txt",
+      "sha256": "a070d1f4714d1cb2fbd498c3172cc4e1acc96e5967537f24ff85c53651d3e48a",
+      "bytes": 6707
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-global-ai-image-studio/references/sku-color-change.md",
+      "archive": "sources/accio/alibaba-global-ai-image-studio/references/sku-color-change.md.txt",
+      "sha256": "1fc6ae03c09f683899400f442165956897ff4c0484545e5ed991511fd55caee1",
+      "bytes": 6790
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/accio-com-buyer-assistant/skills/ai-product-designer/SKILL.md",
+      "archive": "sources/accio/ai-product-designer/SKILL.md.txt",
+      "sha256": "698df70ebb1239367afcd3e4e7d9523df21835edb33974142693e0876795be1e",
+      "bytes": 16440
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-product-recruitment/references/image-prompts/detail-image.md",
+      "archive": "sources/accio/recruitment-image-prompts/detail-image.md.txt",
+      "sha256": "c2ec22f905ac9c2e38f6df6dafa01f57701b51cd6f45adb0002eaf706f1ae7b2",
+      "bytes": 1998
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-product-recruitment/references/image-prompts/model-image.md",
+      "archive": "sources/accio/recruitment-image-prompts/model-image.md.txt",
+      "sha256": "57e38f85d6931e49b148be16da304273a613ab8a62f42e08c1fc33225eac0370",
+      "bytes": 5268
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-product-recruitment/references/image-prompts/process-image.md",
+      "archive": "sources/accio/recruitment-image-prompts/process-image.md.txt",
+      "sha256": "36eab7be547110db12aac116655f8a08a0c771096f8b1b12c74787e465de4806",
+      "bytes": 9105
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-product-recruitment/references/image-prompts/prompt-common.md",
+      "archive": "sources/accio/recruitment-image-prompts/prompt-common.md.txt",
+      "sha256": "997e35e19f52114c67c5baf5d5a104cd5750d8536cf7d83f579f2f46e89a2948",
+      "bytes": 4406
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-product-recruitment/references/image-prompts/scene-image.md",
+      "archive": "sources/accio/recruitment-image-prompts/scene-image.md.txt",
+      "sha256": "06fb089adc4e3addc859f3702c615fc2144954c3b5e5b8225e61f7454a3d27ed",
+      "bytes": 3498
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/alibaba-com-seller-assistant/skills/alibaba-product-recruitment/references/image-prompts/selling-point-image.md",
+      "archive": "sources/accio/recruitment-image-prompts/selling-point-image.md.txt",
+      "sha256": "f6927fd508206a78dc5a89c8240d4cff41e97a26a15419c33b096707919fbd77",
+      "bytes": 2965
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/agents/MID-44792947U1792740-95C20F-8932-1CC720/agent-core/prompt.md",
+      "archive": "sources/accio/design-expert-prompt.md.txt",
+      "sha256": "5999a2ee43adca4dfbd77488920544955305a23fdb940a80b4d552e1a92fe999",
+      "bytes": 7401
+    },
+    {
+      "source": "/Users/shileqi/.accio/accounts/1795792947/plugins/installed/1688-seller-assistant/prompt.md",
+      "archive": "sources/accio/1688-plugin-routing.md.txt",
+      "sha256": "7039765985e3f56188121c7b360d7f7187b23066e21f8103b89f5f93d204e6cc",
+      "bytes": 23384
+    },
+    {
+      "source": "/Users/shileqi/.accio/image-agent/subagent-config-cache.json",
+      "archive": "sources/accio/image-agent-execution-rules.json.txt",
+      "sha256": "bb5b5990123fe5cbd902db0c6ecd377f32c64b546a7230a69e66db59f601de2c",
+      "bytes": 35153
+    }
+  ]
+}

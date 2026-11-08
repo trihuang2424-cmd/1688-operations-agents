@@ -1,0 +1,11 @@
+{
+  "user_source": "/Users/shileqi/Documents/ChatGPT/jacky/outputs/1688-capabilities/2026-10-25-tool-catalog.md",
+  "copy": "catalog/2026-10-25-tool-catalog.md",
+  "sha256": "16d2e30437240b0e9e89f5d51513bb7eb6e9625358cdabf914e395dd6824a553",
+  "exact_copy": true,
+  "live_schema_count": 205,
+  "live_metadata_only": true,
+  "date": "2026-10-25",
+  "bridge_status": "reachable; ali1688 authorized; 205 callable catalog tools",
+  "business_tool_calls": 0
+}

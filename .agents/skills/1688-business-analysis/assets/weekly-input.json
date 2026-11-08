@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "data_mode": "template",
+  "report_type": "weekly",
+  "period_basis": "independent_period",
+  "title": "店铺经营周报",
+  "period": {"start": "__REQUIRED__", "end": "__REQUIRED__", "timezone": "Asia/Shanghai"},
+  "data_cutoff": "__REQUIRED__",
+  "retrieved_at": "__REQUIRED__",
+  "storeAttribution": {"store_ref": "__REQUIRED__", "display_name": "__REQUIRED__"},
+  "strategy_version": null,
+  "coverage": {"status": "partial", "notes": ["__REQUIRED__"]},
+  "metrics": [
+    {"name": "周期指标：按真实来源填写", "value": null, "unit": "__REQUIRED__", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "明确本周区间、阶段起点或行动前固定基线；不自动生成环比或利润", "denominator": "不适用", "missing_reason": "__REQUIRED__"}
+  ],
+  "findings": [],
+  "actions": [],
+  "unfinished": []
+}

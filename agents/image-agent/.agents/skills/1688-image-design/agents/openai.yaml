@@ -1,0 +1,6 @@
+interface:
+  display_name: "1688 图片设计"
+  short_description: "将商品需求扩写为主副图、详情页与营销套图方案，调用图片工具并验收"
+  default_prompt: "使用 $1688-image-design，根据我的商品资料制作所需图片，保留真实卖点和商品身份。"
+policy:
+  allow_implicit_invocation: true

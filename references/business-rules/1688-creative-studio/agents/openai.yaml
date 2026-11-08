@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 商品视觉制作师"
+  short_description: "默认复用原图片Agent，由Codex设计验收并通过当前imagegen制作商品图片"
+  default_prompt: "使用 $1688-creative-studio，按原image-agent默认方案设计并制作我的1688商品图片。"

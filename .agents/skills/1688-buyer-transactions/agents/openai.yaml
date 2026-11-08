@@ -1,0 +1,5 @@
+interface:
+  display_name: "1688 买家采购事务"
+  short_description: "按买家订单物流售后发票流程处理事务，保留各类身份和操作条件"
+  default_prompt: "使用 $1688-buyer-transactions 核实本次交易身份和对象，按相应原规则完成指定采购事务。"
+

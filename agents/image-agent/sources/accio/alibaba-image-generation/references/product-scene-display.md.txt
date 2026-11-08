@@ -1,0 +1,168 @@
+---
+name: product-scene-display
+description: 将商品图片合成到指定场景中展示，结果路径保存在json中。调用商品场景展示服务处理图片，输入一张商品图片和场景描述prompt，输出场景展示后的图片路径。当用户需要在特定场景中展示商品、生成商品场景图、制作产品展示效果图时使用。
+---
+
+# 商品场景展示
+
+## 功能说明
+
+本 Skill 用于将商品图片合成到用户指定的场景中，生成商品场景展示图，适用于电商产品展示、营销素材制作、产品效果图生成等场景。
+
+## 使用流程
+
+### 1. 准备输入
+
+- **图片输入**：一张商品图片（支持常见格式：JPG、PNG、WEBP 等）
+- **场景描述**：用户提供的场景 prompt，描述希望商品展示的场景
+
+**场景描述示例：**
+- "在现代化的客厅沙发上"
+- "放在木质餐桌上，周围有鲜花装饰"
+- "在阳光明媚的户外草坪上"
+- "放在简约风格的办公桌上"
+
+### 2. 参数校验（前置拦截）
+
+**在调用图像工具之前，必须先校验必传参数。如果参数为空，不发起请求，直接提示用户。**
+
+| 必传参数 | 校验规则 | 缺失时处理 |
+|---------|---------|-----------|
+| `imageUrl` | 用户提供的商品图片 URL，不可为空 | 终止流程，提示"请提供需要场景展示的商品图片" |
+| `prompt` | 用户提供的场景描述，不可为空 | 终止流程，提示"请描述您希望商品展示的场景" |
+
+### 3. 调用图像工具
+
+商品场景展示使用 `image_edit` 工具的 `simple_generation` 或 `complex_generation` task_type：
+
+```
+工具：image_edit
+task_type：simple_generation 或 complex_generation
+参数：
+  imageUrl: "<图片URL>"
+  prompt: "<场景描述 + 固定约束文案>"
+```
+
+**参数说明：**
+- `imageUrl`：输入商品图片的 URL 地址
+- `prompt`：场景 prompt，由用户场景描述与固定约束文案拼接而成
+
+**Prompt 构建：**
+
+用户/Agent 生成部分示例：
+
+```
+Place the product on a modern kitchen countertop with warm morning light
+```
+
+或中文描述：
+
+```
+将商品放在现代厨房台面上，温暖的晨光照射
+```
+
+固定拼接文案：
+
+```
+Keep the main product in the image fully consistent with the original in shape, color, texture, material details, and structural features — do NOT alter, simplify, or reimagine any aspect of the product's appearance. For any parts that are occluded, blocked, or hidden in the original image (covered by hands, packaging, other objects, or the product itself), do NOT infer, reconstruct, or fabricate the hidden content — only render the visible portions actually shown in the original image. Only the surrounding scene/background may change as described.
+```
+
+完整 prompt 结构：
+
+```
+{用户/Agent 的场景描述 prompt} + Keep the main product in the image fully consistent with the original in shape, color, texture, material details, and structural features — do NOT alter, simplify, or reimagine any aspect of the product's appearance. For any parts that are occluded, blocked, or hidden in the original image (covered by hands, packaging, other objects, or the product itself), do NOT infer, reconstruct, or fabricate the hidden content — only render the visible portions actually shown in the original image. Only the surrounding scene/background may change as described.
+```
+
+task_type 选择：
+- 简单背景替换、单一场景 → `simple_generation`
+- 多元素、复杂光影、高保真场景 → `complex_generation`
+
+**返回示例：**
+
+工具直接返回处理后的图片 URL：
+
+```json
+{
+  "imageUrl": "https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png"
+}
+```
+
+### 4. 输出结果
+
+**重要：获取到处理结果后，按照以下格式向用户展示，不要直接返回原始 JSON。**
+
+**输出格式：**
+
+```
+已经帮你生成图片
+
+![]({图片URL})
+```
+
+**输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)
+
+- ✅ 正确：按上述格式输出，包含图片预览和创意工坊链接
+- ❌ 错误：直接返回 JSON 或只返回图片 URL
+
+## 注意事项
+
+1. **场景描述**：prompt 应尽量具体清晰，描述场景的环境、光线、风格等细节。
+2. **商品主体一致性是核心要求**：商品的形状、颜色、纹理、材质细节、结构特征及所有可见细节必须与原图完全一致，禁止形变、颜色偏差、材质改写或结构调整。
+3. **遮挡部位禁止推测**：对于原图中被手部、包装、其他物体或商品自身遮挡/隐藏的部位，严禁推测、还原或想象被遮挡的内容；只能基于原图实际可见的部位进行场景合成。
+4. 仅替换/补充背景与环境，不得修改商品本体。
+5. 处理失败时按 SKILL.md 中的错误处理规则执行。
+
+## 使用示例
+
+**场景1：客厅展示**
+
+用户："帮我把这个抱枕放到现代风格的客厅沙发上展示"
+
+执行步骤：
+1. 获取用户提供的商品图片路径
+2. 获取用户场景描述：现代风格的客厅沙发上
+3. 构建场景 prompt（用户描述 + 固定约束文案）
+4. 调用 `image_edit`，`task_type: simple_generation`（或 `complex_generation`），传入原图与 prompt
+5. 返回最终结果
+
+**示例调用：**
+
+```
+工具：image_edit
+task_type：simple_generation
+参数：
+  imageUrl: "https://sc01.alicdn.com/kf/H5b56916614944dafaa06ea9f03aff8979.jpg"
+  prompt: "将商品放在现代风格的客厅沙发上。Keep the main product in the image fully consistent with the original in shape, color, texture, material details, and structural features — do NOT alter, simplify, or reimagine any aspect of the product's appearance. For any parts that are occluded, blocked, or hidden in the original image (covered by hands, packaging, other objects, or the product itself), do NOT infer, reconstruct, or fabricate the hidden content — only render the visible portions actually shown in the original image. Only the surrounding scene/background may change as described."
+```
+
+**场景2：办公场景**
+
+用户："我想看看这个笔记本放在办公桌上是什么效果"
+
+执行步骤：
+1. 获取用户提供的商品图片路径
+2. 获取用户场景描述：放在办公桌上
+3. 构建场景 prompt
+4. 调用 `image_edit`，`task_type: simple_generation`，传入原图与 prompt
+5. 返回最终结果
+
+**场景3：户外场景**
+
+用户："帮我生成这张户外背包在山间小路上的场景图"
+
+执行步骤：
+1. 获取用户提供的商品图片路径
+2. 获取用户场景描述：在山间小路上
+3. 构建场景 prompt
+4. 调用 `image_edit`，`task_type: simple_generation` 或 `complex_generation`，传入原图与 prompt
+5. 返回最终结果
+
+**成功后输出示例：**
+
+已经帮你生成图片
+
+![](https://sc04.alicdn.com/kf/H696151c21a7342229edefd0b3769a579S/200042360/H696151c21a7342229edefd0b3769a579S.png)

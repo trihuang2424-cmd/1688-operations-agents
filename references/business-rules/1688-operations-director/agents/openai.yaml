@@ -1,0 +1,6 @@
+interface:
+  display_name: "1688 运营总控"
+  short_description: "统筹店铺经营诊断及商品、流量、客户、采购、履约和ERP专员协作"
+  default_prompt: "使用 $1688-operations-director，分析我的1688运营目标并协调对应专员完成任务。"
+policy:
+  allow_implicit_invocation: true

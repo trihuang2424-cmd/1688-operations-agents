@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "data_mode": "template",
+  "report_type": "monthly",
+  "period_basis": "complete_calendar_month",
+  "title": "店铺经营月报",
+  "period": {"start": "__REQUIRED__", "end": "__REQUIRED__", "timezone": "Asia/Shanghai"},
+  "data_cutoff": "__REQUIRED__",
+  "retrieved_at": "__REQUIRED__",
+  "storeAttribution": {"store_ref": "__REQUIRED__", "display_name": "__REQUIRED__"},
+  "strategy_version": null,
+  "coverage": {"status": "partial", "notes": ["__REQUIRED__"]},
+  "metrics": [
+    {"name": "本月销售额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__完整自然月起止日及销售口径", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "前一个完整月销售额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__前月起止日及相同销售口径", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "月销售额差额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "本月销售额减前一个完整月销售额；仅在两期可比且有数据时计算", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "月销售额变化幅度", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "两期销售额差额除以前一个完整月销售额乘100；分母为零或未知时保留null并解释", "denominator": "__REQUIRED__前一个完整月销售额", "missing_reason": "__REQUIRED__"},
+    {"name": "本月日均销售额", "value": null, "unit": "元/日", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "本月销售额除以本月自然日数，数据缺失不可据此外推", "denominator": "__REQUIRED__本月自然日数", "missing_reason": "__REQUIRED__"},
+    {"name": "前月日均销售额", "value": null, "unit": "元/日", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "前一个完整月销售额除以该月自然日数，数据缺失不可据此外推", "denominator": "__REQUIRED__前月自然日数", "missing_reason": "__REQUIRED__"},
+    {"name": "日均销售额差额", "value": null, "unit": "元/日", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "本月日均销售额减前月日均销售额", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "日均销售额变化幅度", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "日均销售额差额除以前月日均销售额乘100；分母为零或未知时保留null并解释", "denominator": "__REQUIRED__前月日均销售额", "missing_reason": "__REQUIRED__"}
+  ],
+  "findings": [],
+  "actions": [],
+  "unfinished": []
+}

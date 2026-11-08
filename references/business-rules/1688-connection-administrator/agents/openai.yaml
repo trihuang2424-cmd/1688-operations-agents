@@ -1,0 +1,4 @@
+interface:
+  display_name: "1688 · 店铺与系统连接管理员"
+  short_description: "当前店铺工具关系、多店铺绑定、ERP/销帮帮连接状态、凭证与路由配置、断开连接"
+  default_prompt: "使用 $1688-connection-administrator 处理我的店铺与系统连接管理员任务，并列出真实依据与已完成结果。"

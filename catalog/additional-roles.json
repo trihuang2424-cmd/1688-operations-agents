@@ -1,0 +1,82 @@
+[
+  {
+    "legacy_id": "daily_report",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "operations_director",
+    "capability": "business_analysis",
+    "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-daily-report/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "profit_analyst",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "operations_director",
+    "capability": "business_analysis",
+    "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-profit-analyst/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "competition_analyst",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "product_operations",
+    "capability": "market_research",
+    "skill": ".agents/skills/1688-market-research/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-competition-analyst/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "market_opportunity",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "product_operations",
+    "capability": "market_research",
+    "skill": ".agents/skills/1688-market-research/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-market-opportunity/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "platform_knowledge",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "operations_director",
+    "capability": "platform_knowledge",
+    "skill": ".agents/skills/1688-platform-knowledge/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-platform-knowledge/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "report_designer",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "operations_director",
+    "capability": "reporting",
+    "skill": ".agents/skills/1688-business-analysis/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-report-designer/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "title_optimizer",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "product_operations",
+    "capability": "product_optimization",
+    "skill": ".agents/skills/1688-product-operations/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-title-optimizer/RULES.md"
+    ]
+  },
+  {
+    "legacy_id": "company_due_diligence",
+    "status": "capability_alias_not_additional_agent",
+    "owner": "operations_director",
+    "capability": "procurement_research",
+    "skill": ".agents/skills/1688-procurement-research/SKILL.md",
+    "rules": [
+      "references/business-rules/1688-company-due-diligence/RULES.md"
+    ]
+  }
+]
