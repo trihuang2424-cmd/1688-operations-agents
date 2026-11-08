@@ -12,7 +12,7 @@
 | 有多少人符合条件 | `customer_list` 只查最小页，以服务端 `recordCount` 作为匹配总数 |
 | 新标签、未知自定义属性 | `customer_attr_field_config`；仅需全部属性定义和生效状态时用 `customer_attr_list_all` |
 | 单客画像和跟进 | `customer_ai_profile(action=query)`、`get_followup_record_by_buyer`、`get_order_info_by_buyer` |
-| 全店买家画像与新老客构成 | `get_customer_profile`；核对周期和统计口径，不与 CRM 库总人数混用 |
+| 全店买家画像与平台新老客构成 | `get_customer_profile`；核对周期和平台定义，不与 CRM 库总人数混用，不直接当作企业新老客拆分 |
 
 首次业务查询前调用 `bridge_status(check_gateway=true)`，只用网关真实返回的 `store_ref`。按工具名 `search_tools`，再对本次将用的工具 `describe_tool`；以下例子是已核验契约示意，不能代替本轮 live Schema。通过 `call_tool` 调用，不直连前端 HTTP，不注入 `NEWTON_SHOP_LOGIN_ID` 等身份字段。
 
@@ -24,13 +24,21 @@
 |---|---|
 | 高采购意愿 | `user_interest_level` 为“高意愿”；空值是未评估，不是低意愿 |
 | 流失风险 | `lost_status` 为“即将流失”或“已流失”；没有原因字段时不能编造原因 |
-| 历史有成交 / 从未成交 | `source=ORDER` / `source=INQUIRY`；从未下单不能用空日期作比较 |
+| CRM订单来源 / 询盘来源记录 | `source=ORDER` / `source=INQUIRY` 的含义以本轮工具定义为准；来源字段及可见记录不证明公司跨渠道历史，不能直接映射为企业老客/新客 |
 | 近 7 天询盘未转化 | 最近询盘时间在 7 天内，且近 7 天支付订单数 `pay_mord_cnt_1w <= 0`；不是“历史从未成交” |
 | 累计、历史、总金额；金额未给周期 | `pay_ord_amt_std_all` |
 | 近 30 天、近一个月、近期成交金额 | `recent_30d_purchase_amount` |
 | 近 7 天支付/成交金额 | `pay_ord_amt_1w` |
 
 沿用同一追问的金额字段，除非用户改变周期；对用户写明所用口径。只有 `recent_30d_purchase_amount` 是来源规则支持排序的金额字段，累计金额不能冒充其排序。其他可排序字段为 `last_inquiry_time`、`last_order_time`、`gmt_create`，执行前核对 live 定义。
+
+## 企业身份与获客来源核验
+
+仅在任务需要时，按[客户身份与成交来源](../../../../references/acquisition-analysis.md#客户身份与成交来源)核验本公司新客、老客及未知，不能从平台首购、CRM新增、`source` 或空日期直接推出企业身份。已有CRM线索但从未成交不自动算老客；已知企业老客首次转到1688下单仍是企业老客。平台新客字段保留原口径，不能替代企业核验。
+
+围绕影响决定的对象，使用现有候选订单/跟进读取或用户已提供的企业记录核对历史成交、渠道覆盖、客户关联及截止；工具是否可读、是否有这些字段以本轮 live Schema 和回包为准，不承诺可自动联通企业全历史。空结果只能在明确覆盖内说明未发现记录，冲突或覆盖不足保留未知。广告来源独立核实，业务引导老客下单不计广告拉新；公司新成交也不自动等于广告获客。
+
+核验优先用聚合及任务必要的有限证据，沿用现有脱敏与数量限制，不为身份匹配全量导出或新建客户主档。将来源、覆盖、可关联程度和精确缺项交回分析，询盘队列按[指标与队列](../../../../references/acquisition-analysis.md#指标与队列)观察。
 
 “L3 以上”按来源规则不含 L3，“L3 及以上”包含 L3；在结果说明边界。同字段多值一次 `in` 表达，`in/not in` 的 `value` 是 JSON 数组字符串；跨字段 OR 没有已核验支持，不拆查询后冒充一个精确总人数。`site_flag` 只表示来源，不表示客户质量或是否有效。商家自建“高意向”标签与平台采购意愿不同。
 

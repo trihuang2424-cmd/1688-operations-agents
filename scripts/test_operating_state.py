@@ -102,6 +102,23 @@ class OperatingStateTests(unittest.TestCase):
         record["workflow"]["approval"].update(type=approval_type, necessary_basis="fixture explicit review requirement",
             basis_refs=["evidence.md"], review_objects=[{"type": item["type"], "artifact_refs": list(item["artifact_refs"])}], status="pending")
 
+    def product_content_execution(self, artifact_type="image"):
+        record = self.workflow_action("asset")
+        workflow = record["workflow"]
+        workflow["deliverable_type"] = "execution"
+        artifact_ref = "main-image-v1.png" if artifact_type == "image" else "title-v1.txt"
+        if artifact_type == "image":
+            (self.root / artifact_ref).write_bytes((self.root / "asset.png").read_bytes())
+        else:
+            (self.root / artifact_ref).write_text("Offline final product title, version 1.\n")
+        workflow["preparation"]["required_types"] = [artifact_type]
+        workflow["preparation"]["deliverables"][0].update(type=artifact_type, artifact_refs=[artifact_ref])
+        record["plan"]["changes"] = [{"field": "main_image" if artifact_type == "image" else "title",
+                                        "before": "offline original", "after_artifact_ref": artifact_ref}]
+        record["plan"]["assets"] = [{"type": artifact_type, "artifact_ref": artifact_ref, "version": "v1"}]
+        self.request_review(record, "asset_review")
+        return record
+
     def focus(self, action_ids=None):
         record = copy.deepcopy(TEMPLATE["focus_product_template"])
         record.update(focus_id="f1", store_ref=self.payload["store_ref"], company_instruction_ref="evidence.md",
@@ -641,6 +658,52 @@ class OperatingStateTests(unittest.TestCase):
         self.assertFalse(result["readiness"]["closure_ready"])
         action["plan"]["authorization_ref"] = None
         self.assertFalse(self.query("check", object_id="a1", requirement="execution")["check_passed"])
+
+    def test_product_content_approval_enables_execution_without_second_authorization(self):
+        for artifact_type in ("copy", "image"):
+            with self.subTest(artifact_type=artifact_type):
+                action = self.product_content_execution(artifact_type)
+                self.data["actions"] = [action]
+                self.assertTrue(self.query("check", object_id="a1", requirement="handoff")["check_passed"])
+                pending = self.query("check", object_id="a1", requirement="execution")
+                self.assertFalse(pending["check_passed"])
+                self.assertIn("approval_not_cleared", pending["readiness"]["blockers"])
+
+                (self.root / "approval-v1.md").write_text("Offline user approval of the recorded version 1.\n")
+                action["workflow"]["approval"].update(status="approved", authorization_ref="approval-v1.md")
+                action["status"] = "awaiting_execution"
+                approved = self.query("check", object_id="a1", requirement="execution")
+                self.assertTrue(approved["check_passed"])
+                self.assertEqual(action["workflow"]["approval"]["type"], "asset_review")
+                self.assertFalse(approved["readiness"]["user_action_required"])
+                self.assertFalse(approved["readiness"]["closure_ready"])
+                self.assertIsNone(action["execution"]["effective_at"])
+
+    def test_execution_rejects_replacement_artifact_under_previous_review_reference(self):
+        action = self.product_content_execution()
+        action["workflow"]["approval"].update(status="approved", authorization_ref="evidence.md")
+        action["status"] = "awaiting_execution"
+        self.data["actions"] = [action]
+        self.assertTrue(self.query("check", object_id="a1", requirement="execution")["check_passed"])
+
+        # The local contract checks artifact references, not an immutable content hash or remote asset mapping.
+        (self.root / "main-image-v2.png").write_bytes((self.root / "main-image-v1.png").read_bytes())
+        action["workflow"]["preparation"]["deliverables"][0]["artifact_refs"] = ["main-image-v2.png"]
+        action["plan"]["assets"][0].update(artifact_ref="main-image-v2.png", version="v2")
+        action["plan"]["changes"][0]["after_artifact_ref"] = "main-image-v2.png"
+        replaced = self.query("check", object_id="a1", requirement="execution")
+        self.assertFalse(replaced["check_passed"])
+        self.assertIn("review_objects_not_ready", replaced["readiness"]["blockers"])
+
+    def test_approved_execution_cannot_use_brief_as_actual_image(self):
+        action = self.product_content_execution()
+        action["workflow"]["approval"].update(status="approved", authorization_ref="evidence.md")
+        action["status"] = "awaiting_execution"
+        (self.root / "main-image-v1.png").write_text("Offline design brief; this is not an actual image.\n")
+        self.data["actions"] = [action]
+        result = self.query("check", object_id="a1", requirement="execution")
+        self.assertFalse(result["check_passed"])
+        self.assertIn("artifact_type_mismatch", {item["status"] for item in result["readiness"]["reference_checks"]})
 
     def test_execution_readiness_requires_executor_and_next_step(self):
         for missing in ("executor", "next_step", "owner"):

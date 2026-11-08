@@ -45,6 +45,78 @@ class TaskContextTests(unittest.TestCase):
                 self.assertFalse(any("/business-rules/" in ref or ref.startswith("source/") for ref in result["read"]))
                 self.assertFalse(any(ref.endswith("SKILL.md") for ref in result["read"]))
 
+    def test_acquisition_policy_is_loaded_for_analysis_but_not_local_recovery(self):
+        shared = "references/acquisition-analysis.md"
+        for route, phase in (("daily_metrics", "execute"), ("period_analysis", "evaluate"),
+                             ("weekly_review", "plan"), ("monthly_review", "evaluate"),
+                             ("traffic_and_ads", "monitor")):
+            with self.subTest(route=route, phase=phase):
+                result = self.context(route, phase)
+                self.assertIn(shared, result["read"])
+                self.assertIn("acquisition_analysis", result["active_conditions"])
+                self.assertTrue(result["completion_contract"]["declared"])
+                self.assertTrue(result["completion_contract"]["requirements"])
+        for route, phase in (("daily_operations", "monitor"),
+                             ("conversion_monitoring", "monitor"), ("product_change", "receipt")):
+            with self.subTest(local_route=route, phase=phase):
+                local = self.context(route, phase)
+                self.assertFalse(any(ref.startswith(shared) for ref in local["read"]))
+                self.assertEqual(local["rules"], [])
+        for selected in ("inquiry", "crm"):
+            queried = self.context("conversion_monitoring", "monitor", "executor", selected)
+            self.assertIn(shared + "#客户身份与成交来源", queried["read"])
+            self.assertIn(shared + "#指标与队列", queried["read"])
+
+    def test_free_query_ads_loads_acquisition_without_starting_content_work(self):
+        result = self.context("product_diagnosis", "execute", "executor", "free_query", "ads",
+                              deliverable="evidence")
+        self.assertIn("references/acquisition-analysis.md", result["read"])
+        self.assertIn("source/plugins/1688-seller-assistant/skills/1688-shop-freedom-query-data/SKILL.md",
+                      result["read"])
+        self.assertNotIn("images", result["active_conditions"])
+        self.assertNotIn("apply_images", result["active_conditions"])
+        self.assertTrue(all(h["activation_status"] == "candidate_only" and not h["automatic_execution"]
+                            for h in result["conditional_handoffs"]))
+
+    def test_monitor_and_evaluation_have_decisions_without_granting_execution(self):
+        for phase in ("monitor", "evaluate"):
+            with self.subTest(phase=phase):
+                evidence = self.context("traffic_and_ads", phase, deliverable="evidence")
+                plan = self.context("traffic_and_ads", phase, deliverable="plan")
+                self.assertTrue(evidence["completion_contract"]["declared"])
+                self.assertTrue(plan["completion_contract"]["declared"])
+                self.assertTrue(all(h["activation_status"] == "candidate_only"
+                                    for h in evidence["conditional_handoffs"]))
+                self.assertTrue(all(h["authorization"] == "inherit_only" and not h["automatic_execution"]
+                                    for h in plan["conditional_handoffs"]))
+                self.assertNotIn("apply_images", plan["active_conditions"])
+                with self.assertRaisesRegex(ContextError, "not declared"):
+                    self.context("traffic_and_ads", phase, deliverable="execution")
+
+    def test_title_and_detail_handoffs_resolve_to_real_assets_then_application(self):
+        plan = self.context("traffic_and_ads", "monitor", deliverable="plan")
+        handoffs = {h["id"]: h for h in plan["conditional_handoffs"]}
+        for name in ("prepare_title_asset", "prepare_detail_asset"):
+            with self.subTest(handoff=name):
+                h = handoffs[name]
+                self.assertEqual(h["target_deliverable"], "asset")
+                self.assertEqual(h["required_scope"], ["asset_preparation"])
+                asset = self.context(h["target_route"], h["target_phase"], deliverable="asset")
+                self.assertTrue(asset["completion_contract"]["declared"])
+                application = next(item for item in asset["conditional_handoffs"]
+                                   if item["id"] == "apply_approved_copy")
+                self.assertEqual(application["target_route"], "product_change")
+                self.assertEqual(application["target_phase"], "execute")
+                self.assertEqual(application["target_deliverable"], "execution")
+                self.assertIn("approved_version", application["required_scope"])
+                self.assertIn("product_write", application["required_scope"])
+                self.assertEqual(application["activation_status"], "pending_scope_check")
+                self.assertFalse(application["automatic_execution"])
+        applied = self.context("product_change", "execute", deliverable="execution")
+        self.assertIn("references/execution-protocol.md", applied["read"])
+        self.assertIn("references/sales-growth-workflow.md#成品审核与应用", applied["read"])
+        self.assertNotIn("apply_images", applied["active_conditions"])
+
     def test_title_plan_and_execution_are_different_full_rule_sets(self):
         plan = self.context("title_optimization", "plan")
         execution = self.context("title_optimization", "execute")

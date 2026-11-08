@@ -45,7 +45,7 @@ python3 scripts/task_context.py --route title_optimization --phase execute --rol
 
 ## 交付类型与条件交接
 
-阶段表示当前做哪类工作，交付类型表示本轮必须拿出什么结果。`traffic_and_ads`、`product_diagnosis`、`product_images` 的 `plan/execute` 阶段声明了 `completion_contract`；沿用五个阶段，不把每次分析强制扩为制作或发布。按用户本轮目标显式选择 `--deliverable evidence|plan|asset|execution`：证据、具体方案、真实成稿、执行及生效证据。图片设计说明不算成稿，成稿不算已经应用。
+阶段表示当前做哪类工作，交付类型表示本轮必须拿出什么结果。适用阶段在路由中声明 `completion_contract`，现覆盖账号分析、周/月诊断、投放日检/评估及商品、标题、图片的准备和应用；确切组合以目录和加载结果为准。按本轮目标显式选择 `--deliverable evidence|plan|asset|execution`：证据、具体方案、真实成稿、执行及生效证据。经营分析通过 `acquisition_analysis` 或实际取数的 `ads/inquiry/crm` 条件加载[获客口径](acquisition-analysis.md)，纯状态恢复保持轻量。本店正常优化的后续制作按[成品审核与应用](sales-growth-workflow.md#成品审核与应用)由总控承接，明确只查证等范围优先；设计说明不算图片，成品不算已应用，路由元数据不代替用户批准。
 
 ```sh
 # 只查证据：候选交接不激活，不生成图片或修改商品

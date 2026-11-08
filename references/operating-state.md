@@ -121,7 +121,7 @@ evaluation_history 每条必需 evaluated_at、conclusion、decision、evidence_
 
 approval.type 为 none、plan_review、asset_review、execution_authorization；status 为 not_required、pending、approved、rejected、covered。none 只能是 not_required；已有授权用 covered 并保存 authorization_ref，不再保留待审核行动状态。必要依据和引用未准备好时，不能形成有效用户审核待办，摘要以 unready_review_handoffs 单列，而不计入 manual_review。
 
-plan_review 只要求可审核的完整方案及其检查证据，可以先审方案再生成图片。asset_review 必须有实际所需资产类型的产物，且本次必要物料完整并登记检查通过。execution_authorization 必须有具体方案和齐备的必要物料；只可用于 deliverable_type=execution。所有确认都复用现有授权边界；本地记录和 check 不证明授权内容真实，也不产生新授权。
+plan_review 只要求可审核的完整方案及其检查证据，适用于确需先审方案的任务；不作为本店默认成品制作前的额外批准。asset_review 必须有实际所需资产类型的产物，且本次必要物料完整并登记检查通过。execution_authorization 必须有具体方案和齐备的必要物料；只可用于 deliverable_type=execution。所有确认都复用现有授权边界；本地记录和 check 不证明授权内容真实，也不产生新授权。
 
 本地 image 引用检查扩展名和文件头的基本类型一致性：PDF、设计brief或改名PNG的文本不能冒充图稿。它不检查图片质量、尺寸合规或商品真实性；这些需要真实的 check_evidence_refs。外部URL只返回 external_pending_verification，不因为链接存在或登记 passed 就自动通过。其余本地文件检查存在性和已登记检查证据，不声称自动验收内容。
 
@@ -136,6 +136,15 @@ readiness 各布尔值分别表达本阶段、交接、交付、执行准备和�
 非 execution 的 closure_ready 表示本次产物已具备交回条件，可以在最终交付前实际运行 check --require closure；它不表示用户已经收到。delivery_closed 独立要求 delivery_ready、显式 delivered_at 和实际存在的 delivery_receipt_refs。真实交回后或下次恢复时据回执维护；未交回不能仅为消除到期提示造回执。delivery_closed=true 时只跳过该行动本轮资料/物料阶段的准备和跟进到期，不再产生重复诊断或 missing_followup_schedule；摘要保留 delivery_closed 短卡和 delivered_stages 计数。行动内独立广告日检及长期重点照常扫描，unknown 仍需核对。未来不同 scope 另建关联行动，或依据新请求显式开启并记录新阶段，不能复用旧回执推定新产物已交付。
 
 evidence/plan/asset 的本轮交付可用 plan_ready 和 delivery_ready/closure_ready 表达，不填写远端生效，不为交付报告而调用业务写入。completed 的原有真实生效语义保持不变；非 execution workflow 不进入执行、观察或 completed 状态。决定不执行时仍按既有 cancellation 证据规则登记。上述就绪检查只反映已登记的本地一致性，不能证明历史实际按顺序流转。
+
+### 本店成品审核与应用的记录方式
+
+[成品审核与应用](sales-growth-workflow.md#成品审核与应用)复用上述 workflow v1，不增加schema或独立状态表。明确仅查证/方案/成稿的任务仍保留各自交付类型；正常优化中选定并承接审核后应用的商品动作，登记 `deliverable_type=execution`，不是把整份分析报告或本地规则维护任务改成业务执行。
+
+- 制作时用 `preparing_assets`。`preparation.required=true`，标题/详情文稿用 `copy`，实际所需主图/详情图用 `image`；将实际文件和检查证据登记到 `deliverables`，完整后才以 `asset_review` 请求审核。
+- `plan.authorization_ref`引用常设范围及本轮例外的证据；`approval`记录 `necessary_basis`、`basis_refs`及通过检查的具体 `review_objects`。用户尚未审核时 `status=pending`，行动用 `awaiting_approval`；不能把常设制作范围登记为成品已获批准。
+- 用户批准具体版本后，`approval.status=approved`、`approval.authorization_ref`引用此次审核证据，行动进入 `awaiting_execution`。已有 `asset_review` 可以满足执行就绪中的审核条件，无需改成 `execution_authorization` 再问一次。实际写入前仍检查 `--require execution`、当前对象及实时业务前置；未真实生效不填执行回执或观察起点。
+- 使用不覆盖的版本文件，在 `plan.changes/assets`及所引检查/审核证据中绑定商品、字段、文稿或图片版本，记录文件摘要和必要上传的真实资源映射。执行者逐项核对实际参数与获批版本；本脚本能检查审核对象是否引用已检查产物及基本文件类型，不能强制验证内容摘要、图片质量或线上资源映射。更换产物不能沿用旧版本审核。
 
 ## 长期重点与广告日检
 

@@ -2,7 +2,7 @@
 
 浙江淞泰科技账号当前以**提升销售额、固定产品价格、优先新品推广及链接流量/转化**为阶段目标，暂不开展利润优化。首次业务运行、策略变化或约束不清时核对[本店当前阶段策略](references/account-strategies/songtai-sales-growth.md)，其余任务承接已确认版本。
 
-2026-10-30起采用[销售增长运营流程](references/sales-growth-workflow.md)：**完整周/月比较 → 销售变化结论 → 逐链接优化或上新 → 直接执行/人工方案 → 生效后观察 → 到期评估**。公司重点产品另设长期跟踪，有投流时先做计划、按条件执行并每日检查。周报主对比前4周同星期完整周、辅比上周；月报比较前一完整自然月，并列总量和日均。新增月度复盘路由、[记录模板](references/templates/sales-growth-records.json)、[周期窗口计算](scripts/period_windows.py)和[月报输入模板](.agents/skills/1688-business-analysis/assets/monthly-input.json)。这些是执行流程及本地辅助能力，真实商品清单和经营台账需按具体任务建立，未开启定时任务或真实投放。
+2026-11-08更新[销售增长运营流程](references/sales-growth-workflow.md)：**全店/核心商品曝光 → 点击与点击率 → 新客有效询盘 → 成熟询盘成交 → 有依据的商品成品 → 用户审核 → 应用回读 → 效果复盘**。整体成交额保留，并明确新客、老客和身份未知拆分；广告获客另核来源，统一见[获客分析口径](references/acquisition-analysis.md)。公司重点产品长期跟踪，有投流时先计划、按条件执行并每日检查。完整周期沿用周报主比前4周同星期、辅比上周，月报比较前一完整自然月并列总量和日均。[记录模板](references/templates/sales-growth-records.json)、[周期窗口](scripts/period_windows.py)和[月报输入](.agents/skills/1688-business-analysis/assets/monthly-input.json)继续复用。明确仅查证或仅方案的任务按范围交付；本地规则更新不代表真实业务已执行。
 
 本项目将1688运营组织收敛为三个核心角色：**运营总控、商品运营、流量与投放运营**。总控的唯一入口是项目根目录 [AGENTS.md](AGENTS.md)，由根项目当前主 Agent 承担；商品和流量任务按需实际委派；复核及客户转化、ERP、采购等专项按需使用，不再为每项技能设置一个常驻岗位。
 

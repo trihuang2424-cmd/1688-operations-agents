@@ -4,13 +4,49 @@
   "report_type": "monthly",
   "period_basis": "complete_calendar_month",
   "title": "店铺经营月报",
-  "period": {"start": "__REQUIRED__", "end": "__REQUIRED__", "timezone": "Asia/Shanghai"},
+  "period": {
+    "start": "__REQUIRED__",
+    "end": "__REQUIRED__",
+    "timezone": "Asia/Shanghai"
+  },
   "data_cutoff": "__REQUIRED__",
   "retrieved_at": "__REQUIRED__",
-  "storeAttribution": {"store_ref": "__REQUIRED__", "display_name": "__REQUIRED__"},
+  "storeAttribution": {
+    "store_ref": "__REQUIRED__",
+    "display_name": "__REQUIRED__"
+  },
   "strategy_version": null,
-  "coverage": {"status": "partial", "notes": ["__REQUIRED__"]},
+  "coverage": {
+    "status": "partial",
+    "notes": [
+      "__REQUIRED__"
+    ]
+  },
   "metrics": [
+    {"name": "全店曝光次数", "value": null, "unit": "次", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__实际区间、渠道及曝光计数口径；不把跨渠道重叠数当去重曝光", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店点击次数", "value": null, "unit": "次", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__与曝光同范围的点击计数；点击不替代去重访客", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店点击率", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "同范围点击次数除以曝光次数乘100；__REQUIRED__分子与原始来源口径；分母为零或不匹配填null", "denominator": "__REQUIRED__同范围曝光次数", "missing_reason": "__REQUIRED__"},
+    {"name": "全店去重访客数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__与询盘同商品/渠道/期间的去重访问人数；不以点击次数或跨日人数简单相加替代", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店新客候选去重访客数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "按访问时点公司成交历史核验的新客候选访客；__REQUIRED__身份覆盖、同范围去重及来源；不可得填null", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店新客有效询盘客户数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "按询盘发生前公司成交历史固定新客候选队列、核验有效性并去重，不按后来是否成交反选；平台询盘或CRM新建不代替；__REQUIRED__队列、有效性、覆盖及截止", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店访问到新客有效询盘率", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "同队列新客有效询盘客户数除以新客候选去重访客数乘100；__REQUIRED__分子及关联范围；无新客访客分母填null，或另列明确命名的新客有效询盘人数/总访客", "denominator": "__REQUIRED__同范围新客候选去重访客数，不以点击次数替代", "missing_reason": "__REQUIRED__"},
+    {"name": "全店成熟新客有效询盘客户数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "上述询盘发生时固定的新客候选队列中已达到有据成熟条件的客户；__REQUIRED__获客期间、成熟依据及截止，不把未成熟客户记失败", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店成熟新客询盘已成交客户数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "仅统计与上述成熟有效询盘队列可关联的成单客户；直接下单另列，不以本期全部订单替代；__REQUIRED__关联证据及回补截止", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店成熟新客询盘成交率", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "同队列已成交客户数除以成熟有效询盘客户数乘100；__REQUIRED__分子，缺关联或分母为零填null", "denominator": "__REQUIRED__同队列成熟新客有效询盘客户数", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：曝光次数", "value": null, "unit": "次", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__实际区间、渠道及曝光计数口径；不把跨渠道重叠数当去重曝光", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：点击次数", "value": null, "unit": "次", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__与曝光同范围的点击计数；点击不替代去重访客", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：点击率", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "同范围点击次数除以曝光次数乘100；__REQUIRED__分子与原始来源口径；分母为零或不匹配填null", "denominator": "__REQUIRED__同范围曝光次数", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：去重访客数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__与询盘同商品/渠道/期间的去重访问人数；不以点击次数或跨日人数简单相加替代", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：新客候选去重访客数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "按访问时点公司成交历史核验的新客候选访客；__REQUIRED__身份覆盖、同范围去重及来源；不可得填null", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：新客有效询盘客户数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "按询盘发生前公司成交历史固定新客候选队列、核验有效性并去重，不按后来是否成交反选；平台询盘或CRM新建不代替；__REQUIRED__队列、有效性、覆盖及截止", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：访问到新客有效询盘率", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "同队列新客有效询盘客户数除以新客候选去重访客数乘100；__REQUIRED__分子及关联范围；无新客访客分母填null，或另列明确命名的新客有效询盘人数/总访客", "denominator": "__REQUIRED__同范围新客候选去重访客数，不以点击次数替代", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：成熟新客有效询盘客户数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "上述询盘发生时固定的新客候选队列中已达到有据成熟条件的客户；__REQUIRED__获客期间、成熟依据及截止，不把未成熟客户记失败", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：成熟新客询盘已成交客户数", "value": null, "unit": "人", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "仅统计与上述成熟有效询盘队列可关联的成单客户；直接下单另列，不以本期全部订单替代；__REQUIRED__关联证据及回补截止", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "核心商品__REQUIRED__商品ID：成熟新客询盘成交率", "value": null, "unit": "%", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "同队列已成交客户数除以成熟有效询盘客户数乘100；__REQUIRED__分子，缺关联或分母为零填null", "denominator": "__REQUIRED__同队列成熟新客有效询盘客户数", "missing_reason": "__REQUIRED__"},
+    {"name": "全店整体成交额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__统计区间、支付/退款口径和覆盖；整体经营结果，不与广告归因成交相加", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店企业新客队列成交额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "依共同口径固定统计期开始前无本公司成交、本期首次成交的客户队列；含该队列期内首单及后续成交，首单另列；__REQUIRED__身份覆盖和证据", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店企业老客队列成交额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "依共同口径固定统计期开始前已有本公司成交的客户队列；__REQUIRED__身份覆盖和证据", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
+    {"name": "全店身份未知成交额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "企业历史或关联覆盖不足的成交单列；与已核新客、老客同口径核对整体成交额，缺失不填零；__REQUIRED__范围和证据", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
     {"name": "本月销售额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__完整自然月起止日及销售口径", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
     {"name": "前一个完整月销售额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "__REQUIRED__前月起止日及相同销售口径", "denominator": "不适用", "missing_reason": "__REQUIRED__"},
     {"name": "月销售额差额", "value": null, "unit": "元", "source": "__REQUIRED__", "evidence": "__REQUIRED__", "basis": "本月销售额减前一个完整月销售额；仅在两期可比且有数据时计算", "denominator": "不适用", "missing_reason": "__REQUIRED__"},

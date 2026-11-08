@@ -48,7 +48,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -78,7 +79,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -104,7 +106,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -132,7 +135,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -158,7 +162,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -167,7 +172,7 @@
     },
     {
       "id": "weekly_review",
-      "intent": "完整周对比前4周同星期基线并辅比上周，先形成销售变化结论，再逐链接行动及到期评估",
+      "intent": "完整周对比前4周同星期基线并辅比上周，诊断全店/核心商品获客漏斗，明确整体成交与新老客拆分并推进链接行动",
       "owner": "operations_director",
       "capability": "operating_cycle",
       "skill": ".agents/skills/1688-operations-director/SKILL.md",
@@ -197,22 +202,47 @@
             ".agents/skills/1688-operations-director/SKILL.md",
             "references/operating-cycle.md#持久记录及读取顺序",
             "references/sales-growth-workflow.md#完整周期与比较基线",
-            "references/sales-growth-workflow.md#经营结论"
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-operations-director/RULES.md"
           ],
           "source_read": [],
-          "automatic_conditions": [],
+          "automatic_conditions": [
+            "acquisition_analysis"
+          ],
           "conditions": [
             "ads",
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         },
         "monitor": {
           "director_read": [
@@ -237,7 +267,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -255,20 +286,45 @@
             "references/operating-cycle.md#持久记录及读取顺序",
             "references/sales-growth-workflow.md#完整周期与比较基线",
             "references/sales-growth-workflow.md#两类观察",
-            "references/sales-growth-workflow.md#经营结论"
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [],
           "source_read": [],
-          "automatic_conditions": [],
+          "automatic_conditions": [
+            "acquisition_analysis"
+          ],
           "conditions": [
             "ads",
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         },
         "receipt": {
           "director_read": [
@@ -293,7 +349,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -302,7 +359,7 @@
     },
     {
       "id": "monthly_review",
-      "intent": "完整自然月对比前一完整月，结合总量与日均形成经营结论，安排链接行动并总结公司重点产品",
+      "intent": "完整自然月对比前月，诊断全店/核心商品获客漏斗，保留总成交及新老客拆分，安排链接行动和重点商品复盘",
       "owner": "operations_director",
       "capability": "operating_cycle",
       "skill": ".agents/skills/1688-operations-director/SKILL.md",
@@ -332,22 +389,47 @@
             ".agents/skills/1688-operations-director/SKILL.md",
             "references/operating-cycle.md#持久记录及读取顺序",
             "references/sales-growth-workflow.md#完整周期与比较基线",
-            "references/sales-growth-workflow.md#经营结论"
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-operations-director/RULES.md"
           ],
           "source_read": [],
-          "automatic_conditions": [],
+          "automatic_conditions": [
+            "acquisition_analysis"
+          ],
           "conditions": [
             "ads",
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         },
         "monitor": {
           "director_read": [
@@ -372,7 +454,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -390,20 +473,45 @@
             "references/operating-cycle.md#持久记录及读取顺序",
             "references/sales-growth-workflow.md#完整周期与比较基线",
             "references/sales-growth-workflow.md#两类观察",
-            "references/sales-growth-workflow.md#经营结论"
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [],
           "source_read": [],
-          "automatic_conditions": [],
+          "automatic_conditions": [
+            "acquisition_analysis"
+          ],
           "conditions": [
             "ads",
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         },
         "receipt": {
           "director_read": [
@@ -428,7 +536,8 @@
             "inquiry",
             "crm",
             "stock_warning",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -437,7 +546,7 @@
     },
     {
       "id": "daily_metrics",
-      "intent": "单日经营日报与交易/流量/买家指标",
+      "intent": "单日经营日报：全店/核心商品曝光、点击、新客询盘与成交，明确整体成交额及新老未知拆分",
       "owner": "operations_director",
       "capability": "business_analysis",
       "skill": ".agents/skills/1688-business-analysis/SKILL.md",
@@ -453,67 +562,141 @@
         "plan": {
           "director_read": [],
           "executor_read": [
-            ".agents/skills/1688-business-analysis/SKILL.md"
-          ],
-          "rules": [
-            "references/business-rules/1688-daily-report/RULES.md"
-          ],
-          "source_read": [],
-          "automatic_conditions": [],
-          "conditions": [
-            "ads",
-            "data_query",
-            "free_query",
-            "strategy_refresh"
-          ],
-          "required_any_conditions": [],
-          "condition_rules": {}
-        },
-        "execute": {
-          "director_read": [],
-          "executor_read": [
-            ".agents/skills/1688-business-analysis/SKILL.md"
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-daily-report/RULES.md"
           ],
           "source_read": [],
           "automatic_conditions": [
-            "data_query"
+            "acquisition_analysis"
           ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         },
-        "evaluate": {
+        "execute": {
           "director_read": [],
           "executor_read": [
-            ".agents/skills/1688-business-analysis/SKILL.md"
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-daily-report/RULES.md"
           ],
           "source_read": [],
-          "automatic_conditions": [],
+          "automatic_conditions": [
+            "data_query",
+            "acquisition_analysis"
+          ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "evidence",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
+        },
+        "evaluate": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
+          ],
+          "rules": [
+            "references/business-rules/1688-daily-report/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "acquisition_analysis"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "strategy_refresh",
+            "acquisition_analysis"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         }
       }
     },
     {
       "id": "period_analysis",
-      "intent": "长周期经营、活动、卖家退款与健康分析",
+      "intent": "长周期经营、活动、卖家退款与健康分析；获客漏斗和整体成交及新老客贡献分别说明",
       "owner": "operations_director",
       "capability": "business_analysis",
       "skill": ".agents/skills/1688-business-analysis/SKILL.md",
@@ -531,68 +714,142 @@
           "executor_read": [
             ".agents/skills/1688-business-analysis/SKILL.md",
             "references/sales-growth-workflow.md#完整周期与比较基线",
-            "references/sales-growth-workflow.md#经营结论"
-          ],
-          "rules": [
-            "references/business-rules/1688-store-analyst/RULES.md"
-          ],
-          "source_read": [],
-          "automatic_conditions": [],
-          "conditions": [
-            "ads",
-            "data_query",
-            "free_query",
-            "health",
-            "strategy_refresh"
-          ],
-          "required_any_conditions": [],
-          "condition_rules": {}
-        },
-        "execute": {
-          "director_read": [],
-          "executor_read": [
-            ".agents/skills/1688-business-analysis/SKILL.md",
-            "references/sales-growth-workflow.md#完整周期与比较基线",
-            "references/sales-growth-workflow.md#经营结论"
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-store-analyst/RULES.md"
           ],
           "source_read": [],
           "automatic_conditions": [
-            "data_query"
+            "acquisition_analysis"
           ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
             "health",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
+        },
+        "execute": {
+          "director_read": [],
+          "executor_read": [
+            ".agents/skills/1688-business-analysis/SKILL.md",
+            "references/sales-growth-workflow.md#完整周期与比较基线",
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
+          ],
+          "rules": [
+            "references/business-rules/1688-store-analyst/RULES.md"
+          ],
+          "source_read": [],
+          "automatic_conditions": [
+            "data_query",
+            "acquisition_analysis"
+          ],
+          "conditions": [
+            "ads",
+            "data_query",
+            "free_query",
+            "health",
+            "strategy_refresh",
+            "acquisition_analysis"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "evidence",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         },
         "evaluate": {
           "director_read": [],
           "executor_read": [
             ".agents/skills/1688-business-analysis/SKILL.md",
             "references/sales-growth-workflow.md#完整周期与比较基线",
-            "references/sales-growth-workflow.md#经营结论"
+            "references/sales-growth-workflow.md#经营结论",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-store-analyst/RULES.md"
           ],
           "source_read": [],
-          "automatic_conditions": [],
+          "automatic_conditions": [
+            "acquisition_analysis"
+          ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
             "health",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
+                  "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                ]
+              }
+            }
+          }
         }
       }
     },
@@ -697,7 +954,8 @@
           "executor_read": [
             "agents/product_operations/AGENTS.md",
             ".agents/skills/1688-product-operations/SKILL.md",
-            "references/sales-growth-workflow.md#决策与阶段交付"
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-merchandising-analyst/RULES.md"
@@ -712,7 +970,8 @@
             "scoring",
             "sales_fields",
             "images",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {},
@@ -738,12 +997,44 @@
           "conditional_handoffs": [
             {
               "id": "prepare_selected_image_asset",
-              "when": "已选择图片动作并完成必要参考与事实核查，且用户已有范围包含物料准备；否则交精确缺项或下一步。",
+              "when": "已选择有依据的图片动作并完成必要参考与事实核查；总控确认本店常设成品准备范围或本次明确制作要求后承接生成，用户明确只查证/只方案时不启动。",
               "from_deliverables": [
                 "plan"
               ],
               "target_route": "product_images",
               "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_title_asset",
+              "when": "证据支持标题改动且总控已核对本店常设成品准备范围或本次明确制作要求；用户明确只分析/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "title_optimization",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_detail_asset",
+              "when": "证据支持详情采购信息或表达改动，已取得必要商品事实且现有范围覆盖成品准备；图稿部分交图片能力，未核实写接口不阻止文稿准备。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_change",
+              "target_phase": "plan",
               "target_owner": "product_operations",
               "target_deliverable": "asset",
               "required_scope": [
@@ -761,7 +1052,8 @@
           "executor_read": [
             "agents/product_operations/AGENTS.md",
             ".agents/skills/1688-product-operations/SKILL.md",
-            "references/sales-growth-workflow.md#决策与阶段交付"
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-merchandising-analyst/RULES.md"
@@ -778,7 +1070,8 @@
             "scoring",
             "sales_fields",
             "images",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {},
@@ -804,12 +1097,44 @@
           "conditional_handoffs": [
             {
               "id": "prepare_selected_image_asset",
-              "when": "已选择图片动作并完成必要参考与事实核查，且用户已有范围包含物料准备；否则交精确缺项或下一步。",
+              "when": "已选择有依据的图片动作并完成必要参考与事实核查；总控确认本店常设成品准备范围或本次明确制作要求后承接生成，用户明确只查证/只方案时不启动。",
               "from_deliverables": [
                 "plan"
               ],
               "target_route": "product_images",
               "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_title_asset",
+              "when": "证据支持标题改动且总控已核对本店常设成品准备范围或本次明确制作要求；用户明确只分析/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "title_optimization",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_detail_asset",
+              "when": "证据支持详情采购信息或表达改动，已取得必要商品事实且现有范围覆盖成品准备；图稿部分交图片能力，未核实写接口不阻止文稿准备。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_change",
+              "target_phase": "plan",
               "target_owner": "product_operations",
               "target_deliverable": "asset",
               "required_scope": [
@@ -841,7 +1166,8 @@
             "scoring",
             "sales_fields",
             "images",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {}
@@ -871,7 +1197,9 @@
           "executor_read": [
             "agents/product_operations/AGENTS.md",
             ".agents/skills/1688-product-operations/SKILL.md",
-            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-title-optimizer/RULES.md"
@@ -889,7 +1217,52 @@
             "strategy_refresh"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              },
+              "asset": {
+                "requirements": [
+                  "交付绑定商品和字段的完整可用文稿、修改前后差异、版本及事实检查证据；标题为完整新标题，详情为完整文案/图稿，设计说明与待制作清单不能代替成品。",
+                  "简述修改依据和预期改善环节，保留实际商品信息、固定价格及已核能力边界；需要图片时另交真实图片文件，不能以文字代替。",
+                  "按成品审核与应用流程交用户审核该具体版本；批准后在既有范围和实时能力内应用，不再增加同版本的例行执行确认。纯成稿限定不获得应用权限。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "apply_approved_copy",
+              "when": "用户已批准绑定商品、字段和具体版本的标题/详情成品，已有范围覆盖通过后应用；核实实时接口后接续，详情无接口时保留现成材料人工交接。",
+              "from_deliverables": [
+                "asset"
+              ],
+              "target_route": "product_change",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "execution",
+              "required_scope": [
+                "approved_version",
+                "product_write"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "execute": {
           "director_read": [
@@ -902,7 +1275,9 @@
             "references/runtime.md#连接和工具",
             "references/runtime.md#商品编辑字段边界",
             "references/sales-growth-workflow.md#逐链接执行与人工交接",
-            "references/sales-growth-workflow.md#两类观察"
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-title-optimizer/RULES.md",
@@ -921,7 +1296,45 @@
             "strategy_refresh"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "asset",
+            "deliverables": {
+              "asset": {
+                "requirements": [
+                  "交付绑定商品和字段的完整可用文稿、修改前后差异、版本及事实检查证据；标题为完整新标题，详情为完整文案/图稿，设计说明与待制作清单不能代替成品。",
+                  "简述修改依据和预期改善环节，保留实际商品信息、固定价格及已核能力边界；需要图片时另交真实图片文件，不能以文字代替。",
+                  "按成品审核与应用流程交用户审核该具体版本；批准后在既有范围和实时能力内应用，不再增加同版本的例行执行确认。纯成稿限定不获得应用权限。"
+                ]
+              },
+              "execution": {
+                "requirements": [
+                  "核对实际店铺、商品字段、当前值、真实接口和业务前置；审核记录须对应本次应用的成品版本，沿用已确认的应用范围。",
+                  "完成已支持的接口提交并回读，保存真实回执、生效时间、原值和资源映射；未知结果先核查同一动作，不重复提交。详情或其他字段无已验证写能力时交实际成品与精确人工事项。",
+                  "已批准的同版本不再设置重复批准；内容、商品或范围改变时重新确定缺少的决定。执行前保存固定基线，只有真实生效后才启动有限观察，成品交付不算上线。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "apply_approved_copy",
+              "when": "用户已批准绑定商品、字段和具体版本的标题/详情成品，已有范围覆盖通过后应用；核实实时接口后接续，详情无接口时保留现成材料人工交接。",
+              "from_deliverables": [
+                "asset"
+              ],
+              "target_route": "product_change",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "execution",
+              "required_scope": [
+                "approved_version",
+                "product_write"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "monitor": {
           "director_read": [
@@ -1040,7 +1453,9 @@
             "agents/product_operations/AGENTS.md",
             ".agents/skills/1688-product-operations/SKILL.md",
             "references/runtime.md#商品编辑字段边界",
-            "references/sales-growth-workflow.md#逐链接执行与人工交接"
+            "references/sales-growth-workflow.md#逐链接执行与人工交接",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-product-editor/RULES.md"
@@ -1058,7 +1473,52 @@
             "strategy_refresh"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
+                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
+                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                ]
+              },
+              "asset": {
+                "requirements": [
+                  "交付绑定商品和字段的完整可用文稿、修改前后差异、版本及事实检查证据；标题为完整新标题，详情为完整文案/图稿，设计说明与待制作清单不能代替成品。",
+                  "简述修改依据和预期改善环节，保留实际商品信息、固定价格及已核能力边界；需要图片时另交真实图片文件，不能以文字代替。",
+                  "按成品审核与应用流程交用户审核该具体版本；批准后在既有范围和实时能力内应用，不再增加同版本的例行执行确认。纯成稿限定不获得应用权限。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "apply_approved_copy",
+              "when": "用户已批准绑定商品、字段和具体版本的标题/详情成品，已有范围覆盖通过后应用；核实实时接口后接续，详情无接口时保留现成材料人工交接。",
+              "from_deliverables": [
+                "asset"
+              ],
+              "target_route": "product_change",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "execution",
+              "required_scope": [
+                "approved_version",
+                "product_write"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "execute": {
           "director_read": [
@@ -1071,7 +1531,9 @@
             "references/runtime.md#连接和工具",
             "references/runtime.md#商品编辑字段边界",
             "references/sales-growth-workflow.md#逐链接执行与人工交接",
-            "references/sales-growth-workflow.md#两类观察"
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-product-editor/RULES.md"
@@ -1089,7 +1551,19 @@
             "strategy_refresh"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "execution",
+            "deliverables": {
+              "execution": {
+                "requirements": [
+                  "核对实际店铺、商品字段、当前值、真实接口和业务前置；审核记录须对应本次应用的成品版本，沿用已确认的应用范围。",
+                  "完成已支持的接口提交并回读，保存真实回执、生效时间、原值和资源映射；未知结果先核查同一动作，不重复提交。详情或其他字段无已验证写能力时交实际成品与精确人工事项。",
+                  "已批准的同版本不再设置重复批准；内容、商品或范围改变时重新确定缺少的决定。执行前保存固定基线，只有真实生效后才启动有限观察，成品交付不算上线。"
+                ]
+              }
+            }
+          }
         },
         "monitor": {
           "director_read": [
@@ -1213,7 +1687,8 @@
             "agents/product_operations/AGENTS.md",
             "agents/image-agent/.agents/skills/1688-image-design/SKILL.md",
             "references/sales-growth-workflow.md#逐链接执行与人工交接",
-            "references/sales-growth-workflow.md#决策与阶段交付"
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-creative-studio/RULES.md"
@@ -1281,7 +1756,8 @@
             "references/execution-protocol.md",
             "references/sales-growth-workflow.md#逐链接执行与人工交接",
             "references/sales-growth-workflow.md#两类观察",
-            "references/sales-growth-workflow.md#决策与阶段交付"
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-creative-studio/RULES.md"
@@ -1326,7 +1802,7 @@
           "conditional_handoffs": [
             {
               "id": "apply_approved_image",
-              "when": "已有真实成稿且已完成必要审核，用户既有范围分别覆盖上传和商品应用；单独的成稿制作授权不满足此条件。",
+              "when": "用户已批准绑定商品、位置和具体版本的真实图片，已有本店通过即应用范围或本次上传/应用授权；接续必要上传及商品应用，不重复批准同版本。",
               "from_deliverables": [
                 "asset"
               ],
@@ -1335,6 +1811,7 @@
               "target_owner": "product_operations",
               "target_deliverable": "execution",
               "required_scope": [
+                "approved_version",
                 "image_upload",
                 "product_write"
               ],
@@ -1785,7 +2262,7 @@
     },
     {
       "id": "traffic_and_ads",
-      "intent": "渠道与投放分析；重点产品先制订具体投流方案，依授权和实时能力执行或交人工，并每日检查提升策略",
+      "intent": "自然渠道与投放商品分析，核对新客获客与成交及全部期间消耗，形成具体决定并承接有依据的商品成品优化",
       "owner": "traffic_operations",
       "capability": "traffic_analysis",
       "skill": ".agents/skills/1688-traffic-operations/SKILL.md",
@@ -1810,21 +2287,24 @@
             ".agents/skills/1688-traffic-operations/SKILL.md",
             "references/sales-growth-workflow.md#重点推广与每日投流",
             "references/sales-growth-workflow.md#逐链接执行与人工交接",
-            "references/sales-growth-workflow.md#决策与阶段交付"
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-traffic-analyst/RULES.md"
           ],
           "source_read": [],
           "automatic_conditions": [
-            "ads"
+            "ads",
+            "acquisition_analysis"
           ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
             "attribution",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {},
@@ -1833,16 +2313,20 @@
             "deliverables": {
               "evidence": {
                 "requirements": [
-                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
-                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
-                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
                 ]
               },
               "plan": {
                 "requirements": [
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
                   "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
                   "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
-                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
                 ]
               }
             }
@@ -1867,12 +2351,44 @@
             },
             {
               "id": "prepare_image_trial_asset",
-              "when": "已选择首图试验且用户已有任务范围覆盖物料准备；只要求查证时仅交具体下一步，不启动生图。",
+              "when": "已选择有依据的图片动作并完成必要参考与事实核查；总控确认本店常设成品准备范围或本次明确制作要求后承接生成，用户明确只查证/只方案时不启动。",
               "from_deliverables": [
                 "plan"
               ],
               "target_route": "product_images",
               "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_title_asset",
+              "when": "证据支持标题改动且总控已核对本店常设成品准备范围或本次明确制作要求；用户明确只分析/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "title_optimization",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_detail_asset",
+              "when": "证据支持详情采购信息或表达改动，已取得必要商品事实且现有范围覆盖成品准备；图稿部分交图片能力，未核实写接口不阻止文稿准备。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_change",
+              "target_phase": "plan",
               "target_owner": "product_operations",
               "target_deliverable": "asset",
               "required_scope": [
@@ -1895,21 +2411,24 @@
             "references/sales-growth-workflow.md#重点推广与每日投流",
             "references/sales-growth-workflow.md#逐链接执行与人工交接",
             "references/sales-growth-workflow.md#两类观察",
-            "references/sales-growth-workflow.md#决策与阶段交付"
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-traffic-analyst/RULES.md"
           ],
           "source_read": [],
           "automatic_conditions": [
-            "ads"
+            "ads",
+            "acquisition_analysis"
           ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
             "attribution",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {},
@@ -1918,16 +2437,20 @@
             "deliverables": {
               "evidence": {
                 "requirements": [
-                  "给出对象、日期、口径、覆盖范围及可追溯证据；缺失、未查询、查询失败和真实零值分别说明。",
-                  "区分已证实事实、有支持的判断和待验证假设；指出缺口是否会改变当前决定。",
-                  "列明已经尝试与尚未尝试的来源、继续查询的收益及本轮停止条件；只读取证不自动生成物料或写入。"
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
                 ]
               },
               "plan": {
                 "requirements": [
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
                   "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
                   "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
-                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。"
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
                 ]
               },
               "execution": {
@@ -1959,12 +2482,44 @@
             },
             {
               "id": "prepare_image_trial_asset",
-              "when": "已选择首图试验且用户已有任务范围覆盖物料准备；只要求查证时仅交具体下一步，不启动生图。",
+              "when": "已选择有依据的图片动作并完成必要参考与事实核查；总控确认本店常设成品准备范围或本次明确制作要求后承接生成，用户明确只查证/只方案时不启动。",
               "from_deliverables": [
                 "plan"
               ],
               "target_route": "product_images",
               "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_title_asset",
+              "when": "证据支持标题改动且总控已核对本店常设成品准备范围或本次明确制作要求；用户明确只分析/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "title_optimization",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_detail_asset",
+              "when": "证据支持详情采购信息或表达改动，已取得必要商品事实且现有范围覆盖成品准备；图稿部分交图片能力，未核实写接口不阻止文稿准备。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_change",
+              "target_phase": "plan",
               "target_owner": "product_operations",
               "target_deliverable": "asset",
               "required_scope": [
@@ -1983,24 +2538,118 @@
             "agents/traffic_operations/AGENTS.md",
             ".agents/skills/1688-traffic-operations/SKILL.md",
             "references/sales-growth-workflow.md#重点推广与每日投流",
-            "references/sales-growth-workflow.md#两类观察"
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-traffic-analyst/RULES.md"
           ],
           "source_read": [],
           "automatic_conditions": [
-            "ads"
+            "ads",
+            "acquisition_analysis"
           ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
             "attribution",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "evidence",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "inspect_product_expression",
+              "when": "当前决策依赖商品表达或版本证据，且已有只读核查范围覆盖所需来源；展示核查仍单独遵循既有授权。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "product_diagnosis",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "evidence",
+              "required_scope": [
+                "product_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_image_trial_asset",
+              "when": "已选择有依据的图片动作并完成必要参考与事实核查；总控确认本店常设成品准备范围或本次明确制作要求后承接生成，用户明确只查证/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_title_asset",
+              "when": "证据支持标题改动且总控已核对本店常设成品准备范围或本次明确制作要求；用户明确只分析/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "title_optimization",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_detail_asset",
+              "when": "证据支持详情采购信息或表达改动，已取得必要商品事实且现有范围覆盖成品准备；图稿部分交图片能力，未核实写接口不阻止文稿准备。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_change",
+              "target_phase": "plan",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -2011,24 +2660,118 @@
             ".agents/skills/1688-traffic-operations/SKILL.md",
             "references/sales-growth-workflow.md#重点推广与每日投流",
             "references/sales-growth-workflow.md#完整周期与比较基线",
-            "references/sales-growth-workflow.md#两类观察"
+            "references/sales-growth-workflow.md#两类观察",
+            "references/sales-growth-workflow.md#决策与阶段交付",
+            "references/sales-growth-workflow.md#成品审核与应用"
           ],
           "rules": [
             "references/business-rules/1688-traffic-analyst/RULES.md"
           ],
           "source_read": [],
           "automatic_conditions": [
-            "ads"
+            "ads",
+            "acquisition_analysis"
           ],
           "conditions": [
             "ads",
             "data_query",
             "free_query",
             "attribution",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
+                  "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
+                  "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
+                  "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
+                  "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
+                ]
+              }
+            }
+          },
+          "conditional_handoffs": [
+            {
+              "id": "inspect_product_expression",
+              "when": "当前决策依赖商品表达或版本证据，且已有只读核查范围覆盖所需来源；展示核查仍单独遵循既有授权。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "product_diagnosis",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "evidence",
+              "required_scope": [
+                "product_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_image_trial_asset",
+              "when": "已选择有依据的图片动作并完成必要参考与事实核查；总控确认本店常设成品准备范围或本次明确制作要求后承接生成，用户明确只查证/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_images",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_title_asset",
+              "when": "证据支持标题改动且总控已核对本店常设成品准备范围或本次明确制作要求；用户明确只分析/只方案时不启动。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "title_optimization",
+              "target_phase": "execute",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            },
+            {
+              "id": "prepare_detail_asset",
+              "when": "证据支持详情采购信息或表达改动，已取得必要商品事实且现有范围覆盖成品准备；图稿部分交图片能力，未核实写接口不阻止文稿准备。",
+              "from_deliverables": [
+                "plan"
+              ],
+              "target_route": "product_change",
+              "target_phase": "plan",
+              "target_owner": "product_operations",
+              "target_deliverable": "asset",
+              "required_scope": [
+                "asset_preparation"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "receipt": {
           "director_read": [
@@ -2051,7 +2794,8 @@
             "data_query",
             "free_query",
             "attribution",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_rules": {
@@ -2237,7 +2981,8 @@
             "crm",
             "transfer_inquiry",
             "crm_plan_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_requirements": [
@@ -2279,7 +3024,8 @@
             "crm",
             "transfer_inquiry",
             "crm_plan_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [],
           "condition_requirements": [
@@ -2340,7 +3086,8 @@
             "crm",
             "transfer_inquiry",
             "crm_plan_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [
             [
@@ -2372,7 +3119,8 @@
             "crm",
             "transfer_inquiry",
             "crm_plan_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [
             [
@@ -2404,7 +3152,8 @@
             "crm",
             "transfer_inquiry",
             "crm_plan_query",
-            "strategy_refresh"
+            "strategy_refresh",
+            "acquisition_analysis"
           ],
           "required_any_conditions": [
             [
@@ -3168,7 +3917,8 @@
       "ads": {
         "when": "任何广告分析、建议、执行或复核；直接广告路由自动选中。",
         "read": [
-          "references/ad-decision-policy.md"
+          "references/ad-decision-policy.md",
+          "references/acquisition-analysis.md"
         ],
         "rules": [],
         "source_read": []
@@ -3263,7 +4013,9 @@
       "inquiry": {
         "when": "本次读取或解释询盘、接待、业务员或对话数据；不能因轻量模式省略。",
         "read": [
-          "references/runtime.md#连接和工具"
+          "references/runtime.md#连接和工具",
+          "references/acquisition-analysis.md#客户身份与成交来源",
+          "references/acquisition-analysis.md#指标与队列"
         ],
         "rules": [
           "references/business-rules/1688-inquiry-analyst/RULES.md"
@@ -3274,7 +4026,9 @@
         "when": "本次读取或解释客户库、筛选、画像、跟进、订单等CRM证据。",
         "read": [
           "references/runtime.md#连接和工具",
-          ".agents/skills/1688-customer-conversion/references/crm-query.md"
+          ".agents/skills/1688-customer-conversion/references/crm-query.md",
+          "references/acquisition-analysis.md#客户身份与成交来源",
+          "references/acquisition-analysis.md#指标与队列"
         ],
         "rules": [
           "references/business-rules/1688-crm-manager/RULES.md"
@@ -3495,6 +4249,14 @@
         "when": "首次真实业务、策略版本变化或任务包约束不清时必须选；已带确认版本及适用约束的任务包可复用。",
         "read": [
           "references/account-strategies/songtai-sales-growth.md"
+        ],
+        "rules": [],
+        "source_read": []
+      },
+      "acquisition_analysis": {
+        "when": "本次实际分析店铺/核心商品的曝光、点击、新客询盘与成交，或评估广告获客；纯状态恢复不选，不由此扩大制作或写入范围。",
+        "read": [
+          "references/acquisition-analysis.md"
         ],
         "rules": [],
         "source_read": []

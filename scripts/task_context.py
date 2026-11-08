@@ -19,20 +19,39 @@ PHASES = {"plan", "execute", "monitor", "evaluate", "receipt"}
 DELIVERABLES = {"evidence", "plan", "asset", "execution"}
 DEFAULT_DELIVERABLES = {"plan": "plan", "execute": "execution", "monitor": "evidence",
                         "evaluate": "plan", "receipt": "evidence"}
-REQUIRED_COMPLETION_CONTRACTS = {
-    (route, phase) for route in ("traffic_and_ads", "product_diagnosis", "product_images")
+ACQUISITION_SECTION = "references/acquisition-analysis.md"
+ACQUISITION_AUTOMATIC_STAGES = {
+    (route, phase) for route in ("daily_metrics", "period_analysis")
+    for phase in ("plan", "execute", "evaluate")
+} | {
+    ("traffic_and_ads", phase) for phase in ("plan", "execute", "monitor", "evaluate")
+} | {
+    (route, phase) for route in ("weekly_review", "monthly_review")
+    for phase in ("plan", "evaluate")
+}
+REQUIRED_COMPLETION_CONTRACTS = ACQUISITION_AUTOMATIC_STAGES | {
+    (route, phase) for route in ("product_diagnosis", "product_images",
+                                "title_optimization", "product_change")
     for phase in ("plan", "execute")
 }
 REQUIRED_HANDOFFS = {
-    ("traffic_and_ads", phase): {"inspect_product_expression", "prepare_image_trial_asset"}
-    for phase in ("plan", "execute")
+    ("traffic_and_ads", phase): {"inspect_product_expression", "prepare_image_trial_asset",
+                                "prepare_title_asset", "prepare_detail_asset"}
+    for phase in ("plan", "execute", "monitor", "evaluate")
 }
 REQUIRED_HANDOFFS.update({
-    ("product_diagnosis", phase): {"prepare_selected_image_asset"} for phase in ("plan", "execute")
+    ("product_diagnosis", phase): {"prepare_selected_image_asset", "prepare_title_asset",
+                                  "prepare_detail_asset"} for phase in ("plan", "execute")
 })
-REQUIRED_HANDOFFS.update({("product_images", "plan"): {"produce_reviewable_image"},
-                          ("product_images", "execute"): {"apply_approved_image"}})
+REQUIRED_HANDOFFS.update({
+    ("product_images", "plan"): {"produce_reviewable_image"},
+    ("product_images", "execute"): {"apply_approved_image"},
+    ("title_optimization", "plan"): {"apply_approved_copy"},
+    ("title_optimization", "execute"): {"apply_approved_copy"},
+    ("product_change", "plan"): {"apply_approved_copy"},
+})
 DECISION_SECTION = "references/sales-growth-workflow.md#决策与阶段交付"
+CONTENT_APPLICATION_SECTION = "references/sales-growth-workflow.md#成品审核与应用"
 ROLES = {"director", "executor"}
 CATALOG = "catalog/task-routing.json"
 
@@ -380,6 +399,11 @@ def validate_loading_contract(root, catalog=None):
                     fail(f"Missing mandatory completion contract: {label}")
                 if DECISION_SECTION not in stage.get("executor_read", []):
                     fail(f"Missing decision and deliverable workflow: {label}")
+                if CONTENT_APPLICATION_SECTION not in stage.get("executor_read", []):
+                    fail(f"Missing reviewable content and application workflow: {label}")
+            if (route["id"], phase) in ACQUISITION_AUTOMATIC_STAGES:
+                if "acquisition_analysis" not in stage.get("automatic_conditions", []):
+                    fail(f"Acquisition analysis policy must be automatic: {label}")
             if contract is not None:
                 if not isinstance(contract, dict):
                     fail(f"Invalid completion contract: {label}")
@@ -453,6 +477,12 @@ def validate_loading_contract(root, catalog=None):
                     fail(f"Product execution handoff must require product write scope: {label}")
                 if handoff.get("authorization") != "inherit_only" or handoff.get("automatic_execution") is not False:
                     fail(f"Conditional handoff must not grant authorization or execute automatically: {label}")
+                if isinstance(handoff_id, str) and handoff_id in {"apply_approved_copy", "apply_approved_image"}:
+                    if not isinstance(scope, list) or "approved_version" not in scope:
+                        fail(f"Approved content handoff must retain version scope: {label}")
+                    if (target_route != "product_change" or target_phase != "execute"
+                            or handoff.get("target_deliverable") != "execution"):
+                        fail(f"Approved content must hand off to product application: {label}")
             if not REQUIRED_HANDOFFS.get((route["id"], phase), set()).issubset(handoff_ids):
                 fail(f"Missing mandatory conditional handoff: {label}")
             for key in ("director_read", "executor_read", "rules", "source_read"):
@@ -493,7 +523,10 @@ def validate_loading_contract(root, catalog=None):
                 if "references/runtime.md#商品编辑字段边界" not in stage.get("executor_read", []):
                     fail(f"Missing mandatory product-field boundary: {label}")
     for name, required in {
-        "ads": {"references/ad-decision-policy.md"},
+        "ads": {"references/ad-decision-policy.md", ACQUISITION_SECTION},
+        "acquisition_analysis": {ACQUISITION_SECTION},
+        "inquiry": {ACQUISITION_SECTION + "#客户身份与成交来源", ACQUISITION_SECTION + "#指标与队列"},
+        "crm": {ACQUISITION_SECTION + "#客户身份与成交来源", ACQUISITION_SECTION + "#指标与队列"},
         "data_query": {"references/runtime.md#连接和工具", "references/runtime.md#数据和交接"},
         "images": {"references/runtime.md#默认图片方案", "agents/image-agent/AGENTS.md"},
         "sales_fields": {"references/runtime.md#商品编辑字段边界"},

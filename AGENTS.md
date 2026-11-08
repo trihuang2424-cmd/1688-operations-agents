@@ -5,12 +5,14 @@
 ## 启动与选任务
 
 1. 总控先运行 `python3 scripts/operating_state.py summary`，读取真实状态摘要；指定账本用 `--state 路径` 放在子命令前。缺账本或历史未核对时先定位已有报告、行动与回执，不能据空表派单。子 Agent 只接收任务包并查询相关对象，不重读整店历史。
-2. 本店目标是提升销售额、价格固定，优先新品推广及链接流量/转化，不默认利润分析。首次业务运行、策略版本变化或约束不清时读取[有效策略](references/account-strategies/songtai-sales-growth.md)；其余轮次核对版本及已确认摘要。策略名不是真实店铺引用。
+2. 本店保留整体成交额及明确的新客/老客/未知拆分；账号按全店与核心商品曝光、点击率、新客有效询盘、成熟询盘成交诊断，投放重点评价新客效果。价格固定，不默认利润分析。首次业务运行、策略变化或约束不清时读取[有效策略](references/account-strategies/songtai-sales-growth.md)；实际分析用[统一获客口径](references/acquisition-analysis.md)。策略名不是真实店铺引用。
 3. 按[任务路由](catalog/task-routing.json)选任务和阶段：`python3 scripts/task_context.py --route 路由ID --phase 阶段 --role director`。总控自己做业务或子 Agent 执行用 `executor`。未确定路由时用 `python3 scripts/task_context.py list` 查看简表。依结果读取选中的完整规则、必要来源及原文章节；同一上下文已读且版本一致不重复加载。条件、命令与缺项处理见[按需加载](references/context-loading.md)。
 
 明确小任务直接进入领域，只核对相关对象的历史与授权，不要求先补齐全店账本；可先完成不依赖缺失事实的资料和方案。持续运营按[销售增长流程](references/sales-growth-workflow.md)选本次相关章节；周/月先作完整周期比较和经营结论，再安排链接动作。总控先处理结果未知、人工待办和到期评估；无新证据不重复调整。实际生效后才观察，单次措施与长期重点产品分开；多目标分别交付。
 
 本轮先按用户目标确定交付类型：查证 `evidence`、方案 `plan`、成稿 `asset` 或业务执行 `execution`；路由提供交付契约时显式传 `--deliverable`。交付类型描述要完成的工作，不授予生成、发布或花费权限。按[决策与阶段交付](references/sales-growth-workflow.md#决策与阶段交付)决定补查、保持、纠错或试验；每项补查说明会改变哪个决定及停止条件。
+
+本店正常经营/投放优化任务有已确认的[成品审核与应用](references/sales-growth-workflow.md#成品审核与应用)范围：有依据的标题、主图或详情改动由总控续接真实成品制作，交用户审核具体商品/字段/版本，通过后直接应用并回读。分析阶段交付不结束已选的商品行动；明确只查证、只方案、不生成或不应用时按本轮限定执行。纯取数、规则讨论或代码修改不启动真实业务。正文简短说明效果、原因依据与决定，直接展示成品，详细证据和重复口径放附录。
 
 总控按路由的完成要求验收并承接可继续的依赖：要求成稿时，设计说明不能代替成稿；请求审核前准备好相应审核对象。已登记新版行动实际运行 `python3 scripts/operating_state.py check --id <行动ID>`：交接加 `--require handoff`、执行前加 `--require execution`、收尾加 `--require closure`，核对对应就绪状态、卡点与下一执行者；结构有效不等于工作已完成。缺账本或旧记录保持未知并核对相关证据，不强迫明确的小型查证任务补全全店历史。范围内尚能推进时继续，必须用户参与时只交具体待确认项及可审核结果。
 

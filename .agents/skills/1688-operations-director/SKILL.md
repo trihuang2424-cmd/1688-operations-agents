@@ -18,10 +18,10 @@ description: "统筹1688完整周/月经营诊断、每日运营、逐链接行�
 | 异常、新证据或到期深析 | `conversion_analysis` 实际委派临时专项，见[分析协议](../1688-customer-conversion/references/conversion-analysis.md) |
 | 明确客户运营任务 | `customer_conversion`，按[客户运营与转化](../1688-customer-conversion/SKILL.md)选择子模块 |
 
-经营周期、链接方案、观察和投流的详细要求以加载器输出的[销售增长流程](../../../references/sales-growth-workflow.md)原文章节为准。周/月先形成有证据的销售变化结论；公司重点产品可按明确目标立项。将目标、策略版本、对象、数据周期、既有行动、授权与预期交付传给执行者，不把全部历史复制给每个子任务。
+经营周期、链接方案、观察和投流按加载器输出的[销售增长流程](../../../references/sales-growth-workflow.md)执行。周/月按全店及核心商品曝光、点击率、新客有效询盘、成熟询盘成交定位问题，同时明确整体成交额及新/老/未知拆分；身份与指标见[统一获客口径](../../../references/acquisition-analysis.md)。公司重点产品可按明确目标立项。将目标、策略版本、对象、数据周期、既有行动、授权与预期交付传给执行者，不把全部历史复制给每个子任务。
 
-按[决策与阶段交付](../../../references/sales-growth-workflow.md#决策与阶段交付)确定本轮 `evidence/plan/asset/execution`；有交付契约的路由传 `--deliverable`，把该契约与当前用户范围交给执行者。验收比较实际产物与要求，继续承接范围内的后续工作；查证或方案任务可正常交付，不因此启动生成或发布。新版行动运行 `operating_state.py check --id <行动ID>`，交接用 `--require handoff`、执行前用 `--require execution`、收尾用 `--require closure`；按对应就绪状态推进或列出精确阻塞，不把报告、待制作物料或未知生效计作完成。
+按[决策与阶段交付](../../../references/sales-growth-workflow.md#决策与阶段交付)确定本轮 `evidence/plan/asset/execution`；有交付契约的路由传 `--deliverable`，把该契约与当前用户范围交给执行者。本店正常优化中有依据的商品动作按[成品审核与应用](../../../references/sales-growth-workflow.md#成品审核与应用)续接制作，不能以“建议改图”收尾；用户批准具体版本后接续应用。明确只查证/只方案等任务仍在指定范围交付。新版行动运行 `operating_state.py check --id <行动ID>`，交接用 `--require handoff`、执行前用 `--require execution`、收尾用 `--require closure`；按就绪状态推进，不把报告、待制作物料或未知生效计作完成。
 
 询盘日常检查按分析协议每轮 `ingest` 扫描到期项；领取前核对策略、同对象问题及全部关联措施，取消或替代无必要的 pending，已派发/未知先对账。没有新证据或仍在正常观察时不重复派单；分析不包含客户维护、触达或销售催办。
 
-验收分别确认分析结论、实际执行、后台回读、人工待办及效果观察。人工完成须有真实生效回执；单次 `action_id` 完成不结束长期 `focus_id`。按[状态契约](../../../references/operating-state.md)保存本轮证据和下一步；只有真实启动才能报告已委派。需要独立复核时按需使用 `operations_review`，不增加常驻角色。
+验收除核对证据外，还要确认报告解释了哪个瓶颈、为何优先该动作、已选择的商品改动是否已有真实成品。正文先给简短效果/原因/决定及待审对象，过程明细放附录。实际执行、后台回读、人工待办及效果观察分别记录；单次 `action_id` 完成不结束长期 `focus_id`。按[状态契约](../../../references/operating-state.md)保存证据；只有真实启动才能报告已委派。按需使用 `operations_review` 独立复核，不增加常驻角色。

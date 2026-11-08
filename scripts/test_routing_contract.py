@@ -131,6 +131,41 @@ class RoutingContractTests(unittest.TestCase):
         self.edit_json('catalog/task-routing.json', mutate)
         self.assert_contract_error('Missing mandatory completion contract: traffic_and_ads/plan')
 
+    def test_analysis_stages_cannot_lose_acquisition_policy_or_completion(self):
+        for route_id, phase in (("daily_metrics", "execute"), ("period_analysis", "evaluate"),
+                                ("weekly_review", "plan"), ("monthly_review", "evaluate"),
+                                ("traffic_and_ads", "monitor"), ("traffic_and_ads", "evaluate")):
+            for remove, expected in (("completion_contract", "Missing mandatory completion contract"),
+                                     ("acquisition_analysis", "Acquisition analysis policy must be automatic")):
+                with self.subTest(route=route_id, phase=phase, remove=remove):
+                    def mutate(data):
+                        stage = next(r for r in data['routes'] if r['id'] == route_id)['phase_loading'][phase]
+                        if remove == 'completion_contract':
+                            stage.pop(remove)
+                        else:
+                            stage['automatic_conditions'].remove(remove)
+                    self.edit_json('catalog/task-routing.json', mutate)
+                    self.assert_contract_error(expected + ': ' + route_id + '/' + phase)
+                    copy_file(self.base / 'catalog/task-routing.json', self.root / 'catalog/task-routing.json')
+
+    def test_content_handoffs_cannot_drop_title_detail_or_approved_version(self):
+        for handoff_id in ('prepare_title_asset', 'prepare_detail_asset'):
+            with self.subTest(handoff=handoff_id):
+                def mutate(data):
+                    stage = next(r for r in data['routes'] if r['id'] == 'traffic_and_ads')['phase_loading']['monitor']
+                    stage['conditional_handoffs'] = [h for h in stage['conditional_handoffs'] if h['id'] != handoff_id]
+                self.edit_json('catalog/task-routing.json', mutate)
+                self.assert_contract_error('Missing mandatory conditional handoff: traffic_and_ads/monitor')
+                copy_file(self.base / 'catalog/task-routing.json', self.root / 'catalog/task-routing.json')
+        for route_id, phase in (('title_optimization', 'execute'), ('product_change', 'plan'), ('product_images', 'execute')):
+            with self.subTest(route=route_id, phase=phase):
+                def mutate(data):
+                    stage = next(r for r in data['routes'] if r['id'] == route_id)['phase_loading'][phase]
+                    stage['conditional_handoffs'][0]['required_scope'].remove('approved_version')
+                self.edit_json('catalog/task-routing.json', mutate)
+                self.assert_contract_error('Approved content handoff must retain version scope: ' + route_id + '/' + phase)
+                copy_file(self.base / 'catalog/task-routing.json', self.root / 'catalog/task-routing.json')
+
     def test_handoff_cannot_point_to_wrong_owner_or_grant_authorization(self):
         for mutation, prefix in (({'target_owner': 'traffic_operations'}, 'Conditional handoff owner mismatch'),
                                  ({'authorization': 'granted'}, 'Conditional handoff must not grant authorization'),
