@@ -1,0 +1,2284 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-12T07:21:25Z",
+  "semantics": "维护能力归属而非权限白名单。工具描述和Schema仅来自current-tool-definitions；本文件不授权调用。",
+  "tools": [
+    {
+      "name": "1688_bp_inquiry_evaluate_sales_detail",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_bp_inquiry_evaluate_summary",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_factory_overview_imgs",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_item_title_optimizer_interface",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_order_manger_summery",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_order_manger_urge",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_procurement_digital_human_tool",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_category_page_info_query",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_cpv_predict",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_image_classification",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_material_package_generation",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_page_info_query",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "1688_publish_product_draft_save",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_sku_predict",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_publish_title_prediction",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_query_shop_data",
+      "capabilities": [
+        "business_analysis",
+        "market_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_rag_query_api_info",
+      "capabilities": [
+        "business_analysis",
+        "market_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_refund_cancel",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_refund_detail_new_query",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_refund_list_query",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_source_suppliers",
+      "capabilities": [
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_source_suppliers_infos",
+      "capabilities": [
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "1688_title_agent",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "a2a_501498_newton_buyer_script_generator",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "addInvoiceTitle",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "address_gen",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "aegis_get_unique_id_by_user_id",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "aegis_register_profile",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "aegis_report_audit_log",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "agent_action_report",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "ai_publish_by_imageurl",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "ai_publish_excel_data_to_publish_url",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "ai_publish_image_to_publish_url",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "ai_publish_save_tair",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "ai_receptionist",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "apply_dispute",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "apply_offer_pro",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "batch_get_ali1688_shop_data",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "batchApplyInvoice",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "buyer_query_order_list",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cancel_dispute",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "category_recognition_by_image_and_text",
+      "capabilities": [
+        "listing"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cbu_501498_loginid_to_company",
+      "capabilities": [
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cbu_image_analyse_tool",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cbu_image_generation_and_editing_tool",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cbu_offer_query_tool",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cbu_skill_change_main_image",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cbu_skill_change_subject",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cha88_company_report_getReport",
+      "capabilities": [
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cha88_company_report_submit",
+      "capabilities": [
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "companySearch",
+      "capabilities": [
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cowboy_daily_report",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cowboy_knowledge_answer",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cowboy_knowledge_query",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cowboy_load_config",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "cowboy_test_chat",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "create_cow_boy",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "crm_custom_plan_delete",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "crm_reach_effect_query",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "csbc_ai_components_image_op_card",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "csbc_batch_product_optimization",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "csbc_crm_customer_management",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "csbc_multi_shop_dashboard",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "csbc_opportunity_query",
+      "capabilities": [],
+      "owner": null,
+      "review_status": "unassigned",
+      "basis": "当前仅有简短组件名称，参数不足以核实业务范围；保留可发现的完整定义，先查实时说明再归属，不能当作任意商机查询入口。"
+    },
+    {
+      "name": "csbc_opportunity_query_business",
+      "capabilities": [],
+      "owner": null,
+      "review_status": "unassigned",
+      "basis": "当前仅有简短组件名称，参数不足以核实业务范围；保留可发现的完整定义，先查实时说明再归属，不能当作任意商机查询入口。"
+    },
+    {
+      "name": "csbc_product_opportunity_business",
+      "capabilities": [],
+      "owner": null,
+      "review_status": "unassigned",
+      "basis": "当前仅有简短组件名称，参数不足以核实业务范围；保留可发现的完整定义，先查实时说明再归属，不能当作任意商机查询入口。"
+    },
+    {
+      "name": "customer_ai_profile",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_attr_add_column",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_attr_field_config",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_attr_list_all",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_import",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_list",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_stats",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "customer_tag_batch_apply",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "deleteInvoiceTitle",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "distribute_offer",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "distribution_knowledge_tool",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "distribution_offer_info",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "distribution_select_offer",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "find_product",
+      "capabilities": [
+        "market_research",
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "fx_query_order",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "fx_send_ww",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "fx_ww_reply",
+      "capabilities": [
+        "distribution"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_ad_channel_detail",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_channel_traffic",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_core_metrics",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_customer_profile",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_followup_record_by_buyer",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_industry_benchmark",
+      "capabilities": [
+        "market_research",
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_item_diagnosis_context",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jky_auth_guide",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jky_business_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jky_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jky_qimen_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jky_warehouse",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_aftersale_received",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_allocate",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_inout",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_item_combine_sku",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_item_inventory",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_item_sku",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_item_skumap",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_oauth_guide",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_out_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_purchase",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_qimen_item",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_qimen_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_refund_order",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_shops",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_supplier",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_jst_wms_partner",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_normalized_data",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_order_info_by_buyer",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_order_skills_config",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_product_status",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_recommend_channel_detail",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_search_channel_detail",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_traffic_overview",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_traffic_structure",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_traffic_trend",
+      "capabilities": [
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "get_transaction_ranking",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "image_agent",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "image_bank_change_url_for_offer",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "image_bank_upload_picture",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "image_bank_url_external_to_internal",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "inquiry_data_batch_query",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "inquiry_data_load",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "inquiry_data_query",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "item_batch_opt_create",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "item_batch_opt_query",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "item_batch_opt_update",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "jackyun_disconnect",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_get_sku_stock",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_get_stock_quantity",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_get_stockin_doc",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_get_stockout_doc",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_get_vendor",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_search_allocate",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_search_goods_sku",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jky_erp_search_purchase",
+      "capabilities": [
+        "erp_inventory"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "jushuitan_disconnect",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "leaderboard_tools",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "list_invoice_apply_records_by_page",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_ai_crm_customer_reach",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_ai_crm_plan_operation",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_bound_user_ids",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_cowboy_add_user_folder_relation",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_check_buyer_is_tp",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_complete_boost_todo",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_delete_user_folder_relation",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_get_wangwang_profile",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_load_boost_todo_list",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_load_copilot_card",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_load_panel_config",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_load_reception_evaluation",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_open_intent_hosting",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_query_customer_data",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_query_user_folder_relations",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_report_adopt_event",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_report_suggest_feedback",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_save_panel_config",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_cowboy_update_user_folder_relation",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_growth_customer_manage_byr_tag_get_by_pair_login_id",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_growth_customer_manage_byr_tag_get_by_pair_user_id",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_growth_customer_manage_byr_tag_set_buyer_tag",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_im_card_get_layout_list",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_im_card_get_template_layouts",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_im_card_template_sync",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_im_file_try_upload",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_im_login_token_get",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_image_add_model_to_product",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_image_bg_change",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_image_data_agent",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_image_gen_carousel_images",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_image_judge",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_main_agent_skill_delete",
+      "capabilities": [
+        "platform_maintenance",
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "当前定义为卖家自定义接待技能的查询或维护；不是本地Codex技能编辑，不默认写入云端。"
+    },
+    {
+      "name": "newton_main_agent_skill_list",
+      "capabilities": [
+        "platform_maintenance",
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "当前定义为卖家自定义接待技能的查询或维护；不是本地Codex技能编辑，不默认写入云端。"
+    },
+    {
+      "name": "newton_main_agent_skill_query",
+      "capabilities": [
+        "platform_maintenance",
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "当前定义为卖家自定义接待技能的查询或维护；不是本地Codex技能编辑，不默认写入云端。"
+    },
+    {
+      "name": "newton_main_agent_skill_save",
+      "capabilities": [
+        "platform_maintenance",
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "当前定义为卖家自定义接待技能的查询或维护；不是本地Codex技能编辑，不默认写入云端。"
+    },
+    {
+      "name": "newton_main_agent_skill_update",
+      "capabilities": [
+        "platform_maintenance",
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "当前定义为卖家自定义接待技能的查询或维护；不是本地Codex技能编辑，不默认写入云端。"
+    },
+    {
+      "name": "newton_offer_panorama_query_offer_diagnosis",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_profile_customer_data_summary_pc_v2",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_profile_member_update_remark",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "按当前描述与参数核对：客户、接待、标签或客户资料操作；读取、写入及生成分别依实时定义和用户范围判断。"
+    },
+    {
+      "name": "newton_same_competition_offer_compare_data",
+      "capabilities": [
+        "market_research",
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_shop_list_binds",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "newton_webim_im_chat_gateway_invoke",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "offer_owner_query",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "offer_query_for_trade",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "offer_select_card",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "offer_sku_query_batch",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "official_delivery_create_order",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "official_delivery_solution_query",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "opp_market_search_data_query",
+      "capabilities": [
+        "market_research",
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "opp_product_image_patent_list",
+      "capabilities": [
+        "market_research"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "order_view",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "parse_address",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "pause_cow_boy",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "product_cancel_offer",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "product_repost_offer",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "push_diagnosis_section",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "query_address_list",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "query_delivery_order_pack_list",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "query_full_trace_list",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "query_guide_price",
+      "capabilities": [
+        "buyer_transactions",
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "query_invoice_amount",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "query_offer_prop",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "query_order",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "query_receive_list",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    },
+    {
+      "name": "query_transfer_inquiries",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "queryInvoiceTitlesByPage",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "querySellerInvoiceSettings",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "quotation_skill_get_detail",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "quotation_skill_load",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "quotation_skill_save",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "quotation_skill_simulate",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "resume_cow_boy",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "same_img_offer_search",
+      "capabilities": [
+        "market_research",
+        "procurement_research"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_activity_registered_info",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_buyer_detail_hourly",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_customer_business_province",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_customer_detail",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_import_abnormal_offer",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_top_offer",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "seller_trade_code_index",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "set_jky_credentials",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "set_jst_customer_id",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "setDefaultInvoiceTitle",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "shop_and_tool_info",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "skill_1688_item_select_get_item_detail",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "skill_1688_item_select_get_item_overview",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "skill_1688_item_select_get_shop_data",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "skill_1688_shop_daily_report_get_trade_data",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "skill_1688_shop_daily_report_get_traffic_data",
+      "capabilities": [
+        "business_analysis",
+        "traffic_analysis"
+      ],
+      "owner": "traffic_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "skill_1688_shop_daily_report_get_user_data",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_1688_knowledge_rag_query",
+      "capabilities": [
+        "platform_knowledge",
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_business_analysis_query",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_cpv_spi_before_check",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_cpv_spi_execute",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_get_offer_login_id",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_one_click_spi_before_check",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_one_click_spi_execute",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_search_offer_by_keyword",
+      "capabilities": [
+        "product_optimization"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "tool_shop_health_check",
+      "capabilities": [
+        "business_analysis"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "update_cowboy_config",
+      "capabilities": [
+        "customer_conversion"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "updateInvoiceTitle",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "view_apply_dispute",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "view_dispute_detail",
+      "capabilities": [
+        "buyer_transactions"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "xiaobangbang_bind_connection",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "xiaobangbang_disconnect",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "xiaobangbang_query_connection",
+      "capabilities": [
+        "platform_maintenance"
+      ],
+      "owner": "operations_director",
+      "review_status": "reviewed",
+      "basis": "沿用 catalog/tool-routing.json 的能力归属，并保留本次实时定义；归属不代表账号权限或已执行业务。"
+    },
+    {
+      "name": "zongheng_batch_img_upload",
+      "capabilities": [
+        "image"
+      ],
+      "owner": "product_operations",
+      "review_status": "reviewed",
+      "basis": "依据2026-11-12实时description和inputSchema核对业务用途；仅分配能力，不推定只读、账号权限或业务方法可调用。"
+    }
+  ]
+}

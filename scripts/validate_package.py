@@ -9,7 +9,12 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import unquote
 
-from task_context import validate_loading_contract
+if __package__:
+    from .task_context import validate_loading_contract
+    from .tool_catalog import validate_current_catalog
+else:
+    from task_context import validate_loading_contract
+    from tool_catalog import validate_current_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
 PRESERVATION = 'manifests/routing-refactor-20261028-preservation.json'
@@ -51,13 +56,14 @@ ROUTE_CAPABILITIES = {
     'product_images': 'image', 'new_listing': 'listing', 'competition': 'market_research',
     'market_opportunity': 'market_research', 'traffic_and_ads': 'traffic_analysis',
     'platform_rules': 'platform_knowledge', 'connections_and_components': 'platform_maintenance',
-    'customer_conversion': 'customer_conversion', 'conversion_monitoring': 'customer_conversion',
+    'customer_conversion': 'customer_conversion', 'chat_export': 'customer_conversion',
+    'conversion_monitoring': 'customer_conversion',
     'conversion_analysis': 'customer_conversion', 'erp_inventory': 'erp_inventory',
     'procurement_research': 'procurement_research', 'buyer_transactions': 'buyer_transactions',
     'distribution': 'distribution', 'report_rendering': 'reporting',
 }
 SPECIALIST_ROUTES = {
-    'customer_conversion', 'erp_inventory', 'procurement_research',
+    'customer_conversion', 'chat_export', 'erp_inventory', 'procurement_research',
     'buyer_transactions', 'distribution',
 }
 ROUTE_DELEGATION_POLICIES = {
@@ -269,8 +275,10 @@ def check_conversion_contract(c, registry, task_routing):
     These checks validate local routing declarations, not gateway permissions or
     actual delegation. Runtime tool access and acknowledgements remain separate.
     """
-    c.need(registry.get('version') == task_routing.get('version') == '2.4.0',
-           'Registry/task-routing version must be 2.4.0')
+    version = registry.get('version')
+    c.need(isinstance(version, str) and re.fullmatch(r'2\.\d+\.\d+', version) is not None and
+           version == task_routing.get('version'),
+           'Registry/task-routing versions must match the supported 2.x.y schema')
     specialist_rows = registry.get('on_demand_specialists', [])
     c.need(isinstance(specialist_rows, list) and len(specialist_rows) == 1 and
            isinstance(specialist_rows[0], dict) and specialist_rows[0].get('id') == 'conversion_analysis',
@@ -339,6 +347,14 @@ def check_routing(root=ROOT):
     tool_routing = c.read('catalog/tool-routing.json')
     mapping = c.read('catalog/source-to-agent.json')
     preservation = c.read(PRESERVATION)
+    # The immutable 205-tool source snapshot and the current discovery catalog
+    # have different purposes. Check both, without rewriting historical hashes
+    # or treating a formerly observed tool count as today's coverage target.
+    c.errors.extend('Current tool catalog: ' + error for error in validate_current_catalog(c.root))
+    current_definitions = c.read('catalog/current-tool-definitions.json')
+    current_assignments = c.read('catalog/tool-assignments.json')
+    current_tool_rows = current_definitions.get('tools') if isinstance(current_definitions, dict) else None
+    current_assignment_rows = current_assignments.get('tools') if isinstance(current_assignments, dict) else None
     role_rows = registry.get('agents', [])
     roles = {x['id']: x for x in role_rows}
     skill_rows = registry.get('skills', [])
@@ -581,6 +597,8 @@ def check_routing(root=ROOT):
             'active_agent_directory_count': len(agent_directories), 'archived_legacy_entry_count': len(archive_rows),
             'on_demand_specialist_count': len(registry.get('on_demand_specialists') or []),
             'native_agent_config_count': len(native_files),
+            'current_tool_count': len(current_tool_rows) if isinstance(current_tool_rows, list) else 0,
+            'current_assignment_count': len(current_assignment_rows) if isinstance(current_assignment_rows, list) else 0,
             'task_route_count': len(routes), 'legacy_alias_count': len(aliases), 'source_skill_entries': len(actual_sources),
             'business_rule_files_hash_checked': len(original_rules), 'errors': c.errors}
 

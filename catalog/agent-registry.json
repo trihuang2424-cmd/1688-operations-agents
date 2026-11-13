@@ -1,6 +1,6 @@
 {
-  "version": "2.4.0",
-  "date": "2026-10-30",
+  "version": "2.5.0",
+  "date": "2026-11-12",
   "runtime": "Codex/compatible host; default image workflow uses current-session imagegen; Accio desktop gateway required only for Accio business tools",
   "agent_count": 3,
   "agents": [

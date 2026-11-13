@@ -1,6 +1,6 @@
 {
-  "version": "2.4.0",
-  "date": "2026-10-30",
+  "version": "2.5.0",
+  "date": "2026-11-12",
   "authority": "当前任务职责与能力路由的唯一维护源；root/skill/role入口引用本表",
   "selection": "按用户目标和对象选route，复合任务可选多条；不是全量每日必跑清单，也不是自动关键词匹配程序",
   "rules_preservation": "来源原文保持不变；用户已授权的限定条款修正按 approved_rule_overrides 执行，其他业务步骤/参数/前置/免责声明继续有效",
@@ -110,7 +110,21 @@
             "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -166,8 +180,65 @@
             "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "business_overview",
+            "purpose": "定位可比期间的经营结果、漏斗与渠道贡献",
+            "tools": [
+              "get_core_metrics",
+              "get_transaction_ranking",
+              "get_customer_profile",
+              "get_channel_traffic",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "先核周期支持与统计口径；按首要经营问题选择下钻，不同时调用全部候选。"
+          },
+          {
+            "id": "search_and_ad_diagnosis",
+            "purpose": "搜索成为主要异动渠道时，查相关词、广告词和商品匹配；关联覆盖单列",
+            "tools": [
+              "get_search_channel_detail",
+              "get_ad_channel_detail",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "诊断/TOP、完整词表、商品下钻是不同覆盖；自由取数先发现具体API与参数。买家归因缺失不阻止词级分析，未尝试不能记为不可用。"
+          },
+          {
+            "id": "inquiry_evidence",
+            "purpose": "实际询盘核查时使用，区分平台口径与公司新客",
+            "tools": [
+              "1688_bp_inquiry_evaluate_summary",
+              "inquiry_data_batch_query",
+              "inquiry_data_query",
+              "inquiry_data_load"
+            ],
+            "selection_note": "按相关商品或买家补证；不是自动全量聊天导出。",
+            "when_any_conditions": [
+              "inquiry"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -230,7 +301,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -238,11 +310,53 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "monitor": {
           "director_read": [
@@ -271,7 +385,21 @@
             "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -312,7 +440,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -320,11 +449,53 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "receipt": {
           "director_read": [
@@ -353,8 +524,65 @@
             "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "business_overview",
+            "purpose": "定位可比期间的经营结果、漏斗与渠道贡献",
+            "tools": [
+              "get_core_metrics",
+              "get_transaction_ranking",
+              "get_customer_profile",
+              "get_channel_traffic",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "先核周期支持与统计口径；按首要经营问题选择下钻，不同时调用全部候选。"
+          },
+          {
+            "id": "search_and_ad_diagnosis",
+            "purpose": "搜索成为主要异动渠道时，查相关词、广告词和商品匹配；关联覆盖单列",
+            "tools": [
+              "get_search_channel_detail",
+              "get_ad_channel_detail",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "诊断/TOP、完整词表、商品下钻是不同覆盖；自由取数先发现具体API与参数。买家归因缺失不阻止词级分析，未尝试不能记为不可用。"
+          },
+          {
+            "id": "inquiry_evidence",
+            "purpose": "实际询盘核查时使用，区分平台口径与公司新客",
+            "tools": [
+              "1688_bp_inquiry_evaluate_summary",
+              "inquiry_data_batch_query",
+              "inquiry_data_query",
+              "inquiry_data_load"
+            ],
+            "selection_note": "按相关商品或买家补证；不是自动全量聊天导出。",
+            "when_any_conditions": [
+              "inquiry"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -417,7 +645,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -425,11 +654,53 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "monitor": {
           "director_read": [
@@ -458,7 +729,21 @@
             "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -499,7 +784,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -507,11 +793,53 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "receipt": {
           "director_read": [
@@ -540,8 +868,65 @@
             "acquisition_analysis"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "business_overview",
+            "purpose": "定位可比期间的经营结果、漏斗与渠道贡献",
+            "tools": [
+              "get_core_metrics",
+              "get_transaction_ranking",
+              "get_customer_profile",
+              "get_channel_traffic",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "先核周期支持与统计口径；按首要经营问题选择下钻，不同时调用全部候选。"
+          },
+          {
+            "id": "search_and_ad_diagnosis",
+            "purpose": "搜索成为主要异动渠道时，查相关词、广告词和商品匹配；关联覆盖单列",
+            "tools": [
+              "get_search_channel_detail",
+              "get_ad_channel_detail",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "诊断/TOP、完整词表、商品下钻是不同覆盖；自由取数先发现具体API与参数。买家归因缺失不阻止词级分析，未尝试不能记为不可用。"
+          },
+          {
+            "id": "inquiry_evidence",
+            "purpose": "实际询盘核查时使用，区分平台口径与公司新客",
+            "tools": [
+              "1688_bp_inquiry_evaluate_summary",
+              "inquiry_data_batch_query",
+              "inquiry_data_query",
+              "inquiry_data_load"
+            ],
+            "selection_note": "按相关商品或买家补证；不是自动全量聊天导出。",
+            "when_any_conditions": [
+              "inquiry"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -589,7 +974,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -597,10 +983,33 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
           }
         },
         "execute": {
@@ -634,7 +1043,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -642,10 +1052,33 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
           }
         },
         "evaluate": {
@@ -678,7 +1111,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -686,12 +1120,74 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
           }
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "business_overview",
+            "purpose": "定位可比期间的经营结果、漏斗与渠道贡献",
+            "tools": [
+              "get_core_metrics",
+              "get_transaction_ranking",
+              "get_customer_profile",
+              "get_channel_traffic",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "先核周期支持与统计口径；按首要经营问题选择下钻，不同时调用全部候选。"
+          },
+          {
+            "id": "search_and_ad_diagnosis",
+            "purpose": "搜索成为主要异动渠道时，查相关词、广告词和商品匹配；关联覆盖单列",
+            "tools": [
+              "get_search_channel_detail",
+              "get_ad_channel_detail",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "诊断/TOP、完整词表、商品下钻是不同覆盖；自由取数先发现具体API与参数。买家归因缺失不阻止词级分析，未尝试不能记为不可用。"
+          },
+          {
+            "id": "daily_report_sources",
+            "purpose": "仅单日已完成日报的交易、流量和客户指标",
+            "tools": [
+              "skill_1688_shop_daily_report_get_trade_data",
+              "skill_1688_shop_daily_report_get_traffic_data",
+              "skill_1688_shop_daily_report_get_user_data"
+            ],
+            "selection_note": "先核实T+1和日期限制；不能用单日日报接口冒充完整周或月的期间去重数据。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -742,7 +1238,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -750,11 +1247,53 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "execute": {
           "director_read": [],
@@ -790,7 +1329,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -798,11 +1338,53 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         },
         "evaluate": {
           "director_read": [],
@@ -837,7 +1419,8 @@
                 "requirements": [
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
-                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。"
+                  "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -845,12 +1428,93 @@
                   "按完整可比期间简述全店及核心商品曝光、点击/点击率、新客有效询盘、成熟询盘成交的表现和首要瓶颈，区分事实、支持判断与待验证原因；没有某环数据时明确影响，不补零。",
                   "保留整体成交额，明确拆分公司新客、老客和身份未知的成交额及覆盖；平台首购不等于公司新客，广告来源与身份分开核验；分子分母和队列遵循获客分析口径。",
                   "正文给关键变化、原因和优先动作，详细数据与口径放附录；只交真正影响决定的补证项、下一执行者和条件，不把有依据的动作全部退回观察。",
-                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。"
+                  "按影响和证据排序具体商品动作，给出拟改善环节与成品要求；总控按已确认的本店常设范围承接制作和审核后应用，用户明确只查证或只要方案时保留限定范围。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
-          }
+          },
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          },
+          "conditional_handoffs": [
+            {
+              "id": "investigate_material_channel_change",
+              "when": "已识别重要渠道/商品异动，原因验证会改变首要经营决定且现有证据不足；将问题与已知范围交流量运营继续必要验证，非每次例行全量查词。",
+              "from_deliverables": [
+                "evidence",
+                "plan"
+              ],
+              "target_route": "traffic_and_ads",
+              "target_phase": "execute",
+              "target_owner": "traffic_operations",
+              "target_deliverable": "plan",
+              "required_scope": [
+                "traffic_evidence_read"
+              ],
+              "authorization": "inherit_only",
+              "automatic_execution": false
+            }
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "business_overview",
+            "purpose": "定位可比期间的经营结果、漏斗与渠道贡献",
+            "tools": [
+              "get_core_metrics",
+              "get_transaction_ranking",
+              "get_customer_profile",
+              "get_channel_traffic",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "先核周期支持与统计口径；按首要经营问题选择下钻，不同时调用全部候选。"
+          },
+          {
+            "id": "search_and_ad_diagnosis",
+            "purpose": "搜索成为主要异动渠道时，查相关词、广告词和商品匹配；关联覆盖单列",
+            "tools": [
+              "get_search_channel_detail",
+              "get_ad_channel_detail",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "诊断/TOP、完整词表、商品下钻是不同覆盖；自由取数先发现具体API与参数。买家归因缺失不阻止词级分析，未尝试不能记为不可用。"
+          },
+          {
+            "id": "business_context",
+            "purpose": "与当前经营问题相关的活动、交易指标及店铺健康背景",
+            "tools": [
+              "seller_activity_registered_info",
+              "seller_trade_code_index",
+              "tool_shop_health_check"
+            ],
+            "selection_note": "仅在这些背景会改变当前判断时使用；规则/健康提示发生时间必须与分析期间核对。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -930,6 +1594,20 @@
           "required_any_conditions": [],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "tool_business_analysis_query",
+              "batch_get_ali1688_shop_data"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -1172,6 +1850,37 @@
           "required_any_conditions": [],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "cbu_offer_query_tool",
+              "get_item_diagnosis_context",
+              "get_product_status",
+              "leaderboard_tools",
+              "newton_offer_panorama_query_offer_diagnosis",
+              "newton_same_competition_offer_compare_data",
+              "seller_import_abnormal_offer",
+              "seller_top_offer",
+              "skill_1688_item_select_get_item_detail",
+              "skill_1688_item_select_get_item_overview",
+              "skill_1688_item_select_get_shop_data",
+              "tool_search_offer_by_keyword",
+              "1688_title_agent",
+              "apply_offer_pro",
+              "csbc_batch_product_optimization",
+              "item_batch_opt_create",
+              "item_batch_opt_query",
+              "item_batch_opt_update",
+              "query_offer_prop"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -1359,7 +2068,21 @@
             "strategy_refresh"
           ],
           "required_any_conditions": [],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -1423,8 +2146,54 @@
               "references/business-rules/1688-title-optimizer/RULES.md",
               "references/business-rules/1688-product-editor/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "1688_item_title_optimizer_interface",
+              "cbu_offer_query_tool",
+              "cbu_skill_change_main_image",
+              "cbu_skill_change_subject",
+              "offer_owner_query",
+              "product_cancel_offer",
+              "product_repost_offer",
+              "tool_cpv_spi_before_check",
+              "tool_cpv_spi_execute",
+              "tool_get_offer_login_id",
+              "tool_one_click_spi_before_check",
+              "tool_one_click_spi_execute",
+              "tool_search_offer_by_keyword",
+              "1688_title_agent",
+              "apply_offer_pro",
+              "csbc_batch_product_optimization",
+              "item_batch_opt_create",
+              "item_batch_opt_query",
+              "item_batch_opt_update",
+              "query_offer_prop"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -1596,7 +2365,21 @@
             "free_query": [
               "references/business-rules/1688-product-editor/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -1659,8 +2442,52 @@
             "free_query": [
               "references/business-rules/1688-product-editor/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "1688_item_title_optimizer_interface",
+              "cbu_skill_change_main_image",
+              "cbu_skill_change_subject",
+              "offer_owner_query",
+              "product_cancel_offer",
+              "product_repost_offer",
+              "tool_cpv_spi_before_check",
+              "tool_cpv_spi_execute",
+              "tool_get_offer_login_id",
+              "tool_one_click_spi_before_check",
+              "tool_one_click_spi_execute",
+              "1688_title_agent",
+              "apply_offer_pro",
+              "csbc_batch_product_optimization",
+              "item_batch_opt_create",
+              "item_batch_opt_query",
+              "item_batch_opt_update",
+              "query_offer_prop"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -1850,7 +2677,21 @@
             "free_query": [
               "references/business-rules/1688-creative-studio/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -1912,8 +2753,47 @@
             "free_query": [
               "references/business-rules/1688-creative-studio/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "1688_factory_overview_imgs",
+              "cbu_image_analyse_tool",
+              "cbu_image_generation_and_editing_tool",
+              "image_agent",
+              "image_bank_change_url_for_offer",
+              "image_bank_upload_picture",
+              "image_bank_url_external_to_internal",
+              "newton_image_add_model_to_product",
+              "newton_image_bg_change",
+              "newton_image_data_agent",
+              "newton_image_gen_carousel_images",
+              "newton_image_judge",
+              "zongheng_batch_img_upload"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2023,7 +2903,21 @@
             "free_query": [
               "references/business-rules/1688-listing-publisher/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -2086,8 +2980,47 @@
             "free_query": [
               "references/business-rules/1688-listing-publisher/RULES.md"
             ]
-          }
+          },
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "1688_publish_category_page_info_query",
+              "1688_publish_cpv_predict",
+              "1688_publish_image_classification",
+              "1688_publish_material_package_generation",
+              "1688_publish_product_draft_save",
+              "1688_publish_sku_predict",
+              "1688_publish_title_prediction",
+              "ai_publish_by_imageurl",
+              "ai_publish_excel_data_to_publish_url",
+              "ai_publish_image_to_publish_url",
+              "ai_publish_save_tair",
+              "category_recognition_by_image_and_text",
+              "1688_publish_page_info_query"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2173,6 +3106,23 @@
           "required_any_conditions": [],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "1688_query_shop_data",
+              "1688_rag_query_api_info",
+              "get_industry_benchmark",
+              "newton_same_competition_offer_compare_data",
+              "opp_product_image_patent_list"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2258,6 +3208,22 @@
           "required_any_conditions": [],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "find_product",
+              "opp_market_search_data_query",
+              "same_img_offer_search",
+              "opp_product_image_patent_list"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2315,7 +3281,8 @@
                 "requirements": [
                   "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
                   "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
-                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -2326,7 +3293,8 @@
                   "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
                   "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
                   "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
-                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
@@ -2397,7 +3365,29 @@
               "authorization": "inherit_only",
               "automatic_execution": false
             }
-          ]
+          ],
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          }
         },
         "execute": {
           "director_read": [
@@ -2439,7 +3429,8 @@
                 "requirements": [
                   "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
                   "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
-                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -2450,7 +3441,8 @@
                   "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
                   "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
                   "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
-                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "execution": {
@@ -2528,7 +3520,29 @@
               "authorization": "inherit_only",
               "automatic_execution": false
             }
-          ]
+          ],
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          }
         },
         "monitor": {
           "director_read": [
@@ -2567,7 +3581,8 @@
                 "requirements": [
                   "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
                   "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
-                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -2578,7 +3593,8 @@
                   "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
                   "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
                   "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
-                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
@@ -2649,7 +3665,29 @@
               "authorization": "inherit_only",
               "automatic_execution": false
             }
-          ]
+          ],
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          }
         },
         "evaluate": {
           "director_read": [
@@ -2689,7 +3727,8 @@
                 "requirements": [
                   "覆盖最近完整日及统计期全部有消耗商品，核对花费汇总与未展开部分；按曝光、点击/点击率、新客有效询盘和成熟首单定位问题，不只以昨日消耗筛选累计分析对象。",
                   "保留平台归因总成交，明确公司新客、老客、身份未知的成交及覆盖；业务引导老客下单不计拉新成果，新客身份与广告来源分别核实，集中大单单独解释。",
-                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。"
+                  "简述新证据、首要问题、保持/纠错/试验/补证的当前选择与优先级，关键缺项说明如何改变决定；全文数据和计算留附录，样本不足不自动等于继续投入或无限观察。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               },
               "plan": {
@@ -2700,7 +3739,8 @@
                   "交付明确决定（保持、试验、纠错或补证）、候选动作排序、选择理由及不确定性；未证实因果不冒充已确诊。",
                   "列出对象、具体差异、执行者、交付物、依赖、现有授权和精确缺项；完成能够独立推进的准备。",
                   "涉及经营措施或试验时，另给基线、主要与保护指标、目标及样本依据、预算边界、评估分支和最晚重新审视时间；纯设计或提示词方案等不适用项说明原因，不强制设计试验。",
-                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。"
+                  "商品表达动作按已确认的本店范围交成品制作；纯分析/方案限定不被路由扩大，已审具体版本由总控接续应用。",
+                  "逐项完成 decision_review 并引用证据；领域报告交回不等于总任务完成，关键可执行依赖由总控续接。"
                 ]
               }
             }
@@ -2771,7 +3811,29 @@
               "authorization": "inherit_only",
               "automatic_execution": false
             }
-          ]
+          ],
+          "decision_review": {
+            "reference": "references/sales-growth-workflow.md#决策与阶段交付",
+            "checks": [
+              {
+                "id": "business_problem",
+                "requirement": "首要经营问题、受影响对象和漏斗断点有证据；无法定位时列出精确缺项。"
+              },
+              {
+                "id": "necessary_verification",
+                "requirement": "会改变首要决定且可执行的关键验证已完成或明确受阻；不同数据层次的缺口分别处理。"
+              },
+              {
+                "id": "specific_decision",
+                "requirement": "当前选择具体到保持、纠错、有限试验或有限补查，给对象、理由、执行者与评估/停止条件。"
+              },
+              {
+                "id": "dependency_disposition",
+                "requirement": "子任务交回的关键依赖已继续处理或有具体停止依据；只有需要用户事实/选择的事项才交用户。"
+              }
+            ],
+            "verification": "agent_review_of_evidence_not_programmatic_business_truth"
+          }
         },
         "receipt": {
           "director_read": [
@@ -2807,6 +3869,35 @@
             ]
           }
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "channel_diagnosis",
+            "purpose": "概览、趋势与异动渠道定位",
+            "tools": [
+              "get_traffic_overview",
+              "get_traffic_trend",
+              "get_channel_traffic",
+              "get_traffic_structure",
+              "get_industry_benchmark",
+              "get_recommend_channel_detail"
+            ],
+            "selection_note": "先确认哪个渠道/商品改变首要决定，再选择对应明细。"
+          },
+          {
+            "id": "search_and_ad_diagnosis",
+            "purpose": "搜索成为主要异动渠道时，查相关词、广告词和商品匹配；关联覆盖单列",
+            "tools": [
+              "get_search_channel_detail",
+              "get_ad_channel_detail",
+              "1688_rag_query_api_info",
+              "1688_query_shop_data"
+            ],
+            "selection_note": "诊断/TOP、完整词表、商品下钻是不同覆盖；自由取数先发现具体API与参数。买家归因缺失不阻止词级分析，未尝试不能记为不可用。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2864,6 +3955,19 @@
           "required_any_conditions": [],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [
+              "tool_1688_knowledge_rag_query"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2938,6 +4042,65 @@
           ],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "connection",
+            "purpose": "已选择的业务子流程：connection",
+            "tools": [
+              "get_jky_auth_guide",
+              "get_jst_oauth_guide",
+              "jackyun_disconnect",
+              "jushuitan_disconnect",
+              "newton_bound_user_ids",
+              "newton_shop_list_binds",
+              "set_jky_credentials",
+              "set_jst_customer_id",
+              "shop_and_tool_info",
+              "xiaobangbang_bind_connection",
+              "xiaobangbang_disconnect",
+              "xiaobangbang_query_connection"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "connection"
+            ]
+          },
+          {
+            "id": "platform_components",
+            "purpose": "已选择的业务子流程：platform_components",
+            "tools": [
+              "aegis_get_unique_id_by_user_id",
+              "aegis_register_profile",
+              "aegis_report_audit_log",
+              "csbc_ai_components_image_op_card",
+              "csbc_crm_customer_management",
+              "csbc_multi_shop_dashboard",
+              "get_normalized_data",
+              "newton_im_card_get_layout_list",
+              "newton_im_card_get_template_layouts",
+              "newton_im_card_template_sync",
+              "newton_im_file_try_upload",
+              "newton_im_login_token_get",
+              "newton_webim_im_chat_gateway_invoke",
+              "offer_select_card",
+              "push_diagnosis_section",
+              "tool_1688_knowledge_rag_query",
+              "agent_action_report",
+              "newton_main_agent_skill_delete",
+              "newton_main_agent_skill_list",
+              "newton_main_agent_skill_query",
+              "newton_main_agent_skill_save",
+              "newton_main_agent_skill_update"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "platform_components"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -2999,7 +4162,21 @@
               ]
             }
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [
@@ -3044,6 +4221,50 @@
           ],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "crm",
+            "purpose": "本次明确选择的客户子流程：crm",
+            "tools": [
+              "customer_ai_profile",
+              "customer_attr_field_config",
+              "customer_attr_list_all",
+              "customer_list",
+              "customer_stats",
+              "get_customer_profile",
+              "get_followup_record_by_buyer",
+              "get_order_info_by_buyer",
+              "seller_buyer_detail_hourly",
+              "seller_customer_detail",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_login_id",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_user_id",
+              "newton_profile_customer_data_summary_pc_v2"
+            ],
+            "selection_note": "此组只用于客户资料查询；customer_ai_profile仅action=query，不能refresh。客户库维护另选crm_maintenance；不按省市区筛选或分析。不把工具可见性当操作授权。",
+            "when_any_conditions": [
+              "crm"
+            ]
+          },
+          {
+            "id": "inquiry",
+            "purpose": "本次明确选择的客户子流程：inquiry",
+            "tools": [
+              "1688_bp_inquiry_evaluate_sales_detail",
+              "1688_bp_inquiry_evaluate_summary",
+              "inquiry_data_load",
+              "query_transfer_inquiries",
+              "inquiry_data_batch_query",
+              "inquiry_data_query"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "inquiry"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3163,6 +4384,50 @@
           ],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "crm",
+            "purpose": "本次明确选择的客户子流程：crm",
+            "tools": [
+              "customer_ai_profile",
+              "customer_attr_field_config",
+              "customer_attr_list_all",
+              "customer_list",
+              "customer_stats",
+              "get_customer_profile",
+              "get_followup_record_by_buyer",
+              "get_order_info_by_buyer",
+              "seller_buyer_detail_hourly",
+              "seller_customer_detail",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_login_id",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_user_id",
+              "newton_profile_customer_data_summary_pc_v2"
+            ],
+            "selection_note": "此组只用于客户资料查询；customer_ai_profile仅action=query，不能refresh。客户库维护另选crm_maintenance；不按省市区筛选或分析。不把工具可见性当操作授权。",
+            "when_any_conditions": [
+              "crm"
+            ]
+          },
+          {
+            "id": "inquiry",
+            "purpose": "本次明确选择的客户子流程：inquiry",
+            "tools": [
+              "1688_bp_inquiry_evaluate_sales_detail",
+              "1688_bp_inquiry_evaluate_summary",
+              "inquiry_data_load",
+              "query_transfer_inquiries",
+              "inquiry_data_batch_query",
+              "inquiry_data_query"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "inquiry"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3286,7 +4551,21 @@
               "outreach"
             ]
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [],
@@ -3354,8 +4633,160 @@
               "outreach"
             ]
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "crm",
+            "purpose": "本次明确选择的客户子流程：crm",
+            "tools": [
+              "customer_ai_profile",
+              "customer_attr_field_config",
+              "customer_attr_list_all",
+              "customer_list",
+              "customer_stats",
+              "get_customer_profile",
+              "get_followup_record_by_buyer",
+              "get_order_info_by_buyer",
+              "seller_buyer_detail_hourly",
+              "seller_customer_detail",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_login_id",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_user_id",
+              "newton_profile_customer_data_summary_pc_v2"
+            ],
+            "selection_note": "此组只用于客户资料查询；customer_ai_profile仅action=query，不能refresh。客户库维护另选crm_maintenance；不按省市区筛选或分析。不把工具可见性当操作授权。",
+            "when_any_conditions": [
+              "crm"
+            ]
+          },
+          {
+            "id": "crm_maintenance",
+            "purpose": "本次明确选择的客户子流程：crm_maintenance",
+            "tools": [
+              "customer_ai_profile",
+              "customer_attr_add_column",
+              "customer_attr_field_config",
+              "customer_attr_list_all",
+              "customer_import",
+              "customer_list",
+              "customer_stats",
+              "customer_tag_batch_apply",
+              "get_customer_profile",
+              "get_followup_record_by_buyer",
+              "get_order_info_by_buyer",
+              "seller_buyer_detail_hourly",
+              "seller_customer_business_province",
+              "seller_customer_detail",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_login_id",
+              "newton_growth_customer_manage_byr_tag_get_by_pair_user_id",
+              "newton_growth_customer_manage_byr_tag_set_buyer_tag",
+              "newton_profile_customer_data_summary_pc_v2",
+              "newton_profile_member_update_remark"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "crm_maintenance"
+            ]
+          },
+          {
+            "id": "inquiry",
+            "purpose": "本次明确选择的客户子流程：inquiry",
+            "tools": [
+              "1688_bp_inquiry_evaluate_sales_detail",
+              "1688_bp_inquiry_evaluate_summary",
+              "inquiry_data_load",
+              "query_transfer_inquiries",
+              "inquiry_data_batch_query",
+              "inquiry_data_query"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "inquiry"
+            ]
+          },
+          {
+            "id": "reception",
+            "purpose": "本次明确选择的客户子流程：reception",
+            "tools": [
+              "ai_receptionist",
+              "cowboy_daily_report",
+              "cowboy_knowledge_answer",
+              "cowboy_knowledge_query",
+              "cowboy_load_config",
+              "cowboy_test_chat",
+              "create_cow_boy",
+              "pause_cow_boy",
+              "resume_cow_boy",
+              "update_cowboy_config",
+              "newton_cowboy_add_user_folder_relation",
+              "newton_cowboy_check_buyer_is_tp",
+              "newton_cowboy_complete_boost_todo",
+              "newton_cowboy_delete_user_folder_relation",
+              "newton_cowboy_get_wangwang_profile",
+              "newton_cowboy_load_boost_todo_list",
+              "newton_cowboy_load_copilot_card",
+              "newton_cowboy_load_panel_config",
+              "newton_cowboy_load_reception_evaluation",
+              "newton_cowboy_open_intent_hosting",
+              "newton_cowboy_query_customer_data",
+              "newton_cowboy_query_user_folder_relations",
+              "newton_cowboy_report_adopt_event",
+              "newton_cowboy_report_suggest_feedback",
+              "newton_cowboy_save_panel_config",
+              "newton_cowboy_update_user_folder_relation"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "reception"
+            ]
+          },
+          {
+            "id": "quotation",
+            "purpose": "本次明确选择的客户子流程：quotation",
+            "tools": [
+              "quotation_skill_get_detail",
+              "quotation_skill_load",
+              "quotation_skill_save",
+              "quotation_skill_simulate"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "quotation"
+            ]
+          },
+          {
+            "id": "outreach",
+            "purpose": "本次明确选择的客户子流程：outreach",
+            "tools": [
+              "a2a_501498_newton_buyer_script_generator",
+              "newton_ai_crm_customer_reach",
+              "newton_ai_crm_plan_operation",
+              "crm_custom_plan_delete",
+              "crm_reach_effect_query"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "outreach"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3424,6 +4855,61 @@
           ],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "jushuitan",
+            "purpose": "已选择的业务子流程：jushuitan",
+            "tools": [
+              "get_jst_oauth_guide",
+              "get_jst_aftersale_received",
+              "get_jst_allocate",
+              "get_jst_inout",
+              "get_jst_item_combine_sku",
+              "get_jst_item_inventory",
+              "get_jst_item_sku",
+              "get_jst_item_skumap",
+              "get_jst_order",
+              "get_jst_out_order",
+              "get_jst_purchase",
+              "get_jst_qimen_item",
+              "get_jst_qimen_order",
+              "get_jst_refund_order",
+              "get_jst_shops",
+              "get_jst_supplier",
+              "get_jst_wms_partner"
+            ],
+            "selection_note": "先用get_jst_oauth_guide核对当前系统授权状态；再按实际数据任务和实时Schema选择查询，授权状态查询不等于发起新授权。",
+            "when_any_conditions": [
+              "jushuitan"
+            ]
+          },
+          {
+            "id": "jackyun",
+            "purpose": "已选择的业务子流程：jackyun",
+            "tools": [
+              "get_jky_auth_guide",
+              "get_jky_business_order",
+              "get_jky_order",
+              "get_jky_qimen_order",
+              "get_jky_warehouse",
+              "jky_erp_get_sku_stock",
+              "jky_erp_get_stock_quantity",
+              "jky_erp_get_stockin_doc",
+              "jky_erp_get_stockout_doc",
+              "jky_erp_get_vendor",
+              "jky_erp_search_allocate",
+              "jky_erp_search_goods_sku",
+              "jky_erp_search_purchase"
+            ],
+            "selection_note": "先用get_jky_auth_guide核对当前系统授权状态；再按实际数据任务和实时Schema选择查询，授权状态查询不等于发起新授权。",
+            "when_any_conditions": [
+              "jackyun"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3494,6 +4980,44 @@
           ],
           "condition_rules": {}
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "sourcing",
+            "purpose": "已选择的业务子流程：sourcing",
+            "tools": [
+              "1688_source_suppliers",
+              "1688_source_suppliers_infos",
+              "cbu_501498_loginid_to_company",
+              "cha88_company_report_getReport",
+              "cha88_company_report_submit",
+              "companySearch",
+              "find_product",
+              "opp_market_search_data_query",
+              "same_img_offer_search"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "sourcing"
+            ]
+          },
+          {
+            "id": "company",
+            "purpose": "已选择的业务子流程：company",
+            "tools": [
+              "cbu_501498_loginid_to_company",
+              "cha88_company_report_getReport",
+              "cha88_company_report_submit",
+              "companySearch"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "company"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3604,7 +5128,21 @@
               "procurement_inquiry"
             ]
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [],
@@ -3664,8 +5202,122 @@
               "procurement_inquiry"
             ]
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "order",
+            "purpose": "已选择的业务子流程：order",
+            "tools": [
+              "1688_procurement_digital_human_tool",
+              "address_gen",
+              "buyer_query_order_list",
+              "get_order_skills_config",
+              "offer_query_for_trade",
+              "offer_sku_query_batch",
+              "order_view",
+              "parse_address",
+              "query_address_list",
+              "query_order",
+              "query_guide_price",
+              "query_receive_list"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "order"
+            ]
+          },
+          {
+            "id": "procurement_inquiry",
+            "purpose": "已选择的业务子流程：procurement_inquiry",
+            "tools": [
+              "1688_source_suppliers",
+              "1688_source_suppliers_infos",
+              "cbu_501498_loginid_to_company",
+              "cha88_company_report_getReport",
+              "cha88_company_report_submit",
+              "companySearch",
+              "find_product",
+              "opp_market_search_data_query",
+              "same_img_offer_search",
+              "query_guide_price",
+              "query_receive_list"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "procurement_inquiry"
+            ]
+          },
+          {
+            "id": "fulfillment",
+            "purpose": "已选择的业务子流程：fulfillment",
+            "tools": [
+              "1688_order_manger_summery",
+              "1688_order_manger_urge",
+              "official_delivery_create_order",
+              "official_delivery_solution_query",
+              "query_delivery_order_pack_list",
+              "query_full_trace_list"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "fulfillment"
+            ]
+          },
+          {
+            "id": "aftersales",
+            "purpose": "已选择的业务子流程：aftersales",
+            "tools": [
+              "1688_refund_cancel",
+              "1688_refund_detail_new_query",
+              "1688_refund_list_query",
+              "apply_dispute",
+              "cancel_dispute",
+              "view_apply_dispute",
+              "view_dispute_detail"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "aftersales"
+            ]
+          },
+          {
+            "id": "invoice",
+            "purpose": "已选择的业务子流程：invoice",
+            "tools": [
+              "addInvoiceTitle",
+              "batchApplyInvoice",
+              "deleteInvoiceTitle",
+              "list_invoice_apply_records_by_page",
+              "queryInvoiceTitlesByPage",
+              "querySellerInvoiceSettings",
+              "query_invoice_amount",
+              "setDefaultInvoiceTitle",
+              "updateInvoiceTitle"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "invoice"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3759,7 +5411,21 @@
               "cross_platform"
             ]
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         },
         "evaluate": {
           "director_read": [],
@@ -3809,8 +5475,53 @@
               "cross_platform"
             ]
           ],
-          "condition_rules": {}
+          "condition_rules": {},
+          "tool_context_when_any_conditions": [
+            "data_query",
+            "free_query",
+            "ads",
+            "inquiry",
+            "crm",
+            "reception",
+            "quotation",
+            "outreach",
+            "jushuitan",
+            "jackyun",
+            "connection",
+            "platform_components"
+          ]
         }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "distribution_1688",
+            "purpose": "已选择的业务子流程：distribution_1688",
+            "tools": [
+              "distribute_offer",
+              "distribution_knowledge_tool",
+              "distribution_offer_info",
+              "distribution_select_offer",
+              "fx_query_order",
+              "fx_send_ww",
+              "fx_ww_reply"
+            ],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "distribution_1688"
+            ]
+          },
+          {
+            "id": "cross_platform",
+            "purpose": "已选择的业务子流程：cross_platform",
+            "tools": [],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。",
+            "when_any_conditions": [
+              "cross_platform"
+            ]
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
       }
     },
     {
@@ -3865,6 +5576,131 @@
           ],
           "required_any_conditions": [],
           "condition_rules": {}
+        }
+      },
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "task_candidates",
+            "purpose": "本任务规则及当前能力映射的候选工具",
+            "tools": [],
+            "selection_note": "候选列表不授权调用；按用户目标、实时定义、账号范围和字段覆盖选择，调用前describe_tool；不要因同名或单入口失败推断其他入口的权限。"
+          }
+        ],
+        "selection_policy": "按目标和实际范围筛选；候选清单不是顺序调用清单，完整能力可由tool_catalog.py list按capability发现。"
+      }
+    },
+    {
+      "id": "chat_export",
+      "intent": "导出指定期间的全店或指定买家聊天记录，核对分页、长正文、原文与文件完整性",
+      "owner": "operations_director",
+      "capability": "customer_conversion",
+      "skill": ".agents/skills/1688-customer-conversion/SKILL.md",
+      "rules": [
+        "references/business-rules/1688-inquiry-analyst/RULES.md"
+      ],
+      "optional_capabilities": [],
+      "rule_loading": "按本阶段完整读取客户技能、聊天导出适配及询盘来源；实时Schema与前置继续有效。",
+      "execution_protocol": "references/execution-protocol.md",
+      "delegation": "按需委派一次性导出或文件验收任务，不增加常驻角色；仅本地导出不意味着业务写入。",
+      "delegation_policy": "specialist_on_demand",
+      "tool_profile": {
+        "groups": [
+          {
+            "id": "conversation_sources",
+            "purpose": "按日期获取全店或指定买家对话；单买家完整正文用于真实索引补读",
+            "tools": [
+              "inquiry_data_batch_query",
+              "inquiry_data_query",
+              "inquiry_data_load"
+            ],
+            "selection_note": "分批工具按实时优先说明选择；普通查询是独立候选，load需要真实买家索引。各入口分别核实范围、完整性与失败证据，权限拒绝不自动切换。"
+          }
+        ]
+      },
+      "phase_loading": {
+        "plan": {
+          "director_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/chat-export.md"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/chat-export.md",
+            "references/runtime.md#连接和工具"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [
+            "inquiry"
+          ],
+          "conditions": [
+            "inquiry",
+            "data_query"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "plan",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "确认用户期望的店铺、时区、日期/买家范围和交付类型；只查定义或只要方案时不取聊天正文。",
+                  "核对候选工具实时说明、Schema及已有权限证据，区分已验证范围、未验证权限和明确限制；不将元数据可见写成账号可读取。",
+                  "交付能力核查证据及精确未知项，不要求实际会话、消息数或完整性回执。"
+                ]
+              },
+              "plan": {
+                "requirements": [
+                  "确认用户期望的店铺、时区、日期/买家范围和交付类型；只查定义或只要方案时不取聊天正文。",
+                  "核对候选工具实时说明、Schema及已有权限证据，区分已验证范围、未验证权限和明确限制；不将元数据可见写成账号可读取。",
+                  "交付具体查询路径、分页/长文处理、输出文件与验收方法，说明尚缺的前提；实际返回数与正文保真留到获授权取数后的执行阶段。"
+                ]
+              }
+            }
+          }
+        },
+        "execute": {
+          "director_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/chat-export.md"
+          ],
+          "executor_read": [
+            ".agents/skills/1688-customer-conversion/SKILL.md",
+            ".agents/skills/1688-customer-conversion/references/chat-export.md",
+            "references/runtime.md#连接和工具"
+          ],
+          "rules": [],
+          "source_read": [],
+          "automatic_conditions": [
+            "inquiry"
+          ],
+          "conditions": [
+            "inquiry",
+            "data_query"
+          ],
+          "required_any_conditions": [],
+          "condition_rules": {},
+          "completion_contract": {
+            "default_deliverable": "asset",
+            "deliverables": {
+              "evidence": {
+                "requirements": [
+                  "确认真实店铺、时区、日期范围及导出对象；根据当前工具定义选择来源并记录逐接口的范围与结果。",
+                  "核对每天返回总数、已返回数、分页/长正文及失败索引；不足之处明确，不把空回包当无聊天。",
+                  "仅对有真实依据的买家索引补读；保留完整原文和消息解析对应，不能遍历索引猜测未授权数据。"
+                ]
+              },
+              "asset": {
+                "requirements": [
+                  "确认真实店铺、时区、日期范围及导出对象；根据当前工具定义选择来源并记录逐接口的范围与结果。",
+                  "核对每天返回总数、已返回数、分页/长正文及失败索引；不足之处明确，不把空回包当无聊天。",
+                  "仅对有真实依据的买家索引补读；保留完整原文和消息解析对应，不能遍历索引猜测未授权数据。",
+                  "交付可打开的聊天文件和完整原文，逐条核对文本、时间、会话和附件链接；完整性仅限接口返回范围，未下载附件明示。"
+                ]
+              }
+            }
+          }
         }
       }
     }

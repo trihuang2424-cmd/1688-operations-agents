@@ -14,6 +14,11 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
+if __package__:
+    from .tool_catalog import CatalogError, build_tool_context, load_current_catalog
+else:
+    from tool_catalog import CatalogError, build_tool_context, load_current_catalog
+
 ROOT = Path(__file__).resolve().parents[1]
 PHASES = {"plan", "execute", "monitor", "evaluate", "receipt"}
 DELIVERABLES = {"evidence", "plan", "asset", "execution"}
@@ -52,6 +57,7 @@ REQUIRED_HANDOFFS.update({
 })
 DECISION_SECTION = "references/sales-growth-workflow.md#决策与阶段交付"
 CONTENT_APPLICATION_SECTION = "references/sales-growth-workflow.md#成品审核与应用"
+DECISION_CHECKS = {"business_problem", "necessary_verification", "specific_decision", "dependency_disposition"}
 ROLES = {"director", "executor"}
 CATALOG = "catalog/task-routing.json"
 
@@ -206,6 +212,7 @@ def _completion_context(stage, phase, deliverable, active, role):
                                 "required_conditions": required},
         "unresolved_deliverable_conditions": missing,
         "conditional_handoffs": handoffs,
+        "decision_review": stage.get("decision_review"),
     }
 
 
@@ -295,6 +302,26 @@ def build_context(root, route_id, phase, role, conditions=(), catalog=None, deli
         if definition.get("requires_any_conditions"):
             item["requires_any_conditions"] = definition["requires_any_conditions"]
         conditional.append(item)
+    profile = route.get("tool_profile")
+    deferred_groups = []
+    if profile is not None:
+        eligible = []
+        for group in profile.get("groups", []):
+            needed = group.get("when_any_conditions", [])
+            if needed and not set(needed).intersection(active):
+                deferred_groups.append({key: group[key] for key in
+                                        ("id", "purpose", "when_any_conditions") if key in group})
+            else:
+                eligible.append(group)
+        profile = {**profile, "groups": eligible}
+    triggers = stage.get("tool_context_when_any_conditions")
+    if triggers is not None and not set(triggers).intersection(active):
+        profile = {"groups": []}
+    try:
+        tool_context = build_tool_context(root, [route["capability"]], profile)
+    except CatalogError as exc:
+        raise ContextError(f"Current tool metadata needs repair: {exc}") from exc
+    tool_context["conditional_groups"] = deferred_groups
     return {
         "version": catalog["version"], "route": {key: route[key] for key in
             ("id", "intent", "owner", "capability", "delegation_policy", "executor") if key in route},
@@ -305,6 +332,7 @@ def build_context(root, route_id, phase, role, conditions=(), catalog=None, deli
         "unresolved_conditions": missing, "source_followups": followups,
         "condition_policy": loading["condition_policy"], "source_policy": loading["source_policy"],
         "task_packet": "另附目标、店铺/对象、实际周期/截止、证据路径、现行策略、已有行动及授权；清单不证明已读、已委派或已执行业务。",
+        "tool_context": tool_context,
         **completion,
     }
 
@@ -387,7 +415,39 @@ def validate_loading_contract(root, catalog=None):
         except ContextError:
             pass  # Already reported by references([rule], ...).
     route_map = {route["id"]: route for route in catalog.get("routes", [])}
+    try:
+        bundle = load_current_catalog(root)
+        current_tools = {item["name"] for item in bundle["definitions"]["tools"]}
+    except (CatalogError, KeyError, TypeError) as exc:
+        fail(f"Cannot check current tool profiles: {exc}")
+        current_tools = set()
     for route in route_map.values():
+        profile = route.get("tool_profile")
+        if not isinstance(profile, dict) or not isinstance(profile.get("groups"), list):
+            fail(f"Missing task tool profile: {route['id']}")
+        else:
+            group_ids = set()
+            available_conditions = {name for stage in route.get("phase_loading", {}).values()
+                                    for key in ("conditions", "automatic_conditions") for name in stage.get(key, [])}
+            for group in profile["groups"]:
+                if not isinstance(group, dict):
+                    fail(f"Invalid tool group: {route['id']}")
+                    continue
+                gid = group.get("id")
+                if not isinstance(gid, str) or not gid or gid in group_ids:
+                    fail(f"Invalid or duplicate tool group: {route['id']}")
+                else:
+                    group_ids.add(gid)
+                names = group.get("tools")
+                if not isinstance(names, list) or any(not isinstance(x, str) for x in names):
+                    fail(f"Invalid tool candidates: {route['id']}/{gid}")
+                elif len(names) != len(set(names)) or set(names) - current_tools:
+                    fail(f"Duplicate or unavailable current tool candidates: {route['id']}/{gid}")
+                if not group.get("purpose") or not group.get("selection_note"):
+                    fail(f"Missing tool selection basis: {route['id']}/{gid}")
+                triggers = group.get("when_any_conditions", [])
+                if not isinstance(triggers, list) or any(not isinstance(x, str) or x not in available_conditions for x in triggers):
+                    fail(f"Unknown tool group condition: {route['id']}/{gid}")
         stages = route.get("phase_loading", {})
         if not stages or set(stages) - PHASES:
             fail(f"Missing or unsupported phase loading: {route['id']}")
@@ -404,6 +464,14 @@ def validate_loading_contract(root, catalog=None):
             if (route["id"], phase) in ACQUISITION_AUTOMATIC_STAGES:
                 if "acquisition_analysis" not in stage.get("automatic_conditions", []):
                     fail(f"Acquisition analysis policy must be automatic: {label}")
+                review = stage.get("decision_review", {})
+                checks = review.get("checks", []) if isinstance(review, dict) else []
+                if (not isinstance(review, dict) or review.get("reference") != DECISION_SECTION
+                        or not isinstance(checks, list)
+                        or {c.get("id") for c in checks if isinstance(c, dict)} != DECISION_CHECKS
+                        or len(checks) != len(DECISION_CHECKS)
+                        or any(not isinstance(c, dict) or not c.get("requirement") for c in checks)):
+                    fail(f"Missing operating decision review: {label}")
             if contract is not None:
                 if not isinstance(contract, dict):
                     fail(f"Invalid completion contract: {label}")
@@ -595,6 +663,9 @@ def main(argv=None):
             print("# Deliverable: " + result["deliverable_type"] + " / " + result["scope_origin"])
             print("# Completion: " + json.dumps(result["completion_contract"], ensure_ascii=False))
             print("# Scope: " + result["scope_note"])
+            print("# Tool candidates (metadata only): " + json.dumps(result["tool_context"], ensure_ascii=False))
+            if result["decision_review"]:
+                print("# Decision review (requires evidence): " + json.dumps(result["decision_review"], ensure_ascii=False))
             if result["conditional_handoffs"]:
                 print("# Candidate handoffs (not dispatched): " + json.dumps(result["conditional_handoffs"], ensure_ascii=False))
             if result["unresolved_conditions"]:

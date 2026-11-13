@@ -7,12 +7,20 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from validate_package import (
-    ROOT, PRESERVATION, CONTEXT_PRESERVATION, CONTEXT_DOCUMENTS, LEGACY_ENTRY_ARCHIVE,
-    DIRECTOR_ENTRY_MIGRATION, DIRECTOR_ARCHIVE_ROOT, Checks,
-    active_markdown, check_context_documents, check_package, check_routing,
-    local_link_target, read_native_config,
-)
+if __package__:
+    from .validate_package import (
+        ROOT, PRESERVATION, CONTEXT_PRESERVATION, CONTEXT_DOCUMENTS, LEGACY_ENTRY_ARCHIVE,
+        DIRECTOR_ENTRY_MIGRATION, DIRECTOR_ARCHIVE_ROOT, Checks,
+        active_markdown, check_context_documents, check_package, check_routing,
+        local_link_target, read_native_config,
+    )
+else:
+    from validate_package import (
+        ROOT, PRESERVATION, CONTEXT_PRESERVATION, CONTEXT_DOCUMENTS, LEGACY_ENTRY_ARCHIVE,
+        DIRECTOR_ENTRY_MIGRATION, DIRECTOR_ARCHIVE_ROOT, Checks,
+        active_markdown, check_context_documents, check_package, check_routing,
+        local_link_target, read_native_config,
+    )
 
 
 def copy_file(source, target):
@@ -101,8 +109,56 @@ class RoutingContractTests(unittest.TestCase):
         result = check_package(ROOT)
         self.assertTrue(result['passed'], result['errors'])
         self.assertEqual(result['tool_count'], 205)
+        current = json.loads((ROOT / 'catalog/current-tool-definitions.json').read_text())
+        self.assertEqual(result['current_tool_count'], len(current['tools']))
+        self.assertEqual(result['current_assignment_count'], len(current['tools']))
         self.assertEqual(result['design_prompt_count'], 265)
         self.assertEqual(result['protected_files_hash_checked'], 2658)
+
+    def test_current_tool_assignment_cannot_be_silently_omitted(self):
+        def mutate(data):
+            data['tools'] = [row for row in data['tools'] if row['name'] != 'inquiry_data_query']
+        self.edit_json('catalog/tool-assignments.json', mutate)
+        self.assert_contract_error('Current tool catalog: Missing assignment (use explicit unassigned): inquiry_data_query')
+
+    def test_registry_and_routing_versions_must_match_supported_schema(self):
+        for registry_version, routing_version in ((None, '2.5.0'), ('2.5.0', '2.6.0'),
+                                                 ('', ''), ('3.0.0', '3.0.0')):
+            with self.subTest(registry=registry_version, routing=routing_version):
+                self.edit_json('catalog/agent-registry.json', lambda data: data.update(version=registry_version))
+                self.edit_json('catalog/task-routing.json', lambda data: data.update(version=routing_version))
+                self.assert_contract_error('Registry/task-routing versions must match')
+                for rel in ('catalog/agent-registry.json', 'catalog/task-routing.json'):
+                    copy_file(self.base / rel, self.root / rel)
+
+    def test_current_catalog_requires_unique_complete_metadata(self):
+        def mutate(data):
+            data['tools'].append(data['tools'][0].copy())
+            data['tool_count'] = len(data['tools'])
+        self.edit_json('catalog/current-tool-definitions.json', mutate)
+        self.assert_contract_error('Current tool catalog:')
+
+    def test_current_catalog_does_not_replace_the_historical_snapshot(self):
+        def mutate(data):
+            new_tool = next(row for row in data['tools'] if row['name'] == 'inquiry_data_load').copy()
+            new_tool['name'] = 'inquiry_data_query'
+            data['tools'].append(new_tool)
+        self.edit_json('catalog/tool-routing.json', mutate)
+        self.assert_contract_error('Tool routing must cover exactly 205 distinct snapshot tools')
+
+    def test_chat_export_remains_a_customer_capability_without_new_agent(self):
+        result = check_routing(self.root)
+        self.assertTrue(result['passed'], result['errors'])
+        self.assertEqual(result['agent_count'], 3)
+        self.assertEqual(result['capability_count'], 15)
+        routing = json.loads((self.root / 'catalog/task-routing.json').read_text())
+        chat = next(row for row in routing['routes'] if row['id'] == 'chat_export')
+        self.assertEqual(chat['capability'], 'customer_conversion')
+        self.assertEqual(chat['skill'], '.agents/skills/1688-customer-conversion/SKILL.md')
+        self.edit_json('catalog/task-routing.json', lambda data:
+                       next(row for row in data['routes'] if row['id'] == 'chat_export').update(
+                           capability='traffic_analysis'))
+        self.assert_contract_error('Route capability mismatch: chat_export')
 
     def test_staged_loading_cannot_disappear(self):
         def mutate(data):

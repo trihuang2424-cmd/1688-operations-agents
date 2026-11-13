@@ -26,8 +26,10 @@ class TaskContextTests(unittest.TestCase):
 
     def test_entire_catalog_and_all_stage_roles_resolve(self):
         self.assertEqual(validate_loading_contract(ROOT, self.catalog), [])
-        self.assertEqual(self.catalog["version"], "2.4.0")
-        self.assertEqual(len(self.catalog["routes"]), 24)
+        self.assertEqual(self.catalog["version"], "2.5.0")
+        route_ids = [r["id"] for r in self.catalog["routes"]]
+        self.assertEqual(len(route_ids), len(set(route_ids)))
+        self.assertIn("chat_export", route_ids)
         for route in self.catalog["routes"]:
             for phase, stage in route["phase_loading"].items():
                 conditions = [group[0] for group in stage["required_any_conditions"]]
@@ -44,6 +46,75 @@ class TaskContextTests(unittest.TestCase):
                 self.assertEqual(result["rules"], [])
                 self.assertFalse(any("/business-rules/" in ref or ref.startswith("source/") for ref in result["read"]))
                 self.assertFalse(any(ref.endswith("SKILL.md") for ref in result["read"]))
+
+    def test_chat_export_exposes_all_documented_sources_and_actual_output_contract(self):
+        ctx = self.context("chat_export", "execute")
+        cards = {t["name"]: t for t in ctx["tool_context"]["candidates"]}
+        self.assertEqual(set(cards), {"inquiry_data_batch_query", "inquiry_data_query", "inquiry_data_load"})
+        self.assertEqual(ctx["deliverable_type"], "asset")
+        self.assertTrue(ctx["completion_contract"]["declared"])
+        self.assertIn(".agents/skills/1688-customer-conversion/references/chat-export.md", ctx["read"])
+        self.assertFalse(ctx["tool_context"]["automatic_fallback"])
+        definitions = json.loads((ROOT / "catalog/current-tool-definitions.json").read_text())
+        for card in cards.values():
+            parts = card["schema_ref"].split("#/")[1].split("/")
+            value = definitions
+            for part in parts:
+                value = value[int(part)] if isinstance(value, list) else value[part]
+            self.assertIn("ds", value["properties"])
+            self.assertEqual(card["required"], value["required"])
+        with self.assertRaisesRegex(ContextError, "not declared"):
+            self.context("chat_export", "execute", deliverable="execution")
+
+    def test_tool_candidates_follow_selected_scope_and_local_recovery_stays_light(self):
+        inquiry = self.context("customer_conversion", "execute", "executor", "inquiry")
+        names = {t["name"] for t in inquiry["tool_context"]["candidates"]}
+        self.assertIn("inquiry_data_query", names)
+        self.assertNotIn("customer_import", names)
+        self.assertNotIn("create_cow_boy", names)
+        local = self.context("conversion_monitoring", "monitor")
+        self.assertEqual(local["tool_context"]["candidates"], [])
+        self.assertEqual(len(local["tool_context"]["capability_map"]), 15)
+
+    def test_crm_read_scopes_exclude_pure_writes_but_maintenance_can_discover_them(self):
+        writes = {"customer_import", "customer_tag_batch_apply", "customer_attr_add_column",
+                  "newton_growth_customer_manage_byr_tag_set_buyer_tag", "newton_profile_member_update_remark"}
+        for route, phase in (("conversion_analysis", "execute"), ("conversion_monitoring", "monitor"),
+                             ("customer_conversion", "execute")):
+            ctx = self.context(route, phase, "executor", "crm")
+            names = {t["name"] for t in ctx["tool_context"]["candidates"]}
+            self.assertFalse(names & writes)
+            self.assertIn("customer_list", names)
+        maintenance = self.context("customer_conversion", "execute", "executor", "crm_maintenance")
+        self.assertTrue(writes <= {t["name"] for t in maintenance["tool_context"]["candidates"]})
+
+    def test_erp_candidates_include_required_authorization_status_sources(self):
+        for condition, auth in (("jushuitan", "get_jst_oauth_guide"), ("jackyun", "get_jky_auth_guide")):
+            ctx = self.context("erp_inventory", "execute", "executor", condition)
+            self.assertIn(auth, {t["name"] for t in ctx["tool_context"]["candidates"]})
+
+    def test_operating_review_carries_next_owner_without_granting_tool_execution(self):
+        plan = self.context("weekly_review", "plan")
+        ids = {item["id"] for item in plan["decision_review"]["checks"]}
+        self.assertEqual(ids, {"business_problem", "necessary_verification", "specific_decision", "dependency_disposition"})
+        handoff = next(h for h in plan["conditional_handoffs"] if h["id"] == "investigate_material_channel_change")
+        self.assertEqual(handoff["target_owner"], "traffic_operations")
+        self.assertEqual(handoff["activation_status"], "pending_scope_check")
+        self.assertFalse(handoff["automatic_execution"])
+        evidence = self.context("weekly_review", "plan", deliverable="evidence")
+        self.assertTrue(all(h["activation_status"] == "candidate_only" for h in evidence["conditional_handoffs"]))
+        traffic = self.context(handoff["target_route"], handoff["target_phase"], deliverable=handoff["target_deliverable"])
+        tools = {t["name"] for t in traffic["tool_context"]["candidates"]}
+        self.assertTrue({"get_search_channel_detail", "get_ad_channel_detail", "1688_rag_query_api_info"} <= tools)
+
+    def test_invalid_profile_or_missing_decision_review_is_detected(self):
+        missing_tool = copy.deepcopy(self.catalog)
+        missing_tool["routes"][0]["tool_profile"]["groups"][0]["tools"].append("invented_tool")
+        self.assertTrue(any("unavailable current tool" in e for e in validate_loading_contract(ROOT, missing_tool)))
+        missing_check = copy.deepcopy(self.catalog)
+        route = next(r for r in missing_check["routes"] if r["id"] == "weekly_review")
+        route["phase_loading"]["plan"]["decision_review"]["checks"].pop()
+        self.assertTrue(any("operating decision review" in e for e in validate_loading_contract(ROOT, missing_check)))
 
     def test_acquisition_policy_is_loaded_for_analysis_but_not_local_recovery(self):
         shared = "references/acquisition-analysis.md"
@@ -350,7 +421,7 @@ class OriginalTextReadTests(unittest.TestCase):
         cli = [sys.executable, str(ROOT / "scripts/task_context.py")]
         listing = subprocess.run(cli + ["list"], capture_output=True, text=True, check=True)
         rows = json.loads(listing.stdout)
-        self.assertEqual(len(rows), 24)
+        self.assertEqual({row["id"] for row in rows}, {row["id"] for row in load_catalog(ROOT)["routes"]})
         self.assertEqual(set(rows[0]), {"id", "owner", "intent", "phases"})
         ref = "references/runtime.md#连接和工具"
         read = subprocess.run(cli + ["read", ref], capture_output=True, text=True, check=True)
